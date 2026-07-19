@@ -21,7 +21,12 @@ export function ThemeToggle() {
   }
 
   return (
-    <button type="button" onClick={handleToggle} aria-label="Toggle theme">
+    <button
+      type="button"
+      className="theme-toggle"
+      onClick={handleToggle}
+      aria-label="Toggle theme"
+    >
       {mode === 'dark' ? 'Light mode' : 'Dark mode'}
     </button>
   );

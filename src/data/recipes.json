@@ -1,0 +1,275 @@
+[
+  {
+    "id": "maintain-chicken-rice",
+    "phaseId": "maintaining",
+    "name": "Balanced Chicken & Rice Bowl",
+    "calories": 500,
+    "proteinG": 40,
+    "carbsG": 55,
+    "fatG": 12,
+    "ingredients": [
+      "150g chicken breast",
+      "120g cooked brown rice",
+      "150g mixed vegetables",
+      "1/2 avocado",
+      "1 tbsp olive oil",
+      "Seasonings (garlic, herbs, salt, pepper)"
+    ],
+    "steps": [
+      "Season and cook chicken breast.",
+      "Prepare brown rice.",
+      "Steam or roast vegetables.",
+      "Combine with avocado and olive oil."
+    ]
+  },
+  {
+    "id": "maintain-protein-oats",
+    "phaseId": "maintaining",
+    "name": "Protein Oatmeal Bowl",
+    "calories": 450,
+    "proteinG": 35,
+    "carbsG": 55,
+    "fatG": 12,
+    "ingredients": [
+      "60g rolled oats",
+      "1 scoop whey protein",
+      "200ml milk (or plant-based)",
+      "1 banana",
+      "20g almonds",
+      "Berries"
+    ],
+    "steps": [
+      "Cook oats with milk.",
+      "Stir in protein powder.",
+      "Top with banana, almonds, and berries."
+    ]
+  },
+  {
+    "id": "maintain-salmon-quinoa",
+    "phaseId": "maintaining",
+    "name": "Salmon & Quinoa Power Bowl",
+    "calories": 550,
+    "proteinG": 45,
+    "carbsG": 50,
+    "fatG": 18,
+    "ingredients": [
+      "150g salmon fillet",
+      "100g cooked quinoa",
+      "150g roasted vegetables",
+      "Mixed greens",
+      "1 tbsp olive oil dressing",
+      "Lemon juice"
+    ],
+    "steps": [
+      "Bake or pan-sear salmon.",
+      "Prepare quinoa and roast vegetables.",
+      "Serve over greens with dressing and lemon."
+    ]
+  },
+  {
+    "id": "maintain-smoothie",
+    "phaseId": "maintaining",
+    "name": "Balanced Protein Smoothie",
+    "calories": 350,
+    "proteinG": 30,
+    "carbsG": 40,
+    "fatG": 10,
+    "ingredients": [
+      "1 scoop whey protein",
+      "1 banana",
+      "30g oats",
+      "250ml milk",
+      "1 tbsp almond butter",
+      "Ice"
+    ],
+    "steps": ["Blend all ingredients until smooth."]
+  },
+  {
+    "id": "cut-chicken-veg",
+    "phaseId": "cutting",
+    "name": "Lean Chicken & Vegetable Bowl",
+    "calories": 380,
+    "proteinG": 42,
+    "carbsG": 30,
+    "fatG": 8,
+    "ingredients": [
+      "160g chicken breast",
+      "200g mixed vegetables",
+      "80g cooked rice",
+      "Low-calorie seasonings",
+      "Lemon"
+    ],
+    "steps": [
+      "Grill or air-fry chicken.",
+      "Steam a large volume of vegetables.",
+      "Add a measured rice portion and season."
+    ]
+  },
+  {
+    "id": "cut-egg-scramble",
+    "phaseId": "cutting",
+    "name": "Egg White Scramble",
+    "calories": 280,
+    "proteinG": 32,
+    "carbsG": 18,
+    "fatG": 6,
+    "ingredients": [
+      "250ml egg whites",
+      "1 whole egg",
+      "Spinach and peppers",
+      "30g oats or 1 slice toast on the side"
+    ],
+    "steps": [
+      "Scramble egg whites with one whole egg.",
+      "Fold in spinach and peppers.",
+      "Serve with a small carb side if needed."
+    ]
+  },
+  {
+    "id": "cut-turkey-quinoa",
+    "phaseId": "cutting",
+    "name": "Turkey & Quinoa Bowl",
+    "calories": 420,
+    "proteinG": 40,
+    "carbsG": 40,
+    "fatG": 10,
+    "ingredients": [
+      "150g lean turkey",
+      "90g cooked quinoa",
+      "200g vegetables",
+      "Herbs and spices"
+    ],
+    "steps": [
+      "Cook turkey lean.",
+      "Prepare quinoa.",
+      "Load the bowl with vegetables for volume."
+    ]
+  },
+  {
+    "id": "cut-smoothie",
+    "phaseId": "cutting",
+    "name": "Low-Calorie Protein Smoothie",
+    "calories": 250,
+    "proteinG": 30,
+    "carbsG": 25,
+    "fatG": 3,
+    "ingredients": [
+      "1 scoop whey",
+      "150g frozen berries",
+      "Water or almond milk",
+      "Ice",
+      "Optional spinach"
+    ],
+    "steps": ["Blend until smooth; use as a snack or light meal."]
+  },
+  {
+    "id": "bulk-chicken-rice",
+    "phaseId": "bulking",
+    "name": "Massive Chicken & Rice",
+    "calories": 750,
+    "proteinG": 55,
+    "carbsG": 85,
+    "fatG": 18,
+    "ingredients": [
+      "200g chicken thigh or breast",
+      "250g cooked rice",
+      "Vegetables",
+      "1–2 tbsp olive oil or sauce"
+    ],
+    "steps": [
+      "Cook a large chicken portion.",
+      "Scale rice up to hit surplus carbs.",
+      "Add oil or calorie-dense sauce as needed."
+    ]
+  },
+  {
+    "id": "bulk-beef-potato",
+    "phaseId": "bulking",
+    "name": "Beef & Sweet Potato",
+    "calories": 800,
+    "proteinG": 50,
+    "carbsG": 70,
+    "fatG": 30,
+    "ingredients": [
+      "200g beef",
+      "300g sweet potato",
+      "Vegetables",
+      "Butter or oil"
+    ],
+    "steps": [
+      "Cook beef.",
+      "Bake sweet potatoes.",
+      "Combine with fats to raise calories."
+    ]
+  },
+  {
+    "id": "bulk-oats",
+    "phaseId": "bulking",
+    "name": "Protein Oatmeal (Bulk)",
+    "calories": 650,
+    "proteinG": 40,
+    "carbsG": 80,
+    "fatG": 18,
+    "ingredients": [
+      "100g oats",
+      "1–2 scoops whey",
+      "Banana",
+      "Peanut butter",
+      "Milk"
+    ],
+    "steps": ["Cook oats in milk, stir protein, top with banana and peanut butter."]
+  },
+  {
+    "id": "bulk-gainer-smoothie",
+    "phaseId": "bulking",
+    "name": "Mass Gainer Smoothie",
+    "calories": 700,
+    "proteinG": 45,
+    "carbsG": 90,
+    "fatG": 18,
+    "ingredients": [
+      "2 scoops whey",
+      "2 bananas",
+      "80g oats",
+      "Peanut butter",
+      "Milk"
+    ],
+    "steps": ["Blend all ingredients; drink between meals when appetite is low."]
+  },
+  {
+    "id": "bulk-salmon-quinoa",
+    "phaseId": "bulking",
+    "name": "Salmon & Quinoa (Bulk)",
+    "calories": 680,
+    "proteinG": 48,
+    "carbsG": 55,
+    "fatG": 28,
+    "ingredients": [
+      "180g salmon",
+      "150g cooked quinoa",
+      "Vegetables",
+      "Olive oil"
+    ],
+    "steps": ["Cook salmon and quinoa; finish with oil and vegetables."]
+  },
+  {
+    "id": "bulk-pasta",
+    "phaseId": "bulking",
+    "name": "High-Calorie Pasta",
+    "calories": 850,
+    "proteinG": 45,
+    "carbsG": 100,
+    "fatG": 25,
+    "ingredients": [
+      "120g dry pasta (cooked)",
+      "150g lean mince or chicken",
+      "Tomato sauce",
+      "Cheese or oil to raise calories"
+    ],
+    "steps": [
+      "Cook pasta.",
+      "Brown protein and combine with sauce.",
+      "Add cheese/oil if you need more surplus."
+    ]
+  }
+]

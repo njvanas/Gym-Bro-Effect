@@ -1,0 +1,132 @@
+[
+  {
+    "id": "maintaining",
+    "name": "Maintaining",
+    "tagline": "Hold your physique while recovering for the next phase.",
+    "overview": [
+      "Maintenance sustains your current physique while preserving muscle and strength with balanced nutrition and training.",
+      "It is often overlooked but critical for long-term success — a stable base between cutting and bulking.",
+      "Recommended duration is about 3 months between bulk and cut blocks so metabolism, habits, and recovery can settle."
+    ],
+    "nutritionGuidelines": [
+      "Match calories to TDEE so weight stays relatively stable.",
+      "Protein: 1.6–2.2g per kg body weight.",
+      "Carbohydrates: 3–5g per kg, adjusted to activity.",
+      "Fats: 0.8–1g per kg from balanced sources.",
+      "Aim for 3–4 balanced meals with consistency over perfection."
+    ],
+    "stapleFoods": [
+      {
+        "category": "protein",
+        "items": ["Chicken breast", "Turkey", "Eggs", "Greek yogurt", "Fish", "Lean beef", "Legumes"]
+      },
+      {
+        "category": "carbs",
+        "items": ["Brown rice", "Sweet potatoes", "Oats", "Whole grain bread", "Quinoa", "Fruit", "Whole grain pasta"]
+      },
+      {
+        "category": "fats",
+        "items": ["Avocado", "Nuts and seeds", "Olive oil", "Nut butters", "Fatty fish", "Whole eggs"]
+      },
+      {
+        "category": "vegetables",
+        "items": ["Broccoli", "Spinach", "Bell peppers", "Carrots", "Asparagus", "Mixed greens", "Tomatoes"]
+      }
+    ],
+    "dailyRoutine": [
+      { "time": "7:00 AM", "label": "Wake up", "detail": "Water, supplements, flexible morning timing." },
+      { "time": "7:30 AM", "label": "Breakfast", "detail": "Balanced meal with protein, carbs, and fats." },
+      { "time": "12:00 PM", "label": "Lunch", "detail": "Protein-forward plate with vegetables and carbs." },
+      { "time": "4:00–6:00 PM", "label": "Training window", "detail": "Preserve strength with sustainable volume." },
+      { "time": "7:00 PM", "label": "Dinner", "detail": "Final balanced meal; keep calories near TDEE." },
+      { "time": "10:30 PM", "label": "Sleep", "detail": "Prioritize 7–9 hours for recovery." }
+    ]
+  },
+  {
+    "id": "cutting",
+    "name": "Cutting",
+    "tagline": "Lose fat while protecting hard-earned muscle.",
+    "overview": [
+      "Cutting uses a controlled calorie deficit to reduce body fat while prioritizing protein and training performance.",
+      "Progress comes primarily from fuel — without a deficit, fat loss stalls.",
+      "Keep the deficit moderate so strength and recovery stay workable."
+    ],
+    "nutritionGuidelines": [
+      "Eat below TDEE with a sustainable deficit (often ~300–500 kcal).",
+      "Protein: keep high (around 2.0–2.4g per kg) to protect muscle.",
+      "Carbs: lower than maintenance but timed around training when helpful.",
+      "Fats: enough for hormones — do not crash dietary fat to zero.",
+      "Track weight weekly trends, measurements, and photos — not day-to-day noise."
+    ],
+    "stapleFoods": [
+      {
+        "category": "protein",
+        "items": ["Chicken breast", "Turkey", "Egg whites", "Non-fat Greek yogurt", "White fish", "Lean turkey mince", "Whey protein"]
+      },
+      {
+        "category": "carbs",
+        "items": ["Rice", "Potatoes", "Oats", "Fruit", "Rice cakes", "Vegetables as volume foods"]
+      },
+      {
+        "category": "fats",
+        "items": ["Olive oil (measured)", "Small portions of nuts", "Egg yolks in moderation", "Fatty fish occasionally"]
+      },
+      {
+        "category": "vegetables",
+        "items": ["Broccoli", "Spinach", "Zucchini", "Cucumber", "Leafy greens", "Peppers", "Cauliflower"]
+      }
+    ],
+    "dailyRoutine": [
+      { "time": "6:30 AM", "label": "Wake + weigh-in", "detail": "Same conditions each morning for trend data." },
+      { "time": "7:00 AM", "label": "High-protein breakfast", "detail": "Start protein early to hit daily targets." },
+      { "time": "12:00 PM", "label": "Lean lunch", "detail": "Volume vegetables + lean protein." },
+      { "time": "5:00 PM", "label": "Train", "detail": "Protect performance; fuel around the session." },
+      { "time": "7:00 PM", "label": "Dinner", "detail": "Finish remaining macros without binge swings." },
+      { "time": "10:00 PM", "label": "Sleep", "detail": "Recovery is non-negotiable in a deficit." }
+    ]
+  },
+  {
+    "id": "bulking",
+    "name": "Bulking",
+    "tagline": "Eat in a surplus so growth is actually possible.",
+    "overview": [
+      "Bulking requires a calorie surplus — without surplus, meaningful muscle growth is extremely limited for natural trainees.",
+      "Pair progressive training with enough food, protein, and sleep.",
+      "Keep the surplus controlled to grow without unnecessary fat gain."
+    ],
+    "nutritionGuidelines": [
+      "Eat above TDEE (often ~250–500 kcal surplus).",
+      "Protein: ~1.6–2.2g per kg body weight.",
+      "Carbs: higher to support training performance and recovery.",
+      "Fats: fill remaining calories with quality sources.",
+      "If scale weight is flat for 2+ weeks, raise calories — training alone cannot force growth in a deficit."
+    ],
+    "stapleFoods": [
+      {
+        "category": "protein",
+        "items": ["Chicken", "Beef", "Eggs", "Greek yogurt", "Salmon", "Whey", "Dairy"]
+      },
+      {
+        "category": "carbs",
+        "items": ["White/brown rice", "Pasta", "Oats", "Bread", "Potatoes", "Fruit", "Cereal"]
+      },
+      {
+        "category": "fats",
+        "items": ["Olive oil", "Nut butters", "Avocado", "Nuts", "Whole milk", "Fatty fish"]
+      },
+      {
+        "category": "vegetables",
+        "items": ["Broccoli", "Spinach", "Mixed vegetables", "Salads", "Peppers", "Tomatoes"]
+      }
+    ],
+    "dailyRoutine": [
+      { "time": "7:00 AM", "label": "Wake + breakfast", "detail": "Large protein + carb meal to start surplus." },
+      { "time": "10:30 AM", "label": "Snack", "detail": "Calories between meals if appetite is low." },
+      { "time": "1:00 PM", "label": "Lunch", "detail": "Rice/potato + meat + fats." },
+      { "time": "5:00 PM", "label": "Train hard", "detail": "Progressive overload; see Bro Training for methods." },
+      { "time": "7:00 PM", "label": "Post-workout meal", "detail": "Protein + carbs to support recovery." },
+      { "time": "9:30 PM", "label": "Final meal / shake", "detail": "Close remaining surplus calories." },
+      { "time": "11:00 PM", "label": "Sleep", "detail": "Growth happens when you recover." }
+    ]
+  }
+]

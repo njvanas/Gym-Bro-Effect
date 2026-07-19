@@ -1,0 +1,134 @@
+[
+  {
+    "id": "body-weight-scale",
+    "name": "Body Weight Scale",
+    "tier": "essential",
+    "category": "body-composition",
+    "tracks": "Total body weight",
+    "necessity": "Daily weight tracking is the most basic and important metric for knowing if you are gaining, losing, or maintaining.",
+    "advice": "Any basic digital scale works. Weigh at the same time daily (morning, after bathroom, before eating).",
+    "purchaseReason": "Necessity — basic requirement for tracking progress."
+  },
+  {
+    "id": "body-fat-calipers",
+    "name": "Body Fat Calipers",
+    "tier": "advised",
+    "category": "body-composition",
+    "tracks": "Estimated body fat percentage",
+    "necessity": "Useful for composition changes, but weight plus photos can be enough.",
+    "advice": "Affordable for home use; practice consistency. DEXA is more accurate but not required.",
+    "purchaseReason": "Wanted more detailed composition data."
+  },
+  {
+    "id": "measuring-tape",
+    "name": "Measuring Tape",
+    "tier": "essential",
+    "category": "body-composition",
+    "tracks": "Body measurements (chest, arms, waist, thighs, etc.)",
+    "necessity": "Shows muscle growth or fat loss that the scale alone cannot.",
+    "advice": "Use a simple fabric tape on the same spots weekly or bi-weekly.",
+    "purchaseReason": "Necessity — essential for tracking muscle growth."
+  },
+  {
+    "id": "progress-photos",
+    "name": "Progress Photos",
+    "tier": "essential",
+    "category": "body-composition",
+    "tracks": "Visual physique changes",
+    "necessity": "Photos capture progress numbers miss. Free and highly valuable.",
+    "advice": "Same lighting, poses, and time of day. Front, side, and back views.",
+    "purchaseReason": "Necessity — free visual tracking with your phone."
+  },
+  {
+    "id": "smart-scale",
+    "name": "Smart Scale (Body Composition)",
+    "tier": "want",
+    "category": "body-composition",
+    "tracks": "Weight plus estimated body fat and muscle mass",
+    "necessity": "Composition estimates are often inaccurate; the weight reading matters most.",
+    "advice": "Convenient if you want app sync, but a basic scale + tape + photos is better value.",
+    "purchaseReason": "Want — convenience and curiosity; accuracy is questionable."
+  },
+  {
+    "id": "food-scale",
+    "name": "Food Scale (Digital)",
+    "tier": "essential",
+    "category": "nutrition",
+    "tracks": "Accurate food weights for calorie and macro tracking",
+    "necessity": "Eyeballing portions leads to inaccurate tracking, especially when cutting.",
+    "advice": "Any digital kitchen scale in grams works.",
+    "purchaseReason": "Necessity — essential for accurate nutrition tracking."
+  },
+  {
+    "id": "nutrition-app",
+    "name": "Nutrition Tracking App",
+    "tier": "essential",
+    "category": "nutrition",
+    "tracks": "Calories, macros, micros, meal logging",
+    "necessity": "Apps make accurate logging far easier than paper; free versions are usually enough.",
+    "advice": "MyFitnessPal, Cronometer, or similar free apps work well.",
+    "purchaseReason": "Necessity — efficient nutrition tracking.",
+    "url": "https://www.myfitnesspal.com/"
+  },
+  {
+    "id": "meal-prep-containers",
+    "name": "Meal Prep Containers",
+    "tier": "advised",
+    "category": "nutrition",
+    "tracks": "Meal preparation and portion control",
+    "necessity": "Not essential, but improves consistency.",
+    "advice": "Any food storage containers work; compartments are nice, not required.",
+    "purchaseReason": "Want — convenience for meal prep."
+  },
+  {
+    "id": "training-log-app",
+    "name": "Training Log App (Hevy, Strong, etc.)",
+    "tier": "essential",
+    "category": "training",
+    "tracks": "Exercises, sets, reps, weight, rest, progression",
+    "necessity": "You need last session's numbers to progressive overload.",
+    "advice": "Hevy or Strong are excellent; a notebook also works if used consistently.",
+    "purchaseReason": "Necessity — track progressive overload.",
+    "url": "https://www.hevyapp.com/"
+  },
+  {
+    "id": "training-notebook",
+    "name": "Notebook / Journal",
+    "tier": "alternative",
+    "category": "training",
+    "tracks": "Training sessions, notes, observations",
+    "necessity": "Essential if you are not using an app.",
+    "advice": "Method matters less than consistency.",
+    "purchaseReason": "Personal preference for pen and paper."
+  },
+  {
+    "id": "timer",
+    "name": "Timer / Stopwatch",
+    "tier": "advised",
+    "category": "training",
+    "tracks": "Rest periods and rest-pause intervals",
+    "necessity": "Helpful for timed rest techniques; phone timer is enough.",
+    "advice": "No dedicated device required.",
+    "purchaseReason": "Not needed — phone timer is sufficient."
+  },
+  {
+    "id": "sleep-tracker",
+    "name": "Sleep Tracker (App or Wearable)",
+    "tier": "advised",
+    "category": "recovery",
+    "tracks": "Sleep duration, quality, patterns",
+    "necessity": "Sleep drives recovery; detailed trackers are optional.",
+    "advice": "Free apps work; focus on consistently getting 7–9 hours.",
+    "purchaseReason": "Want — more detailed sleep data."
+  },
+  {
+    "id": "heart-rate-monitor",
+    "name": "Heart Rate Monitor",
+    "tier": "want",
+    "category": "recovery",
+    "tracks": "Training and resting heart rate",
+    "necessity": "Interesting but not necessary for bodybuilding progress.",
+    "advice": "Prioritize progressive overload over heart-rate zones for hypertrophy.",
+    "purchaseReason": "Want — curiosity about training heart rate."
+  }
+]

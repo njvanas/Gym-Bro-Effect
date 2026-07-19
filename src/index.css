@@ -50,9 +50,15 @@ textarea {
   font: inherit;
 }
 
-button {
-  cursor: pointer;
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  min-height: 44px;
 }
+
 
 button:focus-visible,
 a:focus-visible,
