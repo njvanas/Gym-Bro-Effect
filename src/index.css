@@ -1841,6 +1841,140 @@ table.ex tr:last-child td {
   background: var(--chip);
 }
 
+/* ── Bro Exercises ── */
+
+.exercises-heading {
+  margin: 0.35rem 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.exercises-toolbar {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.exercises-search {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.9rem;
+}
+
+.exercises-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  align-items: start;
+}
+
+.exercise-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.exercise-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.exercise-card.expanded {
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+}
+
+.exercise-card-main {
+  width: 100%;
+  display: grid;
+  gap: 0.55rem;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 1rem 1.05rem;
+  min-height: 44px;
+}
+
+.exercise-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.exercise-card-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.exercise-card-chevron {
+  flex: 0 0 auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.exercise-hevy {
+  margin: 0;
+  font-size: 0.82rem;
+}
+
+.exercise-card-details {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0 1.05rem 1rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.exercise-detail-block {
+  padding-top: 0.75rem;
+}
+
+.exercise-detail-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.exercise-cues {
+  margin: 0;
+  padding-left: 1.05rem;
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.exercise-note p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
 /* ── Who is Bro? ── */
 
 .who-masthead {

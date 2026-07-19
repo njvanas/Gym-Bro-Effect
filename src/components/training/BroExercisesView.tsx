@@ -1,108 +1,158 @@
 import { useMemo, useState } from 'react';
 
-import { muscleGroupSchema, type MuscleGroup } from '../../schema';
 import { exercises } from '../../lib/db';
+import { categoryLabel, equipmentLabel, muscleLabel } from '../../lib/format';
 import { filterExercises } from '../../lib/training-filters';
-
-const muscles: Array<MuscleGroup | 'all'> = ['all', ...muscleGroupSchema.options];
+import type { Exercise, MuscleGroup } from '../../schema';
 
 export function BroExercisesView() {
   const [query, setQuery] = useState('');
   const [muscle, setMuscle] = useState<MuscleGroup | 'all'>('all');
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  const muscleOptions = useMemo(() => {
+    const set = new Set<MuscleGroup>();
+    for (const ex of exercises) set.add(ex.primaryMuscle);
+    return [...set].sort((a, b) => muscleLabel(a).localeCompare(muscleLabel(b)));
+  }, []);
+
   const filtered = useMemo(
     () => filterExercises(exercises, query, muscle),
     [query, muscle],
   );
-  const [selectedId, setSelectedId] = useState(filtered[0]?.id ?? exercises[0]?.id ?? '');
-  const selected =
-    filtered.find((e) => e.id === selectedId) ??
-    exercises.find((e) => e.id === selectedId) ??
-    filtered[0];
 
   return (
-    <div className="stack">
-      <div className="search-row">
+    <div className="exercises-view stack">
+      <header className="section-masthead">
+        <p className="section-kicker">Library</p>
+        <h3 className="exercises-heading">Bro Exercises</h3>
+        <p className="section-lede">
+          Search the library, filter by muscle, then expand a card for cues — no long side panel.
+        </p>
+      </header>
+
+      <div className="exercises-toolbar">
         <input
           type="search"
-          placeholder="Search exercises"
+          className="exercises-search"
+          placeholder="Search name, Hevy name, or alias…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           aria-label="Search Bro Exercises"
         />
-        <select
-          value={muscle}
-          onChange={(e) => setMuscle(e.target.value as MuscleGroup | 'all')}
-          aria-label="Filter by muscle"
-        >
-          {muscles.map((m) => (
-            <option value={m} key={m}>
-              {m === 'all' ? 'All muscles' : m}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="split">
-        <div className="stack">
-          {filtered.map((exercise) => (
+        <div className="legends-filter-rail" role="group" aria-label="Filter by primary muscle">
+          <button
+            type="button"
+            className={`legends-filter-chip${muscle === 'all' ? ' active' : ''}`}
+            aria-pressed={muscle === 'all'}
+            onClick={() => setMuscle('all')}
+          >
+            All
+          </button>
+          {muscleOptions.map((m) => (
             <button
-              key={exercise.id}
+              key={m}
               type="button"
-              className={exercise.id === selected?.id ? 'list-button active' : 'list-button'}
-              onClick={() => setSelectedId(exercise.id)}
+              className={`legends-filter-chip${muscle === m ? ' active' : ''}`}
+              aria-pressed={muscle === m}
+              onClick={() => setMuscle((current) => (current === m ? 'all' : m))}
             >
-              <strong>{exercise.name}</strong>
-              <div className="muted">
-                {exercise.primaryMuscle} · {exercise.equipment} · {exercise.category}
-              </div>
+              {muscleLabel(m)}
             </button>
           ))}
         </div>
-        {selected ? (
-          <article className="detail-panel stack">
-            <header>
-              <h3>{selected.name}</h3>
-              {selected.hevyName ? (
-                <p className="muted">Hevy: {selected.hevyName}</p>
-              ) : null}
-              <div className="tag-row">
-                <span className="tag accent">{selected.primaryMuscle}</span>
-                <span className="tag">{selected.equipment}</span>
-                <span className="tag">{selected.category}</span>
-              </div>
-            </header>
-            {selected.secondaryMuscles.length > 0 ? (
-              <section>
-                <h4>Secondary muscles</h4>
-                <div className="tag-row">
-                  {selected.secondaryMuscles.map((m) => (
-                    <span className="tag" key={m}>
-                      {m}
-                    </span>
-                  ))}
-                </div>
-              </section>
-            ) : null}
-            {selected.cues.length > 0 ? (
-              <section>
-                <h4>Cues</h4>
-                <ul className="clean">
-                  {selected.cues.map((cue) => (
-                    <li key={cue}>{cue}</li>
-                  ))}
-                </ul>
-              </section>
-            ) : null}
-            {selected.bloodAndGutsNote ? (
-              <section>
-                <h4>Blood & Guts note</h4>
-                <p>{selected.bloodAndGutsNote}</p>
-              </section>
-            ) : null}
-          </article>
-        ) : (
-          <p className="muted">No exercises match that search.</p>
-        )}
+        <p className="legends-search-hint">
+          {filtered.length} of {exercises.length} exercises
+          {muscle !== 'all' ? ` · ${muscleLabel(muscle)}` : ''}
+          {query.trim() ? ` matching “${query.trim()}”` : ''}
+        </p>
       </div>
+
+      {filtered.length === 0 ? (
+        <div className="empty">No exercises match those filters.</div>
+      ) : (
+        <div className="exercises-grid">
+          {filtered.map((exercise) => (
+            <ExerciseCard
+              key={exercise.id}
+              exercise={exercise}
+              expanded={expandedId === exercise.id}
+              onToggle={() =>
+                setExpandedId((current) => (current === exercise.id ? null : exercise.id))
+              }
+            />
+          ))}
+        </div>
+      )}
     </div>
+  );
+}
+
+type ExerciseCardProps = {
+  exercise: Exercise;
+  expanded: boolean;
+  onToggle: () => void;
+};
+
+function ExerciseCard({ exercise, expanded, onToggle }: ExerciseCardProps) {
+  const hasDetails =
+    exercise.cues.length > 0 ||
+    Boolean(exercise.bloodAndGutsNote) ||
+    exercise.secondaryMuscles.length > 0;
+
+  return (
+    <article className={`exercise-card${expanded ? ' expanded' : ''}`}>
+      <button type="button" className="exercise-card-main" onClick={onToggle}>
+        <div className="exercise-card-top">
+          <h4 className="exercise-card-title">{exercise.name}</h4>
+          {hasDetails ? (
+            <span className="exercise-card-chevron" aria-hidden>
+              {expanded ? '−' : '+'}
+            </span>
+          ) : null}
+        </div>
+        {exercise.hevyName && exercise.hevyName !== exercise.name ? (
+          <p className="exercise-hevy muted">Hevy: {exercise.hevyName}</p>
+        ) : null}
+        <div className="chips">
+          <span className="chip accent">{muscleLabel(exercise.primaryMuscle)}</span>
+          <span className="chip">{equipmentLabel(exercise.equipment)}</span>
+          <span className="chip">{categoryLabel(exercise.category)}</span>
+        </div>
+      </button>
+
+      {expanded && hasDetails ? (
+        <div className="exercise-card-details">
+          {exercise.secondaryMuscles.length > 0 ? (
+            <div className="exercise-detail-block">
+              <span className="exercise-detail-label">Also hits</span>
+              <div className="chips">
+                {exercise.secondaryMuscles.map((m) => (
+                  <span className="chip" key={m}>
+                    {muscleLabel(m)}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ) : null}
+          {exercise.cues.length > 0 ? (
+            <div className="exercise-detail-block">
+              <span className="exercise-detail-label">Cues</span>
+              <ul className="exercise-cues">
+                {exercise.cues.map((cue) => (
+                  <li key={cue}>{cue}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+          {exercise.bloodAndGutsNote ? (
+            <div className="exercise-detail-block exercise-note">
+              <span className="exercise-detail-label">Blood &amp; Guts</span>
+              <p>{exercise.bloodAndGutsNote}</p>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
+    </article>
   );
 }
