@@ -1,9 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Teko:wght@500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
-html,
+:root,
+[data-theme='dark'] {
+  --bg: #0e0f12;
+  --surface: #171a1f;
+  --surface-2: #1e232b;
+  --text: #f2f4f7;
+  --text-muted: #9aa3b2;
+  --border: #2a303a;
+  --accent: #c8f542;
+  --accent-text: #0e0f12;
+  --danger: #ff5c5c;
+  --font-display: 'Teko', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+[data-theme='light'] {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --surface-2: #e8ecf1;
+  --text: #12151a;
+  --text-muted: #5c6675;
+  --border: #d0d6e0;
+  --accent: #8fbf00;
+  --accent-text: #0e0f12;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
 body {
   margin: 0;
-  padding: 0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
 }

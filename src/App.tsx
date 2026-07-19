@@ -1,3 +1,10 @@
+import { ThemeToggle } from './components/ThemeToggle';
+
 export function App() {
-  return <h1>Gym Bro Effect</h1>;
+  return (
+    <>
+      <ThemeToggle />
+      <h1>Gym Bro Effect</h1>
+    </>
+  );
 }
