@@ -23,67 +23,113 @@ function foodCategoryLabel(category: Phase['stapleFoods'][number]['category']): 
   }
 }
 
+function foodCategoryEmoji(category: Phase['stapleFoods'][number]['category']): string {
+  switch (category) {
+    case 'protein':
+      return '🥩';
+    case 'carbs':
+      return '🍚';
+    case 'fats':
+      return '🥑';
+    case 'vegetables':
+      return '🥦';
+    default: {
+      const _exhaustive: never = category;
+      return _exhaustive;
+    }
+  }
+}
+
 export function PhaseDetail({ phase }: PhaseDetailProps) {
   const recipes = getRecipesForPhase(phase.id);
 
   return (
-    <div className="stack">
-      <header className="panel stack">
-        <h3>{phase.name}</h3>
-        <p className="muted">{phase.tagline}</p>
+    <div className="stack phase-detail">
+      <header className={`phase-hero phase-hero--${phase.id}`}>
+        <p className="legend-eyebrow">Bro Fuel</p>
+        <h2 className="legend-detail-title">{phase.name}</h2>
+        <p className="phase-hero-tagline">{phase.tagline}</p>
+        <div className="chips">
+          <span className="chip accent">{recipes.length} recipes</span>
+          <span className="chip">{phase.stapleFoods.length} food groups</span>
+          <span className="chip">{phase.dailyRoutine.length} daily blocks</span>
+        </div>
       </header>
 
-      <section className="panel stack">
-        <h4>Overview</h4>
+      <nav className="legend-jump" aria-label="On this phase">
+        <a href={`#${phase.id}-overview`}>Overview</a>
+        <a href={`#${phase.id}-nutrition`}>Nutrition</a>
+        <a href={`#${phase.id}-foods`}>Foods</a>
+        <a href={`#${phase.id}-recipes`}>Recipes</a>
+        <a href={`#${phase.id}-routine`}>Daily routine</a>
+      </nav>
+
+      <section className="fuel-panel stack" id={`${phase.id}-overview`}>
+        <h3 className="legend-col-title">Overview</h3>
         {phase.overview.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+          <p key={paragraph} className="fuel-prose">
+            {paragraph}
+          </p>
         ))}
       </section>
 
-      <section className="panel stack">
-        <h4>Nutrition guidelines</h4>
-        <ul className="clean">
-          {phase.nutritionGuidelines.map((item) => (
-            <li key={item}>{item}</li>
+      <section className="fuel-panel stack" id={`${phase.id}-nutrition`}>
+        <h3 className="legend-col-title">Nutrition guidelines</h3>
+        <ul className="principle-list">
+          {phase.nutritionGuidelines.map((item, index) => (
+            <li key={item}>
+              <span className="principle-num" aria-hidden>
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span className="principle-text">{item}</span>
+            </li>
           ))}
         </ul>
       </section>
 
-      <section className="panel stack">
-        <h4>Staple foods</h4>
-        <div className="journey-grid">
+      <section className="stack" id={`${phase.id}-foods`}>
+        <h3 className="legend-col-title">Staple foods</h3>
+        <div className="food-grid">
           {phase.stapleFoods.map((group) => (
-            <div className="card" key={group.category}>
-              <strong>{foodCategoryLabel(group.category)}</strong>
+            <article className="food-card" key={group.category}>
+              <div className="food-card-head">
+                <span className="food-card-emoji" aria-hidden>
+                  {foodCategoryEmoji(group.category)}
+                </span>
+                <strong>{foodCategoryLabel(group.category)}</strong>
+              </div>
               <ul className="clean">
                 {group.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            </div>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="stack">
-        <h4>Recipes</h4>
-        <div className="journey-grid">
+      <section className="stack" id={`${phase.id}-recipes`}>
+        <h3 className="legend-col-title">Recipes</h3>
+        <div className="recipe-grid">
           {recipes.map((recipe) => (
             <RecipeCard key={recipe.id} recipe={recipe} />
           ))}
         </div>
       </section>
 
-      <section className="panel stack">
-        <h4>Daily routine</h4>
-        <ul className="clean">
+      <section className="fuel-panel stack" id={`${phase.id}-routine`}>
+        <h3 className="legend-col-title">Daily routine</h3>
+        <ol className="daily-timeline">
           {phase.dailyRoutine.map((block) => (
             <li key={`${block.time}-${block.label}`}>
-              <strong>{block.time}</strong> — {block.label}
-              {block.detail ? <div className="muted">{block.detail}</div> : null}
+              <span className="daily-time">{block.time}</span>
+              <div className="daily-body">
+                <strong>{block.label}</strong>
+                {block.detail ? <p className="muted">{block.detail}</p> : null}
+              </div>
             </li>
           ))}
-        </ul>
+        </ol>
       </section>
     </div>
   );

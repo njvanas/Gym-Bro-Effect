@@ -1475,3 +1475,364 @@ table.ex tr:last-child td {
   }
 }
 
+/* ── Shared section mastheads (Fuel / Tools) ── */
+
+.section-masthead {
+  margin-bottom: 0.5rem;
+}
+
+.section-kicker {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.section-display-title {
+  margin: 0.35rem 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+}
+
+.section-display-title .accent {
+  color: var(--accent);
+}
+
+.section-lede {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  max-width: 40rem;
+  line-height: 1.5;
+}
+
+/* ── Bro Fuel ── */
+
+.fuel-hub-grid {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 900px) {
+  .fuel-hub-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.fuel-hub-card--maintaining {
+  border-color: color-mix(in srgb, #6bcf8e 35%, var(--border));
+}
+
+.fuel-hub-card--cutting {
+  border-color: color-mix(in srgb, #5b8def 35%, var(--border));
+}
+
+.fuel-hub-card--bulking {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.phase-hero {
+  padding: 1.4rem 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, var(--accent-soft), transparent 55%), var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.phase-hero--maintaining {
+  background: linear-gradient(135deg, color-mix(in srgb, #6bcf8e 18%, transparent), transparent 55%),
+    var(--surface);
+}
+
+.phase-hero--cutting {
+  background: linear-gradient(135deg, color-mix(in srgb, #5b8def 18%, transparent), transparent 55%),
+    var(--surface);
+}
+
+.phase-hero--bulking {
+  background: linear-gradient(135deg, var(--accent-soft), transparent 55%), var(--surface);
+}
+
+.phase-hero-tagline {
+  margin: 0 0 0.85rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.fuel-panel {
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.fuel-prose {
+  margin: 0;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.food-grid,
+.recipe-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.food-card {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.food-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.55rem;
+}
+
+.food-card-emoji {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.15rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.recipe-card-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.recipe-macro-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.55rem;
+}
+
+.recipe-macro {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.2rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.recipe-macro em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--accent-ink);
+}
+
+.recipe-card-section h5 {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.recipe-steps {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.daily-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.daily-timeline li {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, auto) 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+}
+
+.daily-time {
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 0.3rem 0.55rem;
+  text-align: center;
+}
+
+.daily-body {
+  min-width: 0;
+}
+
+.daily-body strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.daily-body p {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .daily-timeline li {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Bro Tools ── */
+
+.tools-category {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.tools-category-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.tools-category-head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: 0.03em;
+  flex: 1;
+}
+
+.tools-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.1rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.tool-card--essential {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+.tool-card--advised {
+  border-color: color-mix(in srgb, #5b8def 40%, var(--border));
+}
+
+.tool-card--want {
+  border-color: color-mix(in srgb, #c084fc 35%, var(--border));
+}
+
+.tool-card-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.tool-card-tracks {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.tool-card-body,
+.tool-card-advice,
+.tool-card-purchase {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.tool-card-link {
+  margin-top: auto;
+  padding-top: 0.35rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.tool-card-link:hover {
+  text-decoration: underline;
+}
+
+.tool-tier--essential {
+  background: var(--accent-soft);
+}
+
+.tool-tier--advised {
+  background: color-mix(in srgb, #5b8def 18%, transparent);
+  border-color: color-mix(in srgb, #5b8def 45%, var(--border));
+  color: #8eb6ff;
+}
+
+[data-theme='light'] .tool-tier--advised {
+  color: #2a56a8;
+}
+
+.tool-tier--want {
+  background: color-mix(in srgb, #c084fc 16%, transparent);
+  border-color: color-mix(in srgb, #c084fc 40%, var(--border));
+}
+
+.tool-tier--alternative {
+  background: var(--chip);
+}
+
+

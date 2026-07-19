@@ -1,4 +1,4 @@
-export type Pillar = 'home' | 'training' | 'fuel' | 'tools';
+export type Pillar = 'home' | 'training' | 'fuel' | 'tools' | 'who';
 
 export function pillarLabel(pillar: Pillar): string {
   switch (pillar) {
@@ -10,6 +10,8 @@ export function pillarLabel(pillar: Pillar): string {
       return 'Bro Fuel';
     case 'tools':
       return 'Bro Tools';
+    case 'who':
+      return 'Who is Bro?';
     default: {
       const exhaustive: never = pillar;
       return exhaustive;

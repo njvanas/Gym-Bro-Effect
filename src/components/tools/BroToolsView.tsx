@@ -9,7 +9,7 @@ const tiers: Array<ToolTier | 'all'> = ['all', 'essential', 'advised', 'want', '
 function tierLabel(tier: ToolTier | 'all'): string {
   switch (tier) {
     case 'all':
-      return 'All tiers';
+      return 'All';
     case 'essential':
       return 'Essential';
     case 'advised':
@@ -42,6 +42,23 @@ function categoryLabel(category: ToolCategory): string {
   }
 }
 
+function categoryEmoji(category: ToolCategory): string {
+  switch (category) {
+    case 'body-composition':
+      return '📏';
+    case 'nutrition':
+      return '🥗';
+    case 'training':
+      return '🏋️';
+    case 'recovery':
+      return '😴';
+    default: {
+      const _exhaustive: never = category;
+      return _exhaustive;
+    }
+  }
+}
+
 export function BroToolsView() {
   const [tier, setTier] = useState<ToolTier | 'all'>('all');
   const filtered = useMemo(() => filterToolsByTier(tools, tier), [tier]);
@@ -57,54 +74,74 @@ export function BroToolsView() {
   }, [filtered]);
 
   return (
-    <section className="stack">
-      <header>
-        <h2>Bro Tools</h2>
-        <p className="muted">Essential, advised, and optional gear for the journey.</p>
+    <section className="stack tools-section">
+      <header className="section-masthead">
+        <p className="section-kicker">Gear & tracking</p>
+        <h2 className="section-display-title">
+          Bro <span className="accent">Tools</span>
+        </h2>
+        <p className="section-lede">
+          Essential, advised, and optional gear for the journey — filter by what you actually need.
+        </p>
       </header>
 
-      <div className="search-row">
-        <select
-          value={tier}
-          onChange={(e) => setTier(e.target.value as ToolTier | 'all')}
-          aria-label="Filter tools by tier"
-        >
-          {tiers.map((item) => (
-            <option value={item} key={item}>
-              {tierLabel(item)}
-            </option>
-          ))}
-        </select>
+      <div className="legends-filter-rail" role="group" aria-label="Filter tools by tier">
+        {tiers.map((item) => (
+          <button
+            key={item}
+            type="button"
+            className={`legends-filter-chip${tier === item ? ' active' : ''}`}
+            aria-pressed={tier === item}
+            onClick={() => setTier(item)}
+          >
+            {tierLabel(item)}
+          </button>
+        ))}
       </div>
 
-      {[...grouped.entries()].map(([category, list]) => (
-        <section className="stack" key={category}>
-          <h3>{categoryLabel(category)}</h3>
-          <div className="journey-grid">
-            {list.map((tool) => (
-              <article className="card stack" key={tool.id}>
-                <div className="tag-row">
-                  <span className="tag accent">{tierLabel(tool.tier)}</span>
-                </div>
-                <h4>{tool.name}</h4>
-                <p>
-                  <strong>Tracks:</strong> {tool.tracks}
-                </p>
-                <p>
-                  <strong>Necessity:</strong> {tool.necessity}
-                </p>
-                <p>
-                  <strong>Advice:</strong> {tool.advice}
-                </p>
-                <p className="muted">
-                  <strong>Purchase:</strong> {tool.purchaseReason}
-                </p>
-                {tool.url ? <ExternalLink href={tool.url}>Learn more</ExternalLink> : null}
-              </article>
-            ))}
-          </div>
-        </section>
-      ))}
+      <p className="legends-search-hint">
+        {filtered.length} of {tools.length} tools
+        {tier !== 'all' ? ` · ${tierLabel(tier)}` : ''}
+      </p>
+
+      {filtered.length === 0 ? (
+        <div className="empty">No tools in that tier.</div>
+      ) : (
+        [...grouped.entries()].map(([category, list]) => (
+          <section className="tools-category" key={category}>
+            <div className="tools-category-head">
+              <span aria-hidden>{categoryEmoji(category)}</span>
+              <h3>{categoryLabel(category)}</h3>
+              <span className="muted">{list.length}</span>
+            </div>
+            <div className="tools-grid">
+              {list.map((tool) => (
+                <article className={`tool-card tool-card--${tool.tier}`} key={tool.id}>
+                  <div className="tool-card-top">
+                    <span className={`tag accent tool-tier tool-tier--${tool.tier}`}>
+                      {tierLabel(tool.tier)}
+                    </span>
+                  </div>
+                  <h4 className="tool-card-title">{tool.name}</h4>
+                  <p className="tool-card-tracks">
+                    <strong>Tracks</strong> {tool.tracks}
+                  </p>
+                  <p className="tool-card-body">{tool.necessity}</p>
+                  <p className="tool-card-advice muted">{tool.advice}</p>
+                  <p className="tool-card-purchase muted">
+                    <strong>Purchase:</strong> {tool.purchaseReason}
+                  </p>
+                  {tool.url ? (
+                    <ExternalLink className="tool-card-link" href={tool.url}>
+                      Learn more →
+                    </ExternalLink>
+                  ) : null}
+                </article>
+              ))}
+            </div>
+          </section>
+        ))
+      )}
     </section>
   );
 }
