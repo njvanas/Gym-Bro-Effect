@@ -8,6 +8,11 @@ const paths: Array<{ pillar: Exclude<Pillar, 'home'>; title: string; copy: strin
   { pillar: 'training', title: 'Bro Training', copy: 'Build focused workouts that move you forward.' },
   { pillar: 'fuel', title: 'Bro Fuel', copy: 'Fuel your goals with practical nutrition.' },
   { pillar: 'tools', title: 'Bro Tools', copy: 'Use simple tools to track and improve.' },
+  {
+    pillar: 'who',
+    title: 'Who is Bro?',
+    copy: 'Just your friendly neighbourhood Bro.',
+  },
 ];
 
 export function HomeView({ onNavigate }: HomeViewProps) {

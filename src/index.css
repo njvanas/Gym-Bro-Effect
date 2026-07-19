@@ -227,7 +227,7 @@ select:focus-visible {
   right: 0;
   bottom: 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0.25rem;
   padding: 0.4rem;
   background: var(--surface);
@@ -433,7 +433,7 @@ ul.clean {
   }
 
   .journey-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .split {
@@ -442,6 +442,12 @@ ul.clean {
 
   .search-row {
     grid-template-columns: 1fr auto;
+  }
+}
+
+@media (min-width: 1100px) {
+  .journey-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -1834,5 +1840,16 @@ table.ex tr:last-child td {
 .tool-tier--alternative {
   background: var(--chip);
 }
+
+/* ── Who is Bro? ── */
+
+.who-masthead {
+  max-width: 40rem;
+}
+
+.who-lede-soon {
+  font-style: italic;
+}
+
 
 

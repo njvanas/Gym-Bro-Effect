@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { AppShell } from './components/AppShell';
 import { HomeView } from './components/HomeView';
+import { WhoIsBroView } from './components/WhoIsBroView';
 import { BroFuelView } from './components/fuel/BroFuelView';
 import { BroToolsView } from './components/tools/BroToolsView';
 import { BroTrainingView } from './components/training/BroTrainingView';
@@ -23,6 +24,9 @@ export function App() {
       break;
     case 'tools':
       content = <BroToolsView />;
+      break;
+    case 'who':
+      content = <WhoIsBroView />;
       break;
     default: {
       const _exhaustive: never = pillar;

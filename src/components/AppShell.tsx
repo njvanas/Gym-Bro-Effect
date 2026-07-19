@@ -10,7 +10,7 @@ type AppShellProps = {
   children: ReactNode;
 };
 
-const pillars: Pillar[] = ['home', 'training', 'fuel', 'tools'];
+const pillars: Pillar[] = ['home', 'training', 'fuel', 'tools', 'who'];
 
 export function AppShell({ pillar, onNavigate, children }: AppShellProps) {
   const [menuOpen, setMenuOpen] = useState(false);
