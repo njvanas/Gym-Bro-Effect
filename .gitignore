@@ -1,4 +1,7 @@
-node_modules
-dist
+.worktrees/
+.superpowers/
+node_modules/
+dist/
 *.local
+*.tsbuildinfo
 tsconfig*.tsbuildinfo
