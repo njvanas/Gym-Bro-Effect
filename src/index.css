@@ -1870,36 +1870,35 @@ table.ex tr:last-child td {
   display: grid;
   gap: 0.75rem;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  align-items: start;
+  grid-auto-rows: 10.5rem;
+  align-items: stretch;
 }
 
 .exercise-card {
+  height: 100%;
+  min-height: 10.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  text-align: left;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
+  color: inherit;
   box-shadow: var(--shadow);
+  padding: 1rem 1.05rem;
   overflow: hidden;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .exercise-card:hover {
   border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  transform: translateY(-2px);
 }
 
-.exercise-card.expanded {
-  border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
-}
-
-.exercise-card-main {
-  width: 100%;
-  display: grid;
-  gap: 0.55rem;
-  text-align: left;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  padding: 1rem 1.05rem;
-  min-height: 44px;
+.exercise-card.selected {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 .exercise-card-top {
@@ -1907,14 +1906,19 @@ table.ex tr:last-child td {
   justify-content: space-between;
   align-items: flex-start;
   gap: 0.65rem;
+  min-height: 2.7rem;
 }
 
 .exercise-card-title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   letter-spacing: 0.02em;
   line-height: 1.1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .exercise-card-chevron {
@@ -1935,18 +1939,18 @@ table.ex tr:last-child td {
 .exercise-hevy {
   margin: 0;
   font-size: 0.82rem;
+  min-height: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.exercise-card-details {
-  display: grid;
-  gap: 0.75rem;
-  padding: 0 1.05rem 1rem;
-  border-top: 1px solid var(--border);
-  background: var(--bg-elevated);
+.exercise-card-chips {
+  margin-top: auto;
 }
 
 .exercise-detail-block {
-  padding-top: 0.75rem;
+  padding-top: 0.35rem;
 }
 
 .exercise-detail-label {
@@ -1973,6 +1977,68 @@ table.ex tr:last-child td {
   font-size: 0.9rem;
   line-height: 1.45;
   color: var(--text);
+}
+
+.exercise-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.exercise-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: color-mix(in srgb, #0e0f12 72%, transparent);
+  cursor: pointer;
+}
+
+.exercise-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(32rem, 100%);
+  max-height: min(80dvh, 40rem);
+  overflow: auto;
+  display: grid;
+  gap: 0.85rem;
+  padding: 1.2rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-hover);
+}
+
+.exercise-modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.exercise-modal-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+}
+
+.exercise-modal-close {
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  min-height: 44px;
+}
+
+/* Keep decorative icons fixed so opening a modal does not shift them */
+.app-shell .icon-backdrop {
+  position: fixed;
 }
 
 /* ── Who is Bro? ── */

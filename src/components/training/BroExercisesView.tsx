@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { exercises } from '../../lib/db';
 import { categoryLabel, equipmentLabel, muscleLabel } from '../../lib/format';
@@ -8,7 +8,7 @@ import type { Exercise, MuscleGroup } from '../../schema';
 export function BroExercisesView() {
   const [query, setQuery] = useState('');
   const [muscle, setMuscle] = useState<MuscleGroup | 'all'>('all');
-  const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
   const muscleOptions = useMemo(() => {
     const set = new Set<MuscleGroup>();
@@ -21,13 +21,34 @@ export function BroExercisesView() {
     [query, muscle],
   );
 
+  const selected = selectedId
+    ? (exercises.find((exercise) => exercise.id === selectedId) ?? null)
+    : null;
+
+  useEffect(() => {
+    if (!selected) return;
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') setSelectedId(null);
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [selected]);
+
   return (
     <div className="exercises-view stack">
       <header className="section-masthead">
         <p className="section-kicker">Library</p>
         <h3 className="exercises-heading">Bro Exercises</h3>
         <p className="section-lede">
-          Search the library, filter by muscle, then expand a card for cues — no long side panel.
+          Search the library, filter by muscle, then open a card for cues — the grid stays put.
         </p>
       </header>
 
@@ -76,83 +97,126 @@ export function BroExercisesView() {
             <ExerciseCard
               key={exercise.id}
               exercise={exercise}
-              expanded={expandedId === exercise.id}
-              onToggle={() =>
-                setExpandedId((current) => (current === exercise.id ? null : exercise.id))
-              }
+              selected={selectedId === exercise.id}
+              onOpen={() => setSelectedId(exercise.id)}
             />
           ))}
         </div>
       )}
+
+      {selected ? (
+        <ExerciseDetailModal exercise={selected} onClose={() => setSelectedId(null)} />
+      ) : null}
     </div>
   );
 }
 
 type ExerciseCardProps = {
   exercise: Exercise;
-  expanded: boolean;
-  onToggle: () => void;
+  selected: boolean;
+  onOpen: () => void;
 };
 
-function ExerciseCard({ exercise, expanded, onToggle }: ExerciseCardProps) {
-  const hasDetails =
-    exercise.cues.length > 0 ||
-    Boolean(exercise.bloodAndGutsNote) ||
-    exercise.secondaryMuscles.length > 0;
-
+function ExerciseCard({ exercise, selected, onOpen }: ExerciseCardProps) {
   return (
-    <article className={`exercise-card${expanded ? ' expanded' : ''}`}>
-      <button type="button" className="exercise-card-main" onClick={onToggle}>
-        <div className="exercise-card-top">
-          <h4 className="exercise-card-title">{exercise.name}</h4>
-          {hasDetails ? (
-            <span className="exercise-card-chevron" aria-hidden>
-              {expanded ? '−' : '+'}
-            </span>
-          ) : null}
+    <button
+      type="button"
+      className={`exercise-card${selected ? ' selected' : ''}`}
+      onClick={onOpen}
+    >
+      <div className="exercise-card-top">
+        <h4 className="exercise-card-title">{exercise.name}</h4>
+        <span className="exercise-card-chevron" aria-hidden>
+          →
+        </span>
+      </div>
+      <p className="exercise-hevy muted">
+        {exercise.hevyName && exercise.hevyName !== exercise.name
+          ? `Hevy: ${exercise.hevyName}`
+          : '\u00a0'}
+      </p>
+      <div className="chips exercise-card-chips">
+        <span className="chip accent">{muscleLabel(exercise.primaryMuscle)}</span>
+        <span className="chip">{equipmentLabel(exercise.equipment)}</span>
+        <span className="chip">{categoryLabel(exercise.category)}</span>
+      </div>
+    </button>
+  );
+}
+
+type ExerciseDetailModalProps = {
+  exercise: Exercise;
+  onClose: () => void;
+};
+
+function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalProps) {
+  return (
+    <div className="exercise-modal" role="presentation">
+      <button
+        type="button"
+        className="exercise-modal-backdrop"
+        aria-label="Close exercise details"
+        onClick={onClose}
+      />
+      <div
+        className="exercise-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={`exercise-modal-title-${exercise.id}`}
+      >
+        <div className="exercise-modal-head">
+          <div>
+            <h3 id={`exercise-modal-title-${exercise.id}`} className="exercise-modal-title">
+              {exercise.name}
+            </h3>
+            {exercise.hevyName && exercise.hevyName !== exercise.name ? (
+              <p className="muted exercise-hevy">Hevy: {exercise.hevyName}</p>
+            ) : null}
+          </div>
+          <button type="button" className="exercise-modal-close" onClick={onClose}>
+            Close
+          </button>
         </div>
-        {exercise.hevyName && exercise.hevyName !== exercise.name ? (
-          <p className="exercise-hevy muted">Hevy: {exercise.hevyName}</p>
-        ) : null}
+
         <div className="chips">
           <span className="chip accent">{muscleLabel(exercise.primaryMuscle)}</span>
           <span className="chip">{equipmentLabel(exercise.equipment)}</span>
           <span className="chip">{categoryLabel(exercise.category)}</span>
         </div>
-      </button>
 
-      {expanded && hasDetails ? (
-        <div className="exercise-card-details">
-          {exercise.secondaryMuscles.length > 0 ? (
-            <div className="exercise-detail-block">
-              <span className="exercise-detail-label">Also hits</span>
-              <div className="chips">
-                {exercise.secondaryMuscles.map((m) => (
-                  <span className="chip" key={m}>
-                    {muscleLabel(m)}
-                  </span>
-                ))}
-              </div>
+        {exercise.secondaryMuscles.length > 0 ? (
+          <div className="exercise-detail-block">
+            <span className="exercise-detail-label">Also hits</span>
+            <div className="chips">
+              {exercise.secondaryMuscles.map((m) => (
+                <span className="chip" key={m}>
+                  {muscleLabel(m)}
+                </span>
+              ))}
             </div>
-          ) : null}
-          {exercise.cues.length > 0 ? (
-            <div className="exercise-detail-block">
-              <span className="exercise-detail-label">Cues</span>
-              <ul className="exercise-cues">
-                {exercise.cues.map((cue) => (
-                  <li key={cue}>{cue}</li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
-          {exercise.bloodAndGutsNote ? (
-            <div className="exercise-detail-block exercise-note">
-              <span className="exercise-detail-label">Blood &amp; Guts</span>
-              <p>{exercise.bloodAndGutsNote}</p>
-            </div>
-          ) : null}
-        </div>
-      ) : null}
-    </article>
+          </div>
+        ) : null}
+
+        {exercise.cues.length > 0 ? (
+          <div className="exercise-detail-block">
+            <span className="exercise-detail-label">Cues</span>
+            <ul className="exercise-cues">
+              {exercise.cues.map((cue) => (
+                <li key={cue}>{cue}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
+        {exercise.bloodAndGutsNote ? (
+          <div className="exercise-detail-block exercise-note">
+            <span className="exercise-detail-label">Blood &amp; Guts</span>
+            <p>{exercise.bloodAndGutsNote}</p>
+          </div>
+        ) : (
+          <p className="muted">No extra cues logged for this movement yet.</p>
+        )}
+      </div>
+    </div>
   );
 }
