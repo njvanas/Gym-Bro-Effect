@@ -1,33 +1,40 @@
 # Gym Bro Effect
 
-Bro Training, Bro Fuel, and Bro Tools in one place — a static Vite + React app
-with Zod-validated JSON data and GitHub Pages deployment.
+Central hub for **Bro Training**, **Bro Fuel**, and **Bro Tools** — a journey-first bodybuilding resource.
 
-## Getting started
+- **Live POC:** https://njvanas.github.io/Gym-Bro-Effect/
+- **Future domain:** https://gymbroeffect.com/ (cutover later)
 
-Requires Node.js 20+.
+## Pillars
 
-```bash
-npm install
-npm run dev      # http://localhost:5173
-```
+| Pillar | What you get |
+| --- | --- |
+| **Bro Training** | Bro Methods, Bro Routines (Hevy + legend splits), Bro Exercises |
+| **Bro Fuel** | Maintaining / Cutting / Bulking guides, staple foods, recipes, daily schedules |
+| **Bro Tools** | Essential / Advised / Want gear and apps |
+
+Training and fuel stay separate on purpose: surplus vs deficit drives growth or fat loss; methods and routines live under Bro Training.
+
+## Stack
+
+Vite + React + TypeScript, Zod-validated JSON under `src/data/`, Vitest integrity tests, GitHub Actions CI + Pages.
 
 ## Scripts
 
 | Command | Description |
 | --- | --- |
-| `npm run dev` | Start the Vite dev server. |
-| `npm run build` | Type-check and build the production bundle to `dist/`. |
-| `npm run preview` | Preview the production build locally. |
-| `npm run lint` | Run ESLint. |
-| `npm run typecheck` | Type-check without emitting. |
-| `npm test` | Run Vitest. |
-| `npm run test:watch` | Run Vitest in watch mode. |
+| `npm install` | Install dependencies |
+| `npm run dev` | Dev server |
+| `npm run build` | Type-check + production build |
+| `npm run preview` | Preview production build |
+| `npm run lint` | ESLint |
+| `npm run typecheck` | Type-check only |
+| `npm test` | Vitest data/UI helper suite |
 
-## Tech stack
+## Adding content
 
-Vite + React + TypeScript, Zod for schema validation, Vitest for tests, ESLint
-for linting.
+Edit JSON in `src/data/`, then run `npm test`. Do not change workout truth casually — training files were imported from Training Collection.
 
-See `docs/superpowers/plans/2026-07-19-gym-bro-effect-implementation.md` for the
-full implementation plan.
+## Backups
+
+`Training-Collection` and `Gym-Bro-Recipes` remain untouched backup repos of the original sites.
