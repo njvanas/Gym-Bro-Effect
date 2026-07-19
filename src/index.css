@@ -2222,92 +2222,17 @@ table.ex tr:last-child td {
   overflow: visible;
 }
 
-.bro-ink {
-  stroke: color-mix(in srgb, var(--text) 88%, #3a2a1a);
+.bro-fill {
+  fill: color-mix(in srgb, var(--text) 78%, var(--accent));
+}
+
+.bro-line {
+  stroke: color-mix(in srgb, var(--bg) 65%, var(--surface));
   fill: none;
 }
 
-.bro-ink-fill {
-  fill: color-mix(in srgb, var(--text) 82%, #2a1c12);
-}
-
-.bro-cut {
-  stroke: color-mix(in srgb, var(--bg) 70%, var(--surface));
-  fill: none;
-}
-
-.bro-cut-fill {
-  fill: color-mix(in srgb, var(--bg) 55%, var(--surface));
-}
-
-.bro-ground {
-  fill: color-mix(in srgb, var(--text-muted) 22%, transparent);
-}
-
-.bro-hatch-line {
-  stroke: color-mix(in srgb, var(--bg) 55%, transparent);
-  stroke-width: 1.4;
-}
-
-.bro-hatch-line--dense {
-  stroke-width: 1.8;
-  stroke: color-mix(in srgb, var(--bg) 45%, transparent);
-}
-
-.bro-svg--flex,
-.bro-svg--lift {
-  transform-origin: 50% 70%;
-  animation: bro-flex-pulse 0.65s ease-in-out 1;
-}
-
-.bro-flex-arms {
-  transform-origin: 100px 120px;
-  animation: bro-arms-flex 0.65s ease-in-out 1;
-}
-
-.bro-lift-arms {
-  transform-origin: 100px 140px;
-  animation: bro-bar-heave 0.65s ease-in-out 1;
-}
-
-.bro-barbell-lift {
-  transform-origin: 100px 200px;
-}
-
-@keyframes bro-flex-pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  40% {
-    transform: scale(1.04);
-  }
-  65% {
-    transform: scale(1.015);
-  }
-}
-
-@keyframes bro-arms-flex {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(1.06, 0.97);
-  }
-}
-
-@keyframes bro-bar-heave {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  65% {
-    transform: translateY(-4px);
-  }
+.bro-hole {
+  fill: color-mix(in srgb, var(--bg) 70%, var(--surface));
 }
 
 @media (max-width: 1100px) {
@@ -2320,15 +2245,6 @@ table.ex tr:last-child td {
 @media (max-width: 820px) {
   .background-bros {
     display: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bro-svg--flex,
-  .bro-svg--lift,
-  .bro-flex-arms,
-  .bro-lift-arms {
-    animation: none;
   }
 }
 

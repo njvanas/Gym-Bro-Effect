@@ -1,248 +1,211 @@
-import { useEffect, useState } from 'react';
-
 /**
- * Side mascots in pen-and-ink engraving style (inspired by classic gym woodcuts).
- * Any click/tap on the page triggers a flex pulse on both figures.
+ * Static side mascots — original bold bodybuilder silhouettes
+ * in the classic freepik/vecteezy monochrome vector look.
+ * Left: front double biceps. Right: barbell hold.
  */
 export function BackgroundBros() {
-  const [actionId, setActionId] = useState(0);
-
-  useEffect(() => {
-    function triggerAction() {
-      setActionId((id) => id + 1);
-    }
-
-    document.addEventListener('pointerdown', triggerAction, true);
-    return () => document.removeEventListener('pointerdown', triggerAction, true);
-  }, []);
-
   return (
     <div className="background-bros" aria-hidden="true">
-      <div className="background-bro background-bro--left" key={`left-${actionId}`}>
-        <DoubleBicepsEngraving />
+      <div className="background-bro background-bro--left">
+        <DoubleBicepsSvg />
       </div>
-      <div className="background-bro background-bro--right" key={`right-${actionId}`}>
-        <BarbellEngraving />
+      <div className="background-bro background-bro--right">
+        <BarbellHoldSvg />
       </div>
     </div>
   );
 }
 
-/** Shared hatch pattern for engraving shading. */
-function EngravingDefs({ id }: { id: string }) {
-  return (
-    <defs>
-      <pattern id={`${id}-hatch`} width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
-        <line x1="0" y1="0" x2="0" y2="6" className="bro-hatch-line" />
-      </pattern>
-      <pattern id={`${id}-hatch-cross`} width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-40)">
-        <line x1="0" y1="0" x2="0" y2="8" className="bro-hatch-line bro-hatch-line--dense" />
-      </pattern>
-    </defs>
-  );
-}
-
-/** Left: front double-biceps engraving. */
-function DoubleBicepsEngraving() {
+/** Left — classic front double-biceps pose. */
+function DoubleBicepsSvg() {
   return (
     <svg
-      className="bro-svg bro-svg--flex"
-      viewBox="0 0 200 340"
-      fill="none"
+      className="bro-svg"
+      viewBox="0 0 240 400"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>Engraved bodybuilder in front double biceps pose</title>
-      <EngravingDefs id="biceps" />
+      <title>Bodybuilder front double biceps</title>
 
-      <ellipse cx="100" cy="322" rx="42" ry="7" className="bro-ground" />
+      {/* Head */}
+      <ellipse cx="120" cy="48" rx="26" ry="28" className="bro-fill" />
+      {/* Jaw / brow cuts */}
+      <path d="M104 42h10M126 42h10" className="bro-line" strokeWidth="2.4" strokeLinecap="round" />
+      <path d="M108 60q12 10 24 0" className="bro-line" strokeWidth="2.2" strokeLinecap="round" />
+      {/* Neck */}
+      <rect x="106" y="70" width="28" height="22" rx="4" className="bro-fill" />
 
-      {/* Legs */}
-      <path
-        d="M72 200 C66 230 62 268 58 308 M128 200 C134 230 138 268 142 308"
-        className="bro-ink"
-        strokeWidth="14"
-        strokeLinecap="round"
-      />
-      <path
-        d="M68 248 C78 246 88 248 94 252 M132 248 C122 246 112 248 106 252"
-        className="bro-ink"
-        strokeWidth="16"
-        strokeLinecap="round"
-      />
-      <path d="M58 308 H78 M122 308 H142" className="bro-ink" strokeWidth="8" strokeLinecap="round" />
+      {/* Left flexed arm (shoulder → bicep → forearm → fist) */}
+      <ellipse cx="58" cy="108" rx="28" ry="22" className="bro-fill" transform="rotate(-18 58 108)" />
+      <ellipse cx="38" cy="78" rx="20" ry="28" className="bro-fill" transform="rotate(-35 38 78)" />
+      <ellipse cx="48" cy="48" rx="14" ry="18" className="bro-fill" transform="rotate(-10 48 48)" />
+      <circle cx="52" cy="30" r="12" className="bro-fill" />
 
-      {/* Trunks */}
-      <path
-        d="M70 188 C78 204 122 204 130 188 L126 200 C118 210 82 210 74 200 Z"
-        className="bro-ink-fill"
-      />
-      <path
-        d="M70 188 C78 204 122 204 130 188 L126 200 C118 210 82 210 74 200 Z"
-        fill="url(#biceps-hatch)"
-        opacity="0.45"
-      />
+      {/* Right flexed arm */}
+      <ellipse cx="182" cy="108" rx="28" ry="22" className="bro-fill" transform="rotate(18 182 108)" />
+      <ellipse cx="202" cy="78" rx="20" ry="28" className="bro-fill" transform="rotate(35 202 78)" />
+      <ellipse cx="192" cy="48" rx="14" ry="18" className="bro-fill" transform="rotate(10 192 48)" />
+      <circle cx="188" cy="30" r="12" className="bro-fill" />
 
       {/* Torso */}
       <path
-        d="M62 108 C52 132 54 168 70 190 L130 190 C146 168 148 132 138 108
-           C128 96 118 92 100 92 C82 92 72 96 62 108 Z"
-        className="bro-ink-fill"
+        d="M78 92
+           C62 118 60 160 72 200
+           L88 228
+           L152 228
+           L168 200
+           C180 160 178 118 162 92
+           C148 78 132 72 120 72
+           C108 72 92 78 78 92Z"
+        className="bro-fill"
+      />
+      {/* Muscle lines */}
+      <path
+        d="M92 108q28 16 56 0
+           M120 122v86
+           M102 148h36M102 172h36M102 196h36
+           M86 132q16 12 34 8q18 4 34-8"
+        className="bro-line"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      {/* Trunks */}
+      <path
+        d="M88 220
+           C100 248 140 248 152 220
+           L148 242
+           C138 258 102 258 92 242Z"
+        className="bro-fill"
+      />
+
+      {/* Legs */}
+      <path
+        d="M96 240
+           C90 280 84 320 78 352
+           L108 352
+           C110 310 112 274 114 240Z"
+        className="bro-fill"
       />
       <path
-        d="M62 108 C52 132 54 168 70 190 L130 190 C146 168 148 132 138 108
-           C128 96 118 92 100 92 C82 92 72 96 62 108 Z"
-        fill="url(#biceps-hatch-cross)"
-        opacity="0.35"
+        d="M144 240
+           C150 280 156 320 162 352
+           L132 352
+           C130 310 128 274 126 240Z"
+        className="bro-fill"
       />
-      {/* Abs / pecs cut lines */}
-      <path
-        d="M100 118 V178 M86 136 H114 M86 152 H114 M86 168 H114
-           M78 112 Q100 124 122 112 M72 128 Q84 138 100 132 Q116 138 128 128"
-        className="bro-cut"
-        strokeWidth="1.6"
-      />
-
-      {/* Neck + head */}
-      <path d="M90 88 L90 100 M110 88 L110 100" className="bro-ink" strokeWidth="9" strokeLinecap="round" />
-      <ellipse cx="100" cy="68" rx="24" ry="26" className="bro-ink-fill" />
-      <ellipse cx="100" cy="68" rx="24" ry="26" fill="url(#biceps-hatch)" opacity="0.3" />
-      <path d="M88 62 H94 M106 62 H112" className="bro-cut" strokeWidth="2" strokeLinecap="round" />
-      <path d="M92 80 Q100 86 108 80" className="bro-cut" strokeWidth="1.8" strokeLinecap="round" />
-      {/* Jaw / cheek hatch */}
-      <path d="M78 72 L86 78 M118 72 L110 78" className="bro-cut" strokeWidth="1.4" />
-
-      {/* Raised arms — double biceps */}
-      <g className="bro-flex-arms">
-        {/* Left arm */}
-        <path
-          d="M62 112 C40 100 28 78 34 58 C38 48 52 46 62 56 C70 64 72 78 68 90"
-          className="bro-ink"
-          strokeWidth="13"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <ellipse cx="42" cy="72" rx="14" ry="18" className="bro-ink-fill" transform="rotate(-25 42 72)" />
-        <ellipse cx="42" cy="72" rx="14" ry="18" fill="url(#biceps-hatch)" opacity="0.4" transform="rotate(-25 42 72)" />
-        <path d="M34 58 C28 48 30 38 38 34" className="bro-ink" strokeWidth="10" strokeLinecap="round" />
-
-        {/* Right arm */}
-        <path
-          d="M138 112 C160 100 172 78 166 58 C162 48 148 46 138 56 C130 64 128 78 132 90"
-          className="bro-ink"
-          strokeWidth="13"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <ellipse cx="158" cy="72" rx="14" ry="18" className="bro-ink-fill" transform="rotate(25 158 72)" />
-        <ellipse cx="158" cy="72" rx="14" ry="18" fill="url(#biceps-hatch)" opacity="0.4" transform="rotate(25 158 72)" />
-        <path d="M166 58 C172 48 170 38 162 34" className="bro-ink" strokeWidth="10" strokeLinecap="round" />
-      </g>
+      <path d="M98 290h20M142 290h-20" className="bro-line" strokeWidth="2" />
+      {/* Feet */}
+      <ellipse cx="86" cy="360" rx="22" ry="9" className="bro-fill" />
+      <ellipse cx="154" cy="360" rx="22" ry="9" className="bro-fill" />
     </svg>
   );
 }
 
-/** Right: barbell hold engraving. */
-function BarbellEngraving() {
+/** Right — standing barbell hold. */
+function BarbellHoldSvg() {
   return (
     <svg
-      className="bro-svg bro-svg--lift"
-      viewBox="0 0 200 340"
-      fill="none"
+      className="bro-svg"
+      viewBox="0 0 260 400"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>Engraved bodybuilder holding a barbell</title>
-      <EngravingDefs id="barbell" />
+      <title>Bodybuilder holding a barbell</title>
 
-      <ellipse cx="100" cy="322" rx="42" ry="7" className="bro-ground" />
-
-      {/* Legs */}
+      {/* Head */}
+      <ellipse cx="130" cy="46" rx="26" ry="28" className="bro-fill" />
+      <path d="M114 40h10M136 40h10" className="bro-line" strokeWidth="2.4" strokeLinecap="round" />
+      <path d="M118 58q12 10 24 0" className="bro-line" strokeWidth="2.2" strokeLinecap="round" />
+      {/* Neck + traps */}
+      <rect x="116" y="68" width="28" height="20" rx="4" className="bro-fill" />
       <path
-        d="M74 200 C68 232 64 270 60 308 M126 200 C132 232 136 270 140 308"
-        className="bro-ink"
-        strokeWidth="14"
-        strokeLinecap="round"
-      />
-      <path
-        d="M70 250 C80 248 90 250 96 254 M130 250 C120 248 110 250 104 254"
-        className="bro-ink"
-        strokeWidth="16"
-        strokeLinecap="round"
-      />
-      <path d="M60 308 H80 M120 308 H140" className="bro-ink" strokeWidth="8" strokeLinecap="round" />
-
-      {/* Trunks */}
-      <path
-        d="M72 186 C80 202 120 202 128 186 L124 198 C116 208 84 208 76 198 Z"
-        className="bro-ink-fill"
-      />
-      <path
-        d="M72 186 C80 202 120 202 128 186 L124 198 C116 208 84 208 76 198 Z"
-        fill="url(#barbell-hatch)"
-        opacity="0.45"
+        d="M88 100
+           C100 82 114 74 130 74
+           C146 74 160 82 172 100
+           L160 108
+           C150 96 140 90 130 90
+           C120 90 110 96 100 108Z"
+        className="bro-fill"
       />
 
       {/* Torso */}
       <path
-        d="M64 106 C54 130 56 166 72 188 L128 188 C144 166 146 130 136 106
-           C126 94 116 90 100 90 C84 90 74 94 64 106 Z"
-        className="bro-ink-fill"
+        d="M88 100
+           C74 126 72 168 84 208
+           L98 236
+           L162 236
+           L176 208
+           C188 168 186 126 172 100
+           C160 86 146 80 130 80
+           C114 80 100 86 88 100Z"
+        className="bro-fill"
       />
       <path
-        d="M64 106 C54 130 56 166 72 188 L128 188 C144 166 146 130 136 106
-           C126 94 116 90 100 90 C84 90 74 94 64 106 Z"
-        fill="url(#barbell-hatch-cross)"
-        opacity="0.35"
+        d="M102 114q28 14 56 0
+           M130 126v88
+           M112 152h36M112 176h36M112 200h36"
+        className="bro-line"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+      />
+
+      {/* Trunks */}
+      <path
+        d="M98 228
+           C110 254 150 254 162 228
+           L158 248
+           C148 262 112 262 102 248Z"
+        className="bro-fill"
+      />
+
+      {/* Legs */}
+      <path
+        d="M106 246
+           C100 286 94 326 88 356
+           L118 356
+           C120 316 122 280 124 246Z"
+        className="bro-fill"
       />
       <path
-        d="M100 116 V176 M86 134 H114 M86 150 H114 M86 166 H114
-           M78 110 Q100 122 122 110"
-        className="bro-cut"
-        strokeWidth="1.6"
+        d="M154 246
+           C160 286 166 326 172 356
+           L142 356
+           C140 316 138 280 136 246Z"
+        className="bro-fill"
       />
+      <path d="M108 296h20M152 296h-20" className="bro-line" strokeWidth="2" />
+      <ellipse cx="96" cy="364" rx="22" ry="9" className="bro-fill" />
+      <ellipse cx="164" cy="364" rx="22" ry="9" className="bro-fill" />
 
-      {/* Neck + head */}
-      <path d="M90 86 L90 98 M110 86 L110 98" className="bro-ink" strokeWidth="9" strokeLinecap="round" />
-      <ellipse cx="100" cy="66" rx="24" ry="26" className="bro-ink-fill" />
-      <ellipse cx="100" cy="66" rx="24" ry="26" fill="url(#barbell-hatch)" opacity="0.3" />
-      <path d="M88 60 H94 M106 60 H112" className="bro-cut" strokeWidth="2" strokeLinecap="round" />
-      <path d="M92 78 Q100 84 108 78" className="bro-cut" strokeWidth="1.8" strokeLinecap="round" />
+      {/* Arms hanging */}
+      <path
+        d="M88 108
+           C70 140 60 178 64 214
+           L86 214
+           C84 180 90 146 104 120Z"
+        className="bro-fill"
+      />
+      <path
+        d="M172 108
+           C190 140 200 178 196 214
+           L174 214
+           C176 180 170 146 156 120Z"
+        className="bro-fill"
+      />
+      {/* Hands */}
+      <ellipse cx="78" cy="220" rx="14" ry="10" className="bro-fill" />
+      <ellipse cx="182" cy="220" rx="14" ry="10" className="bro-fill" />
 
-      {/* Arms hanging to bar */}
-      <g className="bro-lift-arms">
-        <path
-          d="M64 118 C48 140 40 168 48 196"
-          className="bro-ink"
-          strokeWidth="12"
-          strokeLinecap="round"
-        />
-        <path
-          d="M136 118 C152 140 160 168 152 196"
-          className="bro-ink"
-          strokeWidth="12"
-          strokeLinecap="round"
-        />
-        {/* Forearm bulk */}
-        <path d="M48 168 C42 180 44 190 50 198" className="bro-ink" strokeWidth="10" strokeLinecap="round" />
-        <path d="M152 168 C158 180 156 190 150 198" className="bro-ink" strokeWidth="10" strokeLinecap="round" />
-
-        {/* Barbell */}
-        <g className="bro-barbell-lift">
-          <line x1="28" y1="200" x2="172" y2="200" className="bro-ink" strokeWidth="5" strokeLinecap="round" />
-          {/* Left plates */}
-          <circle cx="22" cy="200" r="18" className="bro-ink-fill" />
-          <circle cx="22" cy="200" r="18" fill="url(#barbell-hatch)" opacity="0.4" />
-          <circle cx="22" cy="200" r="11" className="bro-cut-fill" />
-          <circle cx="34" cy="200" r="12" className="bro-ink-fill" />
-          {/* Right plates */}
-          <circle cx="178" cy="200" r="18" className="bro-ink-fill" />
-          <circle cx="178" cy="200" r="18" fill="url(#barbell-hatch)" opacity="0.4" />
-          <circle cx="178" cy="200" r="11" className="bro-cut-fill" />
-          <circle cx="166" cy="200" r="12" className="bro-ink-fill" />
-          {/* Hands on bar */}
-          <ellipse cx="72" cy="200" rx="10" ry="7" className="bro-ink-fill" />
-          <ellipse cx="128" cy="200" rx="10" ry="7" className="bro-ink-fill" />
-        </g>
-      </g>
+      {/* Barbell bar */}
+      <rect x="16" y="216" width="228" height="8" rx="3" className="bro-fill" />
+      {/* Left plates */}
+      <circle cx="30" cy="220" r="26" className="bro-fill" />
+      <circle cx="30" cy="220" r="14" className="bro-hole" />
+      <circle cx="52" cy="220" r="16" className="bro-fill" />
+      {/* Right plates */}
+      <circle cx="230" cy="220" r="26" className="bro-fill" />
+      <circle cx="230" cy="220" r="14" className="bro-hole" />
+      <circle cx="208" cy="220" r="16" className="bro-fill" />
     </svg>
   );
 }
