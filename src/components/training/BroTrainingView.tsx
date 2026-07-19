@@ -13,7 +13,7 @@ function subLabel(sub: TrainingSub): string {
     case 'legends':
       return 'Bro Legends';
     case 'personal':
-      return 'Personal Hevy';
+      return 'My Personal Hevy';
     case 'exercises':
       return 'Bro Exercises';
     default: {
@@ -32,7 +32,7 @@ export function BroTrainingView() {
       body = (
         <div className="training-hub">
           <p className="muted training-hub-lede">
-            Pick a path — legend methodologies with full workout breakdowns, or your personal Hevy
+            Pick a path — legend methodologies with full workout breakdowns, or My Personal Hevy
             folders.
           </p>
           <div className="training-hub-grid">
@@ -55,12 +55,12 @@ export function BroTrainingView() {
               onClick={() => setSub('personal')}
             >
               <span className="training-hub-kicker">Hevy</span>
-              <strong className="training-hub-title">Personal folders</strong>
+              <strong className="training-hub-title">My Personal folders</strong>
               <p>
-                Your Hevy collection folders — open them in the app to save and log, separate from
-                legend reference routines.
+                My Personal Hevy collection folders — open them in the app to save and log, separate
+                from legend reference routines.
               </p>
-              <span className="training-hub-cta">Open personal →</span>
+              <span className="training-hub-cta">Open My Personal →</span>
             </button>
           </div>
         </div>
@@ -94,7 +94,7 @@ export function BroTrainingView() {
     <section className="stack">
       <header>
         <h2>Bro Training</h2>
-        <p className="muted">Legends, personal Hevy folders, and the exercise library.</p>
+        <p className="muted">Legends, My Personal Hevy folders, and the exercise library.</p>
       </header>
       <div className="sub-nav" role="tablist" aria-label="Bro Training sections">
         {tabs.map((item) => (

@@ -13,12 +13,12 @@ export function BroPersonalView({ onBack }: BroPersonalViewProps) {
       </button>
 
       <section className="collection-intro personal-intro">
-        <div className="personal-badge">Personal collection</div>
+        <div className="personal-badge">My Personal collection</div>
         <h2 className="section-heading">{myCollection.name}</h2>
         <p className="muted">{myCollection.summary}</p>
         <p className="muted">
-          These are Hevy folders — not legend reference routines. Open a folder in Hevy to save it
-          and start logging.
+          These are My Personal Hevy folders — not legend reference routines. Open a folder in Hevy to
+          save it and start logging.
         </p>
       </section>
 
