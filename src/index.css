@@ -1842,6 +1842,42 @@ table.ex tr:last-child td {
   flex: 1;
 }
 
+.tools-tier-section {
+  padding: 1rem 1.05rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.tools-tier-section--essential {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.tools-tier-section--advised {
+  border-color: color-mix(in srgb, #5b8def 35%, var(--border));
+}
+
+.tools-tier-section--want {
+  border-color: color-mix(in srgb, #c084fc 30%, var(--border));
+}
+
+.tools-tier-section--alternative {
+  border-color: color-mix(in srgb, #9aa3b2 35%, var(--border));
+}
+
+.tool-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+}
+
+.tool-card-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 .tools-grid {
   display: grid;
   gap: 0.85rem;

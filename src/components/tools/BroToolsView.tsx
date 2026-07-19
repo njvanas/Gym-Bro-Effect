@@ -1,10 +1,13 @@
 import { useMemo, useState } from 'react';
 
-import { filterToolsByTier, tools } from '../../lib/tools-db';
-import type { ToolCategory, ToolTier } from '../../schema';
+import {
+  filterToolsByTiers,
+  groupToolsByTier,
+  TOOL_TIER_ORDER,
+  tools,
+} from '../../lib/tools-db';
+import type { ToolTier } from '../../schema';
 import { ExternalLink } from '../ExternalLink';
-
-const tiers: Array<ToolTier | 'all'> = ['all', 'essential', 'advised', 'want', 'alternative'];
 
 function tierLabel(tier: ToolTier | 'all'): string {
   switch (tier) {
@@ -25,53 +28,51 @@ function tierLabel(tier: ToolTier | 'all'): string {
   }
 }
 
-function categoryLabel(category: ToolCategory): string {
-  switch (category) {
-    case 'body-composition':
-      return 'Body composition';
-    case 'nutrition':
-      return 'Nutrition';
-    case 'training':
-      return 'Training';
-    case 'recovery':
-      return 'Recovery';
+function tierSectionEmoji(tier: ToolTier): string {
+  switch (tier) {
+    case 'essential':
+      return '✅';
+    case 'advised':
+      return '💡';
+    case 'want':
+      return '✨';
+    case 'alternative':
+      return '🔄';
     default: {
-      const _exhaustive: never = category;
-      return _exhaustive;
-    }
-  }
-}
-
-function categoryEmoji(category: ToolCategory): string {
-  switch (category) {
-    case 'body-composition':
-      return '📏';
-    case 'nutrition':
-      return '🥗';
-    case 'training':
-      return '🏋️';
-    case 'recovery':
-      return '😴';
-    default: {
-      const _exhaustive: never = category;
+      const _exhaustive: never = tier;
       return _exhaustive;
     }
   }
 }
 
 export function BroToolsView() {
-  const [tier, setTier] = useState<ToolTier | 'all'>('all');
-  const filtered = useMemo(() => filterToolsByTier(tools, tier), [tier]);
+  const [selectedTiers, setSelectedTiers] = useState<ToolTier[]>([]);
 
-  const grouped = useMemo(() => {
-    const map = new Map<ToolCategory, typeof filtered>();
-    for (const tool of filtered) {
-      const list = map.get(tool.category) ?? [];
-      list.push(tool);
-      map.set(tool.category, list);
-    }
-    return map;
-  }, [filtered]);
+  const showingAll = selectedTiers.length === 0;
+
+  const filtered = useMemo(
+    () => filterToolsByTiers(tools, selectedTiers),
+    [selectedTiers],
+  );
+
+  const grouped = useMemo(() => groupToolsByTier(filtered), [filtered]);
+
+  function selectAll() {
+    setSelectedTiers([]);
+  }
+
+  function toggleTier(tier: ToolTier) {
+    setSelectedTiers((current) => {
+      if (current.includes(tier)) {
+        return current.filter((item) => item !== tier);
+      }
+      return TOOL_TIER_ORDER.filter((item) => item === tier || current.includes(item));
+    });
+  }
+
+  const filterHint = showingAll
+    ? 'All tiers'
+    : selectedTiers.map((tier) => tierLabel(tier)).join(' · ');
 
   return (
     <section className="stack tools-section">
@@ -81,46 +82,58 @@ export function BroToolsView() {
           Bro <span className="accent">Tools</span>
         </h2>
         <p className="section-lede">
-          Essential, advised, and optional gear for the journey — filter by what you actually need.
+          Laid out as Essential → Advised → Want → Alternative. Pick one or more filters — All shows
+          everything.
         </p>
       </header>
 
       <div className="legends-filter-rail" role="group" aria-label="Filter tools by tier">
-        {tiers.map((item) => (
-          <button
-            key={item}
-            type="button"
-            className={`legends-filter-chip${tier === item ? ' active' : ''}`}
-            aria-pressed={tier === item}
-            onClick={() => setTier(item)}
-          >
-            {tierLabel(item)}
-          </button>
-        ))}
+        <button
+          type="button"
+          className={`legends-filter-chip${showingAll ? ' active' : ''}`}
+          aria-pressed={showingAll}
+          onClick={selectAll}
+        >
+          All
+        </button>
+        {TOOL_TIER_ORDER.map((tier) => {
+          const active = selectedTiers.includes(tier);
+          return (
+            <button
+              key={tier}
+              type="button"
+              className={`legends-filter-chip${active ? ' active' : ''}`}
+              aria-pressed={active}
+              onClick={() => toggleTier(tier)}
+            >
+              {tierLabel(tier)}
+            </button>
+          );
+        })}
       </div>
 
       <p className="legends-search-hint">
-        {filtered.length} of {tools.length} tools
-        {tier !== 'all' ? ` · ${tierLabel(tier)}` : ''}
+        {filtered.length} of {tools.length} tools · {filterHint}
       </p>
 
       {filtered.length === 0 ? (
-        <div className="empty">No tools in that tier.</div>
+        <div className="empty">No tools match those filters.</div>
       ) : (
-        [...grouped.entries()].map(([category, list]) => (
-          <section className="tools-category" key={category}>
+        grouped.map(({ tier, items }) => (
+          <section className={`tools-category tools-tier-section tools-tier-section--${tier}`} key={tier}>
             <div className="tools-category-head">
-              <span aria-hidden>{categoryEmoji(category)}</span>
-              <h3>{categoryLabel(category)}</h3>
-              <span className="muted">{list.length}</span>
+              <span aria-hidden>{tierSectionEmoji(tier)}</span>
+              <h3>{tierLabel(tier)}</h3>
+              <span className="muted">{items.length}</span>
             </div>
             <div className="tools-grid">
-              {list.map((tool) => (
+              {items.map((tool) => (
                 <article className={`tool-card tool-card--${tool.tier}`} key={tool.id}>
                   <div className="tool-card-top">
                     <span className={`tag accent tool-tier tool-tier--${tool.tier}`}>
                       {tierLabel(tool.tier)}
                     </span>
+                    <span className="tool-card-category muted">{formatCategory(tool.category)}</span>
                   </div>
                   <h4 className="tool-card-title">{tool.name}</h4>
                   <p className="tool-card-tracks">
@@ -144,4 +157,21 @@ export function BroToolsView() {
       )}
     </section>
   );
+}
+
+function formatCategory(category: (typeof tools)[number]['category']): string {
+  switch (category) {
+    case 'body-composition':
+      return 'Body composition';
+    case 'nutrition':
+      return 'Nutrition';
+    case 'training':
+      return 'Training';
+    case 'recovery':
+      return 'Recovery';
+    default: {
+      const _exhaustive: never = category;
+      return _exhaustive;
+    }
+  }
 }
