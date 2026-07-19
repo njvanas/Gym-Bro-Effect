@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react';
 
 import { pillarLabel, type Pillar } from '../lib/nav';
+import { IconBackdrop } from './IconBackdrop';
 import { ThemeToggle } from './ThemeToggle';
 
 type AppShellProps = {
@@ -21,6 +22,7 @@ export function AppShell({ pillar, onNavigate, children }: AppShellProps) {
 
   return (
     <div className="app-shell">
+      <IconBackdrop />
       <header className="app-header">
         <button className="brand" type="button" onClick={() => navigate('home')}>
           Gym Bro Effect
