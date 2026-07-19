@@ -2202,9 +2202,20 @@ table.ex tr:last-child td {
   position: absolute;
   top: 50%;
   width: min(240px, 20vw);
-  opacity: 0.7;
+  aspect-ratio: 2 / 3;
   transform: translateY(-46%);
-  transition: opacity 0.25s ease;
+  /* Theme ink — site bg shows through everywhere else */
+  background-color: color-mix(in srgb, var(--text) 78%, var(--accent));
+  opacity: 0.55;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  mask-position: center bottom;
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+  transition: opacity 0.25s ease, background-color 0.25s ease;
 }
 
 .background-bro--left {
@@ -2215,25 +2226,10 @@ table.ex tr:last-child td {
   right: max(0.5rem, calc(50% - min(550px, 50vw) - min(250px, 20vw)));
 }
 
-.bro-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  user-select: none;
-  /* Knock out white background so black ink sits on the page */
-  mix-blend-mode: multiply;
-}
-
-[data-theme='dark'] .bro-img {
-  filter: invert(1);
-  mix-blend-mode: screen;
-  opacity: 0.85;
-}
-
 @media (max-width: 1100px) {
   .background-bro {
     width: min(170px, 17vw);
-    opacity: 0.45;
+    opacity: 0.4;
   }
 }
 
