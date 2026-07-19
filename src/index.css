@@ -301,6 +301,13 @@ select:focus-visible {
   border-radius: 0.85rem;
   padding: 1rem;
   min-height: 44px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 
 .journey-card span {
@@ -473,11 +480,12 @@ ul.clean {
   padding: 1.25rem 1.35rem;
   min-height: 44px;
   box-shadow: var(--shadow);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .training-hub-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-hover);
   border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 
@@ -712,11 +720,12 @@ ul.clean {
   box-shadow: var(--shadow);
   color: inherit;
   overflow: hidden;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .legend-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-hover);
   border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
 }
 
@@ -937,11 +946,12 @@ ul.clean {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: inherit;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .legend-workout-card:hover {
-  transform: translateX(3px);
+  transform: translateY(-5px) scale(1.015);
+  box-shadow: var(--shadow-hover);
   border-color: var(--accent);
 }
 
@@ -1123,10 +1133,13 @@ ul.clean {
   color: inherit;
   text-decoration: none;
   min-height: 44px;
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease,
+    background 0.22s ease;
 }
 
 .folder-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-hover);
   border-color: var(--accent);
   background: var(--accent-soft);
   text-decoration: none;
@@ -1686,11 +1699,12 @@ table.ex tr:last-child td {
   border-radius: var(--radius-sm);
   background: var(--surface);
   box-shadow: var(--shadow);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .food-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-hover);
   border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
 }
 
@@ -1715,11 +1729,12 @@ table.ex tr:last-child td {
   border-radius: var(--radius);
   background: var(--surface);
   box-shadow: var(--shadow);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .recipe-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-hover);
   border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 
@@ -1893,11 +1908,12 @@ table.ex tr:last-child td {
   border-radius: var(--radius);
   background: var(--surface);
   box-shadow: var(--shadow);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .tool-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-hover);
   border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 
@@ -2016,12 +2032,13 @@ table.ex tr:last-child td {
   box-shadow: var(--shadow);
   padding: 1rem 1.05rem;
   overflow: hidden;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .exercise-card:hover {
   border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
-  transform: translateY(-2px);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-hover);
 }
 
 .exercise-card.selected {
@@ -2178,6 +2195,33 @@ table.ex tr:last-child td {
 .who-lede-soon {
   font-style: italic;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-card,
+  .training-hub-card,
+  .legend-card,
+  .legend-workout-card,
+  .folder-card,
+  .food-card,
+  .recipe-card,
+  .tool-card,
+  .exercise-card {
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .journey-card:hover,
+  .training-hub-card:hover,
+  .legend-card:hover,
+  .legend-workout-card:hover,
+  .folder-card:hover,
+  .food-card:hover,
+  .recipe-card:hover,
+  .tool-card:hover,
+  .exercise-card:hover {
+    transform: none;
+  }
+}
+
 
 
 
