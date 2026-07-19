@@ -2207,11 +2207,11 @@ table.ex tr:last-child td {
   transition: opacity 0.25s ease;
 }
 
-.background-bro--curl {
+.background-bro--left {
   left: max(0.5rem, calc(50% - min(550px, 50vw) - min(240px, 19vw)));
 }
 
-.background-bro--steak {
+.background-bro--right {
   right: max(0.5rem, calc(50% - min(550px, 50vw) - min(240px, 19vw)));
 }
 
@@ -2223,105 +2223,90 @@ table.ex tr:last-child td {
 }
 
 .bro-ink {
-  stroke: color-mix(in srgb, var(--text) 78%, var(--accent));
-}
-
-.bro-ink-soft {
-  stroke: color-mix(in srgb, var(--text-muted) 70%, transparent);
-  fill: color-mix(in srgb, var(--text-muted) 18%, transparent);
-}
-
-.bro-fill {
-  fill: color-mix(in srgb, var(--surface) 82%, var(--accent));
+  stroke: color-mix(in srgb, var(--text) 88%, #3a2a1a);
+  fill: none;
 }
 
 .bro-ink-fill {
-  fill: color-mix(in srgb, var(--text) 75%, var(--accent));
+  fill: color-mix(in srgb, var(--text) 82%, #2a1c12);
 }
 
-.bro-accent {
-  stroke: var(--accent);
+.bro-cut {
+  stroke: color-mix(in srgb, var(--bg) 70%, var(--surface));
+  fill: none;
 }
 
-.bro-accent-fill {
-  fill: var(--accent);
+.bro-cut-fill {
+  fill: color-mix(in srgb, var(--bg) 55%, var(--surface));
 }
 
-.bro-steak-fill {
-  fill: color-mix(in srgb, #c45c3a 70%, var(--surface));
+.bro-ground {
+  fill: color-mix(in srgb, var(--text-muted) 22%, transparent);
 }
 
-.bro-curl-arm {
-  transform-origin: 132px 120px;
-  animation: bro-curl 0.7s ease-in-out 1;
+.bro-hatch-line {
+  stroke: color-mix(in srgb, var(--bg) 55%, transparent);
+  stroke-width: 1.4;
 }
 
-.bro-barbell {
-  transform-origin: 148px 168px;
+.bro-hatch-line--dense {
+  stroke-width: 1.8;
+  stroke: color-mix(in srgb, var(--bg) 45%, transparent);
 }
 
-.bro-steak-arm {
-  transform-origin: 132px 120px;
-  animation: bro-steak-lift 0.7s ease-in-out 1;
+.bro-svg--flex,
+.bro-svg--lift {
+  transform-origin: 50% 70%;
+  animation: bro-flex-pulse 0.65s ease-in-out 1;
 }
 
-.bro-steak {
-  transform-origin: 156px 176px;
-  animation: bro-steak-bite 0.7s ease-in-out 1;
+.bro-flex-arms {
+  transform-origin: 100px 120px;
+  animation: bro-arms-flex 0.65s ease-in-out 1;
 }
 
-.bro-mouth {
-  transform-origin: 100px 88px;
-  animation: bro-chew 0.7s ease-in-out 1;
+.bro-lift-arms {
+  transform-origin: 100px 140px;
+  animation: bro-bar-heave 0.65s ease-in-out 1;
 }
 
-@keyframes bro-curl {
+.bro-barbell-lift {
+  transform-origin: 100px 200px;
+}
+
+@keyframes bro-flex-pulse {
   0%,
   100% {
-    transform: rotate(0deg);
-  }
-  45% {
-    transform: rotate(-52deg);
-  }
-  70% {
-    transform: rotate(-40deg);
-  }
-}
-
-@keyframes bro-steak-lift {
-  0%,
-  100% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
   40% {
-    transform: rotate(-28deg);
+    transform: scale(1.04);
   }
   65% {
-    transform: rotate(-18deg);
+    transform: scale(1.015);
   }
 }
 
-@keyframes bro-steak-bite {
+@keyframes bro-arms-flex {
   0%,
   100% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.06, 0.97);
+  }
+}
+
+@keyframes bro-bar-heave {
+  0%,
+  100% {
+    transform: translateY(0);
   }
   40% {
-    transform: translate(-18px, -28px) rotate(-12deg);
+    transform: translateY(-10px);
   }
-  60% {
-    transform: translate(-14px, -22px) rotate(-8deg);
-  }
-}
-
-@keyframes bro-chew {
-  0%,
-  100% {
-    transform: scaleY(1);
-  }
-  40%,
-  55% {
-    transform: scaleY(1.55);
+  65% {
+    transform: translateY(-4px);
   }
 }
 
@@ -2339,10 +2324,10 @@ table.ex tr:last-child td {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bro-curl-arm,
-  .bro-steak-arm,
-  .bro-steak,
-  .bro-mouth {
+  .bro-svg--flex,
+  .bro-svg--lift,
+  .bro-flex-arms,
+  .bro-lift-arms {
     animation: none;
   }
 }
