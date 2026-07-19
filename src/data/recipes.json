@@ -271,5 +271,68 @@
       "Brown protein and combine with sauce.",
       "Add cheese/oil if you need more surplus."
     ]
+  },
+  {
+    "id": "recomp-chicken-veg",
+    "phaseId": "recomposition",
+    "name": "High-Protein Chicken & Veg Bowl",
+    "calories": 480,
+    "proteinG": 48,
+    "carbsG": 40,
+    "fatG": 12,
+    "ingredients": [
+      "180g chicken breast",
+      "100g cooked rice",
+      "250g mixed vegetables",
+      "1 tsp olive oil",
+      "Seasonings"
+    ],
+    "steps": [
+      "Cook chicken.",
+      "Steam or roast a large vegetable serving for volume.",
+      "Add measured rice and oil — stay near TDEE."
+    ]
+  },
+  {
+    "id": "recomp-greek-bowl",
+    "phaseId": "recomposition",
+    "name": "Greek Yogurt Protein Bowl",
+    "calories": 420,
+    "proteinG": 42,
+    "carbsG": 45,
+    "fatG": 8,
+    "ingredients": [
+      "300g non-fat Greek yogurt",
+      "40g oats or granola (measured)",
+      "Berries",
+      "1 scoop whey (optional if yogurt protein is low)",
+      "Cinnamon"
+    ],
+    "steps": [
+      "Mix yogurt and whey if using.",
+      "Top with measured oats and berries.",
+      "Keep fats light so protein stays high at TDEE."
+    ]
+  },
+  {
+    "id": "recomp-turkey-potato",
+    "phaseId": "recomposition",
+    "name": "Turkey & Potato Plate",
+    "calories": 520,
+    "proteinG": 45,
+    "carbsG": 50,
+    "fatG": 12,
+    "ingredients": [
+      "160g turkey breast or lean mince",
+      "250g potato",
+      "Large salad or steamed greens",
+      "1 tsp oil or spray",
+      "Herbs and spices"
+    ],
+    "steps": [
+      "Cook turkey.",
+      "Bake or boil potato.",
+      "Load the plate with vegetables for satiety near maintenance calories."
+    ]
   }
 ]

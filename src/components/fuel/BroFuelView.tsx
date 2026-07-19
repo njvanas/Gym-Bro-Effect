@@ -4,6 +4,7 @@ import { phases } from '../../lib/fuel-db';
 import { phaseLabel } from '../../lib/fuel-nav';
 import type { PhaseId } from '../../schema';
 import { PhaseDetail } from './PhaseDetail';
+import { TdeeCallout } from './TdeeCallout';
 
 type BroFuelViewProps = {
   onNavigateToTraining?: () => void;
@@ -37,7 +38,7 @@ export function BroFuelView({ onNavigateToTraining }: BroFuelViewProps) {
           Bro <span className="accent">Fuel</span>
         </h2>
         <p className="section-lede">
-          Surplus or deficit decides whether you grow or cut. Pick a phase — training stays in Bro
+          Surplus, deficit, or recomp — all of it starts with knowing your TDEE. Training stays in Bro
           Training.
         </p>
         {onNavigateToTraining ? (
@@ -46,6 +47,8 @@ export function BroFuelView({ onNavigateToTraining }: BroFuelViewProps) {
           </button>
         ) : null}
       </header>
+
+      <TdeeCallout />
 
       <div className="training-hub-grid fuel-hub-grid">
         {phases.map((item) => (
@@ -58,6 +61,7 @@ export function BroFuelView({ onNavigateToTraining }: BroFuelViewProps) {
             <span className="training-hub-kicker">{phaseLabel(item.id)}</span>
             <strong className="training-hub-title">{item.name}</strong>
             <p>{item.tagline}</p>
+            <TdeeCallout compact />
             <span className="training-hub-cta">Open phase →</span>
           </button>
         ))}

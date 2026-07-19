@@ -1,6 +1,7 @@
 import { getRecipesForPhase } from '../../lib/fuel-db';
 import type { Phase } from '../../schema';
 import { RecipeCard } from './RecipeCard';
+import { TdeeAccordion } from './TdeeCallout';
 
 type PhaseDetailProps = {
   phase: Phase;
@@ -57,12 +58,15 @@ export function PhaseDetail({ phase }: PhaseDetailProps) {
       </header>
 
       <nav className="legend-jump" aria-label="On this phase">
+        <a href={`#${phase.id}-tdee`}>TDEE</a>
         <a href={`#${phase.id}-overview`}>Overview</a>
         <a href={`#${phase.id}-nutrition`}>Nutrition</a>
         <a href={`#${phase.id}-foods`}>Foods</a>
         <a href={`#${phase.id}-recipes`}>Recipes</a>
         <a href={`#${phase.id}-routine`}>Daily routine</a>
       </nav>
+
+      <TdeeAccordion phaseId={phase.id} />
 
       <section className="fuel-panel stack" id={`${phase.id}-overview`}>
         <h3 className="legend-col-title">Overview</h3>

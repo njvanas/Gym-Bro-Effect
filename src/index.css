@@ -1523,7 +1523,13 @@ table.ex tr:last-child td {
 
 @media (min-width: 900px) {
   .fuel-hub-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .fuel-hub-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -1537,6 +1543,87 @@ table.ex tr:last-child td {
 
 .fuel-hub-card--bulking {
   border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.fuel-hub-card--recomposition {
+  border-color: color-mix(in srgb, #f0a35e 40%, var(--border));
+}
+
+.fuel-tdee-callout {
+  position: relative;
+  padding: 1.2rem 1.3rem 1.25rem 1.35rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(90deg, var(--accent-soft), transparent 42%),
+    var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.fuel-tdee-kicker {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 0.5rem;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+  background: var(--accent-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.fuel-tdee-callout h3 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+}
+
+.fuel-tdee-callout .principle-list {
+  gap: 0.7rem;
+}
+
+.fuel-tdee-callout .principle-text {
+  color: var(--text);
+}
+
+.fuel-tdee-key {
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.fuel-tdee-accordion {
+  margin-bottom: 0.25rem;
+}
+
+.fuel-tdee-accordion .accordion-item {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  border-left: 3px solid var(--accent);
+  background:
+    linear-gradient(90deg, var(--accent-soft), transparent 50%),
+    var(--bg-elevated);
+}
+
+.fuel-tdee-accordion .accordion-title {
+  color: var(--text);
+}
+
+.fuel-tdee-accordion .accordion-summary {
+  color: var(--accent-ink);
+  font-weight: 600;
 }
 
 .phase-hero {
@@ -1559,6 +1646,11 @@ table.ex tr:last-child td {
 
 .phase-hero--bulking {
   background: linear-gradient(135deg, var(--accent-soft), transparent 55%), var(--surface);
+}
+
+.phase-hero--recomposition {
+  background: linear-gradient(135deg, color-mix(in srgb, #f0a35e 18%, transparent), transparent 55%),
+    var(--surface);
 }
 
 .phase-hero-tagline {

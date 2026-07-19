@@ -128,5 +128,50 @@
       { "time": "9:30 PM", "label": "Final meal / shake", "detail": "Close remaining surplus calories." },
       { "time": "11:00 PM", "label": "Sleep", "detail": "Growth happens when you recover." }
     ]
+  },
+  {
+    "id": "recomposition",
+    "name": "Recomposition",
+    "tagline": "Build muscle and lose fat slowly — at or very near TDEE.",
+    "overview": [
+      "Recomposition means improving body composition without a hard bulk or hard cut: gain muscle while losing fat over time.",
+      "It works best when you train hard, keep protein high, and sit at or very near true TDEE — which is why finding TDEE first matters so much.",
+      "Progress is slower than dedicated phases. Patience, consistency, and honest scale trends beat guessing calories.",
+      "Newer trainees and people returning after time off often see the best recomp results; advanced lifters may still prefer clear surplus or deficit blocks."
+    ],
+    "nutritionGuidelines": [
+      "Lock in TDEE first (1–2 weeks of consistent intake and training).",
+      "Eat at or within about ±100–200 kcal of TDEE — not a deep deficit or aggressive surplus.",
+      "Protein: keep high (around 2.0–2.4g per kg) to support muscle while leaning out.",
+      "Carbs: enough to train hard; place more around workouts.",
+      "Fats: fill remaining calories; do not crash fat intake.",
+      "Judge progress weekly: strength up or stable, waist/photos improving, scale mostly flat."
+    ],
+    "stapleFoods": [
+      {
+        "category": "protein",
+        "items": ["Chicken breast", "Turkey", "Eggs", "Greek yogurt", "Fish", "Lean beef", "Whey protein", "Legumes"]
+      },
+      {
+        "category": "carbs",
+        "items": ["Rice", "Potatoes", "Oats", "Fruit", "Whole grains", "Vegetables for volume"]
+      },
+      {
+        "category": "fats",
+        "items": ["Olive oil (measured)", "Avocado", "Nuts in controlled portions", "Egg yolks", "Fatty fish"]
+      },
+      {
+        "category": "vegetables",
+        "items": ["Broccoli", "Spinach", "Zucchini", "Peppers", "Leafy greens", "Mixed vegetables"]
+      }
+    ],
+    "dailyRoutine": [
+      { "time": "6:45 AM", "label": "Wake + weigh-in", "detail": "Same conditions; track the weekly trend, not one day." },
+      { "time": "7:30 AM", "label": "High-protein breakfast", "detail": "Start protein early; keep calories near TDEE." },
+      { "time": "12:30 PM", "label": "Lunch", "detail": "Protein + carbs + vegetables; measure oils and denser fats." },
+      { "time": "4:30–6:30 PM", "label": "Train hard", "detail": "Progressive overload — recomp needs a real training stimulus." },
+      { "time": "7:00 PM", "label": "Post-training meal", "detail": "Protein + carbs for recovery without blowing past TDEE." },
+      { "time": "10:30 PM", "label": "Sleep", "detail": "7–9 hours — recomposition needs recovery as much as macros." }
+    ]
   }
 ]

@@ -8,11 +8,12 @@ import {
 } from './fuel-db';
 
 describe('fuel database', () => {
-  it('loads three phases', () => {
+  it('loads four phases', () => {
     expect(phases.map((p) => p.id).sort()).toEqual([
       'bulking',
       'cutting',
       'maintaining',
+      'recomposition',
     ]);
   });
 
@@ -20,7 +21,7 @@ describe('fuel database', () => {
     for (const phase of phases) {
       expect(getRecipesForPhase(phase.id).length).toBeGreaterThan(0);
     }
-    expect(recipes.length).toBeGreaterThanOrEqual(12);
+    expect(recipes.length).toBeGreaterThanOrEqual(14);
   });
 
   it('passes integrity checks', () => {

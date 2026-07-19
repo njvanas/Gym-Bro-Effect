@@ -23,11 +23,16 @@ export function getRecipesForPhase(id: PhaseId): Recipe[] {
 
 export function validateFuelIntegrity(): string[] {
   const problems: string[] = [];
-  if (phases.length !== 3) {
-    problems.push(`Expected exactly 3 phases, found ${phases.length}`);
+  if (phases.length !== 4) {
+    problems.push(`Expected exactly 4 phases, found ${phases.length}`);
   }
   const ids = new Set(phases.map((p) => p.id));
-  for (const required of ['maintaining', 'cutting', 'bulking'] as const) {
+  for (const required of [
+    'maintaining',
+    'cutting',
+    'bulking',
+    'recomposition',
+  ] as const) {
     if (!ids.has(required)) problems.push(`Missing phase: ${required}`);
   }
   for (const recipe of recipes) {

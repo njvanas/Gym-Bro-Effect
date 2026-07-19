@@ -1,6 +1,11 @@
 import { z } from 'zod';
 
-export const phaseIdSchema = z.enum(['maintaining', 'cutting', 'bulking']);
+export const phaseIdSchema = z.enum([
+  'maintaining',
+  'cutting',
+  'bulking',
+  'recomposition',
+]);
 export type PhaseId = z.infer<typeof phaseIdSchema>;
 
 export const foodCategorySchema = z.enum(['protein', 'carbs', 'fats', 'vegetables']);

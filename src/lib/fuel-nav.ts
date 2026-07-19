@@ -8,6 +8,8 @@ export function phaseLabel(id: PhaseId): string {
       return 'Cutting';
     case 'bulking':
       return 'Bulking';
+    case 'recomposition':
+      return 'Recomposition';
     default: {
       const _exhaustive: never = id;
       return _exhaustive;

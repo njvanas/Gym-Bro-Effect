@@ -223,7 +223,6 @@ function MethodologyPanel({ style }: { style: TrainingStyle }) {
         <AccordionItem
           title="Core principles"
           summary={`${style.principles.length}`}
-          defaultOpen
           anchorId={`${style.id}-principles`}
         >
           <ol className="principle-list">
