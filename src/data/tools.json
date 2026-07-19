@@ -61,14 +61,14 @@
   },
   {
     "id": "nutrition-app",
-    "name": "Nutrition Tracking App",
+    "name": "Cronometer",
     "tier": "essential",
     "category": "nutrition",
     "tracks": "Calories, macros, micros, meal logging",
     "necessity": "Apps make accurate logging far easier than paper; free versions are usually enough.",
-    "advice": "MyFitnessPal, Cronometer, or similar free apps work well.",
+    "advice": "Use Cronometer for nutrition tracking — strong food database and micronutrient detail without the fluff.",
     "purchaseReason": "Necessity — efficient nutrition tracking.",
-    "url": "https://www.myfitnesspal.com/"
+    "url": "https://cronometer.com/"
   },
   {
     "id": "meal-prep-containers",
