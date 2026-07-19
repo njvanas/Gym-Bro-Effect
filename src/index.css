@@ -2201,44 +2201,39 @@ table.ex tr:last-child td {
 .background-bro {
   position: absolute;
   top: 50%;
-  width: min(220px, 18vw);
-  opacity: 0.55;
+  width: min(240px, 20vw);
+  opacity: 0.7;
   transform: translateY(-46%);
   transition: opacity 0.25s ease;
 }
 
 .background-bro--left {
-  left: max(0.5rem, calc(50% - min(550px, 50vw) - min(240px, 19vw)));
+  left: max(0.5rem, calc(50% - min(550px, 50vw) - min(250px, 20vw)));
 }
 
 .background-bro--right {
-  right: max(0.5rem, calc(50% - min(550px, 50vw) - min(240px, 19vw)));
+  right: max(0.5rem, calc(50% - min(550px, 50vw) - min(250px, 20vw)));
 }
 
-.bro-svg {
+.bro-img {
   width: 100%;
   height: auto;
   display: block;
-  overflow: visible;
+  user-select: none;
+  /* Knock out white background so black ink sits on the page */
+  mix-blend-mode: multiply;
 }
 
-.bro-fill {
-  fill: color-mix(in srgb, var(--text) 78%, var(--accent));
-}
-
-.bro-line {
-  stroke: color-mix(in srgb, var(--bg) 65%, var(--surface));
-  fill: none;
-}
-
-.bro-hole {
-  fill: color-mix(in srgb, var(--bg) 70%, var(--surface));
+[data-theme='dark'] .bro-img {
+  filter: invert(1);
+  mix-blend-mode: screen;
+  opacity: 0.85;
 }
 
 @media (max-width: 1100px) {
   .background-bro {
-    width: min(160px, 16vw);
-    opacity: 0.35;
+    width: min(170px, 17vw);
+    opacity: 0.45;
   }
 }
 
