@@ -1,24 +1,33 @@
 import phasesData from '../data/phases.json';
-import recipesData from '../data/recipes.json';
+import productsData from '../data/products.json';
 import {
   phasesFileSchema,
-  recipesFileSchema,
+  productsFileSchema,
   type Phase,
   type PhaseId,
-  type Recipe,
+  type Product,
 } from '../schema';
 
 export const phases: Phase[] = phasesFileSchema.parse(phasesData);
-export const recipes: Recipe[] = recipesFileSchema.parse(recipesData);
+export const products: Product[] = productsFileSchema.parse(productsData);
 
 const phasesById = new Map(phases.map((phase) => [phase.id, phase]));
+const productsById = new Map(products.map((product) => [product.id, product]));
 
 export function getPhase(id: PhaseId): Phase | undefined {
   return phasesById.get(id);
 }
 
-export function getRecipesForPhase(id: PhaseId): Recipe[] {
-  return recipes.filter((recipe) => recipe.phaseId === id);
+export function getProduct(id: string): Product | undefined {
+  return productsById.get(id);
+}
+
+export function getFeaturedProducts(id: PhaseId): Product[] {
+  const phase = phasesById.get(id);
+  if (!phase) return [];
+  return phase.featuredProductIds
+    .map((productId) => productsById.get(productId))
+    .filter((product): product is Product => product !== undefined);
 }
 
 export function validateFuelIntegrity(): string[] {
@@ -35,15 +44,24 @@ export function validateFuelIntegrity(): string[] {
   ] as const) {
     if (!ids.has(required)) problems.push(`Missing phase: ${required}`);
   }
-  for (const recipe of recipes) {
-    if (!phasesById.has(recipe.phaseId)) {
-      problems.push(`Recipe "${recipe.id}" references unknown phase "${recipe.phaseId}"`);
+
+  const productIds = new Set<string>();
+  for (const product of products) {
+    if (productIds.has(product.id)) {
+      problems.push(`Duplicate product id: ${product.id}`);
     }
+    productIds.add(product.id);
   }
+
   for (const phase of phases) {
-    if (getRecipesForPhase(phase.id).length < 1) {
-      problems.push(`Phase "${phase.id}" has no recipes`);
+    for (const productId of phase.featuredProductIds) {
+      if (!productsById.has(productId)) {
+        problems.push(
+          `Phase "${phase.id}" features unknown product "${productId}"`,
+        );
+      }
     }
   }
+
   return problems;
 }

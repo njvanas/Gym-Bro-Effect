@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import type { PhaseId } from '../schema';
-import { phaseLabel } from './fuel-nav';
+import { phaseLabel, productCategoryLabel } from './fuel-nav';
 
 describe('phaseLabel', () => {
   it('labels all phases', () => {
@@ -12,5 +12,12 @@ describe('phaseLabel', () => {
       'Bulking',
       'Recomposition',
     ]);
+  });
+});
+
+describe('productCategoryLabel', () => {
+  it('labels protein and supplements', () => {
+    expect(productCategoryLabel('protein')).toBe('Protein');
+    expect(productCategoryLabel('supplements')).toBe('Supplements');
   });
 });

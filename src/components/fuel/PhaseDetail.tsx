@@ -1,48 +1,16 @@
-import { getRecipesForPhase } from '../../lib/fuel-db';
+import { getFeaturedProducts } from '../../lib/fuel-db';
 import type { Phase } from '../../schema';
-import { RecipeCard } from './RecipeCard';
+import { MealExamplesComingSoon } from './MealExamplesComingSoon';
+import { ProductCard } from './ProductCard';
 import { TdeeAccordion } from './TdeeCallout';
 
 type PhaseDetailProps = {
   phase: Phase;
+  onBrowseFoods?: () => void;
 };
 
-function foodCategoryLabel(category: Phase['stapleFoods'][number]['category']): string {
-  switch (category) {
-    case 'protein':
-      return 'Protein';
-    case 'carbs':
-      return 'Carbs';
-    case 'fats':
-      return 'Fats';
-    case 'vegetables':
-      return 'Vegetables';
-    default: {
-      const _exhaustive: never = category;
-      return _exhaustive;
-    }
-  }
-}
-
-function foodCategoryEmoji(category: Phase['stapleFoods'][number]['category']): string {
-  switch (category) {
-    case 'protein':
-      return '🥩';
-    case 'carbs':
-      return '🍚';
-    case 'fats':
-      return '🥑';
-    case 'vegetables':
-      return '🥦';
-    default: {
-      const _exhaustive: never = category;
-      return _exhaustive;
-    }
-  }
-}
-
-export function PhaseDetail({ phase }: PhaseDetailProps) {
-  const recipes = getRecipesForPhase(phase.id);
+export function PhaseDetail({ phase, onBrowseFoods }: PhaseDetailProps) {
+  const featured = getFeaturedProducts(phase.id);
 
   return (
     <div className="stack phase-detail">
@@ -51,9 +19,9 @@ export function PhaseDetail({ phase }: PhaseDetailProps) {
         <h2 className="legend-detail-title">{phase.name}</h2>
         <p className="phase-hero-tagline">{phase.tagline}</p>
         <div className="chips">
-          <span className="chip accent">{recipes.length} recipes</span>
-          <span className="chip">{phase.stapleFoods.length} food groups</span>
+          <span className="chip accent">{featured.length} featured foods</span>
           <span className="chip">{phase.dailyRoutine.length} daily blocks</span>
+          <span className="chip">Meal examples soon</span>
         </div>
       </header>
 
@@ -62,7 +30,7 @@ export function PhaseDetail({ phase }: PhaseDetailProps) {
         <a href={`#${phase.id}-overview`}>Overview</a>
         <a href={`#${phase.id}-nutrition`}>Nutrition</a>
         <a href={`#${phase.id}-foods`}>Foods</a>
-        <a href={`#${phase.id}-recipes`}>Recipes</a>
+        <a href={`#${phase.id}-meals`}>Meal examples</a>
         <a href={`#${phase.id}-routine`}>Daily routine</a>
       </nav>
 
@@ -92,34 +60,26 @@ export function PhaseDetail({ phase }: PhaseDetailProps) {
       </section>
 
       <section className="stack" id={`${phase.id}-foods`}>
-        <h3 className="legend-col-title">Staple foods</h3>
-        <div className="food-grid">
-          {phase.stapleFoods.map((group) => (
-            <article className="food-card" key={group.category}>
-              <div className="food-card-head">
-                <span className="food-card-emoji" aria-hidden>
-                  {foodCategoryEmoji(group.category)}
-                </span>
-                <strong>{foodCategoryLabel(group.category)}</strong>
-              </div>
-              <ul className="clean">
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+        <h3 className="legend-col-title">Featured foods</h3>
+        <p className="fuel-prose">
+          A slice of the Foods catalog that mattered in this phase. Full shopping reference lives
+          under Bro Foods.
+        </p>
+        <div className="product-grid">
+          {featured.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
+        {onBrowseFoods ? (
+          <button type="button" className="text-link" onClick={onBrowseFoods}>
+            Browse all Foods →
+          </button>
+        ) : null}
       </section>
 
-      <section className="stack" id={`${phase.id}-recipes`}>
-        <h3 className="legend-col-title">Recipes</h3>
-        <div className="recipe-grid">
-          {recipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
-          ))}
-        </div>
-      </section>
+      <div id={`${phase.id}-meals`}>
+        <MealExamplesComingSoon onBrowseFoods={onBrowseFoods} />
+      </div>
 
       <section className="fuel-panel stack" id={`${phase.id}-routine`}>
         <h3 className="legend-col-title">Daily routine</h3>

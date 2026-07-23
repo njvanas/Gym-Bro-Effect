@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 
 import {
-  getRecipesForPhase,
+  getFeaturedProducts,
+  getPhase,
+  getProduct,
+  products,
   phases,
-  recipes,
   validateFuelIntegrity,
 } from './fuel-db';
 
@@ -17,14 +19,29 @@ describe('fuel database', () => {
     ]);
   });
 
-  it('has recipes for every phase', () => {
+  it('loads a non-empty products catalog', () => {
+    expect(products.length).toBeGreaterThan(20);
+  });
+
+  it('resolves featured products for every phase', () => {
     for (const phase of phases) {
-      expect(getRecipesForPhase(phase.id).length).toBeGreaterThan(0);
+      const featured = getFeaturedProducts(phase.id);
+      expect(featured.length).toBeGreaterThan(0);
+      expect(featured.every((p) => p.id)).toBe(true);
     }
-    expect(recipes.length).toBeGreaterThanOrEqual(14);
+  });
+
+  it('looks up products by id', () => {
+    const sample = products[0];
+    expect(getProduct(sample.id)?.id).toBe(sample.id);
+    expect(getProduct('does-not-exist')).toBeUndefined();
   });
 
   it('passes integrity checks', () => {
     expect(validateFuelIntegrity()).toEqual([]);
+  });
+
+  it('exposes getPhase', () => {
+    expect(getPhase('cutting')?.id).toBe('cutting');
   });
 });
