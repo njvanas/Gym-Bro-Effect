@@ -245,28 +245,61 @@ export const bodybuilderTierSchema = z.union([z.literal(1), z.literal(2), z.lite
 export type BodybuilderTier = z.infer<typeof bodybuilderTierSchema>;
 
 /**
- * A roster card for a bodybuilder — lighter than a full `TrainingStyle`.
- * Deliberately has no split/set/rep fields: those only ever live in `styles.json`,
- * behind primary-source research. A card may optionally link to a full style via `styleId`.
+ * A bodybuilder profile in the unified Legends roster.
+ * Deliberately has no split/set/rep fields: those only ever live in `styles.json`
+ * behind primary-source research. When `styleId` is set, principles/sources live on
+ * the linked style — keep them empty here to avoid duplication.
  */
-export const bodybuilderSchema = z.object({
-  id: z.string().min(1),
-  name: z.string().min(1),
-  /** e.g. "1992-1997, 6x Mr. Olympia" or "1950s-60s trainer/gym owner". */
-  era: z.string().min(1),
-  /** Titles/records, e.g. "6x Mr. Olympia". Non-numeric-prescription biographical facts only. */
-  titles: z.array(z.string().min(1)).default([]),
-  /** One sentence: why this person is in the roster. */
-  why: z.string().min(1),
-  /** 2-4 short, sourced bullets (quotes preferred). Never invented set/rep/split numbers. */
-  principles: z.array(z.string().min(1)).min(2).max(4),
-  sources: z.array(sourceSchema).default([]),
-  /** Matching `styles.json` id, when a full trainable system has been documented for this person. */
-  styleId: z.string().min(1).optional(),
-  tier: bodybuilderTierSchema,
-  /** Lower numbers appear first in the roster grid. */
-  displayOrder: z.number().int().nonnegative(),
-});
+export const bodybuilderSchema = z
+  .object({
+    id: z.string().min(1),
+    name: z.string().min(1),
+    /** e.g. "1992-1997, 6x Mr. Olympia" or "1950s-60s trainer/gym owner". */
+    era: z.string().min(1),
+    /** Titles/records, e.g. "6x Mr. Olympia". Non-numeric-prescription biographical facts only. */
+    titles: z.array(z.string().min(1)).default([]),
+    /** One sentence: why this person is in the roster. */
+    why: z.string().min(1),
+    /**
+     * Roster-only cards: 2-4 sourced bullets.
+     * Linked cards (`styleId` set): must be empty — use the style's principles instead.
+     */
+    principles: z.array(z.string().min(1)).max(4).default([]),
+    sources: z.array(sourceSchema).default([]),
+    /** Matching `styles.json` id, when a full trainable system has been documented. */
+    styleId: z.string().min(1).optional(),
+    tier: bodybuilderTierSchema,
+    /** Sort key; browse UI also sorts alphabetically by name. */
+    displayOrder: z.number().int().nonnegative(),
+  })
+  .superRefine((bodybuilder, ctx) => {
+    if (bodybuilder.styleId) {
+      if (bodybuilder.principles.length > 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message:
+            'Linked bodybuilders must leave principles empty (they live on the style)',
+          path: ['principles'],
+        });
+      }
+      if (bodybuilder.sources.length > 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message:
+            'Linked bodybuilders must leave sources empty (they live on the style)',
+          path: ['sources'],
+        });
+      }
+      return;
+    }
+    if (bodybuilder.principles.length < 2) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Roster-only bodybuilders need 2-4 principles',
+        path: ['principles'],
+      });
+    }
+  });
 export type Bodybuilder = z.infer<typeof bodybuilderSchema>;
 
 export const bodybuildersFileSchema = z.array(bodybuilderSchema);

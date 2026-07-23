@@ -144,21 +144,28 @@ describe('bodybuilder roster', () => {
     expect(bodybuilders.length).toBeGreaterThanOrEqual(50);
   });
 
-  it('has no duplicate ids and orders by displayOrder', () => {
+  it('has unique ids and is sorted alphabetically by name', () => {
     const ids = new Set(bodybuilders.map((b) => b.id));
     expect(ids.size).toBe(bodybuilders.length);
     for (let i = 1; i < bodybuilders.length; i++) {
-      expect(bodybuilders[i].displayOrder).toBeGreaterThanOrEqual(
-        bodybuilders[i - 1].displayOrder,
-      );
+      expect(
+        bodybuilders[i].name.localeCompare(bodybuilders[i - 1].name, 'en', {
+          sensitivity: 'base',
+        }),
+      ).toBeGreaterThanOrEqual(0);
     }
   });
 
-  it('every bodybuilder has 2-4 principles and a non-empty why', () => {
+  it('roster-only cards have 2-4 principles; linked cards keep principles on the style', () => {
     for (const b of bodybuilders) {
-      expect(b.principles.length, b.id).toBeGreaterThanOrEqual(2);
-      expect(b.principles.length, b.id).toBeLessThanOrEqual(4);
       expect(b.why.length, b.id).toBeGreaterThan(0);
+      if (b.styleId) {
+        expect(b.principles, b.id).toEqual([]);
+        expect(b.sources, b.id).toEqual([]);
+      } else {
+        expect(b.principles.length, b.id).toBeGreaterThanOrEqual(2);
+        expect(b.principles.length, b.id).toBeLessThanOrEqual(4);
+      }
     }
   });
 
@@ -169,7 +176,7 @@ describe('bodybuilder roster', () => {
     }
   });
 
-  it('every current styles.json creator has a linked Tier 1/2 roster card', () => {
+  it('every current styles.json creator has a linked roster card', () => {
     const linkedStyleIds = new Set(
       bodybuilders.filter((b) => b.styleId).map((b) => b.styleId),
     );

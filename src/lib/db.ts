@@ -34,7 +34,7 @@ export const styles: TrainingStyle[] = stylesFileSchema
 export const routines: Routine[] = routinesFileSchema.parse(routinesData);
 export const bodybuilders: Bodybuilder[] = bodybuildersFileSchema
   .parse(bodybuildersData)
-  .sort((a, b) => a.displayOrder - b.displayOrder);
+  .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
 
 const styleOrder = new Map(styles.map((s) => [s.id, s.displayOrder]));
 

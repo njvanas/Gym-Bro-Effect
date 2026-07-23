@@ -1,69 +1,85 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
+  bodybuilders,
   getLegendRoutineGroupsByStyle,
   getRoutine,
   getRoutinesByStyle,
-  styles,
+  getStyle,
   type LegendRoutineGroup,
 } from '../../lib/db';
 import { intensityTechniqueLabel, muscleLabel } from '../../lib/format';
 import { curatorGradient, curatorInitials } from '../../lib/curator';
-import type { Routine, TrainingStyle } from '../../schema';
+import type { Bodybuilder, Routine, TrainingStyle } from '../../schema';
 import { AccordionItem } from '../Accordion';
 import { ExerciseTable } from '../ExerciseTable';
 
 type View =
   | { kind: 'browse' }
   | { kind: 'legend'; styleId: string }
+  | { kind: 'card'; bodybuilderId: string }
   | { kind: 'workout'; styleId: string; routineId: string };
 
 type FilterChip = {
   id: string;
   label: string;
-  match: (style: TrainingStyle) => boolean;
+  match: (bodybuilder: Bodybuilder, style: TrainingStyle | undefined) => boolean;
 };
 
-/** Editorial browse chips — Stereo-style category rail, not a dashboard. */
+/** Browse chips for the unified bodybuilder roster. */
 const FILTER_CHIPS: FilterChip[] = [
+  {
+    id: 'full-system',
+    label: 'Full system',
+    match: (b) => Boolean(b.styleId),
+  },
+  {
+    id: 'roster',
+    label: 'Roster card',
+    match: (b) => !b.styleId,
+  },
   {
     id: 'hit',
     label: 'HIT',
-    match: (s) =>
-      s.tags.some((t) =>
-        /hit|one set|beyond failure|infrequent|low frequency/i.test(t),
+    match: (_b, style) =>
+      Boolean(
+        style?.tags.some((t) =>
+          /hit|one set|beyond failure|infrequent|low frequency/i.test(t),
+        ),
       ),
   },
   {
     id: 'volume',
     label: 'High volume',
-    match: (s) =>
-      s.tags.some((t) => /high volume|20 working|moderate volume/i.test(t)),
+    match: (_b, style) =>
+      Boolean(style?.tags.some((t) => /high volume|20 working|moderate volume/i.test(t))),
   },
   {
     id: 'old-school',
     label: 'Old school',
-    match: (s) =>
-      s.tags.some((t) => /old school|golden|olympia|nickname/i.test(t)),
+    match: (_b, style) =>
+      Boolean(style?.tags.some((t) => /old school|golden|olympia|nickname/i.test(t))),
   },
   {
     id: 'aesthetics',
     label: 'Aesthetics',
-    match: (s) =>
-      s.tags.some((t) => /aesthetics|mind-muscle|stretching|longevity/i.test(t)),
+    match: (_b, style) =>
+      Boolean(
+        style?.tags.some((t) => /aesthetics|mind-muscle|stretching|longevity/i.test(t)),
+      ),
   },
   {
     id: 'pump',
     label: 'Pump / FST',
-    match: (s) =>
-      s.tags.some((t) => /fst|fascia|pump|pre-exhaust/i.test(t)),
+    match: (_b, style) =>
+      Boolean(style?.tags.some((t) => /fst|fascia|pump|pre-exhaust/i.test(t))),
   },
   {
     id: 'power',
     label: 'Power / compounds',
-    match: (s) =>
-      s.tags.some((t) =>
-        /heavy compounds|metroflex|progressive overload|failure training/i.test(
-          t,
+    match: (_b, style) =>
+      Boolean(
+        style?.tags.some((t) =>
+          /heavy compounds|metroflex|progressive overload|failure training/i.test(t),
         ),
       ),
   },
@@ -73,9 +89,19 @@ function totalSets(routine: Routine): number {
   return routine.exercises.reduce((sum, slot) => sum + slot.sets, 0);
 }
 
-function matchesQuery(style: TrainingStyle, query: string): boolean {
+function matchesBodybuilderQuery(
+  bodybuilder: Bodybuilder,
+  style: TrainingStyle | undefined,
+  query: string,
+): boolean {
   if (!query) return true;
-  const hay = [
+  const hay = [bodybuilder.name, bodybuilder.era, bodybuilder.why, ...bodybuilder.titles]
+    .join(' ')
+    .toLowerCase();
+  if (hay.includes(query)) return true;
+  if (!style) return false;
+
+  const styleHay = [
     style.name,
     style.creator,
     style.summary,
@@ -85,8 +111,7 @@ function matchesQuery(style: TrainingStyle, query: string): boolean {
   ]
     .join(' ')
     .toLowerCase();
-
-  if (hay.includes(query)) return true;
+  if (styleHay.includes(query)) return true;
 
   const groups = getLegendRoutineGroupsByStyle(style.id);
   for (const group of groups) {
@@ -108,25 +133,29 @@ function matchesQuery(style: TrainingStyle, query: string): boolean {
   return false;
 }
 
-function matchesFilter(style: TrainingStyle, filterId: string | null): boolean {
+function matchesFilter(
+  bodybuilder: Bodybuilder,
+  style: TrainingStyle | undefined,
+  filterId: string | null,
+): boolean {
   if (!filterId) return true;
   const chip = FILTER_CHIPS.find((c) => c.id === filterId);
-  return chip ? chip.match(style) : true;
+  return chip ? chip.match(bodybuilder, style) : true;
 }
 
 function Avatar({
   name,
-  styleId,
+  gradientKey,
   size = '',
 }: {
   name: string;
-  styleId: string;
+  gradientKey: string;
   size?: 'sm' | 'lg' | 'xl' | '';
 }) {
   return (
     <span
       className={`avatar${size ? ` ${size}` : ''}`}
-      style={{ background: curatorGradient(styleId) }}
+      style={{ background: curatorGradient(gradientKey) }}
       aria-hidden
     >
       {curatorInitials(name)}
@@ -333,11 +362,11 @@ function LegendDetail({
   return (
     <div className="legend-detail" key={style.id}>
       <button type="button" className="back" onClick={onBack}>
-        ← All Bro Methods
+        ← All bodybuilders
       </button>
 
       <header className="legend-detail-hero">
-        <Avatar name={style.creator} styleId={style.id} size="xl" />
+        <Avatar name={style.creator} gradientKey={style.id} size="xl" />
         <div className="legend-detail-hero-copy">
           <p className="legend-eyebrow">{style.creator}</p>
           <h2 className="legend-detail-title">{style.name}</h2>
@@ -420,7 +449,7 @@ function WorkoutDetail({
         <div className="detail-head">
           <div className="who">
             {routine.styleId ? (
-              <Avatar name={creator} styleId={routine.styleId} size="lg" />
+              <Avatar name={creator} gradientKey={routine.styleId} size="lg" />
             ) : null}
             <div>
               <div className="k">Curated by</div>
@@ -461,17 +490,18 @@ function WorkoutDetail({
   );
 }
 
-function LegendCard({
+function BodybuilderCard({
+  bodybuilder,
   style,
   index,
   onSelect,
 }: {
-  style: TrainingStyle;
+  bodybuilder: Bodybuilder;
+  style: TrainingStyle | undefined;
   index: number;
   onSelect: () => void;
 }) {
-  const groups = getLegendRoutineGroupsByStyle(style.id);
-  const workouts = getRoutinesByStyle(style.id).length;
+  const workouts = style ? getRoutinesByStyle(style.id).length : 0;
 
   return (
     <button
@@ -481,25 +511,121 @@ function LegendCard({
       onClick={onSelect}
     >
       <div className="legend-card-glow" aria-hidden />
-      <Avatar name={style.creator} styleId={style.id} size="lg" />
+      <Avatar
+        name={bodybuilder.name}
+        gradientKey={bodybuilder.styleId ?? bodybuilder.id}
+        size="lg"
+      />
       <div className="legend-card-body">
-        <p className="legend-card-creator">{style.creator}</p>
-        <h3 className="legend-card-name">{style.name}</h3>
-        <p className="legend-card-blurb">{style.summary}</p>
+        <p className="legend-card-creator">{bodybuilder.era}</p>
+        <h3 className="legend-card-name">{bodybuilder.name}</h3>
+        <p className="legend-card-blurb">
+          {style ? style.summary : bodybuilder.why}
+        </p>
         <div className="chips">
-          {style.tags.slice(0, 3).map((tag) => (
-            <span className="chip" key={tag}>
-              {tag}
-            </span>
-          ))}
+          {style
+            ? style.tags.slice(0, 3).map((tag) => (
+                <span className="chip" key={tag}>
+                  {tag}
+                </span>
+              ))
+            : bodybuilder.titles.slice(0, 2).map((title) => (
+                <span className="chip" key={title}>
+                  {title}
+                </span>
+              ))}
+          {!style ? <span className="chip accent">Roster card</span> : null}
         </div>
-        <div className="legend-card-meta">
-          {groups.length} routine{groups.length === 1 ? '' : 's'} · {workouts}{' '}
-          workout{workouts === 1 ? '' : 's'}
+        {style ? (
+          <div className="legend-card-meta">
+            {style.name} · {workouts} workout{workouts === 1 ? '' : 's'}
+          </div>
+        ) : null}
+      </div>
+      <span className="legend-card-cta">
+        {style ? 'Open training system →' : 'View roster card →'}
+      </span>
+    </button>
+  );
+}
+
+function RosterCardDetail({
+  bodybuilder,
+  onBack,
+}: {
+  bodybuilder: Bodybuilder;
+  onBack: () => void;
+}) {
+  return (
+    <div className="legend-detail" key={bodybuilder.id}>
+      <button type="button" className="back" onClick={onBack}>
+        ← All bodybuilders
+      </button>
+
+      <header className="legend-detail-hero">
+        <Avatar name={bodybuilder.name} gradientKey={bodybuilder.id} size="xl" />
+        <div className="legend-detail-hero-copy">
+          <p className="legend-eyebrow">{bodybuilder.era}</p>
+          <h2 className="legend-detail-title">{bodybuilder.name}</h2>
+          <div className="chips">
+            {bodybuilder.titles.map((title) => (
+              <span className="chip accent" key={title}>
+                {title}
+              </span>
+            ))}
+            <span className="chip">Roster card</span>
+          </div>
+        </div>
+      </header>
+
+      <div className="legend-method">
+        <p className="legend-summary">{bodybuilder.why}</p>
+
+        <div className="accordion legend-accordion">
+          <AccordionItem
+            title="Principles"
+            summary={String(bodybuilder.principles.length)}
+            defaultOpen
+            anchorId={`${bodybuilder.id}-principles`}
+          >
+            <ol className="principle-list">
+              {bodybuilder.principles.map((p, i) => (
+                <li key={i}>
+                  <span className="principle-num" aria-hidden>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span className="principle-text">{p}</span>
+                </li>
+              ))}
+            </ol>
+          </AccordionItem>
+
+          {bodybuilder.sources.length > 0 ? (
+            <AccordionItem
+              title="Sources"
+              summary={String(bodybuilder.sources.length)}
+              defaultOpen
+              anchorId={`${bodybuilder.id}-sources`}
+            >
+              <ul className="principles source-list">
+                {bodybuilder.sources.map((s) => (
+                  <li key={s.url}>
+                    <a href={s.url} target="_blank" rel="noreferrer">
+                      {s.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </AccordionItem>
+          ) : (
+            <p className="sub" style={{ marginTop: '0.75rem' }}>
+              No verified sources yet for this roster card — thin sourcing is flagged
+              honestly rather than filled with guesses.
+            </p>
+          )}
         </div>
       </div>
-      <span className="legend-card-cta">Explore →</span>
-    </button>
+    </div>
   );
 }
 
@@ -512,13 +638,15 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
 
   const normalized = query.trim().toLowerCase();
 
-  const filtered = useMemo(
-    () =>
-      styles.filter(
-        (s) => matchesQuery(s, normalized) && matchesFilter(s, filterId),
-      ),
-    [normalized, filterId],
-  );
+  const filtered = useMemo(() => {
+    return bodybuilders.filter((bodybuilder) => {
+      const style = bodybuilder.styleId ? getStyle(bodybuilder.styleId) : undefined;
+      return (
+        matchesBodybuilderQuery(bodybuilder, style, normalized) &&
+        matchesFilter(bodybuilder, style, filterId)
+      );
+    });
+  }, [normalized, filterId]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -526,7 +654,7 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
 
   if (view.kind === 'workout') {
     const routine = getRoutine(view.routineId);
-    const style = styles.find((s) => s.id === view.styleId);
+    const style = getStyle(view.styleId);
     if (!routine) {
       return (
         <div className="empty">
@@ -551,7 +679,7 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
   }
 
   if (view.kind === 'legend') {
-    const style = styles.find((s) => s.id === view.styleId);
+    const style = getStyle(view.styleId);
     if (!style) {
       return (
         <div className="empty">
@@ -577,28 +705,48 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
     );
   }
 
+  if (view.kind === 'card') {
+    const bodybuilder = bodybuilders.find((b) => b.id === view.bodybuilderId);
+    if (!bodybuilder) {
+      return (
+        <div className="empty">
+          Bodybuilder not found.{' '}
+          <button type="button" className="back" onClick={() => setView({ kind: 'browse' })}>
+            Go back
+          </button>
+        </div>
+      );
+    }
+    return (
+      <RosterCardDetail
+        bodybuilder={bodybuilder}
+        onBack={() => setView({ kind: 'browse' })}
+      />
+    );
+  }
+
   return (
     <div className="legends-browse">
       <section className="legends-masthead">
-        <p className="legends-kicker">Bro Methods</p>
+        <p className="legends-kicker">Bro Legends</p>
         <h1 className="legends-headline">
-          Find how the <span className="accent">legends</span> trained
+          {bodybuilders.length} <span className="accent">bodybuilders</span>, A–Z
         </h1>
         <p className="legends-lede">
-          Search a bodybuilder, open their method, then dig into every workout
-          with warm-ups and working sets spelled out.
+          One roster sorted by name. Open a full training system when we have one —
+          otherwise a sourced roster card.
         </p>
 
         <div className="legends-search-shell">
           <label className="visually-hidden" htmlFor="legend-search">
-            Find a legend, method, or workout
+            Find a bodybuilder, method, or workout
           </label>
           <div className="legends-search-row">
             <input
               id="legend-search"
               className="legends-search"
               type="search"
-              placeholder="Yates, HIT, Day 1 Chest, FST-7…"
+              placeholder="Arnold, Yates, HIT, FST-7…"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               autoComplete="off"
@@ -618,7 +766,7 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
             <button
               type="button"
               className="legends-search-go"
-              aria-label="Search legends"
+              aria-label="Search bodybuilders"
               onClick={() => {
                 document.getElementById('legend-results')?.scrollIntoView({
                   behavior: 'smooth',
@@ -660,7 +808,7 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
         </div>
 
         <p className="legends-search-hint" id="legend-results">
-          {filtered.length} of {styles.length} legends
+          {filtered.length} of {bodybuilders.length} bodybuilders
           {normalized ? ` matching “${query.trim()}”` : ''}
           {filterId
             ? ` · ${FILTER_CHIPS.find((c) => c.id === filterId)?.label ?? ''}`
@@ -670,18 +818,28 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
 
       {filtered.length === 0 ? (
         <div className="empty legends-empty">
-          No legends match that search. Try a name, tag, or workout focus.
+          No bodybuilders match that search. Try a name, title, or method.
         </div>
       ) : (
         <div className="legend-grid">
-          {filtered.map((style, index) => (
-            <LegendCard
-              key={style.id}
-              style={style}
-              index={index}
-              onSelect={() => setView({ kind: 'legend', styleId: style.id })}
-            />
-          ))}
+          {filtered.map((bodybuilder, index) => {
+            const style = bodybuilder.styleId
+              ? getStyle(bodybuilder.styleId)
+              : undefined;
+            return (
+              <BodybuilderCard
+                key={bodybuilder.id}
+                bodybuilder={bodybuilder}
+                style={style}
+                index={index}
+                onSelect={() =>
+                  bodybuilder.styleId
+                    ? setView({ kind: 'legend', styleId: bodybuilder.styleId })
+                    : setView({ kind: 'card', bodybuilderId: bodybuilder.id })
+                }
+              />
+            );
+          })}
         </div>
       )}
     </div>

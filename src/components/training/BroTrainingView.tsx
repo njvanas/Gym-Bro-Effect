@@ -3,9 +3,8 @@ import { useState } from 'react';
 import { BroExercisesView } from './BroExercisesView';
 import { BroLegendsView } from './BroLegendsView';
 import { BroPersonalView } from './BroPersonalView';
-import { BroRosterView } from './BroRosterView';
 
-type TrainingSub = 'hub' | 'legends' | 'personal' | 'exercises' | 'roster';
+type TrainingSub = 'hub' | 'legends' | 'personal' | 'exercises';
 
 function subLabel(sub: TrainingSub): string {
   switch (sub) {
@@ -17,8 +16,6 @@ function subLabel(sub: TrainingSub): string {
       return 'My Personal Hevy';
     case 'exercises':
       return 'Bro Exercises';
-    case 'roster':
-      return 'Bro Roster';
     default: {
       const _exhaustive: never = sub;
       return _exhaustive;
@@ -28,7 +25,6 @@ function subLabel(sub: TrainingSub): string {
 
 export function BroTrainingView() {
   const [sub, setSub] = useState<TrainingSub>('hub');
-  const [rosterStyleId, setRosterStyleId] = useState<string | undefined>(undefined);
 
   let body;
   switch (sub) {
@@ -36,38 +32,18 @@ export function BroTrainingView() {
       body = (
         <div className="training-hub">
           <p className="muted training-hub-lede">
-            Pick a path — legend methodologies with full workout breakdowns, or My Personal Hevy
-            folders.
+            Pick a path — the bodybuilder roster with full workout breakdowns where we have them,
+            or My Personal Hevy folders.
           </p>
           <div className="training-hub-grid">
-            <button
-              type="button"
-              className="training-hub-card"
-              onClick={() => {
-                setRosterStyleId(undefined);
-                setSub('legends');
-              }}
-            >
+            <button type="button" className="training-hub-card" onClick={() => setSub('legends')}>
               <span className="training-hub-kicker">Bro Methods</span>
               <strong className="training-hub-title">Legends</strong>
               <p>
-                Browse bodybuilding methodologies, open a legend, then dig into every workout with
-                warm-ups and working sets spelled out.
+                50+ bodybuilders A–Z. Open a full training system when documented, or a sourced
+                roster card when we are still building the archive.
               </p>
-              <span className="training-hub-cta">Explore legends →</span>
-            </button>
-            <button
-              type="button"
-              className="training-hub-card"
-              onClick={() => setSub('roster')}
-            >
-              <span className="training-hub-kicker">Bro Roster</span>
-              <strong className="training-hub-title">Bodybuilder Roster</strong>
-              <p>
-                50+ bodybuilders across every era — titles, era, and sourced principles, linking
-                into a full training system when one has been documented.
-              </p>
-              <span className="training-hub-cta">Browse the roster →</span>
+              <span className="training-hub-cta">Browse bodybuilders →</span>
             </button>
             <button
               type="button"
@@ -92,22 +68,7 @@ export function BroTrainingView() {
           <button type="button" className="back" onClick={() => setSub('hub')}>
             ← Bro Training
           </button>
-          <BroLegendsView initialStyleId={rosterStyleId} />
-        </div>
-      );
-      break;
-    case 'roster':
-      body = (
-        <div className="stack">
-          <button type="button" className="back" onClick={() => setSub('hub')}>
-            ← Bro Training
-          </button>
-          <BroRosterView
-            onOpenStyle={(styleId) => {
-              setRosterStyleId(styleId);
-              setSub('legends');
-            }}
-          />
+          <BroLegendsView />
         </div>
       );
       break;
@@ -138,12 +99,10 @@ export function BroTrainingView() {
             type="button"
             role="tab"
             aria-selected={
-              sub === item ||
-              (item === 'hub' && (sub === 'legends' || sub === 'personal' || sub === 'roster'))
+              sub === item || (item === 'hub' && (sub === 'legends' || sub === 'personal'))
             }
             className={
-              sub === item ||
-              (item === 'hub' && (sub === 'legends' || sub === 'personal' || sub === 'roster'))
+              sub === item || (item === 'hub' && (sub === 'legends' || sub === 'personal'))
                 ? 'nav-link active'
                 : 'nav-link'
             }
