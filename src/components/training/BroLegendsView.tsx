@@ -503,10 +503,12 @@ function LegendCard({
   );
 }
 
-export function BroLegendsView() {
+export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } = {}) {
   const [query, setQuery] = useState('');
   const [filterId, setFilterId] = useState<string | null>(null);
-  const [view, setView] = useState<View>({ kind: 'browse' });
+  const [view, setView] = useState<View>(
+    initialStyleId ? { kind: 'legend', styleId: initialStyleId } : { kind: 'browse' },
+  );
 
   const normalized = query.trim().toLowerCase();
 

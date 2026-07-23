@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import {
+  bodybuilders,
   compareWorkouts,
   exercises,
+  getBodybuilder,
   getLegendRoutines,
   getLegendRoutineGroups,
   getRoutinesByStyle,
@@ -134,5 +136,54 @@ describe('training database', () => {
         expect(slot.repRange.length).toBeGreaterThan(0);
       }
     }
+  });
+});
+
+describe('bodybuilder roster', () => {
+  it('loads at least 50 bodybuilders', () => {
+    expect(bodybuilders.length).toBeGreaterThanOrEqual(50);
+  });
+
+  it('has no duplicate ids and orders by displayOrder', () => {
+    const ids = new Set(bodybuilders.map((b) => b.id));
+    expect(ids.size).toBe(bodybuilders.length);
+    for (let i = 1; i < bodybuilders.length; i++) {
+      expect(bodybuilders[i].displayOrder).toBeGreaterThanOrEqual(
+        bodybuilders[i - 1].displayOrder,
+      );
+    }
+  });
+
+  it('every bodybuilder has 2-4 principles and a non-empty why', () => {
+    for (const b of bodybuilders) {
+      expect(b.principles.length, b.id).toBeGreaterThanOrEqual(2);
+      expect(b.principles.length, b.id).toBeLessThanOrEqual(4);
+      expect(b.why.length, b.id).toBeGreaterThan(0);
+    }
+  });
+
+  it('every styleId reference resolves to a real style (checked in validateReferentialIntegrity too)', () => {
+    const styleIds = new Set(styles.map((s) => s.id));
+    for (const b of bodybuilders) {
+      if (b.styleId) expect(styleIds.has(b.styleId), b.id).toBe(true);
+    }
+  });
+
+  it('every current styles.json creator has a linked Tier 1/2 roster card', () => {
+    const linkedStyleIds = new Set(
+      bodybuilders.filter((b) => b.styleId).map((b) => b.styleId),
+    );
+    for (const style of styles) {
+      expect(linkedStyleIds.has(style.id), style.id).toBe(true);
+    }
+  });
+
+  it('finds a bodybuilder by id', () => {
+    expect(getBodybuilder('dorian-yates')?.styleId).toBe('blood-and-guts');
+    expect(getBodybuilder('does-not-exist')).toBeUndefined();
+  });
+
+  it('has no referential-integrity problems for the roster', () => {
+    expect(validateReferentialIntegrity()).toEqual([]);
   });
 });

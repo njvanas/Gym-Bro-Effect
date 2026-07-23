@@ -2,11 +2,14 @@ import myCollectionData from '../data/my-collection.json';
 import exercisesData from '../data/exercises.json';
 import stylesData from '../data/styles.json';
 import routinesData from '../data/routines.json';
+import bodybuildersData from '../data/bodybuilders.json';
 import {
   exercisesFileSchema,
   stylesFileSchema,
   routinesFileSchema,
   hevyFoldersCatalogFileSchema,
+  bodybuildersFileSchema,
+  type Bodybuilder,
   type Exercise,
   type HevyFoldersCatalog,
   type Routine,
@@ -29,6 +32,9 @@ export const styles: TrainingStyle[] = stylesFileSchema
   .parse(stylesData)
   .sort((a, b) => a.displayOrder - b.displayOrder);
 export const routines: Routine[] = routinesFileSchema.parse(routinesData);
+export const bodybuilders: Bodybuilder[] = bodybuildersFileSchema
+  .parse(bodybuildersData)
+  .sort((a, b) => a.displayOrder - b.displayOrder);
 
 const styleOrder = new Map(styles.map((s) => [s.id, s.displayOrder]));
 
@@ -140,6 +146,12 @@ export function getRoutine(id: string): Routine | undefined {
   return routines.find((r) => r.id === id);
 }
 
+const bodybuildersById = new Map(bodybuilders.map((b) => [b.id, b]));
+
+export function getBodybuilder(id: string): Bodybuilder | undefined {
+  return bodybuildersById.get(id);
+}
+
 export function getHevyFolder(id: string) {
   return hevyFoldersById.get(id);
 }
@@ -179,6 +191,15 @@ export function validateReferentialIntegrity(): string[] {
   checkUnique('exercise', exercises.map((e) => e.id));
   checkUnique('style', styles.map((s) => s.id));
   checkUnique('routine', routines.map((r) => r.id));
+  checkUnique('bodybuilder', bodybuilders.map((b) => b.id));
+
+  for (const bodybuilder of bodybuilders) {
+    if (bodybuilder.styleId && !stylesById.has(bodybuilder.styleId)) {
+      problems.push(
+        `Bodybuilder "${bodybuilder.id}" references unknown style "${bodybuilder.styleId}"`,
+      );
+    }
+  }
 
   for (const folder of hevyFolders) {
     if (!folder.url.endsWith(`/folder/${folder.hevyId}`)) {

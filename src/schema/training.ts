@@ -233,3 +233,40 @@ export const routinesFileSchema = z.array(routineSchema);
 export const hevyFoldersCatalogFileSchema = hevyFoldersCatalogSchema;
 /** @deprecated */
 export const personalCollectionFileSchema = hevyFoldersCatalogSchema;
+
+/**
+ * Research depth for a bodybuilder roster card:
+ * 1 = full `styles.json` system exists (Yates-depth).
+ * 2 = full `styles.json` system exists, but sourcing is thinner ("documented style").
+ * 3 = roster card only — no full trainable system documented (yet); short, honest profile.
+ * See docs/research/legends/00-roster-50-plus.md.
+ */
+export const bodybuilderTierSchema = z.union([z.literal(1), z.literal(2), z.literal(3)]);
+export type BodybuilderTier = z.infer<typeof bodybuilderTierSchema>;
+
+/**
+ * A roster card for a bodybuilder — lighter than a full `TrainingStyle`.
+ * Deliberately has no split/set/rep fields: those only ever live in `styles.json`,
+ * behind primary-source research. A card may optionally link to a full style via `styleId`.
+ */
+export const bodybuilderSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  /** e.g. "1992-1997, 6x Mr. Olympia" or "1950s-60s trainer/gym owner". */
+  era: z.string().min(1),
+  /** Titles/records, e.g. "6x Mr. Olympia". Non-numeric-prescription biographical facts only. */
+  titles: z.array(z.string().min(1)).default([]),
+  /** One sentence: why this person is in the roster. */
+  why: z.string().min(1),
+  /** 2-4 short, sourced bullets (quotes preferred). Never invented set/rep/split numbers. */
+  principles: z.array(z.string().min(1)).min(2).max(4),
+  sources: z.array(sourceSchema).default([]),
+  /** Matching `styles.json` id, when a full trainable system has been documented for this person. */
+  styleId: z.string().min(1).optional(),
+  tier: bodybuilderTierSchema,
+  /** Lower numbers appear first in the roster grid. */
+  displayOrder: z.number().int().nonnegative(),
+});
+export type Bodybuilder = z.infer<typeof bodybuilderSchema>;
+
+export const bodybuildersFileSchema = z.array(bodybuilderSchema);

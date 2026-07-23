@@ -1,0 +1,897 @@
+[
+  {
+    "id": "dorian-yates",
+    "name": "Dorian Yates",
+    "era": "1992-1997",
+    "titles": ["6× Mr. Olympia"],
+    "why": "Redefined mass through Blood & Guts HIT at Temple Gym, building the most complete physique of the 1990s.",
+    "principles": [
+      "One maximum-intensity working set per exercise — quality over quantity.",
+      "Train each body part once every six days; recovery is when growth happens.",
+      "Beyond failure with a training partner: forced reps, rest-pause, negatives, partials, iso-holds."
+    ],
+    "sources": [
+      { "title": "Blood & Guts — Full Documentary (Temple Gym, Birmingham)", "url": "https://www.youtube.com/watch?v=K4i856tQZvY" },
+      { "title": "Blood And Guts Program — The Legacy of HIT (DY Nutrition)", "url": "https://dynutrition.co.uk/blogs/news/blood-and-guts-program-the-legacy-of-the-hit-workout" }
+    ],
+    "styleId": "blood-and-guts",
+    "tier": 1,
+    "displayOrder": 1
+  },
+  {
+    "id": "mike-mentzer",
+    "name": "Mike Mentzer",
+    "era": "1971-1980 competitor; HIT theorist until 2001",
+    "titles": ["Top-level Mr. America / Mr. Universe competitor"],
+    "why": "Defined High Intensity Training (HIT) as a rival philosophy to high-volume bodybuilding.",
+    "principles": [
+      "Intensity, not volume or frequency, is the stimulus for growth.",
+      "One set to true momentary muscular failure per exercise — add a second set only if the first failed to produce results.",
+      "Pre-exhaustion pairs an isolation set into a compound set so the target muscle reaches failure first."
+    ],
+    "sources": [
+      { "title": "Mike Mentzer's Ideal Routine: A Heavy Duty Blueprint (official, mikementzer.org)", "url": "https://mikementzer.org/mike-mentzers-ideal-routine-a-heavy-duty-blueprint/" },
+      { "title": "Heavy Duty College (official YouTube channel)", "url": "https://www.youtube.com/@HeavyDutyCollege" }
+    ],
+    "styleId": "heavy-duty",
+    "tier": 1,
+    "displayOrder": 2
+  },
+  {
+    "id": "ronnie-coleman",
+    "name": "Ronnie Coleman",
+    "era": "1998-2007",
+    "titles": ["8× Mr. Olympia"],
+    "why": "Most-titled male Mr. Olympia champion, pairing heavy compound lifts with genuine bodybuilding volume.",
+    "principles": [
+      "Heavy compound barbell movements anchor every session, but working sets stayed mostly 10-12 reps, not true maxes.",
+      "Chase the pump, not a number: \"I don't tackle a workout obsessed with being able to lift a specific number of pounds for a specific number of repetitions.\"",
+      "Train each major body part twice per week across a six-day split."
+    ],
+    "sources": [
+      { "title": "Ronnie Coleman Signature Series — How to be Hardcore (official)", "url": "https://ronniecoleman.net/blogs/articles/how-to-be-hardcore" },
+      { "title": "Ronnie Coleman official YouTube", "url": "https://www.youtube.com/@ronniecoleman8" }
+    ],
+    "styleId": "coleman-powerbuilding",
+    "tier": 1,
+    "displayOrder": 3
+  },
+  {
+    "id": "greg-doucette",
+    "name": "Greg Doucette",
+    "era": "2010s-present, coach/creator",
+    "titles": ["IFBB Pro turned coach and YouTube educator"],
+    "why": "Modern, living, easiest-to-verify system built entirely around progressive overload.",
+    "principles": [
+      "Harder than last time: always beat the previous session in weight, reps, technique, rest time, or total volume.",
+      "Training frequency scales with experience — beginners need far fewer weekly sessions than advanced lifters.",
+      "Sustainability and consistency beat short bursts of \"killing it\" followed by burnout or injury."
+    ],
+    "sources": [
+      { "title": "Harder Than Last Time Training Programs — Coach Greg Inc. (official)", "url": "https://www.gregdoucette.com/products/htlt-training-programs" },
+      { "title": "Coach Greg YouTube (official channel)", "url": "https://www.youtube.com/@gregdoucette" }
+    ],
+    "styleId": "htlt",
+    "tier": 1,
+    "displayOrder": 4
+  },
+  {
+    "id": "phil-heath",
+    "name": "Phil Heath",
+    "era": "2008-2022",
+    "titles": ["7× Mr. Olympia"],
+    "why": "\"The Gift\" whose physique became the showcase for coach Hany Rambod's FST-7 fascia-stretch system.",
+    "principles": [
+      "Finish a body part with \"sevens\" — seven sets on an isolation or cable move, taken last, after the heavy straight sets.",
+      "Individualize: Heath skipped sevens on arms specifically because they were already his strong point.",
+      "Large muscle groups get FST-7 about once a week; arms and calves can take it twice."
+    ],
+    "sources": [
+      { "title": "8 Tips to Train Like Phil Heath — Muscle & Fitness (interview with Hany Rambod)", "url": "https://www.muscleandfitness.com/athletes-celebrities/pro-tips/8-tips-train-phil-heath/" },
+      { "title": "FST-7 — Official current site (Hany Rambod)", "url": "https://www.hanyrambod.com/fst7/" }
+    ],
+    "styleId": "heath-fst7",
+    "tier": 1,
+    "displayOrder": 5
+  },
+  {
+    "id": "arnold-schwarzenegger",
+    "name": "Arnold Schwarzenegger",
+    "era": "1970-1980",
+    "titles": ["7× Mr. Olympia"],
+    "why": "The most culturally significant name in bodybuilding; his Encyclopedia remains a foundational training text.",
+    "principles": [
+      "Each major body part twice per week — Chest & Back, Shoulders & Arms, Legs.",
+      "Pair antagonists (chest with back) for supersets and training density.",
+      "Progressive overload with controlled form, chasing the pump."
+    ],
+    "sources": [
+      { "title": "The New Encyclopedia of Modern Bodybuilding — Arnold Schwarzenegger & Bill Dobbins", "url": "https://www.penguinrandomhouse.com/books/322959/the-new-encyclopedia-of-modern-bodybuilding-by-arnold-schwarzenegger/" }
+    ],
+    "styleId": "arnold-golden-era",
+    "tier": 1,
+    "displayOrder": 6
+  },
+  {
+    "id": "lee-haney",
+    "name": "Lee Haney",
+    "era": "1984-1991",
+    "titles": ["8× Mr. Olympia"],
+    "why": "Tied the record for most Mr. Olympia titles; his \"stimulate, don't annihilate\" philosophy prioritized longevity.",
+    "principles": [
+      "\"Stimulate the muscle — do not annihilate it every workout\" (his own repeated motto).",
+      "Three days on, one day off gives each body part full recovery before the next hit.",
+      "Pair push movements with pull movements rather than stacking two press days."
+    ],
+    "sources": [
+      { "title": "Lee Haney Official Site", "url": "https://leehaney.com/" },
+      { "title": "The Best Training Split For Bodybuilding — Lee Haney (Muscle & Strength Clips, official YouTube, 2025)", "url": "https://www.youtube.com/watch?v=3HK8RuIpjZk" }
+    ],
+    "styleId": "haney-stimulate",
+    "tier": 2,
+    "displayOrder": 7
+  },
+  {
+    "id": "frank-zane",
+    "name": "Frank Zane",
+    "era": "1977-1979",
+    "titles": ["3× Mr. Olympia"],
+    "why": "Aesthetics-era icon whose Growth Program prioritized symmetry and proportion over sheer mass.",
+    "principles": [
+      "Three-way split — pull, legs, push — built around symmetry, not sheer mass.",
+      "Stretch the working muscle between every set to aid recovery and growth.",
+      "Never train upper body two days in a row."
+    ],
+    "sources": [
+      { "title": "The Growth Program, Then and Now — Frank Zane (official)", "url": "https://frankzane.com/the-growth-program-then-and-now-frank-zane/" }
+    ],
+    "styleId": "zane-aesthetics",
+    "tier": 1,
+    "displayOrder": 8
+  },
+  {
+    "id": "jay-cutler",
+    "name": "Jay Cutler",
+    "era": "2006, 2007, 2009, 2010",
+    "titles": ["4× Mr. Olympia"],
+    "why": "High-volume Olympia-era champion known for an explicit refusal to train to failure.",
+    "principles": [
+      "Aim for roughly 20 working sets per body part — his own stated career standard.",
+      "\"I never trained to failure on any set... never felt it was even necessary to try a technique like forced reps.\"",
+      "Build volume from multiple exercises and angles rather than one heavy exercise."
+    ],
+    "sources": [
+      { "title": "Jay Cutler — One Step Closer (Full DVD, official JayCutlerTV)", "url": "https://www.youtube.com/watch?v=tbK4zFcuVIk" }
+    ],
+    "styleId": "cutler-volume",
+    "tier": 1,
+    "displayOrder": 9
+  },
+  {
+    "id": "samir-bannout",
+    "name": "Samir Bannout",
+    "era": "1983 Mr. Olympia",
+    "titles": ["1983 Mr. Olympia"],
+    "why": "The \"Lion of Lebanon\" — the roster's most honestly thin-sourced champion, with no branded system.",
+    "principles": [
+      "Trains by feel, not fixed sets/reps: full range of motion until the muscle fatigues (his own words).",
+      "\"Nobody should say 8×10 or 3×12\" — rejects rigid rep prescriptions.",
+      "Adopted a three-on/one-off split from a George Turner program rather than inventing his own."
+    ],
+    "sources": [
+      { "title": "Samir Bannout Discusses Optimal Arm Training — Fitness Volt (direct quotes, Old School Labs podcast)", "url": "https://fitnessvolt.com/samir-bannout-critiques-biceps-21s/" }
+    ],
+    "styleId": "bannout-lion",
+    "tier": 2,
+    "displayOrder": 10
+  },
+  {
+    "id": "dexter-jackson",
+    "name": "Dexter Jackson",
+    "era": "1999-2019 career",
+    "titles": ["2008 Mr. Olympia"],
+    "why": "Nicknamed \"The Blade\" for conditioning; the longevity record-holder for competing at the top level.",
+    "principles": [
+      "Compounds first — his own words, \"the bread and butter... exercises I have to do.\"",
+      "Train smart for longevity; heal injuries fully rather than training through them.",
+      "Later career, shifted heavily toward machines and isolation work to protect his joints."
+    ],
+    "sources": [
+      { "title": "The Blade — Iron Man Magazine (Dexter Jackson interview)", "url": "https://www.ironmanmagazine.com/the-blade/" }
+    ],
+    "styleId": "jackson-blade",
+    "tier": 2,
+    "displayOrder": 11
+  },
+  {
+    "id": "rich-gaspari",
+    "name": "Rich Gaspari",
+    "era": "1985-1991",
+    "titles": ["Multiple Mr. Olympia runner-up"],
+    "why": "Training philosophy spans two eras: competition-era \"total annihilation\" and a later Haney-taught recovery lesson.",
+    "principles": [
+      "Train a muscle to complete failure only about twice a month, then follow with a moderate recovery week.",
+      "Cap training at four, maximum five, days a week to allow adequate recovery.",
+      "Pre-exhaust isolation work before compounds, especially lagging body parts like shoulders."
+    ],
+    "sources": [
+      { "title": "\"Hey Fat Boy!!\" — Gaspari Nutrition (official, first-person)", "url": "https://gasparinutrition.com/blogs/fitness-facts/hey-fat-boy" }
+    ],
+    "styleId": "gaspari-annihilation",
+    "tier": 2,
+    "displayOrder": 12
+  },
+  {
+    "id": "tom-platz",
+    "name": "Tom Platz",
+    "era": "Late 1970s-1980s; 3rd, 1981 Mr. Olympia",
+    "titles": ["\"The Golden Eagle\" / \"Quadfather\""],
+    "why": "Legendary leg-training specialist whose squat sessions remain a cult reference point in bodybuilding history.",
+    "principles": [
+      "Trained instinctively — by his own account and multiple contemporaneous profiles, he varied his training rather than following one fixed program.",
+      "Described his own leg training as \"freaky type training\" pushed well past normal limits.",
+      "No official DVD or branded program publishes a single verified sets/reps table for his training; treat secondhand tables as reconstructions, not primary."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 13
+  },
+  {
+    "id": "kai-greene",
+    "name": "Kai Greene",
+    "era": "2012-2016",
+    "titles": ["Multiple-time Mr. Olympia runner-up"],
+    "why": "Highly quotable modern philosophy built on mind-muscle connection, with one of bodybuilding's largest fan followings.",
+    "principles": [
+      "\"Bodybuilding is a mental pursuit: the body is a manifestation of the brain's work\" — his own stated philosophy.",
+      "Founded his own supplement brand, Dynamik Muscle, built around his personal coaching voice.",
+      "No official program publishes a verified sets/reps table independent of his quotable mindset content."
+    ],
+    "sources": [
+      { "title": "Command Your Thinking, Control Your Life — Kai Greene (quoting Greene's own address)", "url": "https://www.youtube.com/watch?v=-ehk6xKa3BY" },
+      { "title": "About Dynamik Muscle (Kai Greene's own brand, official)", "url": "https://dynamikmuscle.com/pages/about-dynamik" }
+    ],
+    "tier": 3,
+    "displayOrder": 14
+  },
+  {
+    "id": "lee-priest",
+    "name": "Lee Priest",
+    "era": "1990s-2000s, \"The Blond Myth\"",
+    "titles": ["2013 Mr. Universe (NABBA)"],
+    "why": "30+ year documented career; still filming his own training and commentary today.",
+    "principles": [
+      "Runs his own current YouTube channel and coaching site, giving direct, ongoing access to his training commentary.",
+      "Known across decades of interviews for training instinctively rather than following one fixed program.",
+      "No official Lee Priest DVD or branded program publishes a verified sets/reps table."
+    ],
+    "sources": [
+      { "title": "Lee Priest — official coaching site", "url": "https://leepriest.co/" },
+      { "title": "Lee Priest -BE YOURSELF (official YouTube channel)", "url": "https://www.youtube.com/@RealLeePriest" }
+    ],
+    "tier": 3,
+    "displayOrder": 15
+  },
+  {
+    "id": "chris-bumstead",
+    "name": "Chris Bumstead",
+    "era": "2019-2024",
+    "titles": ["5× Classic Physique Mr. Olympia"],
+    "why": "Defines the modern Classic Physique division with one of bodybuilding's largest personal media followings.",
+    "principles": [
+      "Publishes extensive first-person training footage and commentary on his own YouTube channel.",
+      "Has spoken publicly about changing his training approach around injury setbacks rather than pushing through pain.",
+      "No official program independent of his paid coaching app publishes a verified sets/reps table."
+    ],
+    "sources": [
+      { "title": "Chris Bumstead — official YouTube channel", "url": "https://www.youtube.com/@ChrisBumstead" }
+    ],
+    "tier": 3,
+    "displayOrder": 16
+  },
+  {
+    "id": "kevin-levrone",
+    "name": "Kevin Levrone",
+    "era": "1991-2003, \"The Maryland Muscle Machine\"",
+    "titles": ["Frequent Mr. Olympia runner-up (1990s)"],
+    "why": "Iconic 1990s mass-monster and frequent Olympia runner-up, later fronting his own signature supplement line.",
+    "principles": [
+      "\"The Levrone Signature Series... created by me, Kevin Levrone\" — built and fronted his own branded supplement line (his own words).",
+      "Career documented across a docuseries and decades of magazine interviews.",
+      "No official Levrone DVD or branded program publishes a verified sets/reps table independent of brand marketing."
+    ],
+    "sources": [
+      { "title": "Kevin Levrone Official Shop — Levrone Signature Series", "url": "https://levrosupplements.com/" }
+    ],
+    "tier": 3,
+    "displayOrder": 17
+  },
+  {
+    "id": "flex-wheeler",
+    "name": "Flex Wheeler",
+    "era": "1993-2003",
+    "titles": ["Widely considered among the most aesthetic physiques of the 1990s"],
+    "why": "Widely considered the most aesthetic physique of the 1990s; his memoir documents his career and health struggles.",
+    "principles": [
+      "Co-authored the memoir \"Flex Ability: A Story of Strength and Survival\" (2003, with Cindy Pearlman).",
+      "Publicly documented his return to fitness after a leg amputation, emphasizing adapted training over any fixed program.",
+      "No verified sets/reps table exists independent of his memoir and interviews."
+    ],
+    "sources": [
+      { "title": "Flex Wheeler — Wikipedia (biography, memoir citation)", "url": "https://en.wikipedia.org/wiki/Flex_Wheeler" }
+    ],
+    "tier": 3,
+    "displayOrder": 18
+  },
+  {
+    "id": "lee-labrada",
+    "name": "Lee Labrada",
+    "era": "1985-1993, \"Mr. Symmetry\"",
+    "titles": ["IFBB Mr. Universe", "IFBB Pro Bodybuilding Hall of Fame inductee"],
+    "why": "Symmetry-era icon who built a lasting education and supplement brand around his own training philosophy.",
+    "principles": [
+      "Founded and fronts Labrada Nutrition, publishing his own training and nutrition content since 1995.",
+      "Hosts his own podcast, The Lee Labrada Show, discussing training philosophy directly.",
+      "No single Labrada program publishes a verified sets/reps table independent of brand content."
+    ],
+    "sources": [
+      { "title": "About Lean Body — Labrada Nutrition (official, founder statement)", "url": "https://leanbody.com/pages/company" }
+    ],
+    "tier": 3,
+    "displayOrder": 19
+  },
+  {
+    "id": "vince-gironda",
+    "name": "Vince Gironda",
+    "era": "1950s-60s trainer/gym owner, \"Iron Guru\"",
+    "titles": ["Influential pre-Olympia training theorist"],
+    "why": "Hugely influential pre-Olympia training theorist who ran his own Hollywood gym and mail-order courses.",
+    "principles": [
+      "Authored his own mail-order training courses, a primary source not yet digitized/verified for this roster pass.",
+      "Widely credited as a major influence on Golden Era training philosophy through decades of gym-owner history.",
+      "No verified sets/reps table from his own courses has been confirmed for this pass — avoid citing secondhand routines as primary."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 20
+  },
+  {
+    "id": "steve-reeves",
+    "name": "Steve Reeves",
+    "era": "1940s-50s, Mr. America/Mr. Universe",
+    "titles": ["Mr. America", "Mr. Universe (NABBA)"],
+    "why": "Foundational aesthetics icon whose career predates the Mr. Olympia contest entirely.",
+    "principles": [
+      "Authored his own strength course, \"Building the Classic Physique\", a primary source not yet fully verified online for this pass.",
+      "Widely credited as defining the proportion-first aesthetic ideal that influenced later Golden Era bodybuilders.",
+      "No verified sets/reps table from his own course has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 21
+  },
+  {
+    "id": "larry-scott",
+    "name": "Larry Scott",
+    "era": "1965-1966, first-ever Mr. Olympia",
+    "titles": ["1st and 2nd Mr. Olympia"],
+    "why": "Historically essential as the very first Mr. Olympia champion.",
+    "principles": [
+      "Authored his own mail-order training course and later book, a primary source not yet fully verified online for this pass.",
+      "Widely credited for popularizing preacher-curl-style isolation biceps training.",
+      "No verified sets/reps table from his own materials has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 22
+  },
+  {
+    "id": "cory-everson",
+    "name": "Cory Everson",
+    "era": "1984-1989",
+    "titles": ["6× Ms. Olympia, undefeated"],
+    "why": "Most dominant women's bodybuilding champion of her era, undefeated across six Ms. Olympia titles.",
+    "principles": [
+      "Undefeated across six consecutive Ms. Olympia titles before retiring from competition in 1989.",
+      "Hosted her own long-running fitness show, Cory Everson's Gotta Sweat, for seven years on ESPN.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [
+      { "title": "Corinna Everson — Wikipedia (biography)", "url": "https://en.wikipedia.org/wiki/Cory_Everson" }
+    ],
+    "tier": 3,
+    "displayOrder": 23
+  },
+  {
+    "id": "rachel-mclish",
+    "name": "Rachel McLish",
+    "era": "1980, 1982 Ms. Olympia (first-ever)",
+    "titles": ["First-ever Ms. Olympia"],
+    "why": "Founding icon of women's bodybuilding as the sport's first-ever Ms. Olympia champion.",
+    "principles": [
+      "Authored her own book, \"Flex Appeal\", on fitness and training philosophy.",
+      "Widely credited as the face that legitimized competitive women's bodybuilding in the early 1980s.",
+      "No verified sets/reps table from her own materials has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 24
+  },
+  {
+    "id": "branch-warren",
+    "name": "Branch Warren",
+    "era": "2000s-2010s",
+    "titles": ["Longtime IFBB Pro, Mr. Olympia top-5 finisher"],
+    "why": "Old-school-style heavy training documented extensively on camera at his own Metroflex Gym.",
+    "principles": [
+      "\"[Bodybuilding is] about getting as much blood into the muscle as possible during training, working the muscle to failure\" (his own words).",
+      "Trained for years at Metroflex Gym in Texas, favoring heavy, controlled compound lifts.",
+      "His own advice: be consistent and train with high intensity — the specific split matters less than sticking to it."
+    ],
+    "sources": [
+      { "title": "M&S Legends: How to Train Like a Bodybuilder w/ Branch Warren (direct interview quotes)", "url": "https://www.muscleandstrength.com/videos/how-to-train-like-a-bodybuilder-branch-warren" }
+    ],
+    "tier": 3,
+    "displayOrder": 25
+  },
+  {
+    "id": "nick-walker",
+    "name": "Nick Walker",
+    "era": "2020s, active competitor",
+    "titles": ["Multiple-time Mr. Olympia top-5 finisher (\"The Mutant\")"],
+    "why": "Current-generation mass monster who films and narrates most of his own training sessions.",
+    "principles": [
+      "Publishes extensive first-person training footage and commentary on his own YouTube channel.",
+      "Has publicly discussed adjusting his training split with a new coaching team rather than following one fixed program.",
+      "No official program independent of his own channel publishes a verified sets/reps table."
+    ],
+    "sources": [
+      { "title": "Nick Walker — official YouTube channel", "url": "https://www.youtube.com/c/NickWalker39" }
+    ],
+    "tier": 3,
+    "displayOrder": 26
+  },
+  {
+    "id": "rich-piana",
+    "name": "Rich Piana",
+    "era": "2000s-2017",
+    "titles": ["Competed as an amateur and pro bodybuilder; major fitness-media figure"],
+    "why": "Hugely influential self-documentarian whose own YouTube back catalog remains a primary record of his training.",
+    "principles": [
+      "Founded 5% Nutrition, built around his own motto: \"those who are willing to do whatever it takes to achieve their goals\" (his own words).",
+      "Built one of bodybuilding's largest self-filmed training archives on his personal YouTube channel.",
+      "No official program independent of his own footage publishes a verified sets/reps table."
+    ],
+    "sources": [
+      { "title": "The Legend Rich Piana — 5% Nutrition (official, his own brand)", "url": "https://5percentnutrition.com/pages/legend-rich-piana" }
+    ],
+    "tier": 3,
+    "displayOrder": 27
+  },
+  {
+    "id": "sergio-oliva",
+    "name": "Sergio Oliva",
+    "era": "1967-1969, \"The Myth\"",
+    "titles": ["3× Mr. Olympia"],
+    "why": "Arnold Schwarzenegger's chief Golden Era rival, considered one of the greatest physiques of all time.",
+    "principles": [
+      "Beat Arnold Schwarzenegger for the Mr. Olympia title in 1969, a signature rivalry of the Golden Era.",
+      "Little confirmed self-authored training material exists; most detail comes from secondhand documentaries and interviews.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 28
+  },
+  {
+    "id": "franco-columbu",
+    "name": "Franco Columbu",
+    "era": "1976, 1981",
+    "titles": ["2× Mr. Olympia"],
+    "why": "Arnold Schwarzenegger's training partner and a two-time Mr. Olympia in his own right.",
+    "principles": [
+      "Co-authored the book \"Winning Bodybuilding\", though authorship credit was not independently verified for this pass.",
+      "Widely documented as Arnold Schwarzenegger's training partner throughout the Golden Era.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 29
+  },
+  {
+    "id": "bill-pearl",
+    "name": "Bill Pearl",
+    "era": "1950s-70s",
+    "titles": ["4× NABBA Mr. Universe (professional)"],
+    "why": "Longevity and legacy icon who authored one of bodybuilding's best-selling training books.",
+    "principles": [
+      "Authored \"Getting Stronger: Weight Training for Men and Women\", which has sold over 600,000 copies.",
+      "Also authored \"Keys to the Inner Universe\", containing roughly 1,500 documented weight-training exercises.",
+      "Adopted a lacto-ovo vegetarian diet at age 39, a well-documented personal detail from his own writing."
+    ],
+    "sources": [
+      { "title": "Getting Stronger 20th Anniversary Edition — Shelter Publications (Bill Pearl's own book)", "url": "https://blog.shelterpub.com/shelter/_fitness/_weight_training/gst_book.html" }
+    ],
+    "tier": 3,
+    "displayOrder": 30
+  },
+  {
+    "id": "serge-nubret",
+    "name": "Serge Nubret",
+    "era": "1960s-80s, \"The Black Panther\"",
+    "titles": ["Decades-long competitive career across multiple federations"],
+    "why": "Unique high-volume, cardio-heavy training philosophy sustained across an unusually long career.",
+    "principles": [
+      "Known for pairing very high training volume with regular cardio, an atypical approach for his era.",
+      "Most primary material about his training is in French-language interviews and documentaries, limiting English-language verification for this pass.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 31
+  },
+  {
+    "id": "robby-robinson",
+    "name": "Robby Robinson",
+    "era": "1970s-80s, still posing into his 70s",
+    "titles": ["Longtime IFBB Pro, decades-long competitive career"],
+    "why": "Longevity icon who remains active on social media and continues posing exhibitions today.",
+    "principles": [
+      "Remains active and vocal about training and lifestyle on his own current social channels.",
+      "Widely known for an unusually long competitive career spanning multiple decades.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 32
+  },
+  {
+    "id": "casey-viator",
+    "name": "Casey Viator",
+    "era": "1970s",
+    "titles": ["Youngest-ever Mr. America winner"],
+    "why": "Directly tied to the HIT lineage through Arthur Jones's Colorado Experiment and later work with Mike Mentzer.",
+    "principles": [
+      "Central subject of Arthur Jones's Nautilus-sponsored \"Colorado Experiment\" HIT case study.",
+      "Later career overlapped with Mike Mentzer's Heavy Duty circle, giving useful pairing context for HIT history.",
+      "No verified sets/reps table independent of the Colorado Experiment writeups has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 33
+  },
+  {
+    "id": "reg-park",
+    "name": "Reg Park",
+    "era": "1950s-60s",
+    "titles": ["3× Mr. Universe"],
+    "why": "Arnold Schwarzenegger's own idol and mentor, and an early strength-focused bodybuilding icon.",
+    "principles": [
+      "Authored his own strength-training courses, a primary source not yet fully verified online for this pass.",
+      "Widely credited by Arnold Schwarzenegger himself as a formative childhood influence.",
+      "No verified sets/reps table from his own course has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 34
+  },
+  {
+    "id": "lou-ferrigno",
+    "name": "Lou Ferrigno",
+    "era": "1970s",
+    "titles": ["Mr. Olympia runner-up", "Mr. Universe"],
+    "why": "Crossover bodybuilding-to-Hollywood fame who still coaches and appears publicly today.",
+    "principles": [
+      "Remains active in interviews and on his own current social/YouTube presence discussing training.",
+      "Widely known for a rare successful crossover from competitive bodybuilding into a Hollywood acting career.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 35
+  },
+  {
+    "id": "albert-beckles",
+    "name": "Albert Beckles",
+    "era": "Competed into his 50s, \"The Ageless Wonder\"",
+    "titles": ["Competed at the pro level into his 50s"],
+    "why": "Longevity and genetics icon nicknamed \"The Ageless Wonder\" for competing at an elite level for decades.",
+    "principles": [
+      "Widely documented for maintaining a competitive pro physique well into his 50s.",
+      "Most available material is secondary profiles rather than self-authored training content.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 36
+  },
+  {
+    "id": "nasser-el-sonbaty",
+    "name": "Nasser El Sonbaty",
+    "era": "1990s mass-monster era",
+    "titles": ["Multiple-time Mr. Olympia runner-up"],
+    "why": "Huge 1990s frame paired with unusually articulate, multilingual magazine interviews.",
+    "principles": [
+      "Known for extensive, directly-quoted magazine interviews despite never running his own branded program.",
+      "Fluent in multiple languages, giving broader interview access than most peers of his era.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 37
+  },
+  {
+    "id": "paul-dillett",
+    "name": "Paul Dillett",
+    "era": "Mid-1990s",
+    "titles": ["Top mid-1990s Mr. Olympia contender"],
+    "why": "Iconic 1990s size and conditioning during a brief but memorable competitive career.",
+    "principles": [
+      "Career primarily documented through magazine profiles rather than a self-authored program.",
+      "Widely remembered for an unusually massive, conditioned physique relative to his short competitive window.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 38
+  },
+  {
+    "id": "shawn-ray",
+    "name": "Shawn Ray",
+    "era": "1990s",
+    "titles": ["Longtime Mr. Olympia top-5 finisher"],
+    "why": "Outspoken 1990s contender who remains an active media personality today.",
+    "principles": [
+      "Remains active and vocal about training and the sport on his own current YouTube/podcast appearances.",
+      "Widely known as one of the most consistent Olympia top-5 finishers of his era.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 39
+  },
+  {
+    "id": "vince-taylor",
+    "name": "Vince Taylor",
+    "era": "1990s",
+    "titles": ["Masters Olympia champion"],
+    "why": "Longevity and symmetry-era representative who won the Masters Olympia.",
+    "principles": [
+      "Career primarily documented through magazine profiles rather than a self-authored program.",
+      "Widely known for competitive longevity into the Masters (over-40) bodybuilding division.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 40
+  },
+  {
+    "id": "mike-matarazzo",
+    "name": "Mike Matarazzo",
+    "era": "1990s mass-monster era",
+    "titles": ["1990s IFBB Pro competitor"],
+    "why": "Cult fan-favorite of the 1990s mass-monster era, known for his outsized personality.",
+    "principles": [
+      "Career primarily documented through magazine and interview profiles rather than a self-authored program.",
+      "Widely remembered as one of the most fan-beloved personalities of his competitive era.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 41
+  },
+  {
+    "id": "gunter-schlierkamp",
+    "name": "Gunter Schlierkamp",
+    "era": "Late 1990s-2000s",
+    "titles": ["Multiple-time Mr. Olympia top-5 finisher"],
+    "why": "European size representative of the late-1990s/2000s mass-monster era.",
+    "principles": [
+      "Later built a coaching/brand presence after competing, though a fully verified primary source was not confirmed for this pass.",
+      "Widely known as one of the largest conditioned physiques of his competitive era.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 42
+  },
+  {
+    "id": "markus-ruhl",
+    "name": "Markus Ruhl",
+    "era": "2000s, extreme mass",
+    "titles": ["2000s IFBB Pro competitor"],
+    "why": "Extreme-mass case study of the 2000s, with German representation at the top level.",
+    "principles": [
+      "Career primarily documented through magazine profiles and some self-filmed gym footage.",
+      "Widely remembered for an unusually extreme mass relative to his height, even by 2000s standards.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 43
+  },
+  {
+    "id": "johnnie-jackson",
+    "name": "Johnnie Jackson",
+    "era": "2000s-2010s",
+    "titles": ["IFBB Pro, competitive raw powerlifter"],
+    "why": "Powerlifting-bodybuilding hybrid approach, well documented through heavy, verifiable competition lifts.",
+    "principles": [
+      "Publishes his own training content across YouTube and social channels.",
+      "Widely known for combining competitive raw powerlifting with pro bodybuilding, unusual for his era.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 44
+  },
+  {
+    "id": "toney-freeman",
+    "name": "Toney Freeman",
+    "era": "2000s-2010s Olympia top-5",
+    "titles": ["Multiple-time Mr. Olympia top-5 finisher"],
+    "why": "Aesthetics-plus-longevity representative of the modern mass-monster era.",
+    "principles": [
+      "Career primarily documented through interviews rather than a self-authored program.",
+      "Widely known for combining aesthetic lines with modern-era mass across a long competitive career.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 45
+  },
+  {
+    "id": "victor-martinez",
+    "name": "Victor Martinez",
+    "era": "2000s",
+    "titles": ["Multiple-time Mr. Olympia top-5 finisher"],
+    "why": "Strong 2000s-era physique and Dominican representation at the top level of pro bodybuilding.",
+    "principles": [
+      "Career primarily documented through interviews rather than a self-authored program.",
+      "Widely known as one of the top Dominican-born competitors in Mr. Olympia history.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 46
+  },
+  {
+    "id": "dennis-wolf",
+    "name": "Dennis Wolf",
+    "era": "2000s-2010s",
+    "titles": ["Multiple-time Mr. Olympia top-5 finisher"],
+    "why": "Modern European mass-monster representative of the 2000s-2010s era.",
+    "principles": [
+      "Publishes training content across his own social/YouTube presence.",
+      "Widely known as one of the top German competitors of the modern mass-monster era.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 47
+  },
+  {
+    "id": "shawn-rhoden",
+    "name": "Shawn Rhoden",
+    "era": "2018 Mr. Olympia",
+    "titles": ["2018 Mr. Olympia"],
+    "why": "The most recent \"classic-format\" Olympia winner before the modern mass-monster era.",
+    "principles": [
+      "Career documented through interviews and some self-produced YouTube content.",
+      "Widely known for winning the Mr. Olympia at an unusually advanced competitive age.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 48
+  },
+  {
+    "id": "brandon-curry",
+    "name": "Brandon Curry",
+    "era": "2019 Mr. Olympia",
+    "titles": ["2019 Mr. Olympia"],
+    "why": "Modern Olympia champion known for being unusually articulate about his own training on camera.",
+    "principles": [
+      "Narrates his own training sessions in detail on his personal YouTube channel (his own words).",
+      "Publishes extensive first-person peak-week and contest-prep training footage.",
+      "No official program independent of his own channel publishes a verified sets/reps table."
+    ],
+    "sources": [
+      { "title": "Brandon Curry's Final Upper Body Touch Up — Fitness Volt (direct quotes from his own YouTube channel)", "url": "https://fitnessvolt.com/brandon-curry-peak-week-arnold-classic-2025-workout/" }
+    ],
+    "tier": 3,
+    "displayOrder": 49
+  },
+  {
+    "id": "hadi-choopan",
+    "name": "Hadi Choopan",
+    "era": "2022 Mr. Olympia, \"The Persian Wolf\"",
+    "titles": ["2022 Mr. Olympia"],
+    "why": "Current-era champion known for a distinct training culture and nickname, \"The Persian Wolf.\"",
+    "principles": [
+      "Widely documented through competition footage and translated interviews; a confirmed official channel/site was not verified for this pass.",
+      "Known for an unusually dense, conditioned physique relative to his height.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 50
+  },
+  {
+    "id": "big-ramy",
+    "name": "Big Ramy",
+    "era": "2020-2021 Mr. Olympia",
+    "titles": ["2× Mr. Olympia"],
+    "why": "Modern mass-monster champion and the first Egyptian bodybuilder to win the Mr. Olympia.",
+    "principles": [
+      "First Egyptian bodybuilder to win the Mr. Olympia, and the second Middle Eastern champion after Samir Bannout in 1983.",
+      "Does not maintain a confirmed official YouTube channel; most training footage comes from sponsors and other creators.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 51
+  },
+  {
+    "id": "lenda-murray",
+    "name": "Lenda Murray",
+    "era": "1990-1995, 1997",
+    "titles": ["8× Ms. Olympia"],
+    "why": "Most-titled women's bodybuilding champion before Iris Kyle, dominant across the 1990s.",
+    "principles": [
+      "Holds eight Ms. Olympia titles, the most of any women's bodybuilding champion before Iris Kyle.",
+      "Career primarily documented through interviews and official Olympia appearances.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 52
+  },
+  {
+    "id": "iris-kyle",
+    "name": "Iris Kyle",
+    "era": "2003-2014",
+    "titles": ["10× Ms. Olympia — most Olympia titles of any bodybuilder, any gender"],
+    "why": "Holds the record for most Olympia titles of any bodybuilder — male or female — in the sport's history.",
+    "principles": [
+      "\"Bodybuilding is my first love\" — her own words, from a direct fan-site interview.",
+      "Co-owner of her own gym, \"No Mercy\" in Huntington Beach, California, alongside her competitive career.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [
+      { "title": "An Exclusive Interview With the Ms. Olympia Champion Iris Kyle — RX Muscle (direct quotes)", "url": "https://rxmuscle.com/index.php/rx-girl-articles/female-bodybuilding/4986-an-exclusive-interview-with-the-ms-olympia-champion-iris-kyle.html" }
+    ],
+    "tier": 3,
+    "displayOrder": 53
+  },
+  {
+    "id": "kim-chizevsky",
+    "name": "Kim Chizevsky",
+    "era": "1996-1999 Ms. Olympia, then Fitness Olympia",
+    "titles": ["4× Ms. Olympia", "Fitness Olympia champion"],
+    "why": "Rare cross-division champion who won titles in both bodybuilding and fitness competition.",
+    "principles": [
+      "Won four consecutive Ms. Olympia titles before successfully transitioning to the Fitness Olympia division.",
+      "Career primarily documented through magazine interviews rather than a self-authored program.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 54
+  },
+  {
+    "id": "bev-francis",
+    "name": "Bev Francis",
+    "era": "1980s powerlifting-to-bodybuilding pioneer; now coach/gym owner",
+    "titles": ["Former world-record powerlifter turned elite bodybuilder"],
+    "why": "Pioneered a strength-first approach to women's bodybuilding and remains an active coach today.",
+    "principles": [
+      "Transitioned from a world-record powerlifting career into elite bodybuilding, an unusual path for her era.",
+      "Co-owns and coaches at her own Powerhouse Gym, giving an active, ongoing training voice.",
+      "No verified sets/reps table from a confirmed primary source has been confirmed for this pass."
+    ],
+    "sources": [],
+    "tier": 3,
+    "displayOrder": 55
+  }
+]
