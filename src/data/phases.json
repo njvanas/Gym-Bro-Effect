@@ -6,7 +6,8 @@
     "overview": [
       "Maintenance sustains your current physique while preserving muscle and strength with balanced nutrition and training.",
       "It is often overlooked but critical for long-term success — a stable base between cutting and bulking.",
-      "Recommended duration is about 3 months between bulk and cut blocks so metabolism, habits, and recovery can settle."
+      "Recommended duration is about 3 months between bulk and cut blocks so metabolism, habits, and recovery can settle.",
+      "Browse the Foods catalog for staples that fit maintenance — personal meal examples are coming soon."
     ],
     "nutritionGuidelines": [
       "Match calories to TDEE so weight stays relatively stable.",
@@ -15,7 +16,15 @@
       "Fats: 0.8–1g per kg from balanced sources.",
       "Aim for 3–4 balanced meals with consistency over perfection."
     ],
-    "featuredProductIds": ["pantry-oats"],
+    "featuredProductIds": [
+      "mm-chicken-meat-balls",
+      "mm-bruine-rijst",
+      "pantry-oats",
+      "ah-campina-high-protein-greek-yoghurt",
+      "pantry-eggs",
+      "supp-creatine",
+      "supp-vitamin-d"
+    ],
     "dailyRoutine": [
       { "time": "7:00 AM", "label": "Wake up", "detail": "Water, supplements, flexible morning timing." },
       { "time": "7:30 AM", "label": "Breakfast", "detail": "Balanced meal with protein, carbs, and fats." },
@@ -32,7 +41,8 @@
     "overview": [
       "Cutting uses a controlled calorie deficit to reduce body fat while prioritizing protein and training performance.",
       "Progress comes primarily from fuel — without a deficit, fat loss stalls.",
-      "Keep the deficit moderate so strength and recovery stay workable."
+      "Keep the deficit moderate so strength and recovery stay workable.",
+      "Featured Foods below highlight lean staples for a cut — personal meal examples are coming soon."
     ],
     "nutritionGuidelines": [
       "Eat below TDEE with a sustainable deficit (often ~300–500 kcal).",
@@ -41,7 +51,15 @@
       "Fats: enough for hormones — do not crash dietary fat to zero.",
       "Track weight weekly trends, measurements, and photos — not day-to-day noise."
     ],
-    "featuredProductIds": ["pantry-oats"],
+    "featuredProductIds": [
+      "mm-roasted-kipfiletreepjes-naturel",
+      "mm-ultimate-spicy-kipfilet",
+      "pantry-tuna",
+      "ah-hipro-protein-kwark-mango",
+      "ah-coca-cola-zero",
+      "pantry-oats",
+      "supp-creatine"
+    ],
     "dailyRoutine": [
       { "time": "6:30 AM", "label": "Wake + weigh-in", "detail": "Same conditions each morning for trend data." },
       { "time": "7:00 AM", "label": "High-protein breakfast", "detail": "Start protein early to hit daily targets." },
@@ -58,7 +76,8 @@
     "overview": [
       "Bulking requires a calorie surplus — without surplus, meaningful muscle growth is extremely limited for natural trainees.",
       "Pair progressive training with enough food, protein, and sleep.",
-      "Keep the surplus controlled to grow without unnecessary fat gain."
+      "Keep the surplus controlled to grow without unnecessary fat gain.",
+      "Featured Foods below show surplus-friendly staples — personal meal examples are coming soon."
     ],
     "nutritionGuidelines": [
       "Eat above TDEE (often ~250–500 kcal surplus).",
@@ -67,7 +86,15 @@
       "Fats: fill remaining calories with quality sources.",
       "If scale weight is flat for 2+ weeks, raise calories — training alone cannot force growth in a deficit."
     ],
-    "featuredProductIds": ["pantry-oats"],
+    "featuredProductIds": [
+      "mm-high-protein-rundergehakt-taco",
+      "mm-basmati-rijst",
+      "mm-proteine-melk",
+      "pantry-peanut-butter",
+      "ah-pasta-kip-kebab",
+      "supp-mass-gainer",
+      "ah-coca-cola-zero"
+    ],
     "dailyRoutine": [
       { "time": "7:00 AM", "label": "Wake + breakfast", "detail": "Large protein + carb meal to start surplus." },
       { "time": "10:30 AM", "label": "Snack", "detail": "Calories between meals if appetite is low." },
@@ -86,7 +113,8 @@
       "Recomposition means improving body composition without a hard bulk or hard cut: gain muscle while losing fat over time.",
       "It works best when you train hard, keep protein high, and sit at or very near true TDEE — which is why finding TDEE first matters so much.",
       "Progress is slower than dedicated phases. Patience, consistency, and honest scale trends beat guessing calories.",
-      "Newer trainees and people returning after time off often see the best recomp results; advanced lifters may still prefer clear surplus or deficit blocks."
+      "Newer trainees and people returning after time off often see the best recomp results; advanced lifters may still prefer clear surplus or deficit blocks.",
+      "Featured Foods below suit high-protein, near-TDEE eating — personal meal examples are coming soon."
     ],
     "nutritionGuidelines": [
       "Lock in TDEE first (1–2 weeks of consistent intake and training).",
@@ -96,7 +124,14 @@
       "Fats: fill remaining calories; do not crash fat intake.",
       "Judge progress weekly: strength up or stable, waist/photos improving, scale mostly flat."
     ],
-    "featuredProductIds": ["pantry-oats"],
+    "featuredProductIds": [
+      "mm-chicken-meat-balls-vadouvan",
+      "mm-zoete-aardappel-friet",
+      "ah-protein-mousse-chocolade",
+      "pantry-eggs",
+      "supp-whey-protein",
+      "supp-animal-stak"
+    ],
     "dailyRoutine": [
       { "time": "6:45 AM", "label": "Wake + weigh-in", "detail": "Same conditions; track the weekly trend, not one day." },
       { "time": "7:30 AM", "label": "High-protein breakfast", "detail": "Start protein early; keep calories near TDEE." },
