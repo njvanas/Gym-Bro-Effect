@@ -4,11 +4,13 @@ import type { Product } from '../../schema';
 
 type ProductCardProps = {
   product: Product;
+  /** Dense layout for phase featured lists — hides notes and shrinks media. */
+  compact?: boolean;
 };
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, compact = false }: ProductCardProps) {
   return (
-    <article className="product-card">
+    <article className={compact ? 'product-card product-card--compact' : 'product-card'}>
       {product.imageSrc ? (
         <img
           className="product-card-image"
@@ -22,7 +24,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="product-card-body">
         <p className="product-card-category">{productCategoryLabel(product.category)}</p>
         <h4 className="product-card-title">{product.name}</h4>
-        {product.brand ? <p className="muted">{product.brand}</p> : null}
+        {!compact && product.brand ? <p className="muted">{product.brand}</p> : null}
         <p className="product-card-serving">{product.servingLabel}</p>
         <div className="recipe-macro-row" aria-label="Macros">
           <span className="recipe-macro">
@@ -38,10 +40,10 @@ export function ProductCard({ product }: ProductCardProps) {
             <em>{product.fatG}g</em> F
           </span>
         </div>
-        {product.notes ? <p className="product-card-notes">{product.notes}</p> : null}
+        {!compact && product.notes ? <p className="product-card-notes">{product.notes}</p> : null}
         {product.url ? (
           <ExternalLink href={product.url} className="text-link">
-            View product →
+            {compact ? 'Product →' : 'View product →'}
           </ExternalLink>
         ) : null}
       </div>

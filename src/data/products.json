@@ -168,7 +168,8 @@
     "proteinG": 8.3,
     "carbsG": 5.5,
     "fatG": 0.5,
-    "url": "https://www.ah.nl/producten/product/wi515883/hipro-protein-drink-mango"
+    "url": "https://www.ah.nl/producten/product/wi515883/hipro-protein-drink-mango",
+    "imageSrc": "products/ah-hipro-protein-drink-mango.jpg"
   },
   {
     "id": "ah-hipro-protein-kwark-mango",
@@ -181,6 +182,7 @@
     "carbsG": 3.6,
     "fatG": 0.4,
     "url": "https://www.ah.nl/producten/product/wi556396/hipro-protein-kwark-mango",
+    "imageSrc": "products/ah-hipro-protein-kwark-mango.jpg",
     "notes": "No added sugar, 0% fat — fits the preference for relatively clean, non–sugar-sweetened options."
   },
   {
@@ -193,7 +195,8 @@
     "proteinG": 10,
     "carbsG": 6.2,
     "fatG": 0.8,
-    "url": "https://www.ah.nl/producten/product/wi556394/hipro-protein-pudding-karamel"
+    "url": "https://www.ah.nl/producten/product/wi556394/hipro-protein-pudding-karamel",
+    "imageSrc": "products/ah-hipro-protein-pudding-karamel.jpg"
   },
   {
     "id": "ah-hipro-protein-pudding-chocolade-hazelnoot",
@@ -205,7 +208,8 @@
     "proteinG": 10,
     "carbsG": 6.2,
     "fatG": 0.9,
-    "url": "https://www.ah.nl/producten/product/wi556395/hipro-protein-pudding-chocolade-hazelnoot"
+    "url": "https://www.ah.nl/producten/product/wi556395/hipro-protein-pudding-chocolade-hazelnoot",
+    "imageSrc": "products/ah-hipro-protein-pudding-chocolade-hazelnoot.jpg"
   },
   {
     "id": "ah-campina-high-protein-greek-yoghurt",
@@ -217,7 +221,8 @@
     "proteinG": 10,
     "carbsG": 4,
     "fatG": 1.5,
-    "url": "https://www.ah.nl/producten/product/wi585849/campina-high-protein-greek-yoghurt-1-5-fat"
+    "url": "https://www.ah.nl/producten/product/wi585849/campina-high-protein-greek-yoghurt-1-5-fat",
+    "imageSrc": "products/ah-campina-high-protein-greek-yoghurt.jpg"
   },
   {
     "id": "ah-protein-mousse-chocolade",
@@ -229,7 +234,8 @@
     "proteinG": 10,
     "carbsG": 5,
     "fatG": 1.6,
-    "url": "https://www.ah.nl/producten/product/wi556294/ah-protein-mousse-chocoladesmaak"
+    "url": "https://www.ah.nl/producten/product/wi556294/ah-protein-mousse-chocoladesmaak",
+    "imageSrc": "products/ah-protein-mousse-chocolade.jpg"
   },
   {
     "id": "ah-protein-kwark-framboos",
@@ -241,7 +247,8 @@
     "proteinG": 13,
     "carbsG": 3.4,
     "fatG": 0.4,
-    "url": "https://www.ah.nl/producten/product/wi585919/ah-protein-kwark-met-yoghurt-framboos"
+    "url": "https://www.ah.nl/producten/product/wi585919/ah-protein-kwark-met-yoghurt-framboos",
+    "imageSrc": "products/ah-protein-kwark-framboos.jpg"
   },
   {
     "id": "ah-xxl-fitquark-peach-passion",
@@ -253,7 +260,8 @@
     "proteinG": 12,
     "carbsG": 3.5,
     "fatG": 0.4,
-    "url": "https://www.ah.nl/producten/product/wi585928/xxl-nutrition-fitquark-peach-passion"
+    "url": "https://www.ah.nl/producten/product/wi585928/xxl-nutrition-fitquark-peach-passion",
+    "imageSrc": "products/ah-xxl-fitquark-peach-passion.jpg"
   },
   {
     "id": "ah-starbucks-protein-chocolate-mocha",
@@ -265,7 +273,8 @@
     "proteinG": 6.1,
     "carbsG": 4.1,
     "fatG": 1.1,
-    "url": "https://www.ah.nl/producten/product/wi588114/starbucks-protein-drink-chocolate-mocha-coffee"
+    "url": "https://www.ah.nl/producten/product/wi588114/starbucks-protein-drink-chocolate-mocha-coffee",
+    "imageSrc": "products/ah-starbucks-protein-chocolate-mocha.jpg"
   },
   {
     "id": "ah-starbucks-protein-caramel-hazelnut",
@@ -277,7 +286,8 @@
     "proteinG": 6.1,
     "carbsG": 4,
     "fatG": 1.1,
-    "url": "https://www.ah.nl/producten/product/wi588113/starbucks-protein-drink-caramel-hazelnut-coffee"
+    "url": "https://www.ah.nl/producten/product/wi588113/starbucks-protein-drink-caramel-hazelnut-coffee",
+    "imageSrc": "products/ah-starbucks-protein-caramel-hazelnut.jpg"
   },
   {
     "id": "ah-melkunie-protein-yoghurt-perzik-framboos",
@@ -289,7 +299,8 @@
     "proteinG": 10,
     "carbsG": 5.4,
     "fatG": 0.6,
-    "url": "https://www.ah.nl/producten/product/wi585902/melkunie-protein-yoghurt-perzik-framboos"
+    "url": "https://www.ah.nl/producten/product/wi585902/melkunie-protein-yoghurt-perzik-framboos",
+    "imageSrc": "products/ah-melkunie-protein-yoghurt-perzik-framboos.jpg"
   },
   {
     "id": "ah-protein-bar-white-choco-pinda-karamel",
@@ -302,6 +313,7 @@
     "carbsG": 5,
     "fatG": 11,
     "url": "https://www.ah.nl/producten/product/wi560850/ah-protein-bar-white-choco-pinda-karamel",
+    "imageSrc": "products/ah-protein-bar-white-choco-pinda-karamel.jpg",
     "notes": "Macros approximate — AH blocks automated crawling; values estimated from label listings."
   },
   {
@@ -314,7 +326,8 @@
     "proteinG": 18,
     "carbsG": 2.8,
     "fatG": 11,
-    "url": "https://www.ah.nl/producten/product/wi560851/ah-protein-bar-melk-choco-pinda-karamel"
+    "url": "https://www.ah.nl/producten/product/wi560851/ah-protein-bar-melk-choco-pinda-karamel",
+    "imageSrc": "products/ah-protein-bar-melk-choco-pinda-karamel.jpg"
   },
   {
     "id": "ah-barebells-white-chocolate-almond",
@@ -326,7 +339,8 @@
     "proteinG": 20,
     "carbsG": 16,
     "fatG": 8.1,
-    "url": "https://www.ah.nl/producten/product/wi444578/barebells-protein-bar-white-chocolate-almond"
+    "url": "https://www.ah.nl/producten/product/wi444578/barebells-protein-bar-white-chocolate-almond",
+    "imageSrc": "products/ah-barebells-white-chocolate-almond.png"
   },
   {
     "id": "ah-barebells-salty-peanut",
@@ -338,7 +352,8 @@
     "proteinG": 20,
     "carbsG": 15,
     "fatG": 8.5,
-    "url": "https://www.ah.nl/producten/product/wi430023/barebells-protein-bar-salty-peanut"
+    "url": "https://www.ah.nl/producten/product/wi430023/barebells-protein-bar-salty-peanut",
+    "imageSrc": "products/ah-barebells-salty-peanut.png"
   },
   {
     "id": "ah-barebells-caramel-cashew",
@@ -350,7 +365,8 @@
     "proteinG": 20,
     "carbsG": 16,
     "fatG": 8.2,
-    "url": "https://www.ah.nl/producten/product/wi414027/barebells-protein-bar-caramel-cashew"
+    "url": "https://www.ah.nl/producten/product/wi414027/barebells-protein-bar-caramel-cashew",
+    "imageSrc": "products/ah-barebells-caramel-cashew.png"
   },
   {
     "id": "ah-pasta-tonijn",
@@ -363,6 +379,7 @@
     "carbsG": 15,
     "fatG": 6.4,
     "url": "https://www.ah.nl/producten/product/wi365389/ah-pasta-tonijn-m",
+    "imageSrc": "products/ah-pasta-tonijn.jpg",
     "notes": "Grab-and-go AH meal — convenience that kept eating consistent on busy training days."
   },
   {
@@ -376,6 +393,7 @@
     "carbsG": 17,
     "fatG": 7,
     "url": "https://www.ah.nl/producten/product/wi563781/ah-pasta-kip-kebab-m",
+    "imageSrc": "products/ah-pasta-kip-kebab.jpg",
     "notes": "Macros approximate — AH blocks automated crawling; values estimated from comparable meals."
   },
   {
@@ -389,6 +407,7 @@
     "carbsG": 18,
     "fatG": 2.6,
     "url": "https://www.ah.nl/producten/product/wi564363/fitmeals-chicken-teriyaki",
+    "imageSrc": "products/ah-fitmeals-chicken-teriyaki.jpg",
     "notes": "Lean ready meal — convenience option that made hitting protein easier when time was tight."
   },
   {
@@ -401,7 +420,8 @@
     "proteinG": 10,
     "carbsG": 12,
     "fatG": 7.8,
-    "url": "https://www.ah.nl/producten/product/wi582329/freasy-tandoori-kip-biryani"
+    "url": "https://www.ah.nl/producten/product/wi582329/freasy-tandoori-kip-biryani",
+    "imageSrc": "products/ah-freasy-tandoori-kip-biryani.jpg"
   },
   {
     "id": "ah-go-tan-mihoen",
@@ -413,7 +433,8 @@
     "proteinG": 7.7,
     "carbsG": 80,
     "fatG": 1,
-    "url": "https://www.ah.nl/producten/product/wi55943/go-tan-mihoen-rice-noodles"
+    "url": "https://www.ah.nl/producten/product/wi55943/go-tan-mihoen-rice-noodles",
+    "imageSrc": "products/ah-go-tan-mihoen.jpg"
   },
   {
     "id": "ah-coca-cola-zero",
@@ -426,6 +447,7 @@
     "carbsG": 0,
     "fatG": 0,
     "url": "https://www.ah.nl/producten/product/wi137739/coca-cola-zero-sugar",
+    "imageSrc": "products/ah-coca-cola-zero.jpg",
     "notes": "Zero-sugar drinks helped adherence and getting food down on a bulk without adding calories."
   },
   {
@@ -438,7 +460,11 @@
     "carbsG": 66,
     "fatG": 7,
     "notes": "Reference macros — brand and country vary. Quantities were the lever between cut and bulk.",
-    "tags": ["staple", "reference"]
+    "tags": [
+      "staple",
+      "reference"
+    ],
+    "imageSrc": "products/pantry-oats.jpg"
   },
   {
     "id": "pantry-tuna",
@@ -450,7 +476,11 @@
     "carbsG": 0,
     "fatG": 1,
     "notes": "Lean convenience protein — reference macros; drained canned tuna in water.",
-    "tags": ["staple", "reference"]
+    "tags": [
+      "staple",
+      "reference"
+    ],
+    "imageSrc": "products/pantry-tuna.jpg"
   },
   {
     "id": "pantry-eggs",
@@ -462,7 +492,11 @@
     "carbsG": 0.7,
     "fatG": 9.5,
     "notes": "Whole eggs by default; swap toward whites when cutting to trim fat. Reference macros.",
-    "tags": ["staple", "reference"]
+    "tags": [
+      "staple",
+      "reference"
+    ],
+    "imageSrc": "products/pantry-eggs.jpg"
   },
   {
     "id": "pantry-brown-bread",
@@ -474,7 +508,11 @@
     "carbsG": 41,
     "fatG": 3.5,
     "notes": "Measured carbs — count slices to keep the carb lever precise. Reference macros.",
-    "tags": ["staple", "reference"]
+    "tags": [
+      "staple",
+      "reference"
+    ],
+    "imageSrc": "products/pantry-brown-bread.jpg"
   },
   {
     "id": "pantry-peanut-butter",
@@ -486,7 +524,11 @@
     "carbsG": 20,
     "fatG": 50,
     "notes": "Calorie-dense — great on a bulk, watch the spoon size on a cut. Reference macros.",
-    "tags": ["staple", "reference"]
+    "tags": [
+      "staple",
+      "reference"
+    ],
+    "imageSrc": "products/pantry-peanut-butter.jpg"
   },
   {
     "id": "pantry-honey",
@@ -498,7 +540,11 @@
     "carbsG": 82,
     "fatG": 0,
     "notes": "Measured carbs / taste — a quick sweetener dosed by the teaspoon. Reference macros.",
-    "tags": ["staple", "reference"]
+    "tags": [
+      "staple",
+      "reference"
+    ],
+    "imageSrc": "products/pantry-honey.jpg"
   },
   {
     "id": "supp-creatine",
@@ -510,7 +556,10 @@
     "carbsG": 0,
     "fatG": 0,
     "notes": "Daily on/off cycles. No meaningful macros.",
-    "tags": ["supplement"]
+    "tags": [
+      "supplement"
+    ],
+    "imageSrc": "products/supp-creatine.jpg"
   },
   {
     "id": "supp-animal-stak",
@@ -523,7 +572,10 @@
     "carbsG": 0,
     "fatG": 0,
     "notes": "Multivitamin / test-support stack used on/off. No meaningful macros.",
-    "tags": ["supplement"]
+    "tags": [
+      "supplement"
+    ],
+    "imageSrc": "products/supp-animal-stak.jpg"
   },
   {
     "id": "supp-vitamin-d",
@@ -535,7 +587,10 @@
     "carbsG": 0,
     "fatG": 0,
     "notes": "Ongoing — NL low sunlight. No meaningful macros.",
-    "tags": ["supplement"]
+    "tags": [
+      "supplement"
+    ],
+    "imageSrc": "products/supp-vitamin-d.jpg"
   },
   {
     "id": "supp-whey-protein",
@@ -547,7 +602,11 @@
     "carbsG": 3,
     "fatG": 1.5,
     "notes": "Used as needed; phase timing coming with meal examples. Generic reference macros.",
-    "tags": ["supplement", "reference"]
+    "tags": [
+      "supplement",
+      "reference"
+    ],
+    "imageSrc": "products/supp-whey-protein.jpg"
   },
   {
     "id": "supp-mass-gainer",
@@ -559,6 +618,10 @@
     "carbsG": 110,
     "fatG": 6,
     "notes": "Bulk tool when appetite lagged; timing coming soon. Generic reference macros.",
-    "tags": ["supplement", "reference"]
+    "tags": [
+      "supplement",
+      "reference"
+    ],
+    "imageSrc": "products/supp-mass-gainer.jpg"
   }
 ]
