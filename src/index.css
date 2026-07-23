@@ -413,7 +413,6 @@ select:focus-visible {
   border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
 }
 
-.recipe-macros,
 .meta-line {
   color: var(--text-muted);
   font-size: 0.92rem;
@@ -1693,8 +1692,7 @@ table.ex tr:last-child td {
   color: var(--text);
 }
 
-.food-grid,
-.recipe-grid {
+.food-grid {
   display: grid;
   gap: 0.85rem;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -1727,32 +1725,6 @@ table.ex tr:last-child td {
   line-height: 1;
 }
 
-.recipe-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  padding: 1.15rem 1.2rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: var(--shadow);
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-}
-
-.recipe-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: var(--shadow-hover);
-  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
-}
-
-.recipe-card-title {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.45rem;
-  letter-spacing: 0.02em;
-  line-height: 1.1;
-}
-
 .recipe-macro-row {
   display: flex;
   flex-wrap: wrap;
@@ -1776,14 +1748,6 @@ table.ex tr:last-child td {
   font-style: normal;
   font-weight: 700;
   color: var(--accent-ink);
-}
-
-.recipe-card-section h5 {
-  margin: 0 0 0.35rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-muted);
 }
 
 .product-grid {
@@ -1861,13 +1825,6 @@ table.ex tr:last-child td {
 
 .foods-intro {
   max-width: 42rem;
-}
-
-.recipe-steps {
-  margin: 0;
-  padding-left: 1.15rem;
-  display: grid;
-  gap: 0.35rem;
 }
 
 .daily-timeline {
@@ -2338,7 +2295,6 @@ table.ex tr:last-child td {
   .legend-workout-card,
   .folder-card,
   .food-card,
-  .recipe-card,
   .tool-card,
   .exercise-card {
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
@@ -2350,7 +2306,6 @@ table.ex tr:last-child td {
   .legend-workout-card:hover,
   .folder-card:hover,
   .food-card:hover,
-  .recipe-card:hover,
   .tool-card:hover,
   .exercise-card:hover {
     transform: none;
