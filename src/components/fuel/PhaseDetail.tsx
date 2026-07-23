@@ -1,6 +1,4 @@
-import { getRecipesForPhase } from '../../lib/fuel-db';
 import type { Phase } from '../../schema';
-import { RecipeCard } from './RecipeCard';
 import { TdeeAccordion } from './TdeeCallout';
 
 type PhaseDetailProps = {
@@ -42,8 +40,6 @@ function foodCategoryEmoji(category: Phase['stapleFoods'][number]['category']): 
 }
 
 export function PhaseDetail({ phase }: PhaseDetailProps) {
-  const recipes = getRecipesForPhase(phase.id);
-
   return (
     <div className="stack phase-detail">
       <header className={`phase-hero phase-hero--${phase.id}`}>
@@ -51,7 +47,6 @@ export function PhaseDetail({ phase }: PhaseDetailProps) {
         <h2 className="legend-detail-title">{phase.name}</h2>
         <p className="phase-hero-tagline">{phase.tagline}</p>
         <div className="chips">
-          <span className="chip accent">{recipes.length} recipes</span>
           <span className="chip">{phase.stapleFoods.length} food groups</span>
           <span className="chip">{phase.dailyRoutine.length} daily blocks</span>
         </div>
@@ -62,7 +57,6 @@ export function PhaseDetail({ phase }: PhaseDetailProps) {
         <a href={`#${phase.id}-overview`}>Overview</a>
         <a href={`#${phase.id}-nutrition`}>Nutrition</a>
         <a href={`#${phase.id}-foods`}>Foods</a>
-        <a href={`#${phase.id}-recipes`}>Recipes</a>
         <a href={`#${phase.id}-routine`}>Daily routine</a>
       </nav>
 
@@ -108,15 +102,6 @@ export function PhaseDetail({ phase }: PhaseDetailProps) {
                 ))}
               </ul>
             </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="stack" id={`${phase.id}-recipes`}>
-        <h3 className="legend-col-title">Recipes</h3>
-        <div className="recipe-grid">
-          {recipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
           ))}
         </div>
       </section>
