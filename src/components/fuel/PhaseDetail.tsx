@@ -65,9 +65,9 @@ export function PhaseDetail({ phase, onBrowseFoods }: PhaseDetailProps) {
           A slice of the Foods catalog that mattered in this phase. Full shopping reference lives
           under Bro Foods.
         </p>
-        <div className="product-grid">
+        <div className="product-grid product-grid--compact">
           {featured.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} compact />
           ))}
         </div>
         {onBrowseFoods ? (
