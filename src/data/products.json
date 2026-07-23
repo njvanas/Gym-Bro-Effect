@@ -1,0 +1,14 @@
+[
+  {
+    "id": "pantry-oats",
+    "name": "Oats",
+    "category": "pantry",
+    "servingLabel": "per 100g (dry, reference)",
+    "calories": 389,
+    "proteinG": 17,
+    "carbsG": 66,
+    "fatG": 7,
+    "notes": "Reference macros — brand and country vary. Quantities were the lever between cut and bulk.",
+    "tags": ["staple", "reference"]
+  }
+]
