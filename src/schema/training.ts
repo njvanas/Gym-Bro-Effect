@@ -266,8 +266,8 @@ export const bodybuilderSchema = z
      */
     principles: z.array(z.string().min(1)).max(4).default([]),
     sources: z.array(sourceSchema).default([]),
-    /** Matching `styles.json` id, when a full trainable system has been documented. */
-    styleId: z.string().min(1).optional(),
+    /** Matching `styles.json` id — required; every bodybuilder opens the same style detail. */
+    styleId: z.string().min(1),
     tier: bodybuilderTierSchema,
     /** Sort key; browse UI also sorts alphabetically by name. */
     displayOrder: z.number().int().nonnegative(),

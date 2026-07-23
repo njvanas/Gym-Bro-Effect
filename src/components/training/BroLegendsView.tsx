@@ -16,7 +16,6 @@ import { ExerciseTable } from '../ExerciseTable';
 type View =
   | { kind: 'browse' }
   | { kind: 'legend'; styleId: string }
-  | { kind: 'card'; bodybuilderId: string }
   | { kind: 'workout'; styleId: string; routineId: string };
 
 type FilterChip = {
@@ -28,14 +27,14 @@ type FilterChip = {
 /** Browse chips for the unified bodybuilder roster. */
 const FILTER_CHIPS: FilterChip[] = [
   {
-    id: 'full-system',
-    label: 'Full system',
-    match: (b) => Boolean(b.styleId),
+    id: 'has-workouts',
+    label: 'Has workouts',
+    match: (_b, style) => Boolean(style && getRoutinesByStyle(style.id).length > 0),
   },
   {
-    id: 'roster',
-    label: 'Roster card',
-    match: (b) => !b.styleId,
+    id: 'needs-sources',
+    label: 'Needs sources',
+    match: (_b, style) => Boolean(style?.tags.includes('Needs primary sources')),
   },
   {
     id: 'hit',
@@ -410,7 +409,10 @@ function LegendDetail({
             Training routines
           </h3>
           {groups.length === 0 ? (
-            <div className="empty">No workouts for this legend yet.</div>
+            <div className="empty">
+              No verified workouts for this athlete yet — primary sources have not
+              attested a specific routine we can list without inventing exercises.
+            </div>
           ) : (
             <div className="legend-routines">
               {groups.map((group) => (
@@ -497,11 +499,11 @@ function BodybuilderCard({
   onSelect,
 }: {
   bodybuilder: Bodybuilder;
-  style: TrainingStyle | undefined;
+  style: TrainingStyle;
   index: number;
   onSelect: () => void;
 }) {
-  const workouts = style ? getRoutinesByStyle(style.id).length : 0;
+  const workouts = getRoutinesByStyle(style.id).length;
 
   return (
     <button
@@ -511,121 +513,24 @@ function BodybuilderCard({
       onClick={onSelect}
     >
       <div className="legend-card-glow" aria-hidden />
-      <Avatar
-        name={bodybuilder.name}
-        gradientKey={bodybuilder.styleId ?? bodybuilder.id}
-        size="lg"
-      />
+      <Avatar name={bodybuilder.name} gradientKey={style.id} size="lg" />
       <div className="legend-card-body">
         <p className="legend-card-creator">{bodybuilder.era}</p>
         <h3 className="legend-card-name">{bodybuilder.name}</h3>
-        <p className="legend-card-blurb">
-          {style ? style.summary : bodybuilder.why}
-        </p>
+        <p className="legend-card-blurb">{style.summary}</p>
         <div className="chips">
-          {style
-            ? style.tags.slice(0, 3).map((tag) => (
-                <span className="chip" key={tag}>
-                  {tag}
-                </span>
-              ))
-            : bodybuilder.titles.slice(0, 2).map((title) => (
-                <span className="chip" key={title}>
-                  {title}
-                </span>
-              ))}
-          {!style ? <span className="chip accent">Roster card</span> : null}
+          {style.tags.slice(0, 3).map((tag) => (
+            <span className="chip" key={tag}>
+              {tag}
+            </span>
+          ))}
         </div>
-        {style ? (
-          <div className="legend-card-meta">
-            {style.name} · {workouts} workout{workouts === 1 ? '' : 's'}
-          </div>
-        ) : null}
+        <div className="legend-card-meta">
+          {style.name} · {workouts} workout{workouts === 1 ? '' : 's'}
+        </div>
       </div>
-      <span className="legend-card-cta">
-        {style ? 'Open training system →' : 'View roster card →'}
-      </span>
+      <span className="legend-card-cta">Open training system →</span>
     </button>
-  );
-}
-
-function RosterCardDetail({
-  bodybuilder,
-  onBack,
-}: {
-  bodybuilder: Bodybuilder;
-  onBack: () => void;
-}) {
-  return (
-    <div className="legend-detail" key={bodybuilder.id}>
-      <button type="button" className="back" onClick={onBack}>
-        ← All bodybuilders
-      </button>
-
-      <header className="legend-detail-hero">
-        <Avatar name={bodybuilder.name} gradientKey={bodybuilder.id} size="xl" />
-        <div className="legend-detail-hero-copy">
-          <p className="legend-eyebrow">{bodybuilder.era}</p>
-          <h2 className="legend-detail-title">{bodybuilder.name}</h2>
-          <div className="chips">
-            {bodybuilder.titles.map((title) => (
-              <span className="chip accent" key={title}>
-                {title}
-              </span>
-            ))}
-            <span className="chip">Roster card</span>
-          </div>
-        </div>
-      </header>
-
-      <div className="legend-method">
-        <p className="legend-summary">{bodybuilder.why}</p>
-
-        <div className="accordion legend-accordion">
-          <AccordionItem
-            title="Principles"
-            summary={String(bodybuilder.principles.length)}
-            defaultOpen
-            anchorId={`${bodybuilder.id}-principles`}
-          >
-            <ol className="principle-list">
-              {bodybuilder.principles.map((p, i) => (
-                <li key={i}>
-                  <span className="principle-num" aria-hidden>
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <span className="principle-text">{p}</span>
-                </li>
-              ))}
-            </ol>
-          </AccordionItem>
-
-          {bodybuilder.sources.length > 0 ? (
-            <AccordionItem
-              title="Sources"
-              summary={String(bodybuilder.sources.length)}
-              defaultOpen
-              anchorId={`${bodybuilder.id}-sources`}
-            >
-              <ul className="principles source-list">
-                {bodybuilder.sources.map((s) => (
-                  <li key={s.url}>
-                    <a href={s.url} target="_blank" rel="noreferrer">
-                      {s.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </AccordionItem>
-          ) : (
-            <p className="sub" style={{ marginTop: '0.75rem' }}>
-              No verified sources yet for this roster card — thin sourcing is flagged
-              honestly rather than filled with guesses.
-            </p>
-          )}
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -705,26 +610,6 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
     );
   }
 
-  if (view.kind === 'card') {
-    const bodybuilder = bodybuilders.find((b) => b.id === view.bodybuilderId);
-    if (!bodybuilder) {
-      return (
-        <div className="empty">
-          Bodybuilder not found.{' '}
-          <button type="button" className="back" onClick={() => setView({ kind: 'browse' })}>
-            Go back
-          </button>
-        </div>
-      );
-    }
-    return (
-      <RosterCardDetail
-        bodybuilder={bodybuilder}
-        onBack={() => setView({ kind: 'browse' })}
-      />
-    );
-  }
-
   return (
     <div className="legends-browse">
       <section className="legends-masthead">
@@ -733,8 +618,9 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
           {bodybuilders.length} <span className="accent">bodybuilders</span>, A–Z
         </h1>
         <p className="legends-lede">
-          One roster sorted by name. Open a full training system when we have one —
-          otherwise a sourced roster card.
+          One roster sorted by name. Every athlete opens the same training layout —
+          methodology, guidelines, split, workouts, and sources. Gaps stay marked until
+          primary sources verify them.
         </p>
 
         <div className="legends-search-shell">
@@ -823,9 +709,8 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
       ) : (
         <div className="legend-grid">
           {filtered.map((bodybuilder, index) => {
-            const style = bodybuilder.styleId
-              ? getStyle(bodybuilder.styleId)
-              : undefined;
+            const style = getStyle(bodybuilder.styleId!);
+            if (!style) return null;
             return (
               <BodybuilderCard
                 key={bodybuilder.id}
@@ -833,9 +718,7 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
                 style={style}
                 index={index}
                 onSelect={() =>
-                  bodybuilder.styleId
-                    ? setView({ kind: 'legend', styleId: bodybuilder.styleId })
-                    : setView({ kind: 'card', bodybuilderId: bodybuilder.id })
+                  setView({ kind: 'legend', styleId: bodybuilder.styleId! })
                 }
               />
             );

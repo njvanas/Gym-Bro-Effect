@@ -972,6 +972,19 @@
     ]
   },
   {
+    "id": "one-arm-dumbbell-triceps-extension",
+    "name": "One-Arm Dumbbell Triceps Extension",
+    "hevyName": "Triceps Extension (Dumbbell)",
+    "primaryMuscle": "triceps",
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "cues": [
+      "Elbow pointed at the ceiling, tucked close to the head.",
+      "Lower the dumbbell behind the head under control.",
+      "Extend to a full lockout, squeeze at the top."
+    ]
+  },
+  {
     "id": "front-squat",
     "name": "Front Squat",
     "hevyName": "Squat (Barbell)",

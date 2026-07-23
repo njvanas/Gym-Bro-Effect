@@ -9723,5 +9723,2374 @@
       }
     ],
     "collection": "legend"
+  },
+  {
+    "id": "cory-everson-legs",
+    "name": "Cory Everson — Legs (Squat Guide Lift + Calves)",
+    "day": "Day 2",
+    "styleId": "cory-everson",
+    "focus": [
+      "quads",
+      "calves"
+    ],
+    "description": "Cory Everson's leg day guide lift and calf work, as she describes it in her own words: 8 total squat sets (3 warm-up + 5 working) pyramiding from 15 reps down to 8, then calf work in the 15-25 rep range.",
+    "source": {
+      "name": "Cory Everson Workout: Her Top 10 Training Tips — The Barbell (direct quotes)",
+      "url": "https://thebarbell.com/cory-everson-workout/"
+    },
+    "exercises": [
+      {
+        "exerciseId": "barbell-squat",
+        "sets": 5,
+        "repRange": "8-15",
+        "notes": "\"I did eight sets of squats every leg workout, including three warmup sets. I'd pyramid from 15 reps to 8 reps... over the five working sets.\"",
+        "setScheme": [
+          {
+            "label": "W1",
+            "kind": "warmup",
+            "intensity": "Light warm-up"
+          },
+          {
+            "label": "W2",
+            "kind": "warmup",
+            "intensity": "Moderate warm-up"
+          },
+          {
+            "label": "W3",
+            "kind": "warmup",
+            "intensity": "Heavier warm-up"
+          },
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "15 reps — lightest working set"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "~12-13 reps, weight increased"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "~10-11 reps, weight increased"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "~9 reps, weight increased"
+          },
+          {
+            "label": "5",
+            "kind": "working",
+            "intensity": "8 reps target — heaviest working set"
+          }
+        ]
+      },
+      {
+        "exerciseId": "standing-calf-raise",
+        "sets": 3,
+        "repRange": "15-25",
+        "notes": "\"I think calves respond best to 15-25 reps.\"",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "15-25 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "15-25 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "15-25 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "seated-calf-raise",
+        "sets": 3,
+        "repRange": "15-25",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "15-25 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "15-25 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "15-25 reps"
+          }
+        ]
+      }
+    ],
+    "sortOrder": 10,
+    "labels": [
+      "Direct quote"
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "rachel-mclish-in-and-out",
+    "name": "Rachel McLish — \"In and Out\" Full-Body Workout",
+    "day": "Full-body",
+    "styleId": "rachel-mclish",
+    "focus": [
+      "back",
+      "triceps",
+      "chest",
+      "quads",
+      "hamstrings",
+      "lower-back"
+    ],
+    "description": "Rachel McLish's own 35-minute whole-body \"In and Out\" workout, a verbatim excerpt from her book TLC: Tighter and Leaner to the Core, quoted directly in a 2006 Iron Man Magazine interview. Performed 3-4x/week with 1-2 rest days between sessions. Ab/midsection exercises and one glute movement from the original text are omitted here because no matching exercise exists in this catalog yet.",
+    "source": {
+      "name": "\"Legendary\" — Iron Man Magazine, April 2006 (verbatim book excerpt)",
+      "url": "https://www.ironmanmagazine.com/wp-content/uploads/articles/6504-Rachel-McLish.pdf"
+    },
+    "exercises": [
+      {
+        "exerciseId": "back-extension",
+        "sets": 1,
+        "repRange": "15",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "15 reps, followed by a sustained stretch"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lat-pulldown",
+        "sets": 3,
+        "repRange": "12-15",
+        "notes": "\"Don't forget the sustained stretch after the last rep.\"",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12-15 reps, sustained stretch on final rep"
+          }
+        ]
+      },
+      {
+        "exerciseId": "weighted-triceps-dip",
+        "sets": 3,
+        "repRange": "12-15",
+        "notes": "Assisted or unassisted dips in the original text; catalog match is the weighted/assisted dip variant.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "dumbbell-bench-press",
+        "sets": 2,
+        "repRange": "9-12",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "9-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "9-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "seated-cable-row",
+        "sets": 2,
+        "repRange": "9-12",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "9-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "9-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lying-leg-curl",
+        "sets": 3,
+        "repRange": "15",
+        "notes": "Followed by a hamstring stretch in the original text.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "15 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "15 reps, followed by a hamstring stretch"
+          }
+        ]
+      },
+      {
+        "exerciseId": "leg-extension",
+        "sets": 3,
+        "repRange": "15",
+        "notes": "Followed by a quadriceps stretch in the original text.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "15 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "15 reps, followed by a quadriceps stretch"
+          }
+        ]
+      },
+      {
+        "exerciseId": "leg-press",
+        "sets": 2,
+        "repRange": "15",
+        "notes": "\"Leg press or squat,\" followed by a quadriceps stretch in the original text.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "15 reps, followed by a quadriceps stretch"
+          }
+        ]
+      }
+    ],
+    "sortOrder": 10,
+    "labels": [
+      "Direct quote"
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "branch-warren-back",
+    "name": "Branch Warren — Back",
+    "day": "Monday",
+    "styleId": "branch-warren",
+    "focus": [
+      "back",
+      "lats",
+      "traps"
+    ],
+    "description": "A back session filmed directly with Branch Warren at MetroFlex Gym. Rear-delt and machine-specific accessory work from the original video is omitted here because no matching exercise exists in this catalog yet.",
+    "source": {
+      "name": "Branch Warren's Back Workout at MetroFlex Gym — Muscle & Strength",
+      "url": "https://www.muscleandstrength.com/videos/branch-warren-back-workout"
+    },
+    "exercises": [
+      {
+        "exerciseId": "barbell-shrug",
+        "sets": 4,
+        "repRange": "15",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "15 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "15 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "15 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "t-bar-row",
+        "sets": 4,
+        "repRange": "12-20",
+        "notes": "Machine T-bar row in the original video: 3 sets of 12 reps then 1 set of 20 reps.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "4",
+            "kind": "backoff",
+            "intensity": "20 reps, lighter"
+          }
+        ]
+      },
+      {
+        "exerciseId": "one-arm-dumbbell-row",
+        "sets": 4,
+        "repRange": "12",
+        "notes": "12 reps per side.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps/side"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps/side"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps/side"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "12 reps/side"
+          }
+        ]
+      },
+      {
+        "exerciseId": "seated-cable-row",
+        "sets": 3,
+        "repRange": "20",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "20 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lat-pulldown",
+        "sets": 3,
+        "repRange": "15",
+        "notes": "Final exercise of the session — double drop set performed on the last set.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "15 reps"
+          },
+          {
+            "label": "3",
+            "kind": "all-out",
+            "intensity": "15 reps, then double drop set"
+          }
+        ]
+      }
+    ],
+    "sortOrder": 10,
+    "labels": [
+      "Filmed session"
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "nick-walker-push-finisher",
+    "name": "Nick Walker — Push Day Shoulder & Arm Finisher",
+    "day": "Day 1",
+    "styleId": "nick-walker",
+    "focus": [
+      "shoulders",
+      "rear-delts",
+      "triceps",
+      "biceps"
+    ],
+    "description": "The shoulder/arm finisher portion of Nick Walker's push day, reported directly from his own YouTube video by Fitness Volt. His incline Smith bench press and decline press (earlier in the same session) are omitted here because the report gave set counts but no rep ranges for those two, and this catalog avoids inventing numbers.",
+    "source": {
+      "name": "Nick Walker Crushes Push Day Workout and Explains His New Training Split — Fitness Volt",
+      "url": "https://fitnessvolt.com/nick-walker-push-day-training-split/"
+    },
+    "exercises": [
+      {
+        "exerciseId": "lateral-raise-machine",
+        "sets": 5,
+        "repRange": "12-15",
+        "supersetGroup": "delt-superset",
+        "notes": "Superset with rear-delt pec deck.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "5",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "rear-delt-fly-machine",
+        "sets": 5,
+        "repRange": "12-15",
+        "supersetGroup": "delt-superset",
+        "notes": "Superset with side lateral raise machine.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "5",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "overhead-triceps-extension-cable",
+        "sets": 4,
+        "repRange": "12-15",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "preacher-curl-barbell",
+        "sets": 5,
+        "repRange": "12-15",
+        "notes": "\"Atlantis preacher curls\" (a preacher curl machine) in the original video; closest catalog match is the barbell preacher curl.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          },
+          {
+            "label": "5",
+            "kind": "working",
+            "intensity": "12-15 reps"
+          }
+        ]
+      }
+    ],
+    "sortOrder": 10,
+    "labels": [
+      "Reported from own footage"
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "rich-piana-feeder-arms",
+    "name": "Rich Piana — Feeder Workout (Arms)",
+    "day": "Feeder",
+    "styleId": "rich-piana",
+    "focus": [
+      "biceps",
+      "triceps"
+    ],
+    "description": "An illustrative feeder workout combining Rich Piana's own documented feeder-workout protocol (2 exercises, superset-style, 2-3 sets of 30-50 reps, done for shoulders or arms) with two of his own stated favorite arm exercises. This is a reconstructed example applying his attested protocol and exercise preferences, not a single filmed session — he explicitly never followed one fixed arm-day template.",
+    "source": {
+      "name": "Rich Piana's Workout Tips & Tricks — 5% Nutrition (official)",
+      "url": "https://5percentnutrition.com/blogs/motivation/rich-piana-s-workout-tips-tricks"
+    },
+    "exercises": [
+      {
+        "exerciseId": "hammer-curl",
+        "sets": 3,
+        "repRange": "30-50",
+        "supersetGroup": "feeder",
+        "notes": "One of his own stated favorite biceps exercises (Muscle Insider interview), applied to his documented feeder-workout protocol.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "30-50 reps, superset, moderate weight"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "30-50 reps, superset, moderate weight"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "30-50 reps, superset, moderate weight"
+          }
+        ]
+      },
+      {
+        "exerciseId": "overhead-triceps-extension-cable",
+        "sets": 3,
+        "repRange": "30-50",
+        "supersetGroup": "feeder",
+        "notes": "Feeder-workout protocol applied to a triceps movement to pair with the biceps side of the superset.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "30-50 reps, superset, moderate weight"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "30-50 reps, superset, moderate weight"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "30-50 reps, superset, moderate weight"
+          }
+        ]
+      }
+    ],
+    "sortOrder": 10,
+    "labels": [
+      "Reconstructed example"
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "cbum-legs-squat-day",
+    "name": "CBum - Legs 2 (Squat Day)",
+    "day": "Legs 2",
+    "styleId": "chris-bumstead",
+    "sortOrder": 1,
+    "labels": [
+      "Own YouTube (2019)"
+    ],
+    "focus": [
+      "quads",
+      "calves"
+    ],
+    "description": "Chris Bumstead's squat-day session from his own 2019 YouTube walkthrough of his push/pull/legs program: a heavy squat progression, a leg press/calf-raise superset (calf portion not separately tracked here — no matching exercise), standing calf raises, and a leg-extension drop-set finisher. He also does hip-adductor work on this day, omitted here since no matching exercise exists in this catalog.",
+    "source": {
+      "name": "Push, Pull, Legs Explained | MY FULL WORKOUT PROGRAM (official Chris Bumstead YouTube)",
+      "url": "https://www.youtube.com/watch?v=p-8WBLBrG4k"
+    },
+    "exercises": [
+      {
+        "exerciseId": "barbell-squat",
+        "sets": 8,
+        "repRange": "8-10 (working sets); heavier top sets not rep-specified",
+        "notes": "\"Three warm up sets or however many I need... then three sets eight ten reps and we're gonna have one set where I go a little bit heavier... finally for my last set I put on a little bit more and I go really heavy.\"",
+        "setScheme": [
+          {
+            "label": "W1",
+            "kind": "warmup",
+            "intensity": "Light — not rep-specified"
+          },
+          {
+            "label": "W2",
+            "kind": "warmup",
+            "intensity": "Light-moderate — not rep-specified"
+          },
+          {
+            "label": "W3",
+            "kind": "warmup",
+            "intensity": "Moderate — not rep-specified"
+          },
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-10 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-10 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-10 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "Heavier top set — reps not specified"
+          },
+          {
+            "label": "5",
+            "kind": "working",
+            "intensity": "Heaviest top set — reps not specified"
+          }
+        ]
+      },
+      {
+        "exerciseId": "leg-press-horizontal",
+        "sets": 2,
+        "repRange": "40 sec continuous tension (no rep count)",
+        "notes": "Normally supersetted on-platform with calf raises (\"go as heavy as you can and just try and hammer them out\") — the calf-raise portion is not tracked here since it uses the leg press machine, not a distinct calf exercise in this catalog.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "40 seconds continuous tension"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "40 seconds continuous tension"
+          }
+        ]
+      },
+      {
+        "exerciseId": "standing-calf-raise",
+        "sets": 4,
+        "repRange": "10-12, then burnout reps to failure",
+        "notes": "\"Deep stretch contraction at the first few and then when you start to get too tired... bounce as much as you can.\"",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "10-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "10-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "10-12 reps"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "10-12 reps, then bounce/burnout reps to failure"
+          }
+        ]
+      },
+      {
+        "exerciseId": "leg-extension",
+        "sets": 4,
+        "repRange": "10-12 (first 2 sets), then triple drop-set on the last 2",
+        "notes": "\"Two sets of triple drop set... start at whatever your weight was, immediately drop the weight down once, drop it again, rest and repeat.\"",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "10-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "10-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "Triple drop-set to failure"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "Triple drop-set to failure"
+          }
+        ]
+      }
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "levrone-triceps",
+    "name": "Levrone - Triceps",
+    "day": "Triceps",
+    "styleId": "kevin-levrone",
+    "sortOrder": 1,
+    "labels": [
+      "Muscle & Fitness reference"
+    ],
+    "focus": [
+      "triceps"
+    ],
+    "description": "Kevin Levrone's attributed triceps routine from a dedicated Muscle & Fitness feature — 4 exercises at 4 sets of 6-8 reps each (16 sets total, matching the article's own stated count). \"Close-grip bench presses are the single best exercise for packing meat on the triceps.\"",
+    "source": {
+      "name": "The Legendary Triceps of Kevin Levrone (Muscle & Fitness)",
+      "url": "https://www.muscleandfitness.com/flexonline/training/legendary-triceps-kevin-levrone/"
+    },
+    "exercises": [
+      {
+        "exerciseId": "one-arm-dumbbell-triceps-extension",
+        "sets": 4,
+        "repRange": "6-8",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "triceps-pushdown",
+        "sets": 4,
+        "repRange": "6-8",
+        "notes": "Rope attachment in the original routine.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lying-triceps-extension",
+        "sets": 4,
+        "repRange": "6-8",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "close-grip-bench-press",
+        "sets": 4,
+        "repRange": "6-8",
+        "notes": "\"I always try to go as heavy as possible on free-weight exercises in the 6-8 range.\"",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "6-8 reps"
+          }
+        ]
+      }
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "lee-priest-legs-1990s",
+    "name": "Priest - Legs (Early 1990s)",
+    "day": "Day 1",
+    "styleId": "lee-priest",
+    "sortOrder": 1,
+    "labels": [
+      "1990s FLEX interview"
+    ],
+    "focus": [
+      "quads",
+      "hamstrings",
+      "glutes"
+    ],
+    "description": "Lee Priest's own account of his teenage/early-pro leg day — \"the one young Lee Priest used when he made his greatest gains\" — from a dated 2003 FLEX magazine interview. Every set taken to true failure at 6-8 reps (8-10 on leg extension); increase the weight and redo the set if failure isn't hit by the target rep.",
+    "source": {
+      "name": "Lee Priest, The Early Years: Advice and Full Workout (2003 FLEX interview, via The Barbell)",
+      "url": "https://thebarbell.com/lee-priest-interview/"
+    },
+    "exercises": [
+      {
+        "exerciseId": "leg-extension",
+        "sets": 5,
+        "repRange": "8-10",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "8-10 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "8-10 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "8-10 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "8-10 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "8-10 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      },
+      {
+        "exerciseId": "barbell-squat",
+        "sets": 5,
+        "repRange": "6-8",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      },
+      {
+        "exerciseId": "leg-press",
+        "sets": 5,
+        "repRange": "6-8",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      },
+      {
+        "exerciseId": "walking-lunge",
+        "sets": 5,
+        "repRange": "6-8",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lying-leg-curl",
+        "sets": 5,
+        "repRange": "6-8",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      },
+      {
+        "exerciseId": "romanian-deadlift",
+        "sets": 5,
+        "repRange": "6-8",
+        "notes": "Listed as \"Stiff-Leg Deadlift\" in the original interview — same movement pattern as the Romanian deadlift in this catalog.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      }
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "lee-priest-back-1990s",
+    "name": "Priest - Back (Early 1990s)",
+    "day": "Day 2",
+    "styleId": "lee-priest",
+    "sortOrder": 2,
+    "labels": [
+      "1990s FLEX interview"
+    ],
+    "focus": [
+      "back",
+      "lats",
+      "biceps"
+    ],
+    "description": "Lee Priest's own account of his teenage/early-pro back day from the same dated 2003 FLEX interview. 5 sets of 6-8 reps per exercise, every set to true failure, forced reps from a training partner on the last 1-2 reps as his only named intensity technique.",
+    "source": {
+      "name": "Lee Priest, The Early Years: Advice and Full Workout (2003 FLEX interview, via The Barbell)",
+      "url": "https://thebarbell.com/lee-priest-interview/"
+    },
+    "exercises": [
+      {
+        "exerciseId": "pull-up",
+        "sets": 5,
+        "repRange": "6-8",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      },
+      {
+        "exerciseId": "barbell-row",
+        "sets": 5,
+        "repRange": "6-8",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      },
+      {
+        "exerciseId": "one-arm-dumbbell-row",
+        "sets": 5,
+        "repRange": "6-8",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      },
+      {
+        "exerciseId": "seated-cable-row",
+        "sets": 5,
+        "repRange": "6-8",
+        "notes": "Listed as \"Low-Cable Row\" in the original interview.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lat-pulldown",
+        "sets": 5,
+        "repRange": "6-8",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          },
+          {
+            "label": "5",
+            "kind": "failure",
+            "intensity": "6-8 reps, taken to failure — increase the weight and redo the set if failure isn't reached"
+          }
+        ]
+      }
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "flex-wheeler-legs",
+    "name": "Wheeler - Leg Day",
+    "day": "Leg day",
+    "styleId": "flex-wheeler",
+    "sortOrder": 1,
+    "labels": [
+      "MuscleMag 1997 Q&A"
+    ],
+    "focus": [
+      "quads",
+      "calves"
+    ],
+    "description": "Flex Wheeler's own leg-day account from \"Flex Wheeler Speaks!\" (MuscleMag International, Nov 1997): every leg exercise at 20 reps (\"they propel you all day\" and need more stress than other bodyparts), plus a descending-weight calf finisher.",
+    "source": {
+      "name": "\"Flex Wheeler Speaks!\" — Redd Hall, MuscleMag International, November 1997 (via T-Nation forum repost)",
+      "url": "https://t-nation.com/t/flex-wheeler/133949?page=2"
+    },
+    "exercises": [
+      {
+        "exerciseId": "leg-extension",
+        "sets": 4,
+        "repRange": "20",
+        "notes": "Warmup movement before squats — still done for 20 reps, not a light activation set.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "warmup",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "2",
+            "kind": "warmup",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "3",
+            "kind": "warmup",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "4",
+            "kind": "warmup",
+            "intensity": "20 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "barbell-squat",
+        "sets": 5,
+        "repRange": "20",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "5",
+            "kind": "working",
+            "intensity": "20 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "leg-press",
+        "sets": 5,
+        "repRange": "20",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "5",
+            "kind": "working",
+            "intensity": "20 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "leg-extension",
+        "sets": 4,
+        "repRange": "20",
+        "notes": "Finisher — same movement as the warmup, repeated at the end of leg day.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "failure",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "2",
+            "kind": "failure",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "3",
+            "kind": "failure",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "4",
+            "kind": "failure",
+            "intensity": "20 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "standing-calf-raise",
+        "sets": 3,
+        "repRange": "20",
+        "notes": "Descending weight across the 3 sets (heavy, lighter, lightest) — original interview does not specify standing vs. seated; standing used here as the generic machine calf exercise.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "20 reps — heaviest weight"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "20 reps — lighter weight"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "20 reps — lightest weight"
+          }
+        ]
+      }
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "larry-scott-arms",
+    "name": "Scott - Arms",
+    "day": "Arms",
+    "styleId": "larry-scott",
+    "sortOrder": 1,
+    "labels": [
+      "Loaded Guns reference"
+    ],
+    "focus": [
+      "biceps",
+      "triceps"
+    ],
+    "description": "Larry Scott's signature arm-training triset from his own book \"Loaded Guns: Blueprint for Building Massive Arms\" (with John Little): alternating preacher-curl work for biceps, alternating lying/pulley extensions for triceps, each at 6-8 reps plus 3 \"burn\" partials per set. His one-arm dumbbell kickback finisher is omitted here — no matching exercise exists in this catalog.",
+    "source": {
+      "name": "Loaded Guns: Blueprint for Building Massive Arms — Larry Scott & John Little",
+      "url": "https://www.goldenerabookworm.com/product-page/loaded-guns-by-larry-scott"
+    },
+    "exercises": [
+      {
+        "exerciseId": "preacher-curl-barbell",
+        "sets": 6,
+        "repRange": "6 reps + 3 burn partials per set",
+        "notes": "Alternated set-for-set with a dumbbell preacher curl in the original program (no matching dumbbell-preacher-curl exercise in this catalog).",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "6 reps + 3 burn partials"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "6 reps + 3 burn partials"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "6 reps + 3 burn partials"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "6 reps + 3 burn partials"
+          },
+          {
+            "label": "5",
+            "kind": "working",
+            "intensity": "6 reps + 3 burn partials"
+          },
+          {
+            "label": "6",
+            "kind": "working",
+            "intensity": "6 reps + 3 burn partials"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lying-triceps-extension",
+        "sets": 6,
+        "repRange": "8 reps + 3 burn partials per set",
+        "notes": "Alternated set-for-set with kneeling pulley extensions.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          },
+          {
+            "label": "5",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          },
+          {
+            "label": "6",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          }
+        ]
+      },
+      {
+        "exerciseId": "triceps-pushdown",
+        "sets": 6,
+        "repRange": "8 reps + 3 burn partials per set",
+        "notes": "Kneeling pulley extension in the original program — represented here with the standing cable pushdown in this catalog.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          },
+          {
+            "label": "4",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          },
+          {
+            "label": "5",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          },
+          {
+            "label": "6",
+            "kind": "working",
+            "intensity": "8 reps + 3 burn partials"
+          }
+        ]
+      }
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "vince-gironda-beginner-fullbody",
+    "name": "Gironda - Beginner Full-Body",
+    "day": "Daily (6x/week, month 1) or 3x/week (month 4+)",
+    "styleId": "vince-gironda",
+    "sortOrder": 1,
+    "labels": [
+      "Unleashing the Wild Physique"
+    ],
+    "focus": [
+      "back",
+      "shoulders",
+      "triceps",
+      "biceps",
+      "quads",
+      "hamstrings",
+      "calves",
+      "abs"
+    ],
+    "description": "Vince Gironda's 12-exercise beginner full-body routine, per his own book \"Unleashing the Wild Physique\" (with Robert Kennedy) as compiled by student Alan Palmieri and published with exact per-exercise rep counts in Iron Man Magazine. 8 of the 12 named exercises have a matching entry in this catalog; the other 4 (decline pulley hugs, seated wrist curls, bent-knee leg raises, double-ups) are flagged in styles.json as not yet in the exercise library and are omitted rather than invented. Shown at the steady-state month-4+ volume (3 sets/exercise, held ~6 months) after the 1-set-to-2-set-to-3-set beginner ramp.",
+    "source": {
+      "name": "Vince Gironda's Bodybuilding for Beginners — Iron Man Magazine (drawing on Alan Palmieri's Gironda archive)",
+      "url": "https://www.ironmanmagazine.com/vince-girondas-bodybuilding-for-beginners/"
+    },
+    "exercises": [
+      {
+        "exerciseId": "seated-cable-row",
+        "sets": 3,
+        "repRange": "12",
+        "notes": "\"Short-pulley rows (upper lats and teres major), 12 reps\" in the original list.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "dumbbell-lateral-raise",
+        "sets": 3,
+        "repRange": "10",
+        "notes": "\"Lateral raises (medial-deltoid head), 10 reps\" in the original list.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "10 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "10 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "10 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "triceps-pushdown",
+        "sets": 3,
+        "repRange": "10",
+        "notes": "\"Triceps pushdowns (triceps), 10 reps\" in the original list.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "10 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "10 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "10 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "barbell-curl",
+        "sets": 3,
+        "repRange": "10",
+        "notes": "\"Barbell body-drag curls (biceps), 10 reps\" in the original list — represented here with a standard barbell curl since a true drag-curl cue-set is not yet in this catalog.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "10 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "10 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "10 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "leg-extension",
+        "sets": 3,
+        "repRange": "12",
+        "notes": "\"Leg extensions (thighs), 12 reps\" in the original list.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lying-leg-curl",
+        "sets": 3,
+        "repRange": "12",
+        "notes": "\"Leg curls (hamstrings), 12 reps\" in the original list.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "standing-calf-raise",
+        "sets": 3,
+        "repRange": "20",
+        "notes": "\"Calf heel raises (calves), 20 reps\" in the original list.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "20 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "20 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "decline-crunch",
+        "sets": 3,
+        "repRange": "10+",
+        "notes": "\"Crunches (upper and middle abdominals), 10-plus reps\" in the original list.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "10+ reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "10+ reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "10+ reps"
+          }
+        ]
+      }
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "lee-labrada-legs-abs",
+    "name": "Labrada - Legs & Abs",
+    "day": "Day 4",
+    "styleId": "lee-labrada",
+    "sortOrder": 1,
+    "labels": [
+      "12-Week Lean Body Trainer"
+    ],
+    "focus": [
+      "quads",
+      "hamstrings",
+      "calves"
+    ],
+    "description": "Day 4 (Legs & Abs) of Lee Labrada's own official \"12-Week Lean Body Trainer\" program, per the JEFIT mirror's exercise-by-exercise reconstruction (explicitly sourced back to the Bodybuilding.com BodyFit page): Barbell Squat, Dumbbell Lunge, Machine Leg Curl (prone), Barbell Stiff-Leg Deadlift, Dumbbell Seated Calf Raise, Dumbbell Calf Raise — all 3 sets x 12 reps. \"Bench Leg Raise\" (abs) has no matching exercise in this catalog and is omitted rather than invented.",
+    "source": {
+      "name": "\"12 week lean body trainer\" — JEFIT mirror of Lee Labrada's official Bodybuilding.com BodyFit program",
+      "url": "https://www.jefit.com/routines/63930/12-week-lean-body-trainer"
+    },
+    "exercises": [
+      {
+        "exerciseId": "barbell-squat",
+        "sets": 3,
+        "repRange": "12",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "walking-lunge",
+        "sets": 3,
+        "repRange": "12",
+        "notes": "\"Dumbbell Lunge\" in the official program.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lying-leg-curl",
+        "sets": 3,
+        "repRange": "12",
+        "notes": "\"Machine Leg Curl (prone)\" in the official program.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "romanian-deadlift",
+        "sets": 3,
+        "repRange": "12",
+        "notes": "\"Barbell Stiff-Leg Deadlift\" in the official program.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "seated-calf-raise",
+        "sets": 3,
+        "repRange": "12",
+        "notes": "\"Dumbbell Seated Calf Raise\" in the official program.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "standing-calf-raise",
+        "sets": 3,
+        "repRange": "12",
+        "notes": "\"Dumbbell Calf Raise\" in the official program.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "12 reps"
+          }
+        ]
+      }
+    ],
+    "collection": "legend"
+  },
+  {
+    "id": "steve-reeves-fullbody",
+    "name": "Reeves - Full Body",
+    "day": "Monday / Wednesday / Friday",
+    "styleId": "steve-reeves",
+    "sortOrder": 1,
+    "labels": [
+      "Building the Classic Physique"
+    ],
+    "focus": [
+      "shoulders",
+      "chest",
+      "back",
+      "lats",
+      "biceps",
+      "triceps",
+      "quads",
+      "hamstrings",
+      "calves"
+    ],
+    "description": "Steve Reeves' book-attributed full-body exercise table, per checkmeowt.co.uk's direct quotation of \"Building the Classic Physique — The Natural Way\" (with George Helmer). Follows his own stated blood-flow training order (smaller upper-body muscles first, legs last) at his documented 3x8-12 template. 14 of the book table's ~20 slots have a matching entry in this catalog; \"Behind The Neck Press,\" \"Bent Over Lateral Raise,\" \"High Pulley Curl,\" \"Dumbbell French Press Behind The Neck,\" \"One Arm Crossover,\" the dumbbell-swing warmup, lower-back, abdominal, and neck-flexion work have no library match and are omitted rather than invented.",
+    "source": {
+      "name": "\"Steve Reeves Workout Review: Building the Classic Physique (The Natural Way)\" — checkmeowt.co.uk (quotes the book directly)",
+      "url": "https://checkmeowt.co.uk/steve-reeves-workout-review/"
+    },
+    "exercises": [
+      {
+        "exerciseId": "upright-row",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "Deltoids — first in Reeves' stated blood-flow order.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "barbell-bench-press",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "Pectorals.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "incline-dumbbell-press",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "Pectorals.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "incline-dumbbell-flye",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "\"Flying Motion\" in the book table.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lat-pulldown",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "\"Behind The Neck Pull Up/Lat Pulldown\" in the book table.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "seated-cable-row",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "\"Low Pulley Lat Pull (Seated Cable Row)\" in the book table — exact name match.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "one-arm-dumbbell-row",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "Lats.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "barbell-curl",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "\"Standing Barbell Curl\" in the book table.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "incline-dumbbell-curl",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "Biceps.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lying-triceps-extension",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "\"Tricep Extension Bench Press\" in the book table.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "hack-squat",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "Quadriceps.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "front-squat",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "Quadriceps.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "lying-leg-curl",
+        "sets": 3,
+        "repRange": "8-12",
+        "notes": "Hamstrings.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "8-12 reps"
+          }
+        ]
+      },
+      {
+        "exerciseId": "standing-calf-raise",
+        "sets": 3,
+        "repRange": "~15-20",
+        "notes": "Calves — higher reps per the verified guidelines.",
+        "setScheme": [
+          {
+            "label": "1",
+            "kind": "working",
+            "intensity": "~15-20 reps"
+          },
+          {
+            "label": "2",
+            "kind": "working",
+            "intensity": "~15-20 reps"
+          },
+          {
+            "label": "3",
+            "kind": "working",
+            "intensity": "~15-20 reps"
+          }
+        ]
+      }
+    ],
+    "collection": "legend"
   }
 ]
