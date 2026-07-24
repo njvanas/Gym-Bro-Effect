@@ -1,0 +1,67 @@
+import { Link } from 'react-router-dom';
+
+import { muscleLabel } from '../../lib/format';
+import type { Routine, TrainingStyle } from '../../schema';
+import { ExerciseTable } from '../ExerciseTable';
+import { Avatar } from './LegendDetail';
+
+export function WorkoutDetail({
+  routine,
+  style,
+  backTo,
+}: {
+  routine: Routine;
+  style: TrainingStyle | undefined;
+  backTo: string;
+}) {
+  const creator = style?.creator ?? 'Unknown';
+
+  return (
+    <div className="legend-workout-detail">
+      <Link className="back" to={backTo}>
+        ← Back to {style?.name ?? 'legend'}
+      </Link>
+      <div className="detail">
+        <div className="detail-head">
+          <div className="who">
+            {routine.styleId ? (
+              <Avatar name={creator} gradientKey={routine.styleId} size="lg" />
+            ) : null}
+            <div>
+              <div className="k">Curated by</div>
+              <div className="v">{creator}</div>
+              {style ? <div className="ex-meta">{style.name}</div> : null}
+            </div>
+          </div>
+          {routine.source ? (
+            <a href={routine.source.url} target="_blank" rel="noreferrer">
+              {routine.source.name}
+            </a>
+          ) : null}
+        </div>
+
+        <h2>{routine.name}</h2>
+        {routine.day ? <div className="plan-day">{routine.day}</div> : null}
+
+        <div className="chips" style={{ marginTop: 12 }}>
+          {routine.labels.map((label) => (
+            <span className="chip label-chip" key={label}>
+              {label}
+            </span>
+          ))}
+          {routine.focus.map((m) => (
+            <span className="chip accent" key={m}>
+              {muscleLabel(m)}
+            </span>
+          ))}
+        </div>
+
+        {routine.description ? (
+          <p className="routine-desc">{routine.description}</p>
+        ) : null}
+
+        <ExerciseTable routine={routine} />
+      </div>
+    </div>
+  );
+}

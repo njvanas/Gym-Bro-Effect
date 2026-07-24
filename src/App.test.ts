@@ -97,10 +97,58 @@ describe('Bro Training routes', () => {
     expect(activeLink?.getAttribute('href')).toBe('/training/exercises');
   });
 
-  it('renders the temporary legends browse route', () => {
+  it('renders the legends browse route with links to legend detail pages', () => {
     const container = renderAt('/training/legends');
 
     expect(container.textContent).toContain('bodybuilders');
     expect(container.textContent).not.toContain('Page not found');
+
+    const cardLink = container.querySelector<HTMLAnchorElement>('a.legend-card');
+    expect(cardLink?.getAttribute('href')).toMatch(/^\/training\/legends\//);
+  });
+
+  it('renders a legend detail page with a link to a workout', () => {
+    const container = renderAt('/training/legends/arnold-golden-era');
+
+    expect(container.textContent).toContain('Arnold Schwarzenegger');
+    expect(container.textContent).not.toContain('Page not found');
+
+    const workoutLink = container.querySelector<HTMLAnchorElement>(
+      'a.legend-workout-card',
+    );
+    expect(workoutLink?.getAttribute('href')).toMatch(
+      /^\/training\/legends\/arnold-golden-era\/workout\//,
+    );
+  });
+
+  it('shows a not-found page for an unknown legend', () => {
+    const container = renderAt('/training/legends/nobody');
+
+    expect(container.textContent).toContain('Legend not found');
+    expect(
+      container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href'),
+    ).toBe('/training/legends');
+  });
+
+  it('renders a workout detail page at its direct URL', () => {
+    const container = renderAt(
+      '/training/legends/arnold-golden-era/workout/arnold-golden-six',
+    );
+
+    expect(container.textContent).toContain('Golden Six');
+    expect(
+      container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href'),
+    ).toBe('/training/legends/arnold-golden-era');
+  });
+
+  it('shows a not-found page when the workout does not belong to the style', () => {
+    const container = renderAt(
+      '/training/legends/arnold-golden-era/workout/does-not-exist',
+    );
+
+    expect(container.textContent).toContain('Workout not found');
+    expect(
+      container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href'),
+    ).toBe('/training/legends/arnold-golden-era');
   });
 });
