@@ -188,6 +188,13 @@ a.journey-card {
   text-decoration: none;
 }
 
+a.training-hub-card,
+a.legend-card,
+a.legend-workout-card {
+  text-decoration: none;
+  color: inherit;
+}
+
 .menu-toggle {
   margin-left: auto;
   border: 1px solid var(--border);
