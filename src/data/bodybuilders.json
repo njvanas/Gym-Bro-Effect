@@ -1,19 +1,5 @@
 [
   {
-    "id": "albert-beckles",
-    "name": "Albert Beckles",
-    "era": "Competed into his 50s, \"The Ageless Wonder\"",
-    "titles": [
-      "Competed at the pro level into his 50s"
-    ],
-    "why": "Longevity and genetics icon nicknamed \"The Ageless Wonder\" for competing at an elite level for decades.",
-    "principles": [],
-    "sources": [],
-    "tier": 3,
-    "displayOrder": 1,
-    "styleId": "albert-beckles"
-  },
-  {
     "id": "arnold-schwarzenegger",
     "name": "Arnold Schwarzenegger",
     "era": "1970-1980",
@@ -25,7 +11,7 @@
     "sources": [],
     "styleId": "arnold-golden-era",
     "tier": 1,
-    "displayOrder": 2
+    "displayOrder": 1
   },
   {
     "id": "bev-francis",
@@ -37,8 +23,8 @@
     "why": "Pioneered a strength-first approach to women's bodybuilding and remains an active coach today.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 3,
+    "tier": 2,
+    "displayOrder": 2,
     "styleId": "bev-francis"
   },
   {
@@ -51,8 +37,8 @@
     "why": "Modern mass-monster champion and the first Egyptian bodybuilder to win the Mr. Olympia.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 4,
+    "tier": 2,
+    "displayOrder": 3,
     "styleId": "big-ramy"
   },
   {
@@ -65,8 +51,8 @@
     "why": "Longevity and legacy icon who authored one of bodybuilding's best-selling training books.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 5,
+    "tier": 2,
+    "displayOrder": 4,
     "styleId": "bill-pearl"
   },
   {
@@ -79,8 +65,8 @@
     "why": "Old-school-style heavy training documented extensively on camera at his own Metroflex Gym.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 6,
+    "tier": 2,
+    "displayOrder": 5,
     "styleId": "branch-warren"
   },
   {
@@ -93,8 +79,8 @@
     "why": "Modern Olympia champion known for being unusually articulate about his own training on camera.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 7,
+    "tier": 2,
+    "displayOrder": 6,
     "styleId": "brandon-curry"
   },
   {
@@ -107,8 +93,8 @@
     "why": "Directly tied to the HIT lineage through Arthur Jones's Colorado Experiment and later work with Mike Mentzer.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 8,
+    "tier": 2,
+    "displayOrder": 7,
     "styleId": "casey-viator"
   },
   {
@@ -122,7 +108,7 @@
     "principles": [],
     "sources": [],
     "tier": 2,
-    "displayOrder": 9,
+    "displayOrder": 8,
     "styleId": "chris-bumstead"
   },
   {
@@ -135,8 +121,8 @@
     "why": "Most dominant women's bodybuilding champion of her era, undefeated across six Ms. Olympia titles.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 10,
+    "tier": 2,
+    "displayOrder": 9,
     "styleId": "cory-everson"
   },
   {
@@ -149,8 +135,8 @@
     "why": "Modern European mass-monster representative of the 2000s-2010s era.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 11,
+    "tier": 2,
+    "displayOrder": 10,
     "styleId": "dennis-wolf"
   },
   {
@@ -165,7 +151,7 @@
     "sources": [],
     "styleId": "jackson-blade",
     "tier": 2,
-    "displayOrder": 12
+    "displayOrder": 11
   },
   {
     "id": "dorian-yates",
@@ -179,7 +165,7 @@
     "sources": [],
     "styleId": "blood-and-guts",
     "tier": 1,
-    "displayOrder": 13
+    "displayOrder": 12
   },
   {
     "id": "flex-wheeler",
@@ -191,8 +177,8 @@
     "why": "Widely considered the most aesthetic physique of the 1990s; his memoir documents his career and health struggles.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 14,
+    "tier": 2,
+    "displayOrder": 13,
     "styleId": "flex-wheeler"
   },
   {
@@ -205,8 +191,8 @@
     "why": "Arnold Schwarzenegger's training partner and a two-time Mr. Olympia in his own right.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 15,
+    "tier": 2,
+    "displayOrder": 14,
     "styleId": "franco-columbu"
   },
   {
@@ -221,7 +207,7 @@
     "sources": [],
     "styleId": "zane-aesthetics",
     "tier": 1,
-    "displayOrder": 16
+    "displayOrder": 15
   },
   {
     "id": "greg-doucette",
@@ -235,21 +221,7 @@
     "sources": [],
     "styleId": "htlt",
     "tier": 1,
-    "displayOrder": 17
-  },
-  {
-    "id": "gunter-schlierkamp",
-    "name": "Gunter Schlierkamp",
-    "era": "Late 1990s-2000s",
-    "titles": [
-      "Multiple-time Mr. Olympia top-5 finisher"
-    ],
-    "why": "European size representative of the late-1990s/2000s mass-monster era.",
-    "principles": [],
-    "sources": [],
-    "tier": 3,
-    "displayOrder": 18,
-    "styleId": "gunter-schlierkamp"
+    "displayOrder": 16
   },
   {
     "id": "hadi-choopan",
@@ -261,8 +233,8 @@
     "why": "Current-era champion known for a distinct training culture and nickname, \"The Persian Wolf.\"",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 19,
+    "tier": 2,
+    "displayOrder": 17,
     "styleId": "hadi-choopan"
   },
   {
@@ -275,8 +247,8 @@
     "why": "Holds the record for most Olympia titles of any bodybuilder — male or female — in the sport's history.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 20,
+    "tier": 2,
+    "displayOrder": 18,
     "styleId": "iris-kyle"
   },
   {
@@ -291,21 +263,7 @@
     "sources": [],
     "styleId": "cutler-volume",
     "tier": 1,
-    "displayOrder": 21
-  },
-  {
-    "id": "johnnie-jackson",
-    "name": "Johnnie Jackson",
-    "era": "2000s-2010s",
-    "titles": [
-      "IFBB Pro, competitive raw powerlifter"
-    ],
-    "why": "Powerlifting-bodybuilding hybrid approach, well documented through heavy, verifiable competition lifts.",
-    "principles": [],
-    "sources": [],
-    "tier": 3,
-    "displayOrder": 22,
-    "styleId": "johnnie-jackson"
+    "displayOrder": 19
   },
   {
     "id": "kai-greene",
@@ -317,8 +275,8 @@
     "why": "Highly quotable modern philosophy built on mind-muscle connection, with one of bodybuilding's largest fan followings.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 23,
+    "tier": 2,
+    "displayOrder": 20,
     "styleId": "kai-greene"
   },
   {
@@ -332,7 +290,7 @@
     "principles": [],
     "sources": [],
     "tier": 2,
-    "displayOrder": 24,
+    "displayOrder": 21,
     "styleId": "kevin-levrone"
   },
   {
@@ -346,8 +304,8 @@
     "why": "Rare cross-division champion who won titles in both bodybuilding and fitness competition.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 25,
+    "tier": 2,
+    "displayOrder": 22,
     "styleId": "kim-chizevsky"
   },
   {
@@ -360,8 +318,8 @@
     "why": "Historically essential as the very first Mr. Olympia champion.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 26,
+    "tier": 2,
+    "displayOrder": 23,
     "styleId": "larry-scott"
   },
   {
@@ -376,7 +334,7 @@
     "sources": [],
     "styleId": "haney-stimulate",
     "tier": 2,
-    "displayOrder": 27
+    "displayOrder": 24
   },
   {
     "id": "lee-labrada",
@@ -389,8 +347,8 @@
     "why": "Symmetry-era icon who built a lasting education and supplement brand around his own training philosophy.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 28,
+    "tier": 2,
+    "displayOrder": 25,
     "styleId": "lee-labrada"
   },
   {
@@ -404,7 +362,7 @@
     "principles": [],
     "sources": [],
     "tier": 2,
-    "displayOrder": 29,
+    "displayOrder": 26,
     "styleId": "lee-priest"
   },
   {
@@ -417,8 +375,8 @@
     "why": "Most-titled women's bodybuilding champion before Iris Kyle, dominant across the 1990s.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 30,
+    "tier": 2,
+    "displayOrder": 27,
     "styleId": "lenda-murray"
   },
   {
@@ -432,8 +390,8 @@
     "why": "Crossover bodybuilding-to-Hollywood fame who still coaches and appears publicly today.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 31,
+    "tier": 2,
+    "displayOrder": 28,
     "styleId": "lou-ferrigno"
   },
   {
@@ -446,23 +404,9 @@
     "why": "Extreme-mass case study of the 2000s, with German representation at the top level.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 32,
+    "tier": 2,
+    "displayOrder": 29,
     "styleId": "markus-ruhl"
-  },
-  {
-    "id": "mike-matarazzo",
-    "name": "Mike Matarazzo",
-    "era": "1990s mass-monster era",
-    "titles": [
-      "1990s IFBB Pro competitor"
-    ],
-    "why": "Cult fan-favorite of the 1990s mass-monster era, known for his outsized personality.",
-    "principles": [],
-    "sources": [],
-    "tier": 3,
-    "displayOrder": 33,
-    "styleId": "mike-matarazzo"
   },
   {
     "id": "mike-mentzer",
@@ -476,7 +420,7 @@
     "sources": [],
     "styleId": "heavy-duty",
     "tier": 1,
-    "displayOrder": 34
+    "displayOrder": 30
   },
   {
     "id": "nasser-el-sonbaty",
@@ -488,8 +432,8 @@
     "why": "Huge 1990s frame paired with unusually articulate, multilingual magazine interviews.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 35,
+    "tier": 2,
+    "displayOrder": 31,
     "styleId": "nasser-el-sonbaty"
   },
   {
@@ -502,8 +446,8 @@
     "why": "Current-generation mass monster who films and narrates most of his own training sessions.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 36,
+    "tier": 2,
+    "displayOrder": 32,
     "styleId": "nick-walker"
   },
   {
@@ -516,8 +460,8 @@
     "why": "Iconic 1990s size and conditioning during a brief but memorable competitive career.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 37,
+    "tier": 2,
+    "displayOrder": 33,
     "styleId": "paul-dillett"
   },
   {
@@ -532,7 +476,7 @@
     "sources": [],
     "styleId": "heath-fst7",
     "tier": 1,
-    "displayOrder": 38
+    "displayOrder": 34
   },
   {
     "id": "rachel-mclish",
@@ -544,8 +488,8 @@
     "why": "Founding icon of women's bodybuilding as the sport's first-ever Ms. Olympia champion.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 39,
+    "tier": 2,
+    "displayOrder": 35,
     "styleId": "rachel-mclish"
   },
   {
@@ -558,8 +502,8 @@
     "why": "Arnold Schwarzenegger's own idol and mentor, and an early strength-focused bodybuilding icon.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 40,
+    "tier": 2,
+    "displayOrder": 36,
     "styleId": "reg-park"
   },
   {
@@ -574,7 +518,7 @@
     "sources": [],
     "styleId": "gaspari-annihilation",
     "tier": 2,
-    "displayOrder": 41
+    "displayOrder": 37
   },
   {
     "id": "rich-piana",
@@ -586,8 +530,8 @@
     "why": "Hugely influential self-documentarian whose own YouTube back catalog remains a primary record of his training.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 42,
+    "tier": 2,
+    "displayOrder": 38,
     "styleId": "rich-piana"
   },
   {
@@ -600,8 +544,8 @@
     "why": "Longevity icon who remains active on social media and continues posing exhibitions today.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 43,
+    "tier": 2,
+    "displayOrder": 39,
     "styleId": "robby-robinson"
   },
   {
@@ -616,7 +560,7 @@
     "sources": [],
     "styleId": "coleman-powerbuilding",
     "tier": 1,
-    "displayOrder": 44
+    "displayOrder": 40
   },
   {
     "id": "samir-bannout",
@@ -630,7 +574,7 @@
     "sources": [],
     "styleId": "bannout-lion",
     "tier": 2,
-    "displayOrder": 45
+    "displayOrder": 41
   },
   {
     "id": "serge-nubret",
@@ -642,8 +586,8 @@
     "why": "Unique high-volume, cardio-heavy training philosophy sustained across an unusually long career.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 46,
+    "tier": 2,
+    "displayOrder": 42,
     "styleId": "serge-nubret"
   },
   {
@@ -656,8 +600,8 @@
     "why": "Arnold Schwarzenegger's chief Golden Era rival, considered one of the greatest physiques of all time.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 47,
+    "tier": 2,
+    "displayOrder": 43,
     "styleId": "sergio-oliva"
   },
   {
@@ -670,8 +614,8 @@
     "why": "Outspoken 1990s contender who remains an active media personality today.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 48,
+    "tier": 2,
+    "displayOrder": 44,
     "styleId": "shawn-ray"
   },
   {
@@ -684,8 +628,8 @@
     "why": "The most recent \"classic-format\" Olympia winner before the modern mass-monster era.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 49,
+    "tier": 2,
+    "displayOrder": 45,
     "styleId": "shawn-rhoden"
   },
   {
@@ -699,8 +643,8 @@
     "why": "Foundational aesthetics icon whose career predates the Mr. Olympia contest entirely.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 50,
+    "tier": 2,
+    "displayOrder": 46,
     "styleId": "steve-reeves"
   },
   {
@@ -713,23 +657,9 @@
     "why": "Legendary leg-training specialist whose squat sessions remain a cult reference point in bodybuilding history.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 51,
+    "tier": 2,
+    "displayOrder": 47,
     "styleId": "tom-platz"
-  },
-  {
-    "id": "toney-freeman",
-    "name": "Toney Freeman",
-    "era": "2000s-2010s Olympia top-5",
-    "titles": [
-      "Multiple-time Mr. Olympia top-5 finisher"
-    ],
-    "why": "Aesthetics-plus-longevity representative of the modern mass-monster era.",
-    "principles": [],
-    "sources": [],
-    "tier": 3,
-    "displayOrder": 52,
-    "styleId": "toney-freeman"
   },
   {
     "id": "victor-martinez",
@@ -741,8 +671,8 @@
     "why": "Strong 2000s-era physique and Dominican representation at the top level of pro bodybuilding.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 53,
+    "tier": 2,
+    "displayOrder": 48,
     "styleId": "victor-martinez"
   },
   {
@@ -755,8 +685,8 @@
     "why": "Hugely influential pre-Olympia training theorist who ran his own Hollywood gym and mail-order courses.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 54,
+    "tier": 2,
+    "displayOrder": 49,
     "styleId": "vince-gironda"
   },
   {
@@ -769,8 +699,8 @@
     "why": "Longevity and symmetry-era representative who won the Masters Olympia.",
     "principles": [],
     "sources": [],
-    "tier": 3,
-    "displayOrder": 55,
+    "tier": 2,
+    "displayOrder": 50,
     "styleId": "vince-taylor"
   }
 ]

@@ -65,16 +65,10 @@ describe('training database', () => {
     }
   });
 
-  it('Needs-primary-sources stubs may lack workouts; others keep workouts when present', () => {
+  it('every style has at least one complete legend workout', () => {
     for (const style of styles) {
       const owned = getLegendRoutines().filter((r) => r.styleId === style.id);
-      if (style.tags.includes('Needs primary sources')) {
-        // Gap stubs intentionally have no invented routines.
-        expect(owned.length, style.id).toBeGreaterThanOrEqual(0);
-      } else if (owned.length > 0) {
-        expect(owned.length, style.id).toBeGreaterThan(0);
-      }
-      // Methodology-only verified profiles (sources filled, no workouts yet) are allowed.
+      expect(owned.length, style.id).toBeGreaterThan(0);
     }
   });
 
@@ -146,8 +140,19 @@ describe('training database', () => {
 });
 
 describe('bodybuilder roster', () => {
-  it('loads at least 50 bodybuilders', () => {
-    expect(bodybuilders.length).toBeGreaterThanOrEqual(50);
+  it('loads the top-50 bodybuilder roster', () => {
+    expect(bodybuilders.length).toBe(50);
+  });
+
+  it('every bodybuilder has at least one legend routine', () => {
+    const counts = new Map<string, number>();
+    for (const routine of legendRoutines) {
+      if (!routine.styleId) continue;
+      counts.set(routine.styleId, (counts.get(routine.styleId) ?? 0) + 1);
+    }
+    for (const bodybuilder of bodybuilders) {
+      expect(counts.get(bodybuilder.styleId!) ?? 0, bodybuilder.id).toBeGreaterThan(0);
+    }
   });
 
   it('has unique ids and is sorted alphabetically by name', () => {

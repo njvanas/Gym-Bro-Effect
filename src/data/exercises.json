@@ -1003,5 +1003,164 @@
       "Sit between the heels with an upright torso.",
       "Drive up through the mid-foot."
     ]
+  },
+  {
+    "id": "machine-preacher-curl",
+    "name": "Machine Preacher Curl",
+    "aliases": [
+      "Preacher Curl Machine"
+    ],
+    "primaryMuscle": "biceps",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "cues": [
+      "Elbows fixed on pad",
+      "Full stretch at bottom",
+      "Squeeze at top"
+    ]
+  },
+  {
+    "id": "triceps-kickback",
+    "name": "Triceps Kickback",
+    "aliases": [
+      "Dumbbell Kickback"
+    ],
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": [],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "cues": [
+      "Upper arm parallel to floor",
+      "Extend only at the elbow",
+      "Pause at lockout"
+    ]
+  },
+  {
+    "id": "hip-abductor-machine",
+    "name": "Hip Abductor Machine",
+    "aliases": [
+      "Seated Abductor",
+      "Abduction Machine"
+    ],
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "cues": [
+      "Sit upright",
+      "Drive knees outward",
+      "Control the return"
+    ]
+  },
+  {
+    "id": "machine-shrug",
+    "name": "Machine Shrug",
+    "aliases": [
+      "Shrug Machine"
+    ],
+    "primaryMuscle": "traps",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "cues": [
+      "Pull shoulders straight up",
+      "Pause at top",
+      "No rolling"
+    ]
+  },
+  {
+    "id": "stiff-leg-deadlift",
+    "name": "Stiff-Leg Deadlift",
+    "aliases": [
+      "Stiff-Legged Deadlift",
+      "SLDL"
+    ],
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": [
+      "glutes",
+      "lower-back"
+    ],
+    "equipment": "barbell",
+    "category": "compound",
+    "cues": [
+      "Soft knees",
+      "Hinge at hips",
+      "Feel stretch in hamstrings"
+    ]
+  },
+  {
+    "id": "machine-squat",
+    "name": "Machine Squat",
+    "aliases": [
+      "Super Squat",
+      "Mechanical Squat"
+    ],
+    "primaryMuscle": "quads",
+    "secondaryMuscles": [
+      "glutes"
+    ],
+    "equipment": "machine",
+    "category": "compound",
+    "cues": [
+      "Back against pad",
+      "To about parallel",
+      "Stop short of lockout"
+    ]
+  },
+  {
+    "id": "good-morning",
+    "name": "Good Morning",
+    "aliases": [],
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": [
+      "lower-back",
+      "glutes"
+    ],
+    "equipment": "barbell",
+    "category": "compound",
+    "cues": [
+      "Soft knees",
+      "Hinge until torso near parallel",
+      "Drive hips forward"
+    ]
+  },
+  {
+    "id": "dumbbell-shoulder-press",
+    "name": "Dumbbell Shoulder Press",
+    "aliases": [
+      "Seated Dumbbell Press",
+      "DB Press"
+    ],
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": [
+      "triceps"
+    ],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "cues": [
+      "Press overhead without excessive lean",
+      "Full lockout",
+      "Control the descent"
+    ]
+  },
+  {
+    "id": "bent-over-lateral-raise",
+    "name": "Bent-Over Lateral Raise",
+    "aliases": [
+      "Bent-Over Rear Delt Raise",
+      "Rear Lateral Raise"
+    ],
+    "primaryMuscle": "rear-delts",
+    "secondaryMuscles": [
+      "shoulders"
+    ],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "cues": [
+      "Hinge at hips",
+      "Raise out to sides",
+      "Lead with elbows"
+    ]
   }
 ]

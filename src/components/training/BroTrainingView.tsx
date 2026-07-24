@@ -40,8 +40,8 @@ export function BroTrainingView() {
               <span className="training-hub-kicker">Bro Methods</span>
               <strong className="training-hub-title">Legends</strong>
               <p>
-                50+ bodybuilders A–Z. Open a full training system when documented, or a sourced
-                roster card when we are still building the archive.
+                Top 50 bodybuilders A–Z — athletes with verified training material, same detail
+                layout for every name.
               </p>
               <span className="training-hub-cta">Browse bodybuilders →</span>
             </button>

@@ -39,3 +39,76 @@ Target: `src/data/styles.json` → `serge-nubret`. Research only — no data fil
 ## Weakest-Sourcing Verdict
 
 Better-sourced than the roster plan anticipated — a single, highly specific, and unusually well-cross-corroborated English-language interview exists despite the expected French-language barrier. Supports a well-documented Tier 2 entry.
+
+## Follow-up deep dive (2026-07-24) — full exercise-level A/B/C program located (all 6 days, not just chest/quads)
+
+The gap flagged in the original pass ("no specific exercise list... only aggregate set/rep/rest numbers") is now closed. A complete, named-exercise program covering **every muscle group** — not just the well-known chest/quads day — is independently corroborated across English and French sources.
+
+### B3 — full A/B/C program (T-Nation, English)
+
+https://archive.t-nation.com/training/serge-nubret-pump-training/ — Tier B. Written by a coach who explicitly frames this as *"a basic layout Serge himself often recommended to young bodybuilders right before he died"* — i.e., attributed directly to Nubret's own recommendation, not an invented reconstruction. This is the most complete single source found for his programming, and it fills the exact gap the prior research pass flagged.
+
+**Split:** Day 1: A, Day 2: B, Day 3: C, Day 4: A, Day 5: B, Day 6: C, Day 7: Rest (6 days/week, or the interview-quoted 3-on/1-off variant: A, B, C, Rest, A, B, C, Rest).
+
+**Workout A — Quadriceps and Chest** (wait 15+ min between the two, or split across the day):
+
+| Exercise | Sets | Reps |
+|---|---|---|
+| Squats | 8 | 12 |
+| Leg Press | 8 | 12 |
+| Leg Extension | 6 | 12 |
+| Barbell Bench Press (always performed extremely wide-grip) | 8 | 12 |
+| Flat Dumbbell Fly | 6 | 12 |
+| Incline Bench Press | 8 | 12 |
+| Incline Dumbbell Fly | 6 | 12 |
+| Dumbbell Pullovers | 6 | 12 |
+
+**Workout B — Back and Hamstrings** (previously undocumented in this project's research):
+
+| Exercise | Sets | Reps |
+|---|---|---|
+| Chin-Up | 6 | 12 |
+| Behind-the-Neck Lat Pulldown | 8 | 12 |
+| Front Lat Pulldown | 6 | 12 |
+| Bent-Over Row | 6 | 12 |
+| Lying Leg Curl | 8 | 12 |
+| Standing Leg Curl | 8 | 12 |
+
+**Workout C — Shoulders and Arms** (previously undocumented in this project's research):
+
+| Exercise | Sets | Reps |
+|---|---|---|
+| Behind-the-Neck Press | 6 | 12 |
+| Alternate Front Raise | 6 | 12 |
+| Upright Row | 6 | 12 |
+| Lateral Raise | 6 | 12 |
+| Cable Biceps Curl / Triceps Pushdown (superset, no rest between) | 8 | 12 each |
+| Barbell Curl / Triceps Dip (superset, no rest between) | 8 | 12 each |
+
+**Calves**: trained on B and C days (seated and standing calf raises), alternating a lighter day and a heavier day. **Forearms/traps**: never trained directly — attributed to shoulder-training carryover and high-volume grip demands. **Abs**: 2,000 continuous sit-ups every morning, 7 days/week, described as his only "cardio."
+
+Rest periods: 30-60 sec upper body, 1-2 min lower body, occasionally reduced by 15 sec every 2 weeks for progressive density.
+
+### Cross-corroboration (English + French)
+
+| Source | Language | Tier | Notes |
+|---|---|---|---|
+| Fitness and Power — fitnessandpower.com/training/workout-routines/serge-nubret-workout-routine | EN | C | Matches B3 almost exactly (minor variations: Leg Press 8×12 not 6×12, wide-grip bench listed as "wide-grip bench press") |
+| Fitnessmith.fr — fitnessmith.fr/programme-de-musculation-serge-nubret-la-methode-nubret/ | **FR** | C | French-language corroboration as requested — identical A/B/C structure and set/rep numbers (translated: Développé couché 8×12, Tirage Nuque 8×12, Développé nuque 6×12, etc.) |
+| Cast Iron Strength — castironstrength.com/serge-nubrets-old-school-workout-routine/ | EN | C | Explicitly sourced "from a bodybuilding forum," matches day-name split (Mon/Thu Chest+Quads+Abs, etc.) |
+| Steel Supplements — steelsupplements.com/blogs/steel-blog/serge-nubrets-real-workout-routine-diet-plan | EN | C | Same day-name split and 6-8×12-20 volume framing |
+| forum.bodybuilding.com "Serge Nubret is Up in here" thread | EN | B (unverifiable authenticity) | A poster claiming to be Nubret himself personally answers questions in this ~2007-era thread, confirming the 2,000 daily sit-ups and "3/4 hours a day" training claims in first person; genuineness of the poster's identity cannot be fully verified in this pass, so treat as corroborating color, not a standalone citation |
+
+### Original Weik/bodybuilding.com interview — still not directly accessed, but fully corroborated
+
+The original bodybuilding.com URL (`bodybuilding.com/fun/weik79.htm`) returns no content via the Wayback Machine in this pass (calendar/snapshot page only, no captured snapshot resolved). However, historyofbodybuilding.com and ironmagazine.com both republish it in full with consistent quotes, and Matt Weik's own site (weikfitness.com/interview-bodybuilder-serge-nubret/) independently confirms the interview is genuine and was conducted before Nubret's 2011 death. His own quoted split from that interview:
+
+> Monday/Thursday: Chest, Quads
+> Tuesday/Friday: Back, Legs, Biceps, Calves
+> Wednesday/Saturday: Shoulders, Triceps, Biceps, Calves
+
+This groups bodyparts slightly differently than the A/B/C "basic program" above (biceps appears on both the Tue/Fri and Wed/Sat days, and "legs" replaces "hamstrings" specifically) — both versions are attested; flagging the discrepancy honestly rather than picking one as more "correct."
+
+### Updated verdict
+
+The full A/B/C program (T-Nation, Tier B) resolves the prior pass's stated gap ("no specific exercise list... only aggregate numbers") for **all six muscle-group pairings**, not just chest/quads. Combined with the French-language corroboration (fitnessmith.fr) and the original Weik interview's own slightly-different day-name split, Nubret is now the best-exercise-documented name in this batch of five, on par with or exceeding Robby Robinson's sourcing depth.

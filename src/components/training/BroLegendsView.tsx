@@ -618,9 +618,8 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
           {bodybuilders.length} <span className="accent">bodybuilders</span>, A–Z
         </h1>
         <p className="legends-lede">
-          One roster sorted by name. Every athlete opens the same training layout —
-          methodology, guidelines, split, workouts, and sources. Gaps stay marked until
-          primary sources verify them.
+          Top 50 selection — every athlete has a complete training layout: methodology,
+          guidelines, split, workouts, and sources.
         </p>
 
         <div className="legends-search-shell">

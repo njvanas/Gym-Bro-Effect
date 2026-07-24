@@ -43,3 +43,45 @@ Target: `src/data/styles.json` → `vince-taylor`. Research only — no data fil
 ## Weakest-Sourcing Verdict
 
 One of the best-sourced names in this batch — a named, self-described system consistently corroborated across three interviews spanning more than a decade, plus a specific, verifiable injury/invention story.
+
+## Follow-up deep dive (2026-07-24) — named exercises per bodypart located; still no single source ties all bodyparts to numeric sets/reps in one table
+
+### B5 — Fitness Volt "Complete Profile" (named exercises per bodypart, Tier B/C)
+
+https://fitnessvolt.com/16747/vince-taylor/ — Tier B for the attributed quotes, Tier C for the exercise lists themselves (no sets/reps given except where noted). Confirms and extends the push/pull/legs structure from B1-B3 with specific movements:
+
+| Bodypart (day) | Exercises | Sets/Reps |
+|---|---|---|
+| Chest (Push, Mon/Thu) | Barbell Bench Press, Dumbbell Bench Press, Cable Crossover | Not specified — quoted rule: *"When you're training for size and mass, always use a two-handed movement such as barbell press to add maximum resistance to a muscle group."* |
+| Shoulders (Push, Mon/Thu) | Barbell Shoulder Press, Dumbbell Shoulder Press | Not specified — barbell press for mass, dumbbells "to tone the muscles" |
+| Back (Pull, Tue/Fri) | T-Bar Rows, Seated Rows, Lat Pulldowns, Behind-the-Neck Lat Pulldowns, Behind-the-Back Barbell Shrugs | Not specified |
+| Biceps (Pull, Tue/Fri) | Cable Curls, Dumbbell Curls | **5 sets max, 10-12 reps, moderate-to-medium-heavy weight only** — quoted: *"anything above that would be overtraining"* |
+| Legs/Quads (Push, Wed/Sat) | Leg Press, Front Squats, Leg Extensions, Lying Leg Curls (never back squats — see injury note below) | Not specified |
+| Calves (Push, Wed/Sat) | Toe Extensions, Calf Press | Not specified |
+
+**Direct quote on why he never back-squats** (relevant methodology detail, not just an exercise-list gap): *"In the past, I could not train legs that hard as my knees would kill me. I never squatted and never had the squatter bodybuilder legs. I have got the leg presser legs — narrow around the knees rather than heavy mass."* He also designed and used his own patented leg-press machine to work around this limitation.
+
+### B6 — bodybuildingfanatic.com, full triceps day (Tier B, direct quote + numeric table)
+
+https://www.bodybuildingfanatic.com/vince-taylor.html — already captured in the prior pass but confirmed again here as the *only* Vince Taylor bodypart day with a complete, numeric exercise table:
+
+| Exercise | Sets | Reps |
+|---|---|---|
+| Triceps Pushdowns | 5 | 10-12 |
+| One-Arm Pushdowns | 5 | 10-12 |
+| Dumbbell French Press | 5 | 10-12 |
+| Triceps Kickbacks | 5 | 10-12 |
+
+### Reconciling the "3-day" YouTube summary vs. the push-pull-legs interviews
+
+A YouTube biographical video ("Vince Taylor – The Monster Who Dominated Three Decades of Bodybuilding") describes a slightly different, simplified 3-day cycle — Day 1: chest/shoulders/arms, Day 2: legs/abs, Day 3: back, repeat — which is directionally consistent with the push/pull/legs framework (push muscles combined into one day, back isolated, legs/abs together) but is a secondhand video summary, not a primary citation. Tier C; treated as corroborating color only, not a separate attested split.
+
+### Updated split + sourcing table (for `routines.json` planning)
+
+| Day | Bodyparts | Exercises named? | Sets/reps verified? | Tier |
+|---|---|---|---|---|
+| Mon/Thu (Push) | Chest, Shoulders, Triceps | Chest & shoulders: yes. Triceps: yes (B6, full table) | Triceps only | B |
+| Tue/Fri (Pull) | Back, Biceps, Traps | Back: yes. Biceps: yes | Biceps only (5×10-12, capped weight) | B |
+| Wed/Sat (Push 2) | Legs, Abs | Legs/calves: yes | No | C |
+
+**Recommendation**: as with Dillett, the triceps day (B6) and the biceps cap (B5, quoted numeric rule) are strong enough on their own to support `routines.json` legend sessions per the roster's "partial attested sessions over full-week fabrication" rule, while chest/shoulders/back/legs stay exercise-named-but-number-free (methodology detail, not a full session).

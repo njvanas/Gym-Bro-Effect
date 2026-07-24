@@ -42,3 +42,52 @@ Target: `src/data/styles.json` → `paul-dillett`. Research only — no data fil
 ## Weakest-Sourcing Verdict
 
 Reasonably well-sourced given his short career — two dated, contemporaneous direct interviews plus consistent split/rep detail across independent secondary sources.
+
+## Follow-up deep dive (2026-07-24) — complete arm day found; other days remain exercise-lists without sets/reps
+
+### B4 — full arm-day table located and verified (`bodybuildingfanatic.com/paul-dillet.html`)
+
+Note: the correct live URL is `https://www.bodybuildingfanatic.com/paul-dillet.html` (single "t"), not `pauldillettarmworkout.htm`. Direct quotes confirmed:
+
+> *"I loved barbell curls and I loved skull-crushers for triceps. I just found those, along with exercises like one-arm dumbbell curls were the bread and butter for putting size on my arms."*
+> *"I was always a high-rep guy using moderate weight. It was nothing less than 10 reps."*
+
+**Arm day (Tier B — direct quotes, 4-5 sets × 10-12 reps each, triceps-first sequencing, alternating thereafter):**
+
+| Order | Exercise | Sets | Reps |
+|---|---|---|---|
+| 1 | Cable Triceps Extension | 4-5 | 10-12 |
+| 2 | Barbell Curl | 4-5 | 10-12 |
+| 3 | Triceps Skull-crushers | 4-5 | 10-12 |
+| 4 | Preacher Curl | 4-5 | 10-12 |
+| 5 | Triceps Press-downs | 4-5 | 10-12 |
+| 6 | Concentration Curl | 4-5 | 10-12 |
+
+Source: https://www.bodybuildingfanatic.com/paul-dillet.html — Tier B (direct first-person quotes on rep philosophy and exercise choice, plus an explicitly attributed exercise/set/rep table built around those quotes).
+
+### Shoulders/chest exercise lists exist but without sets/reps (Tier C — no numbers)
+
+Multiple independent aggregators (alphabodybuilders.com, strongsupplementshop.com) consistently list the same exercises for these days, but **none specify sets or reps** — only the arm day (above) has verified numbers.
+
+| Day | Exercises (no sets/reps found) |
+|---|---|
+| Shoulders (Day 1) | Seated Military Press, Dumbbell Press, Side Lateral Raises, Front Raises, Rear Delt Machine, Shrugs |
+| Chest (Day 3 AM) | Incline Barbell Press, Flat Bench Press, Pec Deck, Dips |
+
+Source: https://alphabodybuilders.com/bodybuilders/paul-dillett/ (Tier C — generic aggregator, no attributed quotes, no numeric detail).
+
+### Quads/Hamstrings/Back — still a confirmed gap
+
+No source in this pass (or the prior pass) names specific exercises for his quad, hamstring, or back days — only the day-pairing structure (Day 2 AM Quads/PM Hamstrings, Day 4 Back) is attested. Generic aggregators (dr-muscle.com) mention "squats, deadlifts, bench press, rows" but frame these as generic mass-monster staples rather than exercises specifically attributed to Dillett — Tier D, not usable.
+
+### Updated split table (for `routines.json` planning)
+
+| Day | AM / Standalone | PM | Sets/Reps Verified? |
+|---|---|---|---|
+| 1 | Shoulders (6 exercises, Tier C) | — | No |
+| 2 | Quads | Hamstrings | No exercises named at all |
+| 3 | Chest (4 exercises, Tier C) | **Arms (6-exercise table, Tier B, full sets/reps)** | Arms only |
+| 4 | Back | — | No exercises named at all |
+| 5 | Rest | — | — |
+
+**Recommendation**: the arm day alone (Tier B, full exercise/set/rep table) is strong enough to support a single `routines.json` legend session per the roster's coverage rule ("prefer partial attested sessions... over full-week fabrications"). The rest of the split should stay methodology-only until a shoulders/chest/back/legs source with numbers surfaces.
