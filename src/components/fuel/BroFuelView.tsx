@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 
 import { fuelHubCrumbs } from '../../lib/crumbs';
 import { phases } from '../../lib/fuel-db';
-import { phaseLabel } from '../../lib/fuel-nav';
 import { paths } from '../../lib/routes';
 import { PageChrome } from '../PageChrome';
 import { TdeeCallout } from './TdeeCallout';
@@ -10,7 +9,7 @@ import { TdeeCallout } from './TdeeCallout';
 export function BroFuelView() {
   return (
     <section className="stack fuel-section">
-      <PageChrome crumbs={fuelHubCrumbs()} showBack={false} />
+      <PageChrome crumbs={fuelHubCrumbs()} />
       <header className="section-masthead">
         <p className="section-kicker">Nutrition & phases</p>
         <h2 className="section-display-title">
@@ -24,24 +23,21 @@ export function BroFuelView() {
 
       <TdeeCallout />
 
-      <div className="training-hub-grid fuel-hub-grid">
-        <Link className="training-hub-card fuel-hub-card" to={paths.fuelFoods}>
-          <span className="training-hub-kicker">Catalog</span>
-          <strong className="training-hub-title">Foods</strong>
+      <div className="journey-grid fuel-hub-grid">
+        <Link className="journey-card" to={paths.fuelFoods}>
+          <span>Foods</span>
           <p>Products, macros, and buy links used on this journey.</p>
-          <span className="training-hub-cta">Browse foods →</span>
+          <strong>Browse foods →</strong>
         </Link>
         {phases.map((item) => (
           <Link
             key={item.id}
-            className={`training-hub-card fuel-hub-card fuel-hub-card--${item.id}`}
+            className={`journey-card fuel-hub-card--${item.id}`}
             to={paths.fuelPhase(item.id)}
           >
-            <span className="training-hub-kicker">{phaseLabel(item.id)}</span>
-            <strong className="training-hub-title">{item.name}</strong>
+            <span>{item.name}</span>
             <p>{item.tagline}</p>
-            <TdeeCallout compact />
-            <span className="training-hub-cta">Open phase →</span>
+            <strong>Open phase →</strong>
           </Link>
         ))}
       </div>

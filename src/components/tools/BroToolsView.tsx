@@ -78,7 +78,7 @@ export function BroToolsView() {
 
   return (
     <section className="stack tools-section">
-      <PageChrome crumbs={toolsHubCrumbs()} showBack={false} />
+      <PageChrome crumbs={toolsHubCrumbs()} />
       <header className="section-masthead">
         <p className="section-kicker">Gear & tracking</p>
         <h2 className="section-display-title">
