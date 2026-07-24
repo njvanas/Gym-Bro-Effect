@@ -72,6 +72,42 @@ describe('training database', () => {
     }
   });
 
+  it('every top-50 bodybuilder has a full-physique legend program', () => {
+    const normalize = (f: string): string => {
+      const map: Record<string, string> = {
+        chest: 'chest',
+        pecs: 'chest',
+        back: 'back',
+        lats: 'back',
+        'lower-back': 'back',
+        traps: 'back',
+        shoulders: 'shoulders',
+        delts: 'shoulders',
+        'rear-delts': 'shoulders',
+        arms: 'arms',
+        biceps: 'arms',
+        triceps: 'arms',
+        forearms: 'arms',
+        legs: 'legs',
+        quads: 'legs',
+        hamstrings: 'legs',
+        glutes: 'legs',
+        calves: 'legs',
+      };
+      return map[f] ?? f;
+    };
+    const needed = ['chest', 'back', 'shoulders', 'arms', 'legs'] as const;
+    for (const bodybuilder of bodybuilders) {
+      const owned = getLegendRoutines().filter((r) => r.styleId === bodybuilder.styleId);
+      const foci = new Set<string>();
+      for (const routine of owned) {
+        for (const f of routine.focus) foci.add(normalize(f));
+      }
+      const missing = needed.filter((n) => !foci.has(n));
+      expect(missing, `${bodybuilder.id} missing ${missing.join(',')}`).toEqual([]);
+    }
+  });
+
   it('every legend exercise has an explicit set scheme', () => {
     for (const routine of getLegendRoutines()) {
       for (const slot of routine.exercises) {

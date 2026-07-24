@@ -1162,5 +1162,162 @@
       "Raise out to sides",
       "Lead with elbows"
     ]
+  },
+  {
+    "id": "dumbbell-flye",
+    "name": "Dumbbell Flye",
+    "aliases": [
+      "Flat Dumbbell Flye",
+      "DB Flye"
+    ],
+    "primaryMuscle": "chest",
+    "secondaryMuscles": [],
+    "equipment": "dumbbell",
+    "category": "isolation",
+    "cues": [
+      "Slight elbow bend",
+      "Wide arc",
+      "Squeeze at top"
+    ]
+  },
+  {
+    "id": "bench-dip",
+    "name": "Bench Dip",
+    "aliases": [
+      "Dips Between Benches"
+    ],
+    "primaryMuscle": "triceps",
+    "secondaryMuscles": [
+      "chest",
+      "shoulders"
+    ],
+    "equipment": "bodyweight",
+    "category": "compound",
+    "cues": [
+      "Hands on bench behind you",
+      "Lower until upper arms near parallel",
+      "Press up without shrugging"
+    ]
+  },
+  {
+    "id": "hip-thrust",
+    "name": "Hip Thrust",
+    "aliases": [
+      "Barbell Hip Thrust",
+      "Glute Bridge Hip Thrust"
+    ],
+    "primaryMuscle": "glutes",
+    "secondaryMuscles": [
+      "hamstrings"
+    ],
+    "equipment": "barbell",
+    "category": "compound",
+    "cues": [
+      "Upper back on bench",
+      "Drive through heels",
+      "Squeeze glutes at lockout"
+    ]
+  },
+  {
+    "id": "push-up",
+    "name": "Push-Up",
+    "aliases": [
+      "Press-Up"
+    ],
+    "primaryMuscle": "chest",
+    "secondaryMuscles": [
+      "triceps",
+      "shoulders"
+    ],
+    "equipment": "bodyweight",
+    "category": "compound",
+    "cues": [
+      "Body in a straight line",
+      "Chest to floor",
+      "Full lockout"
+    ]
+  },
+  {
+    "id": "bulgarian-split-squat",
+    "name": "Bulgarian Split Squat",
+    "aliases": [
+      "Rear-Foot-Elevated Split Squat"
+    ],
+    "primaryMuscle": "quads",
+    "secondaryMuscles": [
+      "glutes",
+      "hamstrings"
+    ],
+    "equipment": "dumbbell",
+    "category": "compound",
+    "cues": [
+      "Rear foot elevated",
+      "Front shin vertical",
+      "Control the descent"
+    ]
+  },
+  {
+    "id": "seated-hamstring-curl",
+    "name": "Seated Hamstring Curl",
+    "aliases": [
+      "Seated Leg Curl"
+    ],
+    "primaryMuscle": "hamstrings",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "cues": [
+      "Pad on lower legs",
+      "Curl without lifting hips",
+      "Control the return"
+    ]
+  },
+  {
+    "id": "cable-upright-row",
+    "name": "Cable Upright Row",
+    "aliases": [
+      "Cable EZ Upright Row"
+    ],
+    "primaryMuscle": "shoulders",
+    "secondaryMuscles": [
+      "traps"
+    ],
+    "equipment": "cable",
+    "category": "compound",
+    "cues": [
+      "Pull to upper chest",
+      "Elbows lead",
+      "No excessive shrug"
+    ]
+  },
+  {
+    "id": "incline-cable-flye",
+    "name": "Incline Cable Flye",
+    "aliases": [
+      "Low-to-High Cable Flye"
+    ],
+    "primaryMuscle": "chest",
+    "secondaryMuscles": [],
+    "equipment": "cable",
+    "category": "isolation",
+    "cues": [
+      "Slight incline path",
+      "Soft elbows",
+      "Squeeze at top"
+    ]
+  },
+  {
+    "id": "donkey-calf-raise",
+    "name": "Donkey Calf Raise",
+    "aliases": [],
+    "primaryMuscle": "calves",
+    "secondaryMuscles": [],
+    "equipment": "machine",
+    "category": "isolation",
+    "cues": [
+      "Hips hinged",
+      "Full stretch at bottom",
+      "Squeeze at top"
+    ]
   }
 ]

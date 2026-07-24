@@ -618,8 +618,8 @@ export function BroLegendsView({ initialStyleId }: { initialStyleId?: string } =
           {bodybuilders.length} <span className="accent">bodybuilders</span>, A–Z
         </h1>
         <p className="legends-lede">
-          Top 50 selection — every athlete has a complete training layout: methodology,
-          guidelines, split, workouts, and sources.
+          Top 50 selection — every athlete has a full training program covering the
+          physique (not one signature day), plus methodology, guidelines, split, and sources.
         </p>
 
         <div className="legends-search-shell">

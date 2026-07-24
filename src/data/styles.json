@@ -174,21 +174,45 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not yet verified from primary sources.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
+      "trainingDaysPerWeek": "5 (Mon–Fri bodypart split published with coach Ahmad Alaqi in Muscle & Fitness/Flex)",
+      "frequencyPerMuscle": "Once per week in the Alaqi competitive split",
       "warmupProtocol": "Not yet verified from primary sources.",
-      "workingSetProtocol": "No verified sets/reps table found in any Tier A/B source; he trains largely without a spotter or partner, which shapes a machine-first exercise selection for controlled, squeezed contractions.",
+      "workingSetProtocol": "Typically 3–4 working sets; progressive weekly reps 15→12→10→8→6 then restart (Alaqi)",
       "repRanges": [
         {
-          "target": "Working sets",
-          "range": "Not yet verified from primary sources."
+          "target": "Most lifts",
+          "range": "15 down to 6 across a 5-week cycle"
+        },
+        {
+          "target": "Machine preference",
+          "range": "As quoted — machines for control without a spotter"
         }
       ]
     },
     "splitOverview": [
       {
-        "day": "Weekly split",
-        "focus": "Not yet verified from primary sources."
+        "day": "Monday",
+        "focus": "Chest"
+      },
+      {
+        "day": "Tuesday",
+        "focus": "Legs"
+      },
+      {
+        "day": "Wednesday",
+        "focus": "Shoulders"
+      },
+      {
+        "day": "Thursday",
+        "focus": "Back"
+      },
+      {
+        "day": "Friday",
+        "focus": "Arms"
+      },
+      {
+        "day": "Weekend",
+        "focus": "Rest"
       }
     ],
     "sources": [
@@ -199,6 +223,10 @@
       {
         "title": "Big Ramy's Legendary Legs — Muscle & Fitness / Flex",
         "url": "https://www.muscleandfitness.com/flexonline/training/big-ramys-legendary-legs/"
+      },
+      {
+        "title": "How Big Ramy Built His Ridiculously Thick, Wide Back — Muscle & Fitness / Flex (coach Alaqi split + progressive reps)",
+        "url": "https://www.muscleandfitness.com/flexonline/training/how-big-ramy-built-his-ridiculously-thick-wide-back/"
       }
     ]
   },
@@ -375,20 +403,28 @@
     },
     "splitOverview": [
       {
-        "day": "Sunday",
-        "focus": "Quad/hamstring-dominant leg day"
+        "day": "Leg High Day",
+        "focus": "Quad/ham dominant"
       },
       {
-        "day": "Monday",
-        "focus": "Hip-dominant leg day (more isolation, less compound work)"
+        "day": "Hip-Dominant Legs",
+        "focus": "More isolation, less compound"
       },
       {
-        "day": "Thursday",
-        "focus": "Second quad/hamstring-dominant \"high day\""
+        "day": "Upper Push",
+        "focus": "Chest / shoulders / triceps"
       },
       {
-        "day": "Two additional days",
-        "focus": "Upper body, horizontal push-and-pull pattern with arms/rear delts folded in — exact days not confirmed from primary sources."
+        "day": "Upper Pull",
+        "focus": "Back / biceps / rear delts"
+      },
+      {
+        "day": "Peak-week upper",
+        "focus": "Filmed All Access touch-up"
+      },
+      {
+        "day": "Note",
+        "focus": "Exact weekday order not confirmed from primary sources"
       }
     ],
     "sources": [
@@ -934,12 +970,24 @@
     },
     "splitOverview": [
       {
-        "day": "Leg day",
-        "focus": "Legs (warmup leg extension, squats, leg press, leg-extension finisher, all 20 reps) + calves"
+        "day": "Day 1",
+        "focus": "Chest & triceps (reconstruction)"
       },
       {
-        "day": "Rest of weekly split",
-        "focus": "Not yet verified from primary sources — only \"double split, 4 days on/1 off\" is documented."
+        "day": "Day 2",
+        "focus": "Back & biceps (reconstruction)"
+      },
+      {
+        "day": "Day 3",
+        "focus": "Shoulders (reconstruction)"
+      },
+      {
+        "day": "Day 4",
+        "focus": "Legs — all 20s (MuscleMag 1997 primary)"
+      },
+      {
+        "day": "Day 5",
+        "focus": "Off (4-on/1-off double-split)"
       }
     ],
     "sources": [
@@ -1209,8 +1257,24 @@
     },
     "splitOverview": [
       {
-        "day": "Weekly split",
-        "focus": "Not yet verified from primary sources — only a documented leg day and one FST-7 back session were found; chest/shoulder/arm days were not broken down in any primary source reviewed."
+        "day": "Push",
+        "focus": "Chest & triceps (FST-7)"
+      },
+      {
+        "day": "Pull",
+        "focus": "Back & biceps (FST-7)"
+      },
+      {
+        "day": "Legs",
+        "focus": "Quads / hams / calves (FST-7)"
+      },
+      {
+        "day": "Shoulders",
+        "focus": "Shoulders & traps (FST-7)"
+      },
+      {
+        "day": "Rest",
+        "focus": "Recovery between FST-7 large-muscle hits"
       }
     ],
     "sources": [
@@ -1254,12 +1318,24 @@
     },
     "splitOverview": [
       {
-        "day": "Back day",
-        "focus": "Pull-ups (warm-up) → front pulldowns 4x10-12 → low cable rows 4x10-12 → one-arm dumbbell rows 4x10-12 → deadlifts 4x15-10 → optional T-bar rows 4x10-12 if more work is felt needed (Flex/M&F, 2009)."
+        "day": "Day 1",
+        "focus": "Back (Flex/M&F 2009 — primary)"
       },
       {
-        "day": "Remaining days",
-        "focus": "Not yet verified from primary sources — only the back-day routine was published with matching sets/reps detail."
+        "day": "Day 2",
+        "focus": "Chest & shoulders (reconstruction)"
+      },
+      {
+        "day": "Day 3",
+        "focus": "Legs (reconstruction)"
+      },
+      {
+        "day": "Day 4",
+        "focus": "Arms (reconstruction)"
+      },
+      {
+        "day": "Off",
+        "focus": "1–2 off days per her own off-season interviews"
       }
     ],
     "sources": [
@@ -1414,8 +1490,28 @@
     },
     "splitOverview": [
       {
-        "day": "Weekly split",
-        "focus": "Not verified from primary sources — no official program names a day-by-day split."
+        "day": "Day 1",
+        "focus": "Chest & calves"
+      },
+      {
+        "day": "Day 2",
+        "focus": "Shoulders & forearms"
+      },
+      {
+        "day": "Day 3",
+        "focus": "Back"
+      },
+      {
+        "day": "Day 4",
+        "focus": "Legs"
+      },
+      {
+        "day": "Day 5",
+        "focus": "Arms"
+      },
+      {
+        "day": "Note",
+        "focus": "No official program PDF — secondary reconstruction of a commonly attributed split"
       }
     ],
     "sources": [
@@ -1487,12 +1583,20 @@
     },
     "splitOverview": [
       {
-        "day": "Push day",
+        "day": "Push",
         "focus": "Chest, Shoulders & Triceps"
       },
       {
-        "day": "Pull day",
+        "day": "Pull",
         "focus": "Back & Biceps"
+      },
+      {
+        "day": "Legs",
+        "focus": "Quads, Hamstrings & Calves"
+      },
+      {
+        "day": "Optional",
+        "focus": "Specialty triceps session (M&F feature)"
       }
     ],
     "sources": [
@@ -1621,8 +1725,20 @@
     },
     "splitOverview": [
       {
-        "day": "Arms",
-        "focus": "Biceps preacher-curl triset into triceps lying/pulley-extension pairing — no other day is documented in Tier A/B material"
+        "day": "Day 1",
+        "focus": "Chest & shoulders (reconstruction)"
+      },
+      {
+        "day": "Day 2",
+        "focus": "Back & legs (reconstruction)"
+      },
+      {
+        "day": "Day 3",
+        "focus": "Arms — Loaded Guns primary (preacher trisets)"
+      },
+      {
+        "day": "Note",
+        "focus": "Only arms have Tier A book detail; torso/legs are reconstructions"
       }
     ],
     "sources": [
@@ -1919,23 +2035,15 @@
       },
       {
         "day": "Day 2",
-        "focus": "Squats (stance variation), lunges, standing leg curls, stiff-leg deadlifts — 4×10 per her own article"
+        "focus": "Legs (Flex Lower Body Logic)"
       },
       {
         "day": "Day 3",
-        "focus": "Rest"
-      },
-      {
-        "day": "Day 4",
         "focus": "Back and calves"
       },
       {
-        "day": "Day 5",
+        "day": "Day 4",
         "focus": "Shoulders and triceps"
-      },
-      {
-        "day": "Days 6-7",
-        "focus": "Rest"
       }
     ],
     "sources": [
@@ -1976,8 +2084,20 @@
     },
     "splitOverview": [
       {
-        "day": "Current maintenance session",
-        "focus": "Warm-up (10-min treadmill), Machine Chest Press 3x12, Machine Preacher Curl 3x12, Alternating Dumbbell Curl 3x8-10/arm, Triceps Kickback 3x8-10/arm"
+        "day": "Competitive Day 1",
+        "focus": "Chest & back (reconstruction)"
+      },
+      {
+        "day": "Competitive Day 2",
+        "focus": "Shoulders & arms (reconstruction)"
+      },
+      {
+        "day": "Competitive Day 3",
+        "focus": "Legs (reconstruction)"
+      },
+      {
+        "day": "Current",
+        "focus": "Men's Health maintenance session (primary for age 69–74)"
       }
     ],
     "sources": [
@@ -2027,8 +2147,32 @@
     },
     "splitOverview": [
       {
-        "day": "Weekly split",
-        "focus": "6 days/week, one bodypart per day, Sunday off (competitive-era program) — exact bodypart-to-day assignments beyond traps were not found in primary sources."
+        "day": "Day 1",
+        "focus": "Chest (reconstruction)"
+      },
+      {
+        "day": "Day 2",
+        "focus": "Back (reconstruction)"
+      },
+      {
+        "day": "Day 3",
+        "focus": "Shoulders (reconstruction)"
+      },
+      {
+        "day": "Day 4",
+        "focus": "Arms (reconstruction)"
+      },
+      {
+        "day": "Day 5",
+        "focus": "Legs (reconstruction)"
+      },
+      {
+        "day": "Day 6",
+        "focus": "Traps (attested specialty session)"
+      },
+      {
+        "day": "Sunday",
+        "focus": "Off"
       }
     ],
     "sources": [
@@ -2197,8 +2341,32 @@
     },
     "splitOverview": [
       {
-        "day": "Weekly split",
-        "focus": "Not directly quoted as a fixed calendar — by his own stated philosophy, session-to-session structure deliberately varies rather than following one repeating split."
+        "day": "Chest",
+        "focus": "Chest (secondary table)"
+      },
+      {
+        "day": "Back",
+        "focus": "Back (secondary table)"
+      },
+      {
+        "day": "Legs",
+        "focus": "Quads / hams / calves (M&F primary — split across sessions)"
+      },
+      {
+        "day": "Shoulders",
+        "focus": "Shoulders (secondary table)"
+      },
+      {
+        "day": "Biceps",
+        "focus": "Biceps (secondary table)"
+      },
+      {
+        "day": "Triceps",
+        "focus": "Triceps (secondary table)"
+      },
+      {
+        "day": "Note",
+        "focus": "He varied structure by feel — not one fixed calendar"
       }
     ],
     "sources": [
@@ -2724,8 +2892,28 @@
     },
     "splitOverview": [
       {
-        "day": "Weekly split",
-        "focus": "No fixed weekly split documented — he deliberately rotated exercises and target muscles by feel rather than repeating a calendar"
+        "day": "Sample Day 1",
+        "focus": "Chest (illustrative — no fixed calendar)"
+      },
+      {
+        "day": "Sample Day 2",
+        "focus": "Back (illustrative)"
+      },
+      {
+        "day": "Sample Day 3",
+        "focus": "Shoulders (illustrative)"
+      },
+      {
+        "day": "Sample Day 4",
+        "focus": "Legs (illustrative)"
+      },
+      {
+        "day": "Feeder",
+        "focus": "High-rep feeder sessions (official 5% Nutrition protocol)"
+      },
+      {
+        "day": "Note",
+        "focus": "He rejected fixed weekly splits — sample week shows principles only"
       }
     ],
     "sources": [
@@ -3136,8 +3324,24 @@
     },
     "splitOverview": [
       {
-        "day": "Weekly split",
-        "focus": "Not yet verified from primary sources — only a chest/upper-body session sequencing preference was documented in detail."
+        "day": "Day 1",
+        "focus": "Chest & triceps (reconstruction)"
+      },
+      {
+        "day": "Day 2",
+        "focus": "Back & biceps (reconstruction)"
+      },
+      {
+        "day": "Day 3",
+        "focus": "Shoulders (reconstruction)"
+      },
+      {
+        "day": "Day 4",
+        "focus": "Legs (M&F primary)"
+      },
+      {
+        "day": "Note",
+        "focus": "No true rest days by his stated philosophy — fatigued days become cardio/variation"
       }
     ],
     "sources": [
@@ -3196,12 +3400,20 @@
     },
     "splitOverview": [
       {
-        "day": "Leg day (2018 Olympia prep)",
-        "focus": "Leg extension (drop sets) -> Squat pattern (varied weekly) 4x6-8 -> Machine front squat 4x8-10 -> Leg press 4x10-12 -> Standing hamstring curl 3x8-10"
+        "day": "Day 1",
+        "focus": "Chest & triceps (reconstruction)"
       },
       {
-        "day": "Remaining days",
-        "focus": "Not yet verified from primary sources with the same specificity as leg day."
+        "day": "Day 2",
+        "focus": "Back & biceps (reconstruction)"
+      },
+      {
+        "day": "Day 3",
+        "focus": "Shoulders (reconstruction)"
+      },
+      {
+        "day": "Day 4",
+        "focus": "Legs — 2018 Olympia prep (primary)"
       }
     ],
     "sources": [
@@ -3309,8 +3521,24 @@
     },
     "splitOverview": [
       {
-        "day": "Weekly split",
-        "focus": "Not verified from primary sources — no official program names a day-by-day split. Only that legs were his signature, most intensely trained body part is broadly attested."
+        "day": "Day 1",
+        "focus": "Chest & triceps (reconstruction)"
+      },
+      {
+        "day": "Day 2",
+        "focus": "Back & biceps (reconstruction)"
+      },
+      {
+        "day": "Day 3",
+        "focus": "Shoulders (reconstruction)"
+      },
+      {
+        "day": "Day 4",
+        "focus": "Legs — 1981 Olympia prep (primary)"
+      },
+      {
+        "day": "Note",
+        "focus": "No official full-week table — upper days are reconstructions"
       }
     ],
     "sources": [

@@ -29,8 +29,10 @@ archive:
 
 ## Routine coverage rule
 
-Every top-50 bodybuilder must have **complete** legend workout(s) in `routines.json` — a full usable split for that athlete, not methodology-only stubs.
+Every top-50 bodybuilder must have a **full program** in `routines.json` — a weekly (or system-native) split that covers the whole physique (chest, back, shoulders, arms, legs; abs as their system uses), not one signature bodypart day padded as “complete.”
 
-Prefer Tier A/B tables. When a primary table is missing, use the best corroborated reconstruction and label it honestly in the routine `description` / `labels` (e.g. book-attributed, cross-corroborated secondary, or reconstructed from attested parameters).
+Prefer Tier A/B tables. When a primary full week is missing, use the best corroborated reconstruction and label it honestly in the routine `description` / `labels` (e.g. book-attributed, coach-system, cross-corroborated secondary, or reconstructed from attested parameters). If a fixed week cannot be verified, say so in `splitOverview` — do not invent certainty.
+
+Celebrate **50/50 full programs**, not “50/50 have a routine.”
 
 See also `00-methodology-and-yates-gold-standard.md`.
