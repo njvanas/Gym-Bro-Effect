@@ -2,22 +2,20 @@ import { Link } from 'react-router-dom';
 
 import { trainingHubCrumbs } from '../../lib/crumbs';
 import { paths } from '../../lib/routes';
-import { Breadcrumbs } from '../Breadcrumbs';
-import { TrainingSectionNav } from './TrainingSectionNav';
+import { PageChrome } from '../PageChrome';
 
 export function BroTrainingView() {
   return (
     <section className="stack">
-      <Breadcrumbs items={trainingHubCrumbs()} />
+      <PageChrome crumbs={trainingHubCrumbs()} showBack={false} />
       <header>
         <h2>Bro Training</h2>
         <p className="muted">Legends, My Personal Hevy folders, and the exercise library.</p>
       </header>
-      <TrainingSectionNav />
       <div className="training-hub">
         <p className="muted training-hub-lede">
-          Pick a path — the bodybuilder roster with full workout breakdowns where we have them, or
-          My Personal Hevy folders.
+          Pick a path — legends with full workout breakdowns, My Personal Hevy folders, or the
+          exercise library.
         </p>
         <div className="training-hub-grid">
           <Link className="training-hub-card" to={paths.trainingLegends}>
@@ -40,6 +38,15 @@ export function BroTrainingView() {
               from legend reference routines.
             </p>
             <span className="training-hub-cta">Open My Personal →</span>
+          </Link>
+          <Link className="training-hub-card" to={paths.trainingExercises}>
+            <span className="training-hub-kicker">Library</span>
+            <strong className="training-hub-title">Bro Exercises</strong>
+            <p>
+              Search the exercise library, filter by muscle, and open cards for cues — shared across
+              legends and personal training.
+            </p>
+            <span className="training-hub-cta">Browse exercises →</span>
           </Link>
         </div>
       </div>

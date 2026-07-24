@@ -1,11 +1,10 @@
 import { useParams } from 'react-router-dom';
 
-import { parentCrumb, trainingLegendCrumbs } from '../../lib/crumbs';
+import { trainingLegendCrumbs } from '../../lib/crumbs';
 import { getStyle } from '../../lib/db';
 import { paths } from '../../lib/routes';
-import { BackLink } from '../BackLink';
-import { Breadcrumbs } from '../Breadcrumbs';
 import { NotFoundView } from '../NotFoundView';
+import { PageChrome } from '../PageChrome';
 import { LegendDetail } from './LegendDetail';
 
 export function LegendDetailPage() {
@@ -28,12 +27,9 @@ export function LegendDetailPage() {
     );
   }
 
-  const crumbs = trainingLegendCrumbs(style.name, style.id);
-
   return (
     <section className="stack">
-      <Breadcrumbs items={crumbs} />
-      <BackLink parent={parentCrumb(crumbs)} />
+      <PageChrome crumbs={trainingLegendCrumbs(style.name, style.id)} />
       <LegendDetail
         style={style}
         workoutTo={(routineId) => paths.trainingWorkout(style.id, routineId)}

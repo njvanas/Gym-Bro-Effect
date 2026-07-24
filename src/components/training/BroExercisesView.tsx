@@ -1,13 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import { parentCrumb, trainingExercisesCrumbs } from '../../lib/crumbs';
+import { trainingExercisesCrumbs } from '../../lib/crumbs';
 import { exercises } from '../../lib/db';
 import { categoryLabel, equipmentLabel, muscleLabel } from '../../lib/format';
 import { filterExercises } from '../../lib/training-filters';
 import type { Exercise, MuscleGroup } from '../../schema';
-import { BackLink } from '../BackLink';
-import { Breadcrumbs } from '../Breadcrumbs';
-import { TrainingSectionNav } from './TrainingSectionNav';
+import { PageChrome } from '../PageChrome';
 
 export function BroExercisesView() {
   const [query, setQuery] = useState('');
@@ -50,9 +48,7 @@ export function BroExercisesView() {
 
   return (
     <div className="exercises-view stack">
-      <Breadcrumbs items={crumbs} />
-      <BackLink parent={parentCrumb(crumbs)} />
-      <TrainingSectionNav />
+      <PageChrome crumbs={crumbs} />
       <header className="section-masthead">
         <p className="section-kicker">Library</p>
         <h3 className="exercises-heading">Bro Exercises</h3>

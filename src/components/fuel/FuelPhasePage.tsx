@@ -1,11 +1,10 @@
 import { useParams } from 'react-router-dom';
 
-import { fuelPhaseCrumbs, parentCrumb } from '../../lib/crumbs';
+import { fuelPhaseCrumbs } from '../../lib/crumbs';
 import { getPhase } from '../../lib/fuel-db';
 import { isPhaseId, paths } from '../../lib/routes';
-import { BackLink } from '../BackLink';
-import { Breadcrumbs } from '../Breadcrumbs';
 import { NotFoundView } from '../NotFoundView';
+import { PageChrome } from '../PageChrome';
 import { PhaseDetail } from './PhaseDetail';
 
 export function FuelPhasePage() {
@@ -39,12 +38,9 @@ export function FuelPhasePage() {
     );
   }
 
-  const crumbs = fuelPhaseCrumbs(phaseId);
-
   return (
     <section className="stack fuel-section">
-      <Breadcrumbs items={crumbs} />
-      <BackLink parent={parentCrumb(crumbs)} />
+      <PageChrome crumbs={fuelPhaseCrumbs(phaseId)} />
       <PhaseDetail phase={phase} foodsTo={paths.fuelFoods} />
     </section>
   );

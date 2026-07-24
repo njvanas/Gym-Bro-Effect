@@ -8,8 +8,8 @@ import {
   tools,
 } from '../../lib/tools-db';
 import type { ToolTier } from '../../schema';
-import { Breadcrumbs } from '../Breadcrumbs';
 import { ExternalLink } from '../ExternalLink';
+import { PageChrome } from '../PageChrome';
 
 function tierLabel(tier: ToolTier | 'all'): string {
   switch (tier) {
@@ -78,7 +78,7 @@ export function BroToolsView() {
 
   return (
     <section className="stack tools-section">
-      <Breadcrumbs items={toolsHubCrumbs()} />
+      <PageChrome crumbs={toolsHubCrumbs()} showBack={false} />
       <header className="section-masthead">
         <p className="section-kicker">Gear & tracking</p>
         <h2 className="section-display-title">
