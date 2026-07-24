@@ -13,6 +13,7 @@ import { BroLegendsView } from './components/training/BroLegendsView';
 import { BroPersonalView } from './components/training/BroPersonalView';
 import { BroTrainingView } from './components/training/BroTrainingView';
 import { LegendDetailPage } from './components/training/LegendDetailPage';
+import { PersonalWorkoutDetailPage } from './components/training/PersonalWorkoutDetailPage';
 import { WorkoutDetailPage } from './components/training/WorkoutDetailPage';
 import { paths } from './lib/routes';
 
@@ -29,6 +30,10 @@ export function App() {
           element={<WorkoutDetailPage />}
         />
         <Route path="training/personal" element={<BroPersonalView />} />
+        <Route
+          path="training/personal/workout/:routineId"
+          element={<PersonalWorkoutDetailPage />}
+        />
         <Route path="training/exercises" element={<BroExercisesView />} />
         <Route path="fuel" element={<BroFuelView />} />
         <Route path="fuel/phases/:phaseId" element={<FuelPhasePage />} />

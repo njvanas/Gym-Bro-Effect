@@ -11,7 +11,8 @@ export function WorkoutDetail({
   routine: Routine;
   style: TrainingStyle | undefined;
 }) {
-  const creator = style?.creator ?? 'Unknown';
+  const isPersonal = routine.collection === 'personal';
+  const creator = style?.creator ?? (isPersonal ? 'Personal' : 'Unknown');
 
   return (
     <div className="legend-workout-detail">
@@ -22,9 +23,12 @@ export function WorkoutDetail({
               <Avatar name={creator} gradientKey={routine.styleId} size="lg" />
             ) : null}
             <div>
-              <div className="k">Curated by</div>
+              <div className="k">{isPersonal ? 'Collection' : 'Curated by'}</div>
               <div className="v">{creator}</div>
               {style ? <div className="ex-meta">{style.name}</div> : null}
+              {isPersonal && routine.source ? (
+                <div className="ex-meta">{routine.source.name}</div>
+              ) : null}
             </div>
           </div>
           {routine.source ? (

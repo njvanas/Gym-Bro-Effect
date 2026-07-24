@@ -20,6 +20,8 @@ export const paths = {
   trainingWorkout: (styleId: string, routineId: string) =>
     `/training/legends/${styleId}/workout/${routineId}`,
   trainingPersonal: '/training/personal',
+  trainingPersonalWorkout: (routineId: string) =>
+    `/training/personal/workout/${routineId}`,
   trainingExercises: '/training/exercises',
   fuel: '/fuel',
   fuelPhase: (phaseId: PhaseId) => `/fuel/phases/${phaseId}`,

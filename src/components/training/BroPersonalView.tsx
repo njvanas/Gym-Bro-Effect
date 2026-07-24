@@ -1,9 +1,14 @@
+import { Link } from 'react-router-dom';
+
 import { trainingPersonalCrumbs } from '../../lib/crumbs';
-import { hevyFolders, myCollection } from '../../lib/db';
+import { getPersonalRoutines, hevyFolders, myCollection } from '../../lib/db';
+import { paths } from '../../lib/routes';
 import { ExternalLink } from '../ExternalLink';
 import { PageChrome } from '../PageChrome';
 
 export function BroPersonalView() {
+  const personalWorkouts = getPersonalRoutines();
+
   return (
     <div className="collection-layout stack">
       <PageChrome crumbs={trainingPersonalCrumbs()} />
@@ -13,12 +18,37 @@ export function BroPersonalView() {
         <h2 className="section-heading">{myCollection.name}</h2>
         <p className="muted">{myCollection.summary}</p>
         <p className="muted">
-          These are My Personal Hevy folders — not legend reference routines. Open a folder in Hevy to
-          save it and start logging.
+          In-app days below mirror the Bulk like Dorian folder. Hevy folder cards still open the live
+          app so you can save and log.
         </p>
       </section>
 
+      {personalWorkouts.length > 0 ? (
+        <section className="personal-workouts stack">
+          <h3 className="section-heading">In-app workouts</h3>
+          <div className="folder-grid">
+            {personalWorkouts.map((routine) => (
+              <Link
+                key={routine.id}
+                className="folder-card"
+                to={paths.trainingPersonalWorkout(routine.id)}
+              >
+                <div className="folder-card-head">
+                  <span className="folder-label">{routine.name}</span>
+                  {routine.day ? <span className="folder-count">{routine.day}</span> : null}
+                </div>
+                {routine.description ? (
+                  <p className="muted folder-note">{routine.description}</p>
+                ) : null}
+                <span className="folder-open">Open workout →</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       <section className="hevy-folders personal-folders">
+        <h3 className="section-heading">Hevy folders</h3>
         <div className="folder-grid">
           {hevyFolders.map((folder) => (
             <ExternalLink key={folder.id} className="folder-card" href={folder.url}>

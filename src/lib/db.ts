@@ -15,6 +15,7 @@ import {
   type Routine,
   type TrainingStyle,
 } from '../schema';
+import { paths } from './routes';
 
 export const hevyCatalog: HevyFoldersCatalog =
   hevyFoldersCatalogFileSchema.parse(myCollectionData);
@@ -131,6 +132,10 @@ export const legendRoutines = getSortedRoutines(
   routines.filter((r) => r.collection === 'legend'),
 );
 
+export const personalRoutines = [...routines]
+  .filter((r) => r.collection === 'personal')
+  .sort(compareWorkouts);
+
 const exercisesById = new Map(exercises.map((e) => [e.id, e]));
 const stylesById = new Map(styles.map((s) => [s.id, s]));
 
@@ -147,9 +152,20 @@ export function getRoutine(id: string): Routine | undefined {
 }
 
 const bodybuildersById = new Map(bodybuilders.map((b) => [b.id, b]));
+const bodybuildersByStyleId = new Map(
+  bodybuilders.map((b) => [b.styleId, b] as const),
+);
 
 export function getBodybuilder(id: string): Bodybuilder | undefined {
   return bodybuildersById.get(id);
+}
+
+export function getBodybuilderByStyle(styleId: string): Bodybuilder | undefined {
+  return bodybuildersByStyleId.get(styleId);
+}
+
+export function getPersonalRoutines(): Routine[] {
+  return personalRoutines;
 }
 
 export function getHevyFolder(id: string) {
@@ -171,6 +187,129 @@ export function getRoutinesForExercise(exerciseId: string): Routine[] {
   return legendRoutines.filter((r) =>
     r.exercises.some((slot) => slot.exerciseId === exerciseId),
   );
+}
+
+export type ExerciseUsage = {
+  kind: 'legend' | 'personal';
+  /** Stable selection key: styleId for legends, `personal` for personal. */
+  key: string;
+  label: string;
+  styleId?: string;
+  routineId?: string;
+  note?: string;
+  workoutPath: string;
+  /** Defaults to "Open workout →". */
+  ctaLabel?: string;
+};
+
+type ExerciseAppearance = {
+  routine: Routine;
+  slotNotes?: string;
+};
+
+function compareExerciseAppearances(a: ExerciseAppearance, b: ExerciseAppearance): number {
+  const noteDiff = Number(Boolean(b.slotNotes)) - Number(Boolean(a.slotNotes));
+  if (noteDiff !== 0) return noteDiff;
+  const dayDiff = compareWorkouts(a.routine, b.routine);
+  if (dayDiff !== 0) return dayDiff;
+  return a.routine.id.localeCompare(b.routine.id);
+}
+
+function legendUsageLabel(styleId: string): string {
+  const bodybuilder = bodybuildersByStyleId.get(styleId);
+  if (bodybuilder) return bodybuilder.name;
+  const style = stylesById.get(styleId);
+  return style?.creator ?? style?.name ?? styleId;
+}
+
+function resolveUsageNote(
+  exercise: Exercise,
+  styleId: string | undefined,
+  slotNotes: string | undefined,
+): string | undefined {
+  if (styleId === 'blood-and-guts' && exercise.bloodAndGutsNote) {
+    return exercise.bloodAndGutsNote;
+  }
+  return slotNotes;
+}
+
+/**
+ * One entry per bodybuilder (and Personal when applicable) that programs the exercise.
+ * Notes stay optional and are only meant to be shown after a tag is selected.
+ */
+export function getExerciseUsages(exerciseId: string): ExerciseUsage[] {
+  const exercise = exercisesById.get(exerciseId);
+  if (!exercise) return [];
+
+  const byGroup = new Map<string, ExerciseAppearance[]>();
+
+  for (const routine of routines) {
+    const matchingSlots = routine.exercises.filter((slot) => slot.exerciseId === exerciseId);
+    if (matchingSlots.length === 0) continue;
+
+    const groupKey =
+      routine.collection === 'personal' ? 'personal' : (routine.styleId ?? 'unknown');
+    if (groupKey === 'unknown') continue;
+
+    const slotNotes = matchingSlots.map((slot) => slot.notes).find((note) => Boolean(note));
+    const list = byGroup.get(groupKey) ?? [];
+    list.push({ routine, slotNotes });
+    byGroup.set(groupKey, list);
+  }
+
+  const usages: ExerciseUsage[] = [];
+
+  for (const [groupKey, appearances] of byGroup) {
+    const best = [...appearances].sort(compareExerciseAppearances)[0];
+    if (!best) continue;
+
+    if (groupKey === 'personal') {
+      usages.push({
+        kind: 'personal',
+        key: 'personal',
+        label: 'Personal',
+        routineId: best.routine.id,
+        note: best.slotNotes,
+        workoutPath: paths.trainingPersonalWorkout(best.routine.id),
+      });
+      continue;
+    }
+
+    const styleId = groupKey;
+    usages.push({
+      kind: 'legend',
+      key: styleId,
+      label: legendUsageLabel(styleId),
+      styleId,
+      routineId: best.routine.id,
+      note: resolveUsageNote(exercise, styleId, best.slotNotes),
+      workoutPath: paths.trainingWorkout(styleId, best.routine.id),
+    });
+  }
+
+  // Editorial Blood & Guts notes may exist even when classic BAG days use a sibling movement.
+  if (
+    exercise.bloodAndGutsNote &&
+    !usages.some((usage) => usage.styleId === 'blood-and-guts')
+  ) {
+    usages.push({
+      kind: 'legend',
+      key: 'blood-and-guts',
+      label: legendUsageLabel('blood-and-guts'),
+      styleId: 'blood-and-guts',
+      note: exercise.bloodAndGutsNote,
+      workoutPath: paths.trainingLegend('blood-and-guts'),
+      ctaLabel: 'View Blood & Guts →',
+    });
+  }
+
+  return usages.sort((a, b) => {
+    if (a.kind === 'personal' && b.kind !== 'personal') return -1;
+    if (b.kind === 'personal' && a.kind !== 'personal') return 1;
+    if (a.styleId === 'blood-and-guts' && b.styleId !== 'blood-and-guts') return -1;
+    if (b.styleId === 'blood-and-guts' && a.styleId !== 'blood-and-guts') return 1;
+    return a.label.localeCompare(b.label, 'en', { sensitivity: 'base' });
+  });
 }
 
 /**

@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { trainingExercisesCrumbs } from '../../lib/crumbs';
-import { exercises } from '../../lib/db';
+import { exercises, getExerciseUsages, type ExerciseUsage } from '../../lib/db';
 import { categoryLabel, equipmentLabel, muscleLabel } from '../../lib/format';
 import { filterExercises } from '../../lib/training-filters';
 import type { Exercise, MuscleGroup } from '../../schema';
@@ -155,6 +156,15 @@ type ExerciseDetailModalProps = {
 };
 
 function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalProps) {
+  const usages = useMemo(() => getExerciseUsages(exercise.id), [exercise.id]);
+  const [selectedKey, setSelectedKey] = useState<string | null>(null);
+
+  useEffect(() => {
+    setSelectedKey(null);
+  }, [exercise.id]);
+
+  const selectedUsage = usages.find((usage) => usage.key === selectedKey) ?? null;
+
   return (
     <div className="exercise-modal" role="presentation">
       <button
@@ -213,15 +223,64 @@ function ExerciseDetailModal({ exercise, onClose }: ExerciseDetailModalProps) {
           </div>
         ) : null}
 
-        {exercise.bloodAndGutsNote ? (
-          <div className="exercise-detail-block exercise-note">
-            <span className="exercise-detail-label">Blood &amp; Guts</span>
-            <p>{exercise.bloodAndGutsNote}</p>
-          </div>
-        ) : (
-          <p className="muted">No extra cues logged for this movement yet.</p>
-        )}
+        <ExerciseUsagesBlock
+          usages={usages}
+          selected={selectedUsage}
+          onSelect={(key) => setSelectedKey(key)}
+        />
       </div>
+    </div>
+  );
+}
+
+type ExerciseUsagesBlockProps = {
+  usages: ExerciseUsage[];
+  selected: ExerciseUsage | null;
+  onSelect: (key: string) => void;
+};
+
+function ExerciseUsagesBlock({ usages, selected, onSelect }: ExerciseUsagesBlockProps) {
+  if (usages.length === 0) {
+    return <p className="muted">Not programmed in any saved routine yet.</p>;
+  }
+
+  return (
+    <div className="exercise-detail-block">
+      <span className="exercise-detail-label">Used by</span>
+      <div className="chips" role="group" aria-label="Bodybuilders and collections that use this">
+        {usages.map((usage) => {
+          const isSelected = selected?.key === usage.key;
+          return (
+            <button
+              key={usage.key}
+              type="button"
+              className={`chip usage-chip${isSelected ? ' selected' : ''}${
+                usage.kind === 'personal' ? ' personal' : ''
+              }`}
+              aria-pressed={isSelected}
+              onClick={() => onSelect(usage.key)}
+            >
+              {usage.label}
+            </button>
+          );
+        })}
+      </div>
+
+      {selected ? (
+        <div className="exercise-detail-block exercise-note exercise-usage-detail">
+          <span className="exercise-detail-label">Extra cues · {selected.label}</span>
+          {selected.note ? (
+            <p>{selected.note}</p>
+          ) : (
+            <p className="muted">No extra cues for this source.</p>
+          )}
+          <Link className="exercise-open-workout" to={selected.workoutPath}>
+            {selected.ctaLabel ?? 'Open workout →'}
+          </Link>
+        </div>
+      ) : (
+        <p className="muted exercise-usage-hint">Select a name to see their note and open the workout.</p>
+      )}
     </div>
   );
 }

@@ -87,8 +87,33 @@ describe('Bro Training routes', () => {
     const container = renderAt('/training/personal');
 
     expect(container.textContent).toContain('My Personal collection');
+    expect(container.textContent).toContain('In-app workouts');
+    expect(
+      container.querySelector<HTMLAnchorElement>(
+        'a.folder-card[href="/training/personal/workout/hevy-back"]',
+      ),
+    ).not.toBeNull();
     expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe(
       '/training',
+    );
+  });
+
+  it('renders a personal workout detail page', () => {
+    const container = renderAt('/training/personal/workout/hevy-back');
+
+    expect(container.textContent).toContain('Day 1 - Back');
+    expect(container.textContent).not.toContain('Page not found');
+    expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe(
+      '/training/personal',
+    );
+  });
+
+  it('shows not-found for an unknown personal workout', () => {
+    const container = renderAt('/training/personal/workout/does-not-exist');
+
+    expect(container.textContent).toContain('Workout not found');
+    expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe(
+      '/training/personal',
     );
   });
 

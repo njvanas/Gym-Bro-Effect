@@ -2252,6 +2252,65 @@ table.ex tr:last-child td {
   color: var(--text);
 }
 
+button.chip.usage-chip {
+  cursor: pointer;
+  font: inherit;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+button.chip.usage-chip:hover,
+button.chip.usage-chip:focus-visible {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  color: var(--text);
+}
+
+button.chip.usage-chip.selected {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+button.chip.usage-chip.personal:not(.selected) {
+  border-style: dashed;
+}
+
+.exercise-usage-detail {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border);
+}
+
+.exercise-usage-hint {
+  margin: 0.55rem 0 0;
+  font-size: 0.85rem;
+}
+
+.exercise-open-workout {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.exercise-open-workout:hover,
+.exercise-open-workout:focus-visible {
+  text-decoration: underline;
+}
+
+.personal-workouts .section-heading,
+.personal-folders .section-heading {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
 .exercise-modal {
   position: fixed;
   inset: 0;

@@ -12,6 +12,7 @@ import {
   legendRoutines,
   styles,
   getExercise,
+  getExerciseUsages,
   getRoutinesForExercise,
   validateReferentialIntegrity,
   workoutDayOrder,
@@ -163,6 +164,41 @@ describe('training database', () => {
     const used = getRoutinesForExercise('triceps-pushdown');
     expect(used.length).toBeGreaterThan(0);
     expect(used.every((r) => r.collection === 'legend')).toBe(true);
+  });
+
+  it('derives one usage tag per bodybuilder plus Personal when programmed', () => {
+    const tBar = getExerciseUsages('t-bar-row');
+    expect(tBar[0]?.kind).toBe('personal');
+    const yates = tBar.find((u) => u.styleId === 'blood-and-guts');
+    expect(yates?.label).toBe('Dorian Yates');
+    expect(yates?.note).toMatch(/Yates built his thickness/);
+    expect(yates?.workoutPath).toBe('/training/legends/blood-and-guts');
+    expect(yates?.ctaLabel).toMatch(/Blood & Guts/);
+
+    const curl = getExerciseUsages('barbell-curl');
+    expect(curl.length).toBeGreaterThan(10);
+    const labels = curl.map((u) => u.label);
+    expect(new Set(labels).size).toBe(labels.length);
+    expect(curl.some((u) => u.label === 'Mike Mentzer')).toBe(true);
+
+    const personalOnly = getExerciseUsages('chest-fly-machine');
+    expect(personalOnly.some((u) => u.kind === 'personal')).toBe(true);
+    expect(personalOnly.some((u) => u.styleId === 'blood-and-guts')).toBe(true);
+    expect(
+      personalOnly.find((u) => u.kind === 'personal')?.workoutPath,
+    ).toBe('/training/personal/workout/hevy-chest-biceps');
+  });
+
+  it('orders usage tags Personal, Blood & Guts, then A–Z', () => {
+    const usages = getExerciseUsages('t-bar-row');
+    expect(usages[0]?.kind).toBe('personal');
+    expect(usages[1]?.styleId).toBe('blood-and-guts');
+    const rest = usages.slice(2);
+    for (let i = 1; i < rest.length; i++) {
+      expect(
+        rest[i].label.localeCompare(rest[i - 1].label, 'en', { sensitivity: 'base' }),
+      ).toBeGreaterThanOrEqual(0);
+    }
   });
 
   it('has positive set counts and non-empty rep ranges', () => {

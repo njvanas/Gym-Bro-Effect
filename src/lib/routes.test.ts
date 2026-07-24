@@ -11,6 +11,9 @@ describe('paths', () => {
     expect(paths.trainingWorkout('arnold-golden-era', 'arnold-chest-back')).toBe(
       '/training/legends/arnold-golden-era/workout/arnold-chest-back',
     );
+    expect(paths.trainingPersonalWorkout('hevy-back')).toBe(
+      '/training/personal/workout/hevy-back',
+    );
     expect(paths.fuelPhase('cutting')).toBe('/fuel/phases/cutting');
   });
 });

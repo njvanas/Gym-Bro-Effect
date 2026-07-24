@@ -67,6 +67,15 @@ export function trainingPersonalCrumbs(): Crumb[] {
   ];
 }
 
+export function trainingPersonalWorkoutCrumbs(workoutName: string): Crumb[] {
+  return [
+    homeCrumb,
+    { label: pillarLabel('training'), to: paths.training },
+    { label: 'My Personal Hevy', to: paths.trainingPersonal },
+    { label: workoutName },
+  ];
+}
+
 export function trainingExercisesCrumbs(): Crumb[] {
   return [
     homeCrumb,
