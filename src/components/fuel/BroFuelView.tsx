@@ -1,13 +1,17 @@
 import { Link } from 'react-router-dom';
 
+import { fuelHubCrumbs } from '../../lib/crumbs';
 import { phases } from '../../lib/fuel-db';
 import { phaseLabel } from '../../lib/fuel-nav';
 import { paths } from '../../lib/routes';
+import { Breadcrumbs } from '../Breadcrumbs';
+import { PillarExplore } from '../PillarExplore';
 import { TdeeCallout } from './TdeeCallout';
 
 export function BroFuelView() {
   return (
     <section className="stack fuel-section">
+      <Breadcrumbs items={fuelHubCrumbs()} />
       <header className="section-masthead">
         <p className="section-kicker">Nutrition & phases</p>
         <h2 className="section-display-title">
@@ -17,9 +21,7 @@ export function BroFuelView() {
           Phase strategy plus the real Foods shopping reference from this journey. Personal meal
           examples per phase are coming soon.
         </p>
-        <Link className="text-link" to={paths.training}>
-          Browse Bro Training →
-        </Link>
+        <PillarExplore current="fuel" />
       </header>
 
       <TdeeCallout />

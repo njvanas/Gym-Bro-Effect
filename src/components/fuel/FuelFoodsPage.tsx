@@ -1,17 +1,15 @@
-import { Link } from 'react-router-dom';
-
-import { fuelFoodsCrumbs } from '../../lib/crumbs';
-import { paths } from '../../lib/routes';
+import { fuelFoodsCrumbs, parentCrumb } from '../../lib/crumbs';
+import { BackLink } from '../BackLink';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { FoodsCatalog } from './FoodsCatalog';
 
 export function FuelFoodsPage() {
+  const crumbs = fuelFoodsCrumbs();
+
   return (
     <section className="stack fuel-section">
-      <Breadcrumbs items={fuelFoodsCrumbs()} />
-      <Link className="back" to={paths.fuel}>
-        ← Bro Fuel
-      </Link>
+      <Breadcrumbs items={crumbs} />
+      <BackLink parent={parentCrumb(crumbs)} />
       <FoodsCatalog />
     </section>
   );

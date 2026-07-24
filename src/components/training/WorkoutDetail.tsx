@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import { muscleLabel } from '../../lib/format';
 import type { Routine, TrainingStyle } from '../../schema';
 import { ExerciseTable } from '../ExerciseTable';
@@ -9,19 +7,14 @@ import { Avatar } from './LegendDetail';
 export function WorkoutDetail({
   routine,
   style,
-  backTo,
 }: {
   routine: Routine;
   style: TrainingStyle | undefined;
-  backTo: string;
 }) {
   const creator = style?.creator ?? 'Unknown';
 
   return (
     <div className="legend-workout-detail">
-      <Link className="back" to={backTo}>
-        ← Back to {style?.name ?? 'legend'}
-      </Link>
       <div className="detail">
         <div className="detail-head">
           <div className="who">

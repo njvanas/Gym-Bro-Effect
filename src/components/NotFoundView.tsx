@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
-
+import { parentCrumb, type Crumb } from '../lib/crumbs';
+import { BackLink } from './BackLink';
 import { Breadcrumbs } from './Breadcrumbs';
 
 type NotFoundViewProps = {
   title?: string;
   parentLabel: string;
   parentTo: string;
-  crumbs?: { label: string; to?: string }[];
+  crumbs?: Crumb[];
 };
 
 export function NotFoundView({
@@ -15,12 +15,13 @@ export function NotFoundView({
   parentTo,
   crumbs,
 }: NotFoundViewProps) {
+  const fromCrumbs = crumbs ? parentCrumb(crumbs) : null;
+  const parent = fromCrumbs?.to ? fromCrumbs : { label: parentLabel, to: parentTo };
+
   return (
     <section className="stack">
       {crumbs && crumbs.length > 0 ? <Breadcrumbs items={crumbs} /> : null}
-      <Link className="back" to={parentTo}>
-        ← {parentLabel}
-      </Link>
+      <BackLink parent={parent} />
       <header className="section-masthead">
         <p className="section-kicker">Missing page</p>
         <h2 className="section-display-title">{title}</h2>
