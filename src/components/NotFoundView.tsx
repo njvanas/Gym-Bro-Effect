@@ -20,8 +20,10 @@ export function NotFoundView({
 
   return (
     <section className="stack">
-      {crumbs && crumbs.length > 0 ? <Breadcrumbs items={crumbs} /> : null}
-      <BackLink parent={parent} />
+      <div className="page-chrome">
+        <BackLink parent={parent} />
+        {crumbs && crumbs.length > 0 ? <Breadcrumbs items={crumbs} /> : null}
+      </div>
       <header className="section-masthead">
         <p className="section-kicker">Missing page</p>
         <h2 className="section-display-title">{title}</h2>

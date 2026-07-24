@@ -547,6 +547,10 @@ ul.clean {
   .training-hub-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .training-hub-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 }
 
 .visually-hidden {
@@ -562,14 +566,34 @@ ul.clean {
 }
 
 .back {
-  align-self: flex-start;
+  width: max-content;
+  max-width: 100%;
+  flex: 0 0 auto;
+  align-self: auto;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
-  border-radius: 0.5rem;
-  padding: 0.55rem 0.85rem;
-  min-height: 44px;
-  margin-bottom: 0.5rem;
+  border-radius: 0.45rem;
+  padding: 0.35rem 0.65rem;
+  min-height: 2.25rem;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.page-chrome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.page-chrome .breadcrumbs {
+  margin: 0;
+  flex: 1 1 12rem;
+  min-width: 0;
 }
 
 .breadcrumbs {

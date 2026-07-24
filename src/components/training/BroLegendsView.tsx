@@ -8,11 +8,10 @@ import {
   getStyle,
 } from '../../lib/db';
 import { muscleLabel } from '../../lib/format';
-import { parentCrumb, trainingLegendsBrowseCrumbs } from '../../lib/crumbs';
+import { trainingLegendsBrowseCrumbs } from '../../lib/crumbs';
 import { paths } from '../../lib/routes';
 import type { Bodybuilder, TrainingStyle } from '../../schema';
-import { BackLink } from '../BackLink';
-import { Breadcrumbs } from '../Breadcrumbs';
+import { PageChrome } from '../PageChrome';
 import { Avatar } from './LegendDetail';
 
 type FilterChip = {
@@ -194,8 +193,7 @@ export function BroLegendsView() {
 
   return (
     <section className="stack">
-      <Breadcrumbs items={crumbs} />
-      <BackLink parent={parentCrumb(crumbs)} />
+      <PageChrome crumbs={crumbs} />
       <div className="legends-browse">
         <section className="legends-masthead">
           <p className="legends-kicker">Bro Legends</p>

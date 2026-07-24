@@ -4,13 +4,13 @@ import { fuelHubCrumbs } from '../../lib/crumbs';
 import { phases } from '../../lib/fuel-db';
 import { phaseLabel } from '../../lib/fuel-nav';
 import { paths } from '../../lib/routes';
-import { Breadcrumbs } from '../Breadcrumbs';
+import { PageChrome } from '../PageChrome';
 import { TdeeCallout } from './TdeeCallout';
 
 export function BroFuelView() {
   return (
     <section className="stack fuel-section">
-      <Breadcrumbs items={fuelHubCrumbs()} />
+      <PageChrome crumbs={fuelHubCrumbs()} showBack={false} />
       <header className="section-masthead">
         <p className="section-kicker">Nutrition & phases</p>
         <h2 className="section-display-title">

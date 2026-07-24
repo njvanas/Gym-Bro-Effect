@@ -68,14 +68,18 @@ describe('App pillar routes', () => {
 });
 
 describe('Bro Training routes', () => {
-  it('renders hub cards as links to legends and personal routes', () => {
+  it('renders hub cards as links to legends, personal, and exercises', () => {
     const container = renderAt('/training');
     const destinations = Array.from(
       container.querySelectorAll<HTMLAnchorElement>('a.training-hub-card'),
       (link) => link.getAttribute('href'),
     );
 
-    expect(destinations).toEqual(['/training/legends', '/training/personal']);
+    expect(destinations).toEqual([
+      '/training/legends',
+      '/training/personal',
+      '/training/exercises',
+    ]);
   });
 
   it('renders the personal collection at its direct URL', () => {
@@ -87,14 +91,14 @@ describe('Bro Training routes', () => {
     );
   });
 
-  it('renders exercises with URL-driven section navigation', () => {
+  it('renders exercises at its direct URL with a parent back link', () => {
     const container = renderAt('/training/exercises');
-    const activeLink = container.querySelector<HTMLAnchorElement>(
-      '.sub-nav a.nav-link.active[aria-current="page"]',
-    );
 
     expect(container.textContent).toContain('Bro Exercises');
-    expect(activeLink?.getAttribute('href')).toBe('/training/exercises');
+    expect(container.querySelector('.sub-nav')).toBeNull();
+    expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe(
+      '/training',
+    );
   });
 
   it('renders the legends browse route with links to legend detail pages', () => {
