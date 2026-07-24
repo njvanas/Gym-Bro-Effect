@@ -4,7 +4,7 @@ import { Breadcrumbs } from './Breadcrumbs';
 
 type PageChromeProps = {
   crumbs: Crumb[];
-  /** When false, only breadcrumbs (e.g. pillar hubs). Default true. */
+  /** When false, hide hierarchy back (rare). Default true — hubs back to Home. */
   showBack?: boolean;
 };
 

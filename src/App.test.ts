@@ -71,7 +71,7 @@ describe('Bro Training routes', () => {
   it('renders hub cards as links to legends, personal, and exercises', () => {
     const container = renderAt('/training');
     const destinations = Array.from(
-      container.querySelectorAll<HTMLAnchorElement>('a.training-hub-card'),
+      container.querySelectorAll<HTMLAnchorElement>('a.journey-card'),
       (link) => link.getAttribute('href'),
     );
 
@@ -80,6 +80,7 @@ describe('Bro Training routes', () => {
       '/training/personal',
       '/training/exercises',
     ]);
+    expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe('/');
   });
 
   it('renders the personal collection at its direct URL', () => {
@@ -158,6 +159,19 @@ describe('Bro Training routes', () => {
 });
 
 describe('Bro Fuel routes', () => {
+  it('renders hub cards for foods and phases with a back link home', () => {
+    const container = renderAt('/fuel');
+    const destinations = Array.from(
+      container.querySelectorAll<HTMLAnchorElement>('a.journey-card'),
+      (link) => link.getAttribute('href'),
+    );
+
+    expect(destinations[0]).toBe('/fuel/foods');
+    expect(destinations).toContain('/fuel/phases/cutting');
+    expect(destinations).toHaveLength(5);
+    expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe('/');
+  });
+
   it('renders the cutting phase at its direct URL', () => {
     const container = renderAt('/fuel/phases/cutting');
 
@@ -186,5 +200,17 @@ describe('Bro Fuel routes', () => {
     expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe(
       '/fuel',
     );
+  });
+});
+
+describe('Pillar hub back links', () => {
+  it.each([
+    ['/tools', 'Bro Tools'],
+    ['/who', 'Who is Bro'],
+  ] as const)('shows a Home back link on %s', (path, heading) => {
+    const container = renderAt(path);
+
+    expect(container.textContent).toContain(heading);
+    expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe('/');
   });
 });

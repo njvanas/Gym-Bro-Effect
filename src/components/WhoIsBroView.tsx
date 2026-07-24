@@ -4,7 +4,7 @@ import { PageChrome } from './PageChrome';
 export function WhoIsBroView() {
   return (
     <section className="stack who-section">
-      <PageChrome crumbs={whoHubCrumbs()} showBack={false} />
+      <PageChrome crumbs={whoHubCrumbs()} />
       <header className="section-masthead who-masthead">
         <p className="section-kicker">Who is Bro?</p>
         <h2 className="section-display-title">
