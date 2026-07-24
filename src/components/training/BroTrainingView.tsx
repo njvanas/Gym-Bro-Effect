@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { trainingHubCrumbs } from '../../lib/crumbs';
 import { paths } from '../../lib/routes';
 import { Breadcrumbs } from '../Breadcrumbs';
-import { PillarExplore } from '../PillarExplore';
 import { TrainingSectionNav } from './TrainingSectionNav';
 
 export function BroTrainingView() {
@@ -13,7 +12,6 @@ export function BroTrainingView() {
       <header>
         <h2>Bro Training</h2>
         <p className="muted">Legends, My Personal Hevy folders, and the exercise library.</p>
-        <PillarExplore current="training" />
       </header>
       <TrainingSectionNav />
       <div className="training-hub">
