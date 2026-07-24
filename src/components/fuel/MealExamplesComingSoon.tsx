@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 type MealExamplesComingSoonProps = {
-  onBrowseFoods?: () => void;
+  foodsTo: string;
 };
 
-export function MealExamplesComingSoon({ onBrowseFoods }: MealExamplesComingSoonProps) {
+export function MealExamplesComingSoon({ foodsTo }: MealExamplesComingSoonProps) {
   return (
     <section className="fuel-panel stack meal-examples-soon" aria-labelledby="meal-examples-soon-title">
       <h3 id="meal-examples-soon-title" className="legend-col-title">
@@ -13,11 +15,9 @@ export function MealExamplesComingSoon({ onBrowseFoods }: MealExamplesComingSoon
         shake or mass gainer helped, and the real routines — is on the way. For now, browse the
         Foods catalog for the products and macros used along the way.
       </p>
-      {onBrowseFoods ? (
-        <button type="button" className="text-link" onClick={onBrowseFoods}>
-          Browse Foods →
-        </button>
-      ) : null}
+      <Link className="text-link" to={foodsTo}>
+        Browse Foods →
+      </Link>
     </section>
   );
 }
