@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 import { pillarLabel, type Pillar } from '../lib/nav';
@@ -32,6 +32,10 @@ export function AppShell() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
   const pillar = pillarFromPathname(pathname);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="app-shell">

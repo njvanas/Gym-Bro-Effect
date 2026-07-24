@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { muscleLabel } from '../../lib/format';
 import type { Routine, TrainingStyle } from '../../schema';
 import { ExerciseTable } from '../ExerciseTable';
+import { ExternalLink } from '../ExternalLink';
 import { Avatar } from './LegendDetail';
 
 export function WorkoutDetail({
@@ -34,9 +35,7 @@ export function WorkoutDetail({
             </div>
           </div>
           {routine.source ? (
-            <a href={routine.source.url} target="_blank" rel="noreferrer">
-              {routine.source.name}
-            </a>
+            <ExternalLink href={routine.source.url}>{routine.source.name}</ExternalLink>
           ) : null}
         </div>
 

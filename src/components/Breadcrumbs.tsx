@@ -24,7 +24,10 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                   {item.label}
                 </Link>
               ) : (
-                <span className="breadcrumbs-current" aria-current="page">
+                <span
+                  className="breadcrumbs-current"
+                  aria-current={isLast ? 'page' : undefined}
+                >
                   {item.label}
                 </span>
               )}

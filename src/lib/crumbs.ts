@@ -51,7 +51,7 @@ export function trainingPersonalCrumbs(): Crumb[] {
 export function trainingExercisesCrumbs(): Crumb[] {
   return [
     { label: pillarLabel('training'), to: paths.training },
-    { label: 'Exercises' },
+    { label: 'Bro Exercises' },
   ];
 }
 

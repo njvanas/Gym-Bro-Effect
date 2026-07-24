@@ -152,3 +152,35 @@ describe('Bro Training routes', () => {
     ).toBe('/training/legends/arnold-golden-era');
   });
 });
+
+describe('Bro Fuel routes', () => {
+  it('renders the cutting phase at its direct URL', () => {
+    const container = renderAt('/fuel/phases/cutting');
+
+    expect(container.textContent).toContain('Cutting');
+    expect(container.textContent).toContain('Lose fat while protecting hard-earned muscle.');
+    expect(container.textContent).not.toContain('Page not found');
+    expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe(
+      '/fuel',
+    );
+  });
+
+  it('renders the foods catalog at its direct URL', () => {
+    const container = renderAt('/fuel/foods');
+
+    expect(container.textContent).toContain('Bro Foods');
+    expect(container.textContent).not.toContain('Page not found');
+    expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe(
+      '/fuel',
+    );
+  });
+
+  it('shows a not-found page for an unknown phase id', () => {
+    const container = renderAt('/fuel/phases/not-a-phase');
+
+    expect(container.textContent).toContain('Phase not found');
+    expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe(
+      '/fuel',
+    );
+  });
+});

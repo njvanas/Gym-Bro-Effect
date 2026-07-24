@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import {
   fuelFoodsCrumbs,
   fuelPhaseCrumbs,
+  trainingExercisesCrumbs,
   trainingLegendCrumbs,
   trainingWorkoutCrumbs,
 } from './crumbs';
@@ -39,6 +40,13 @@ describe('crumbs', () => {
     expect(fuelFoodsCrumbs()).toEqual([
       { label: 'Bro Fuel', to: '/fuel' },
       { label: 'Foods' },
+    ]);
+  });
+
+  it('builds exercises crumbs', () => {
+    expect(trainingExercisesCrumbs()).toEqual([
+      { label: 'Bro Training', to: '/training' },
+      { label: 'Bro Exercises' },
     ]);
   });
 });
