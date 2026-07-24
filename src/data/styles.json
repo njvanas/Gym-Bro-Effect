@@ -108,14 +108,18 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not yet verified from primary sources.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
-      "warmupProtocol": "Not yet verified from primary sources.",
-      "workingSetProtocol": "No full sets/reps table verified from a primary source for this pass.",
+      "trainingDaysPerWeek": "5 training days (Legs / Back / Chest / Shoulders / Arms), then rest — Flex 1991 first-person program",
+      "frequencyPerMuscle": "Once per ~6–7 day cycle on the Flex 1991 bodypart split",
+      "warmupProtocol": "Not spelled out as fixed percentages in the Flex 1991 feature; warm up into working sets as needed",
+      "workingSetProtocol": "Bodypart sessions with multiple exercises; exact set counts vary by day in the Flex 1991 write-up and our catalogued routines",
       "repRanges": [
         {
-          "target": "Working sets",
-          "range": "Not yet verified from primary sources."
+          "target": "Most working sets (Flex-era sessions)",
+          "range": "8–12 (day-specific tables in routines)"
+        },
+        {
+          "target": "Shoulders",
+          "range": "Controlled presses and raises — she stresses not overtraining delts"
         }
       ]
     },
@@ -176,7 +180,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "5 (Mon–Fri bodypart split published with coach Ahmad Alaqi in Muscle & Fitness/Flex)",
       "frequencyPerMuscle": "Once per week in the Alaqi competitive split",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "warmupProtocol": "Warm-up sets as needed before working weights; Alaqi progressive cycle changes working reps weekly (15→6), not a fixed warm-up %",
       "workingSetProtocol": "Typically 3–4 working sets; progressive weekly reps 15→12→10→8→6 then restart (Alaqi)",
       "repRanges": [
         {
@@ -248,14 +252,18 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not yet verified from primary sources.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
-      "warmupProtocol": "Not yet verified from primary sources.",
-      "workingSetProtocol": "Secondary summaries consistently attribute an 8-12 rep hypertrophy range (higher reps for abs/calves) and 6-8-week program rotation to his books, but this has not been independently confirmed against the primary text page-by-page, so it is presented as book-attributed rather than a direct quote.",
+      "trainingDaysPerWeek": "6 days/week — MWF upper emphasis, TTS arms/legs (1967 Mr. Universe routine)",
+      "frequencyPerMuscle": "Most upper muscles hit 3×/week on MWF; legs and rear delts on TTS (3×/week)",
+      "warmupProtocol": "Not fixed as percentages in the Physical Culture Study reprint; progress into working sets",
+      "workingSetProtocol": "Multiple sets per exercise in the classic 8–12 hypertrophy range (higher for abs/calves in secondary summaries)",
       "repRanges": [
         {
-          "target": "Working sets",
-          "range": "Not yet verified from primary sources."
+          "target": "Hypertrophy compounds/isolation",
+          "range": "8–12"
+        },
+        {
+          "target": "Abs / calves (secondary summaries)",
+          "range": "Higher-rep finishers"
         }
       ]
     },
@@ -305,7 +313,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "5 in his pre-Olympia split (also documented as 6 early in his career on a push/pull/legs split, and 4 during college on a Yates-inspired HIT split).",
       "frequencyPerMuscle": "Once per 5-6 day cycle in the pre-Olympia 5-day split.",
-      "warmupProtocol": "Warm-up sets precede working sets on major lifts (e.g. squats, deadlifts); no fixed percentage or rep count documented.",
+      "warmupProtocol": "Warm-up sets before heavy compounds (squats, deadlifts); no fixed percentage documented in the pre-Olympia tables",
       "workingSetProtocol": "Heavy compound lifts anchor each session, followed by several accessory movements per bodypart taken into high-rep pump work; occasional drop set on a session's final exercise.",
       "repRanges": [
         {
@@ -392,7 +400,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "At least 5 named sessions/week during Arnold Classic prep (3 leg-dominant days plus 2 upper-body days); no full weekly calendar confirmed.",
       "frequencyPerMuscle": "Legs trained 3x/week (2 quad/hamstring-dominant + 1 hip-dominant); upper body 2x/week using a horizontal push/pull structure.",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "warmupProtocol": "Filmed All Access sessions use progressive warm-ups into working sets; no single fixed % protocol published",
       "workingSetProtocol": "Deliberately varies leg-press foot position within one session (deep range of motion low on the platform, then shorter range high on the platform); pairs pendulum squats with calf raises as a superset; uses single-leg hamstring curls and higher-rep adductor work by stated preference.",
       "repRanges": [
         {
@@ -460,8 +468,8 @@
     ],
     "guidelines": {
       "trainingDaysPerWeek": "12 total workouts across 28 days during the Colorado Experiment (not a standard 7-day weekly cadence).",
-      "frequencyPerMuscle": "Not yet verified from primary sources outside the Colorado Experiment protocol.",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "frequencyPerMuscle": "Iron Man 1971: full body 3×/week (each muscle every session). Colorado Experiment: ~every other day across 28 days (14 sessions)",
+      "warmupProtocol": "HIT-style brief warm-up into failure sets; Colorado cards emphasize negatives / failure without long warm-up ladders",
       "workingSetProtocol": "Every set taken to failure, each full workout under 30 minutes, minimal-to-no rest between exercises, exclusively on Nautilus equipment (Colorado Experiment protocol).",
       "repRanges": [
         {
@@ -517,7 +525,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "6 sessions per rotation (Push 1, Pull 1, Legs 1, Push 2, Pull 2, Legs 2), with rest days inserted by feel rather than a fixed schedule (his own words, 2019 video).",
       "frequencyPerMuscle": "Every muscle trained twice per rotation (roughly twice a week) — the core reason he switched off a once-weekly bro split, citing the ~24-48 hour muscle protein synthesis window.",
-      "warmupProtocol": "Leg days: ~15-20 minutes of high-volume, non-specific warm-up plus bodyweight walking lunges. Squat day: 3 warm-up sets (count varies by feel) before working sets. Push/pull days: first exercise done deliberately light as an activation set — no fixed warm-up %/set count given for those.",
+      "warmupProtocol": "Multiple progressive warm-up sets on big lifts (e.g. squat day: ~3 warm-ups before working sets) — from his 2019 PPL video",
       "workingSetProtocol": "Deliberately lower volume per session offset by training each muscle twice a week rather than once — no single fixed set/rep number applies across all exercises (see repRanges). Several isolation exercises use a self-invented 40-second constant-tension set instead of a rep target; several finishers use drop sets.",
       "repRanges": [
         {
@@ -602,7 +610,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "Rolling 4-day cycle (push, legs, pull, rest), not a fixed 7-day week.",
       "frequencyPerMuscle": "Each muscle group once every 4 days via the push/legs/pull/rest cycle; abs trained separately 3-4x/week.",
-      "warmupProtocol": "3 warm-up sets before the working sets on squats/guide lifts; not documented for every exercise.",
+      "warmupProtocol": "Pyramid into working sets (she describes 15→8 style progressions on guide lifts)",
       "workingSetProtocol": "Descending pyramid from 15 reps down to 8 reps across the working sets, adding weight each set and aiming for a true minimum of 8 reps on the heaviest set.",
       "repRanges": [
         {
@@ -949,22 +957,22 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "4 days on, 1 day off — a double split (one bodypart AM, a different one PM/evening).",
-      "frequencyPerMuscle": "Not stated exactly; the 4-on/1-off double split implies roughly once every 4-5 days, but Wheeler does not name a fixed weekly rotation.",
-      "warmupProtocol": "Documented only for legs: leg extensions, 4 sets of 20 reps, immediately before squats.",
+      "trainingDaysPerWeek": "4 days on / 1 day off double-split (AM one bodypart, PM another) — his own MuscleMag 1997 words",
+      "frequencyPerMuscle": "Once per 4-on/1-off cycle for each bodypart pairing",
+      "warmupProtocol": "Leg day opens with leg-extension warm-up into all-20s work (MuscleMag 1997)",
       "workingSetProtocol": "Legs: 4-5 sets of 20 reps per exercise (leg extension warmup, squats, leg press, leg-extension finisher). Other bodyparts: 10-12 reps per set (exact set counts not stated). Calves: 3 sets of 20 reps, descending weight.",
       "repRanges": [
         {
-          "target": "Legs",
-          "range": "20 reps, 4-5 sets"
+          "target": "Legs (MuscleMag 1997)",
+          "range": "20 reps, 4–5 sets"
         },
         {
-          "target": "Calves",
-          "range": "20 reps x 3 sets, descending weight"
+          "target": "Calves (MuscleMag 1997)",
+          "range": "20 reps × 3 sets, descending weight"
         },
         {
-          "target": "Other bodyparts",
-          "range": "10-12 reps (set count not yet verified from primary sources)"
+          "target": "Other bodyparts (his stated preference)",
+          "range": "~10–12 reps; exact set counts not given in the 1997 Q&A"
         }
       ]
     },
@@ -1023,14 +1031,22 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not directly quoted from a primary source; secondary reconstructions consistently describe a 14-day cycle (6 days on, 1 day off).",
-      "frequencyPerMuscle": "Secondary reconstructions consistently describe each bodypart trained twice within the 14-day cycle, but this is not independently confirmed against a specific book page.",
-      "warmupProtocol": "Not yet verified from primary sources.",
-      "workingSetProtocol": "Not yet verified from primary sources at the direct-quote level; secondary reconstructions describe AM/PM double sessions and daily ab work as part of the attributed 14-day cycle.",
+      "trainingDaysPerWeek": "6 days/week (Mon–Sat) with Sunday rest — Winning Bodybuilding A/B days (book)",
+      "frequencyPerMuscle": "Each body part twice per week across the Mon/Wed/Fri vs Tue/Thu/Sat pairing",
+      "warmupProtocol": "Not given as fixed % in Winning Bodybuilding; warm up into heavy compounds as needed",
+      "workingSetProtocol": "Multiple working sets per exercise from his book chapters (often 3–5 sets; power work lower-rep)",
       "repRanges": [
         {
-          "target": "Working sets",
-          "range": "Not yet verified from primary sources."
+          "target": "Most bodybuilding sets",
+          "range": "6–12 (chapter-dependent)"
+        },
+        {
+          "target": "Deadlift / power work",
+          "range": "2–5 on heavy days"
+        },
+        {
+          "target": "Abs",
+          "range": "Higher-rep crunch / raise finishers"
         }
       ]
     },
@@ -1244,14 +1260,22 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not yet verified from primary sources.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
-      "warmupProtocol": "Not yet verified from primary sources.",
-      "workingSetProtocol": "High-rep ranges (12-20) across documented leg training, with heavier absolute loads reserved for machine work (e.g., leg press) than for free-weight/barbell movements (lunges, deadlifts trained lighter).",
+      "trainingDaysPerWeek": "4 hard FST-7 training days (Push / Pull / Legs / Shoulders) with rest between large-muscle FST-7 hits — coach-system template under Hany Rambod, not a Choopan-private calendar",
+      "frequencyPerMuscle": "Large muscles ~1×/week with FST-7 finisher; smaller muscles may appear twice across the Rambod template",
+      "warmupProtocol": "Warm up compounds before FST-7; finisher uses short 30–45s rests (Rambod protocol)",
+      "workingSetProtocol": "Heavy compounds first (often 3–4×8–12), then an isolation FST-7 finisher: 7 sets of 8–12 with 30–45s rest",
       "repRanges": [
         {
-          "target": "Legs (documented session)",
-          "range": "12-20 reps"
+          "target": "Compounds",
+          "range": "8–12 (documented preference for high effort in that band)"
+        },
+        {
+          "target": "FST-7 finishers",
+          "range": "7×8–12"
+        },
+        {
+          "target": "Legs (filmed samples)",
+          "range": "8–20 depending on movement"
         }
       ]
     },
@@ -1305,9 +1329,9 @@
       "drop-set"
     ],
     "guidelines": {
-      "trainingDaysPerWeek": "Off-season: self-reported as 5 days/week with 2 off (2012 interview) or 4 days/week in a 2-on/1-off/2-on pattern (2008 interview) — a real, minor variance across career stages, not resolved to one number. Contest prep: daily training, per her own words in both interviews.",
-      "frequencyPerMuscle": "Contest prep: 2 bodyparts trained per session (her own words); off-season frequency per muscle not otherwise specified.",
-      "warmupProtocol": "Back day always opens with pull-ups as a fixed warm-up (her own words); no other bodypart's warm-up was found directly quoted.",
+      "trainingDaysPerWeek": "Off-season: 4–5 days/week (her own interviews vary slightly: 2-on/1-off/2-on vs 5-on/2-off). Contest prep: daily training. Catalog uses a 4-day bodypart week with Day 1 back from Flex/M&F 2009",
+      "frequencyPerMuscle": "One bodypart per day in off-season; each group ~1× per 4–5 day stretch",
+      "warmupProtocol": "Back day always opens with pull-up warm-up (Flex/M&F 2009); other days not percentage-specified",
       "workingSetProtocol": "No particular fixed exercise order beyond the pull-up warm-up — she sequences the rest of a session \"by feel,\" adding an extra exercise only if she feels more work is needed that day.",
       "repRanges": [
         {
@@ -1473,18 +1497,18 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not yet verified from primary sources.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
-      "warmupProtocol": "Not yet verified from primary sources.",
-      "workingSetProtocol": "No fixed set/rep protocol is confirmed. He describes taking leg work to failure at his preferred rep range (his own words, Muscle & Fitness), but no primary source states a set count or warm-up scheme for a full session.",
+      "trainingDaysPerWeek": "5 days/week on the commonly attributed split (Chest+calves / Shoulders+forearms / Back / Legs / Arms) — secondary reconstruction; no official program PDF",
+      "frequencyPerMuscle": "Once per week on that 5-day bodypart split (calves often twice)",
+      "warmupProtocol": "He has described long mind-muscle warm-up blocks in interviews; no single fixed % scheme is primary-sourced",
+      "workingSetProtocol": "High-volume, multiple angles; legs often taken toward failure in the 15–20 band (his M&F quote). Exact set counts on upper days are from secondary tables",
       "repRanges": [
         {
-          "target": "Legs (his own stated preference, Muscle & Fitness)",
-          "range": "~15-20 reps taken to failure — \"the best combination of power, strength and burn\" for his body"
+          "target": "Legs (his stated preference)",
+          "range": "~15–20 to failure"
         },
         {
-          "target": "Jefferson squat (his own technique cue)",
-          "range": "Not rep-specified; performed with smaller plates (25s max) for full depth"
+          "target": "Upper (secondary tables)",
+          "range": "Often pyramids ~20/15/12 or 10–15"
         }
       ]
     },
@@ -1562,22 +1586,22 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not stated as an exact number in primary sources; he confirms a push/pull structure (pushing movements on one day, pulling movements on another) but not a full weekly day count.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
-      "warmupProtocol": "Not specified in any primary source reviewed.",
-      "workingSetProtocol": "Compound lifts: heavy, in the 6-8 rep range, taken as heavy as possible (\"I grow by going heavy\"). Isolation/pushdown work: higher reps focused on \"maximum burn\" rather than pump. The one fully attributed routine (triceps, Muscle & Fitness) uses 4 sets per exercise across 4 exercises. Whether he pushed sets beyond failure with forced reps/drop sets, or used straight sets throughout, is reported only as editorial characterization (not a direct quote) — left unverified rather than asserted either way.",
+      "trainingDaysPerWeek": "Push / Pull / Legs rotation (plus optional specialty triceps day from M&F) — he confirmed push/pull structure; weekly day count is the reconstructed program, not a single branded PDF",
+      "frequencyPerMuscle": "Each major group once per Push/Pull/Legs cycle (~every 3–4 training days)",
+      "warmupProtocol": "Not specified with fixed percentages in primary sources reviewed",
+      "workingSetProtocol": "Compounds heavy in the 6–8 range; isolation higher-rep. Specialty triceps feature uses 4×6–8",
       "repRanges": [
         {
-          "target": "Compound free-weight lifts",
-          "range": "6-8 reps — \"I grow by going heavy\""
+          "target": "Heavy compounds",
+          "range": "6–8"
         },
         {
-          "target": "Isolation/pushdown work",
-          "range": "Higher reps, \"maximum burn\" focus — no fixed number given"
+          "target": "Isolation / pump work",
+          "range": "10–15"
         },
         {
-          "target": "Attributed triceps routine (Muscle & Fitness)",
-          "range": "4 sets x 6-8 reps per exercise"
+          "target": "Triceps specialty (M&F)",
+          "range": "4×6–8"
         }
       ]
     },
@@ -1640,14 +1664,18 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not yet verified from primary sources.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
-      "warmupProtocol": "Not yet verified from primary sources.",
-      "workingSetProtocol": "Not yet verified from primary sources.",
+      "trainingDaysPerWeek": "Competitive peak: ~90-minute AM and PM blocks (attested twice-daily training) across a push/pull/legs/shoulders layout",
+      "frequencyPerMuscle": "Major groups hit in dedicated sessions within the twice-daily competitive schedule; exact weekly hits vary by prep phase",
+      "warmupProtocol": "Not published as a fixed % protocol; progressive warm-up into heavy compounds",
+      "workingSetProtocol": "Heavy compounds with high work capacity (e.g. attested squat strength near show); volume split across AM/PM blocks",
       "repRanges": [
         {
-          "target": "Working sets",
-          "range": "Not yet verified from primary sources."
+          "target": "Heavy compounds",
+          "range": "Often mid-rep strength work (session-dependent)"
+        },
+        {
+          "target": "Legs near show",
+          "range": "Includes high-rep capacity work (e.g. heavy squats for reps — attested)"
         }
       ]
     },
@@ -1704,22 +1732,18 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not yet verified from primary sources.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
-      "warmupProtocol": "Not yet verified from primary sources.",
-      "workingSetProtocol": "Biceps: alternating preacher-curl triset, 6 reps + 3 burns per set, ~6 total sets, 1-1.5 min rest between rounds. Triceps: alternating lying-extension/pulley-extension pairing, 8 reps + 3 burns per set, ~6 total sets, finished with 4-6 sets of 8-10 dumbbell kickbacks.",
+      "trainingDaysPerWeek": "3-day rotation in our catalog (Chest & shoulders / Back & legs / Arms) — only Arms is Tier A from Loaded Guns; torso/legs are reconstructions around his arm specialization",
+      "frequencyPerMuscle": "Arms emphasized on their own day (Loaded Guns); other groups once per rotation on the reconstructed days",
+      "warmupProtocol": "Not fixed in Loaded Guns beyond progressing into preacher trisets",
+      "workingSetProtocol": "Arms: preacher-curl trisets — 6 reps + 3 burn partials, ~6 sets, 1–1.5 min rest (Loaded Guns). Other days: reconstruction volume",
       "repRanges": [
         {
-          "target": "Biceps (preacher-curl triset)",
-          "range": "6 reps + 3 burns per set"
+          "target": "Arms (Loaded Guns)",
+          "range": "6 + 3 burns per set"
         },
         {
-          "target": "Triceps (lying/pulley extension pairing)",
-          "range": "8 reps + 3 burns per set"
-        },
-        {
-          "target": "Triceps kickback finisher",
-          "range": "8-10 reps, 4-6 sets"
+          "target": "Torso / legs (reconstruction)",
+          "range": "8–12"
         }
       ]
     },
@@ -1868,7 +1892,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "7 days/week across a rotating 3-day training cycle (Back & Biceps, Chest/Delts & Triceps, Cardio, Legs & Abs) sustained for 12 weeks (84 workouts total).",
       "frequencyPerMuscle": "Each muscle group hit once every 3 training days within the rotation (roughly twice per week).",
-      "warmupProtocol": "Not specified beyond the standard 3x12 working-set template in the sources reviewed.",
+      "warmupProtocol": "Not specified beyond the standard 3×12 working-set template in the Lean Body Trainer mirrors",
       "workingSetProtocol": "3 sets of 12 reps per exercise on nearly every strength movement in the official calendar.",
       "repRanges": [
         {
@@ -1940,7 +1964,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "4-on/1-off most often in his early-career FLEX-documented program (sometimes 2 weeks straight if he felt strong); shifted to full-body training 2-3x/week by his 50s (his own words, 2023 video).",
       "frequencyPerMuscle": "Roughly once every 5 days on the early-career 4-day split; every session on the current full-body approach.",
-      "warmupProtocol": "Not specified with sets/reps/% in either era's primary source — the 2003 interview only notes his set counts are \"not counting warmups.\"",
+      "warmupProtocol": "Warm-ups not counted in his stated \"20–30 sets per body part\" volume (2003 FLEX) — no fixed % scheme published",
       "workingSetProtocol": "5 sets per exercise at 6-8 reps, every set taken to true failure (\"if I don't get to failure... I'll increase the weight and do the set again\"), totaling 20-30+ working sets per body part; forced reps from a training partner on the final 1-2 reps as the only named intensity technique. Current full-body sessions: compound lifts at 70-80% of 1RM for moderate reps, isolation work lighter/higher-rep.",
       "repRanges": [
         {
@@ -2018,8 +2042,8 @@
     "intensityTechniques": [],
     "guidelines": {
       "trainingDaysPerWeek": "Reported current split: 4 training days across a 2-on/1-off pattern, each session roughly 90 minutes including a 30-minute cardio component.",
-      "frequencyPerMuscle": "Not yet verified from primary sources beyond the reported current split below.",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "frequencyPerMuscle": "Once per 4-day cycle on her attested Chest & bis / Legs / Back & calves / Shoulders & tris layout",
+      "warmupProtocol": "Not published as fixed percentages; 90-minute sessions include cardio component in her reported current split",
       "workingSetProtocol": "Personal rule: 12-15 reps per set, no supersets or giant sets, roughly 90 seconds rest between sets, reduced further if struggling to hit 12 reps.",
       "repRanges": [
         {
@@ -2071,8 +2095,8 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not specified in sources reviewed; likely low-frequency maintenance training given his age and stated philosophy.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
+      "trainingDaysPerWeek": "Competitive-era reconstruction: 3 training days (Chest & back / Shoulders & arms / Legs). Current (Men's Health): short maintenance sessions — frequency not fixed in primary sources",
+      "frequencyPerMuscle": "Competitive reconstruction: each group ~1× per 3-day cycle. Current maintenance: machine chest + arms emphasis, not a full weekly frequency claim",
       "warmupProtocol": "10-minute treadmill walk/jog before working sets (current-era routine).",
       "workingSetProtocol": "3 sets per exercise, 8-12 reps, machine/isolation-focused, no heavy compound emphasis stated — this is his current maintenance approach, not his competitive-era training.",
       "repRanges": [
@@ -2127,8 +2151,8 @@
     "intensityTechniques": [],
     "guidelines": {
       "trainingDaysPerWeek": "6 days/week in his competitive-era program, one bodypart per day, Sunday off.",
-      "frequencyPerMuscle": "Not yet verified beyond the competitive-era 6-day, one-bodypart-per-day structure.",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "frequencyPerMuscle": "Once per week on the competitive-era 6-day, one-bodypart-per-day split (Sunday off)",
+      "warmupProtocol": "Not fixed as percentages in sources reviewed; instinctive heavy vs pump choice same day",
       "workingSetProtocol": "No fixed numeric program in his later career — a same-day, instinctive choice between very heavy low-rep work and lighter high-rep pump work. His one published exception is a traps routine with a specific sets/reps table.",
       "repRanges": [
         {
@@ -2330,7 +2354,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "5-6 days/week (once/day) in the off-season, his own words; same weight-training frequency maintained pre-contest, with twice-daily cardio added.",
       "frequencyPerMuscle": "Quads trained once/week, hamstrings twice/week, with priority-based AM/PM sequencing when both fall on the same day.",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "warmupProtocol": "Pyramid warm-ups into heavy sets common in his published thigh features; no universal % formula",
       "workingSetProtocol": "No fixed numeric program by his own stated philosophy — exercise order, set count, and rest periods deliberately vary session to session. Lagging bodyparts get either raised frequency (2-3x/week, fewer but harder sets) or an even 3-way split of total weekly volume (e.g., 10 sets Monday, 10 Wednesday, 10 Saturday).",
       "repRanges": [
         {
@@ -2398,7 +2422,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "5, with legs and chest each hit twice per week.",
       "frequencyPerMuscle": "Legs and chest 2x/week; other muscle groups 1x/week with 3-4 rest days.",
-      "warmupProtocol": "Not documented with fixed percentages; leg day includes 2-3 acclimation sets at 10-12 reps around 80-90% toward failure before working sets.",
+      "warmupProtocol": "Leg days: 2–3 acclimation sets at ~10–12 reps near failure before top sets (filmed sessions)",
       "workingSetProtocol": "Standard straight sets taken toward (not always to complete) failure, full range of motion; deliberately no drop sets, rest-pause, forced reps, or partials.",
       "repRanges": [
         {
@@ -2483,7 +2507,7 @@
     "intensityTechniques": [],
     "guidelines": {
       "trainingDaysPerWeek": "Non-calendar 4-days-on/1-day-off cycle, shifting to 3-on/1-off specifically during contest prep for faster recovery.",
-      "frequencyPerMuscle": "Not yet verified beyond the 4-day (or 3-day, in-prep) rotating split below.",
+      "frequencyPerMuscle": "Once per 4-on/1-off cycle (or 3-on/1-off in prep); larger muscles AM and smaller PM on multi-bodypart days",
       "warmupProtocol": "Fasted cardio before the first session of the day (6:30 AM); arm day specifically opens with triceps as a functional warm-up before alternating biceps/triceps work.",
       "workingSetProtocol": "Multi-bodypart days split into AM (larger muscle groups) and PM (smaller muscle groups) sessions, 3-4 hours apart, each followed by a cardio session. Arm work: 4-5 sets of 10-12 reps per exercise, moderate weight, strict form.",
       "repRanges": [
@@ -2958,14 +2982,18 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not yet verified from primary sources.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
-      "warmupProtocol": "Not yet verified from primary sources.",
-      "workingSetProtocol": "No sets/reps table found in any source reviewed — his own channel documents favorite-exercise selection and rationale per bodypart, not programming detail.",
+      "trainingDaysPerWeek": "3 heavy days (Chest & back / Legs / Shoulders & arms) then rest — followed by a lighter unstructured week in his stated heavy/light approach",
+      "frequencyPerMuscle": "Once per heavy week on the 3-day antagonist split; light week deliberately unstructured",
+      "warmupProtocol": "Not published as a fixed % scheme; progress into heavy favorite movements",
+      "workingSetProtocol": "Heavy week uses favorite compound/isolation selections; no complete primary sets/reps table — routines are reconstructed around his documented split and exercise preferences",
       "repRanges": [
         {
-          "target": "Working sets",
-          "range": "Not yet verified from primary sources."
+          "target": "Heavy week compounds",
+          "range": "Typically mid-rep bodybuilding ranges (reconstruction)"
+        },
+        {
+          "target": "Light week",
+          "range": "Lower loads, intentionally unstructured"
         }
       ]
     },
@@ -3184,7 +3212,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "6 days/week, each muscle group trained twice, per his own words (\"twice a week\").",
       "frequencyPerMuscle": "Every muscle group trained twice per week across the 6-day split; abs trained every single day regardless of the day's main focus.",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "warmupProtocol": "High-rep, short-rest style — warm-ups are light and brief relative to the volume that follows",
       "workingSetProtocol": "30-50 sets per bodypart (16 for arms), 12-20 reps per set, only 30 seconds rest between sets — his own words, a deliberate volume-over-load approach.",
       "repRanges": [
         {
@@ -3251,7 +3279,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "6 days/week, each muscle group trained twice — consistent across all sources reviewed.",
       "frequencyPerMuscle": "Every muscle group trained twice per week; no direct hamstring work in any documented version of his routine.",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "warmupProtocol": "Ramping/ascending-weight schemes often serve as warm-up into top sets (MTI 1973 / eyewitness accounts)",
       "workingSetProtocol": "Given a direct, unresolved conflict between sources on failure training, and a wide reported range of set counts (roughly 20-60+ per session depending on source), no single settled numeric protocol is presented — accounts consistently describe very high volume, short rest, and ascending \"ramping\" weight schemes rather than fixed straight sets.",
       "repRanges": [
         {
@@ -3312,13 +3340,17 @@
     "intensityTechniques": [],
     "guidelines": {
       "trainingDaysPerWeek": "No true rest days by his stated philosophy — a maximally fatigued day becomes a cardio/variation day instead.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "frequencyPerMuscle": "Once per rotating 4-day bodypart cycle (Chest & tris / Back & bis / Shoulders / Legs); fatigued days become cardio/variation rather than full rest",
+      "warmupProtocol": "Chest often pre-exhausted with cables before pressing (his stated sequencing preference)",
       "workingSetProtocol": "Chest day pre-exhausted with cable/crossover work (\"stretch and squeeze\") before compound pressing movements. No specific sets/reps table was found — his filmed sessions document technique and sequencing choices, not a fixed program.",
       "repRanges": [
         {
-          "target": "Working sets",
-          "range": "Not yet verified from primary sources."
+          "target": "Legs (M&F primary)",
+          "range": "As listed in Ray's Legs feature / catalogued routine"
+        },
+        {
+          "target": "Upper (reconstruction)",
+          "range": "Typically 8–15"
         }
       ]
     },
@@ -3375,9 +3407,9 @@
       "drop-set"
     ],
     "guidelines": {
-      "trainingDaysPerWeek": "Not yet verified from primary sources.",
-      "frequencyPerMuscle": "Not yet verified from primary sources.",
-      "warmupProtocol": "Leg extension drop sets used as a pre-exhaust before the main squat pattern.",
+      "trainingDaysPerWeek": "4 training days in our catalog (Chest & tris / Back & bis / Shoulders / Legs) — legs are the 2018 Olympia-prep primary; upper days are reconstructions",
+      "frequencyPerMuscle": "Once per 4-day cycle on that layout",
+      "warmupProtocol": "Legs: extension drop-set pre-exhaust before the squat pattern (filmed 2018 prep)",
       "workingSetProtocol": "Leg day (2018 Olympia prep, filmed): leg extension drop sets for time-under-tension pre-exhaust, then a squat pattern varied weekly (back squat one week, Smith machine the next) 4x6-8, machine front squat 4x8-10, leg press 4x10-12, standing hamstring curl 3x8-10.",
       "repRanges": [
         {
@@ -3504,18 +3536,18 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Not verified from primary sources — no dated interview or program specifies a weekly day count.",
-      "frequencyPerMuscle": "Not verified from primary sources. Legs are widely reported elsewhere as trained only once every 1-2 weeks, but no primary interview reviewed confirms an exact frequency.",
-      "warmupProtocol": "Not specified in any primary source reviewed.",
-      "workingSetProtocol": "No fixed set/rep protocol is confirmed. The one fully documented example is a single historical squat set — 405 lbs for 50 reps, mentally broken into 10 blocks of 5 with a training partner counting aloud every 5th rep — described by Platz as a maximal, once-in-a-session feat, not a template for every working set.",
+      "trainingDaysPerWeek": "4-day layout in our catalog (Chest & tris / Back & bis / Shoulders / Legs) — only legs have strong primary attestation (1981 Olympia prep); upper days are reconstructions. No single dated interview locks a lifelong weekly count",
+      "frequencyPerMuscle": "On this layout: once per 4-day cycle. Legs historically prioritized with extreme volume; some secondary reports claim legs only every 1–2 weeks — not confirmed as a fixed rule in primary interviews reviewed",
+      "warmupProtocol": "Not specified with fixed percentages; squat sessions use progressive warm-ups into high-effort sets",
+      "workingSetProtocol": "Legs: very high effort, high-rep capacity work (1981 prep tables). Upper: reconstruction volume consistent with his reps-over-ego philosophy",
       "repRanges": [
         {
-          "target": "General philosophy (his own words)",
-          "range": "Blends heavier, lower-rep days with higher-rep days — no fixed number given"
+          "target": "Legs (1981 prep / signature)",
+          "range": "Wide — including very high-rep squat work"
         },
         {
-          "target": "Historical max-effort squat set (documented feat)",
-          "range": "50 reps at 405 lbs, mentally broken into 10x5"
+          "target": "Upper (reconstruction)",
+          "range": "Often 8–15 with high effort"
         }
       ]
     },
@@ -3588,7 +3620,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "5 days/week, with the exact on/off pattern (3-on/2-off, 4-on/1-off, or 5 straight days) chosen week to week based on how he's feeling — his current documented routine uses a 4-days-on/1-off rotating split.",
       "frequencyPerMuscle": "Calves trained every 2 days; abs capped at 2x/week to avoid over-developing them.",
-      "warmupProtocol": "Not yet verified from primary sources beyond the general prioritization logic (training the target bodypart first while freshest).",
+      "warmupProtocol": "Not published as a fixed % protocol; calves/abs frequency rules are the clearer documented guidelines",
       "workingSetProtocol": "Whatever bodypart is the session's main focus is trained first. Current documented routine (Muscle Insider): Day 1 shoulders/triceps/abs (barbell shoulder press to 225x10, shrugs with 315, side laterals to 50-lb DBs); Day 2 quads/hamstrings/calves (leg extension pre-exhaust, barbell squat to 405x8-10 then drop set to 225 to failure, leg press to 11 plates/side x8-10); Day 3 chest/biceps/forearms/abs (incline DB flyes to 70s x10, incline barbell press to 225x10, flat DB press 4 sets w/ drop set, 3 supersets of decline DB press/DB pullover).",
       "repRanges": [
         {
@@ -3658,9 +3690,9 @@
     ],
     "intensityTechniques": [],
     "guidelines": {
-      "trainingDaysPerWeek": "Beginners: 6 days/week (rest Sunday) for the first month, then 3x/week (held ~6 months). Advanced 8x8: a repeating body-part-split cycle; exact weekly day count not specified beyond a 3-day-per-cycle example (his pupil Mohamed Makkawy's pre-contest routine).",
+      "trainingDaysPerWeek": "Beginners: 6 days/week then 3×/week full body. Advanced 8×8: body-part cycle (exact weekly count varies; Makkawy example is a 3-day bodypart sample)",
       "frequencyPerMuscle": "Beginners: every training day for the first month, then every session on a 3x/week full-body plan. Advanced 8x8 (Makkawy example): each of 3 bodyparts trained once every 3-day cycle.",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "warmupProtocol": "Brief — Gironda favored getting into the working scheme quickly (8×8 uses short rests, not long warm-up pyramids)",
       "workingSetProtocol": "Beginner ramp: week 1 = 1 set/exercise, week 2 = 2 sets, week 3 = 3 sets, week 4+ = 3 sets/exercise held ~6 months. Advanced 8x8: 8 sets of 8 reps per exercise, 60-70% of 1RM, minimal rest, 2-4 exercises per muscle group.",
       "repRanges": [
         {
@@ -3724,7 +3756,7 @@
     "guidelines": {
       "trainingDaysPerWeek": "6 days/week during focused prep (often training all 7), two sessions per day (one bodypart AM, one PM) during comeback/contest prep specifically.",
       "frequencyPerMuscle": "Push (chest/shoulders/triceps) and Pull (back/biceps/traps) days, plus a second Push block for legs/abs, within a 6-7 day rotation.",
-      "warmupProtocol": "Not yet verified from primary sources.",
+      "warmupProtocol": "Not published as fixed percentages; prep often uses two sessions/day with progressive warm-ups",
       "workingSetProtocol": "Comeback-specific rule: 3 exercises per bodypart, 5 sets per exercise, 10-12 reps on a good day / 6-8 on a bad day, prioritizing muscle contraction and control over chasing his old competitive size. Biceps explicitly capped at moderate-to-medium-heavy weight, max 5x10-12.",
       "repRanges": [
         {
