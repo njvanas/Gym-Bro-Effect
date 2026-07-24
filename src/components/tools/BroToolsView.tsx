@@ -10,7 +10,6 @@ import {
 import type { ToolTier } from '../../schema';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { ExternalLink } from '../ExternalLink';
-import { PillarExplore } from '../PillarExplore';
 
 function tierLabel(tier: ToolTier | 'all'): string {
   switch (tier) {
@@ -89,7 +88,6 @@ export function BroToolsView() {
           Laid out as Essential → Advised → Want → Alternative. Pick one or more filters — All shows
           everything.
         </p>
-        <PillarExplore current="tools" />
       </header>
 
       <div className="legends-filter-rail" role="group" aria-label="Filter tools by tier">
