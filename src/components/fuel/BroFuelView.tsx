@@ -1,22 +1,20 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { phases } from '../../lib/fuel-db';
 import { phaseLabel } from '../../lib/fuel-nav';
+import { paths } from '../../lib/routes';
 import type { PhaseId } from '../../schema';
 import { FoodsCatalog } from './FoodsCatalog';
 import { PhaseDetail } from './PhaseDetail';
 import { TdeeCallout } from './TdeeCallout';
-
-type BroFuelViewProps = {
-  onNavigateToTraining?: () => void;
-};
 
 type FuelScreen =
   | { kind: 'hub' }
   | { kind: 'phase'; id: PhaseId }
   | { kind: 'foods' };
 
-export function BroFuelView({ onNavigateToTraining }: BroFuelViewProps) {
+export function BroFuelView() {
   const [screen, setScreen] = useState<FuelScreen>({ kind: 'hub' });
 
   if (screen.kind === 'phase') {
@@ -37,11 +35,9 @@ export function BroFuelView({ onNavigateToTraining }: BroFuelViewProps) {
           ← Bro Fuel
         </button>
         <PhaseDetail phase={phase} onBrowseFoods={() => setScreen({ kind: 'foods' })} />
-        {onNavigateToTraining ? (
-          <button type="button" className="text-link" onClick={onNavigateToTraining}>
-            Browse Bro Training →
-          </button>
-        ) : null}
+        <Link className="text-link" to={paths.training}>
+          Browse Bro Training →
+        </Link>
       </section>
     );
   }
@@ -68,11 +64,9 @@ export function BroFuelView({ onNavigateToTraining }: BroFuelViewProps) {
           Phase strategy plus the real Foods shopping reference from this journey. Personal meal
           examples per phase are coming soon.
         </p>
-        {onNavigateToTraining ? (
-          <button type="button" className="text-link" onClick={onNavigateToTraining}>
-            Browse Bro Training →
-          </button>
-        ) : null}
+        <Link className="text-link" to={paths.training}>
+          Browse Bro Training →
+        </Link>
       </header>
 
       <TdeeCallout />

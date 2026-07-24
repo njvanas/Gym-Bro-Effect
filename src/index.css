@@ -170,6 +170,8 @@ select:focus-visible {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
   border: 0;
   background: transparent;
   color: var(--text);
@@ -178,6 +180,12 @@ select:focus-visible {
   letter-spacing: 0.04em;
   line-height: 1;
   min-height: 44px;
+}
+
+a.brand,
+a.nav-link,
+a.journey-card {
+  text-decoration: none;
 }
 
 .menu-toggle {
@@ -202,6 +210,8 @@ select:focus-visible {
 }
 
 .nav-link {
+  display: inline-flex;
+  align-items: center;
   border: 1px solid transparent;
   background: transparent;
   color: var(--text-muted);
@@ -243,6 +253,7 @@ select:focus-visible {
 }
 
 .bottom-nav .nav-link {
+  justify-content: center;
   text-align: center;
   font-size: 0.78rem;
   padding: 0.45rem 0.25rem;
