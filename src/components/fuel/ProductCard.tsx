@@ -1,5 +1,6 @@
 import { ExternalLink } from '../ExternalLink';
 import { productCategoryLabel } from '../../lib/fuel-nav';
+import { publicUrl } from '../../lib/public-url';
 import type { Product } from '../../schema';
 
 type ProductCardProps = {
@@ -14,7 +15,7 @@ export function ProductCard({ product, compact = false }: ProductCardProps) {
       {product.imageSrc ? (
         <img
           className="product-card-image"
-          src={product.imageSrc}
+          src={publicUrl(product.imageSrc)}
           alt=""
           loading="lazy"
         />
