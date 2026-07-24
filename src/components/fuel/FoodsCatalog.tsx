@@ -54,9 +54,9 @@ export function FoodsCatalog() {
         {visible.length} item{visible.length === 1 ? '' : 's'}
       </p>
 
-      <div className="product-grid">
+      <div className="product-grid product-grid--compact">
         {visible.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} compact />
         ))}
       </div>
     </div>
