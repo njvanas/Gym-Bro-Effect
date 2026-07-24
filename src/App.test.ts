@@ -66,3 +66,41 @@ describe('App pillar routes', () => {
     expect(homeLink?.getAttribute('href')).toBe('/');
   });
 });
+
+describe('Bro Training routes', () => {
+  it('renders hub cards as links to legends and personal routes', () => {
+    const container = renderAt('/training');
+    const destinations = Array.from(
+      container.querySelectorAll<HTMLAnchorElement>('a.training-hub-card'),
+      (link) => link.getAttribute('href'),
+    );
+
+    expect(destinations).toEqual(['/training/legends', '/training/personal']);
+  });
+
+  it('renders the personal collection at its direct URL', () => {
+    const container = renderAt('/training/personal');
+
+    expect(container.textContent).toContain('My Personal collection');
+    expect(container.querySelector<HTMLAnchorElement>('a.back')?.getAttribute('href')).toBe(
+      '/training',
+    );
+  });
+
+  it('renders exercises with URL-driven section navigation', () => {
+    const container = renderAt('/training/exercises');
+    const activeLink = container.querySelector<HTMLAnchorElement>(
+      '.sub-nav a.nav-link.active[aria-current="page"]',
+    );
+
+    expect(container.textContent).toContain('Bro Exercises');
+    expect(activeLink?.getAttribute('href')).toBe('/training/exercises');
+  });
+
+  it('renders the temporary legends browse route', () => {
+    const container = renderAt('/training/legends');
+
+    expect(container.textContent).toContain('bodybuilders');
+    expect(container.textContent).not.toContain('Page not found');
+  });
+});
