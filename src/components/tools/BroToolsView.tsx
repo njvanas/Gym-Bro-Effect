@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 
+import { toolsHubCrumbs } from '../../lib/crumbs';
 import {
   filterToolsByTiers,
   groupToolsByTier,
@@ -7,7 +8,9 @@ import {
   tools,
 } from '../../lib/tools-db';
 import type { ToolTier } from '../../schema';
+import { Breadcrumbs } from '../Breadcrumbs';
 import { ExternalLink } from '../ExternalLink';
+import { PillarExplore } from '../PillarExplore';
 
 function tierLabel(tier: ToolTier | 'all'): string {
   switch (tier) {
@@ -76,6 +79,7 @@ export function BroToolsView() {
 
   return (
     <section className="stack tools-section">
+      <Breadcrumbs items={toolsHubCrumbs()} />
       <header className="section-masthead">
         <p className="section-kicker">Gear & tracking</p>
         <h2 className="section-display-title">
@@ -85,6 +89,7 @@ export function BroToolsView() {
           Laid out as Essential → Advised → Want → Alternative. Pick one or more filters — All shows
           everything.
         </p>
+        <PillarExplore current="tools" />
       </header>
 
       <div className="legends-filter-rail" role="group" aria-label="Filter tools by tier">

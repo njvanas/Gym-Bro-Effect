@@ -8,9 +8,10 @@ import {
   getStyle,
 } from '../../lib/db';
 import { muscleLabel } from '../../lib/format';
-import { trainingLegendsBrowseCrumbs } from '../../lib/crumbs';
+import { parentCrumb, trainingLegendsBrowseCrumbs } from '../../lib/crumbs';
 import { paths } from '../../lib/routes';
 import type { Bodybuilder, TrainingStyle } from '../../schema';
+import { BackLink } from '../BackLink';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { Avatar } from './LegendDetail';
 
@@ -189,12 +190,12 @@ export function BroLegendsView() {
     });
   }, [normalized, filterId]);
 
+  const crumbs = trainingLegendsBrowseCrumbs();
+
   return (
     <section className="stack">
-      <Breadcrumbs items={trainingLegendsBrowseCrumbs()} />
-      <Link className="back" to={paths.training}>
-        ← Bro Training
-      </Link>
+      <Breadcrumbs items={crumbs} />
+      <BackLink parent={parentCrumb(crumbs)} />
       <div className="legends-browse">
         <section className="legends-masthead">
           <p className="legends-kicker">Bro Legends</p>

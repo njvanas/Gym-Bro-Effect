@@ -205,11 +205,9 @@ function MethodologyPanel({ style }: { style: TrainingStyle }) {
 
 export function LegendDetail({
   style,
-  backTo,
   workoutTo,
 }: {
   style: TrainingStyle;
-  backTo: string;
   workoutTo: (routineId: string) => string;
 }) {
   const groups = getLegendRoutineGroupsByStyle(style.id);
@@ -217,10 +215,6 @@ export function LegendDetail({
 
   return (
     <div className="legend-detail" key={style.id}>
-      <Link className="back" to={backTo}>
-        ← All bodybuilders
-      </Link>
-
       <header className="legend-detail-hero">
         <Avatar name={style.creator} gradientKey={style.id} size="xl" />
         <div className="legend-detail-hero-copy">

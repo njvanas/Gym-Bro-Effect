@@ -1,18 +1,16 @@
-import { Link } from 'react-router-dom';
-
-import { trainingPersonalCrumbs } from '../../lib/crumbs';
+import { parentCrumb, trainingPersonalCrumbs } from '../../lib/crumbs';
 import { hevyFolders, myCollection } from '../../lib/db';
-import { paths } from '../../lib/routes';
+import { BackLink } from '../BackLink';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { ExternalLink } from '../ExternalLink';
 
 export function BroPersonalView() {
+  const crumbs = trainingPersonalCrumbs();
+
   return (
     <div className="collection-layout stack">
-      <Breadcrumbs items={trainingPersonalCrumbs()} />
-      <Link className="back" to={paths.training}>
-        ← Bro Training
-      </Link>
+      <Breadcrumbs items={crumbs} />
+      <BackLink parent={parentCrumb(crumbs)} />
 
       <section className="collection-intro personal-intro">
         <div className="personal-badge">My Personal collection</div>
