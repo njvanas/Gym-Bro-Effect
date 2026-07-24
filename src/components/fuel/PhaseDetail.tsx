@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { getFeaturedProducts } from '../../lib/fuel-db';
 import type { Phase } from '../../schema';
 import { MealExamplesComingSoon } from './MealExamplesComingSoon';
@@ -6,10 +8,10 @@ import { TdeeAccordion } from './TdeeCallout';
 
 type PhaseDetailProps = {
   phase: Phase;
-  onBrowseFoods?: () => void;
+  foodsTo: string;
 };
 
-export function PhaseDetail({ phase, onBrowseFoods }: PhaseDetailProps) {
+export function PhaseDetail({ phase, foodsTo }: PhaseDetailProps) {
   const featured = getFeaturedProducts(phase.id);
 
   return (
@@ -70,15 +72,13 @@ export function PhaseDetail({ phase, onBrowseFoods }: PhaseDetailProps) {
             <ProductCard key={product.id} product={product} compact />
           ))}
         </div>
-        {onBrowseFoods ? (
-          <button type="button" className="text-link" onClick={onBrowseFoods}>
-            Browse all Foods →
-          </button>
-        ) : null}
+        <Link className="text-link" to={foodsTo}>
+          Browse all Foods →
+        </Link>
       </section>
 
       <div id={`${phase.id}-meals`}>
-        <MealExamplesComingSoon onBrowseFoods={onBrowseFoods} />
+        <MealExamplesComingSoon foodsTo={foodsTo} />
       </div>
 
       <section className="fuel-panel stack" id={`${phase.id}-routine`}>

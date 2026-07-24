@@ -1,21 +1,41 @@
+import { Link } from 'react-router-dom';
+
 import type { Pillar } from '../lib/nav';
+import { paths as routePaths } from '../lib/routes';
 
-type HomeViewProps = {
-  onNavigate: (pillar: Pillar) => void;
-};
-
-const paths: Array<{ pillar: Exclude<Pillar, 'home'>; title: string; copy: string }> = [
-  { pillar: 'training', title: 'Bro Training', copy: 'Build focused workouts that move you forward.' },
-  { pillar: 'fuel', title: 'Bro Fuel', copy: 'Fuel your goals with practical nutrition.' },
-  { pillar: 'tools', title: 'Bro Tools', copy: 'Use simple tools to track and improve.' },
+const journeys: Array<{
+  pillar: Exclude<Pillar, 'home'>;
+  to: string;
+  title: string;
+  copy: string;
+}> = [
+  {
+    pillar: 'training',
+    to: routePaths.training,
+    title: 'Bro Training',
+    copy: 'Build focused workouts that move you forward.',
+  },
+  {
+    pillar: 'fuel',
+    to: routePaths.fuel,
+    title: 'Bro Fuel',
+    copy: 'Fuel your goals with practical nutrition.',
+  },
+  {
+    pillar: 'tools',
+    to: routePaths.tools,
+    title: 'Bro Tools',
+    copy: 'Use simple tools to track and improve.',
+  },
   {
     pillar: 'who',
+    to: routePaths.who,
     title: 'Who is Bro?',
     copy: 'Just your friendly neighbourhood Bro.',
   },
 ];
 
-export function HomeView({ onNavigate }: HomeViewProps) {
+export function HomeView() {
   return (
     <section className="home-view">
       <div className="hero">
@@ -24,12 +44,12 @@ export function HomeView({ onNavigate }: HomeViewProps) {
         <p className="hero-copy">Everything you need to turn consistent effort into lasting progress.</p>
       </div>
       <div className="journey-grid">
-        {paths.map(({ pillar, title, copy }) => (
-          <button className="journey-card" type="button" onClick={() => onNavigate(pillar)} key={pillar}>
+        {journeys.map(({ pillar, to, title, copy }) => (
+          <Link className="journey-card" to={to} key={pillar}>
             <span>{title}</span>
             <p>{copy}</p>
             <strong>Explore →</strong>
-          </button>
+          </Link>
         ))}
       </div>
     </section>

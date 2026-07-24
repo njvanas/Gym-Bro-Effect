@@ -1,16 +1,18 @@
+import { Link } from 'react-router-dom';
+
+import { trainingPersonalCrumbs } from '../../lib/crumbs';
 import { hevyFolders, myCollection } from '../../lib/db';
+import { paths } from '../../lib/routes';
+import { Breadcrumbs } from '../Breadcrumbs';
 import { ExternalLink } from '../ExternalLink';
 
-type BroPersonalViewProps = {
-  onBack: () => void;
-};
-
-export function BroPersonalView({ onBack }: BroPersonalViewProps) {
+export function BroPersonalView() {
   return (
     <div className="collection-layout stack">
-      <button type="button" className="back" onClick={onBack}>
+      <Breadcrumbs items={trainingPersonalCrumbs()} />
+      <Link className="back" to={paths.training}>
         ← Bro Training
-      </button>
+      </Link>
 
       <section className="collection-intro personal-intro">
         <div className="personal-badge">My Personal collection</div>
