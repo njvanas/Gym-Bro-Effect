@@ -9,6 +9,7 @@ import { intensityTechniqueLabel, muscleLabel } from '../../lib/format';
 import { curatorGradient, curatorInitials } from '../../lib/curator';
 import type { Routine, TrainingStyle } from '../../schema';
 import { AccordionItem } from '../Accordion';
+import { ExternalLink } from '../ExternalLink';
 
 export function Avatar({
   name,
@@ -191,9 +192,7 @@ function MethodologyPanel({ style }: { style: TrainingStyle }) {
             <ul className="principles source-list">
               {style.sources.map((s) => (
                 <li key={s.url}>
-                  <a href={s.url} target="_blank" rel="noreferrer">
-                    {s.title}
-                  </a>
+                  <ExternalLink href={s.url}>{s.title}</ExternalLink>
                 </li>
               ))}
             </ul>
