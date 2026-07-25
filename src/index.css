@@ -1915,151 +1915,182 @@ table.ex tr:last-child td {
 
 /* ── Bro Tools ── */
 
-.tools-category {
+.tools-tier-group {
   display: grid;
+  gap: 0.85rem;
+}
+
+.tools-tier-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   gap: 0.75rem;
 }
 
-.tools-category-head {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-
-.tools-category-head h3 {
+.tools-tier-head .legend-col-title {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.45rem;
-  letter-spacing: 0.03em;
-  flex: 1;
 }
 
-.tools-tier-section {
-  padding: 1rem 1.05rem 1.15rem;
+.tools-tier-count {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
-}
-
-.tools-tier-section--essential {
-  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
-}
-
-.tools-tier-section--advised {
-  border-color: color-mix(in srgb, #5b8def 35%, var(--border));
-}
-
-.tools-tier-section--want {
-  border-color: color-mix(in srgb, #c084fc 30%, var(--border));
-}
-
-.tools-tier-section--alternative {
-  border-color: color-mix(in srgb, #9aa3b2 35%, var(--border));
-}
-
-.tool-card-top {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.45rem;
-}
-
-.tool-card-category {
-  font-size: 0.75rem;
-  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  background: var(--chip);
 }
 
 .tools-grid {
   display: grid;
-  gap: 0.85rem;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
 .tool-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  padding: 1.1rem 1.15rem;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1.25rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
   box-shadow: var(--shadow);
+  overflow: hidden;
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .tool-card:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: var(--shadow-hover);
-  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
 }
 
 .tool-card--essential {
-  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 
-.tool-card--advised {
-  border-color: color-mix(in srgb, #5b8def 40%, var(--border));
+.tool-card-glow {
+  position: absolute;
+  inset: auto -20% -40% auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-soft), transparent 70%);
+  pointer-events: none;
 }
 
-.tool-card--want {
-  border-color: color-mix(in srgb, #c084fc 35%, var(--border));
+.tool-card--essential .tool-card-glow {
+  opacity: 1;
+}
+
+.tool-card--advised .tool-card-glow,
+.tool-card--want .tool-card-glow {
+  opacity: 0.55;
+}
+
+.tool-card--alternative .tool-card-glow {
+  opacity: 0.3;
+}
+
+.tool-card-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  width: 100%;
+}
+
+.tool-card-eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
 }
 
 .tool-card-title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   letter-spacing: 0.02em;
   line-height: 1.1;
 }
 
-.tool-card-tracks {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.tool-card-body,
-.tool-card-advice,
-.tool-card-purchase {
+.tool-card-blurb {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.45;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.tool-card-link {
+.tool-card-tracks {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.tool-card-advice {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tool-card-meta {
   margin-top: auto;
   padding-top: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.tool-card-cta {
+  position: relative;
+  z-index: 1;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-ink);
   text-decoration: none;
 }
 
-.tool-card-link:hover {
+.tool-card-cta:hover {
   text-decoration: underline;
 }
 
 .tool-tier--essential {
   background: var(--accent-soft);
+  color: var(--accent-ink);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
 }
 
 .tool-tier--advised {
-  background: color-mix(in srgb, #5b8def 18%, transparent);
-  border-color: color-mix(in srgb, #5b8def 45%, var(--border));
-  color: #8eb6ff;
-}
-
-[data-theme='light'] .tool-tier--advised {
-  color: #2a56a8;
+  background: color-mix(in srgb, var(--accent) 10%, var(--chip));
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
+  color: var(--text);
 }
 
 .tool-tier--want {
-  background: color-mix(in srgb, #c084fc 16%, transparent);
-  border-color: color-mix(in srgb, #c084fc 40%, var(--border));
+  background: var(--chip);
+  border-color: color-mix(in srgb, var(--accent) 18%, var(--border));
 }
 
 .tool-tier--alternative {
   background: var(--chip);
+  color: var(--text-muted);
 }
 
 /* ── Bro Exercises ── */

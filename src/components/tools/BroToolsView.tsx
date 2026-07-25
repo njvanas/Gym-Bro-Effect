@@ -30,18 +30,18 @@ function tierLabel(tier: ToolTier | 'all'): string {
   }
 }
 
-function tierSectionEmoji(tier: ToolTier): string {
-  switch (tier) {
-    case 'essential':
-      return '✅';
-    case 'advised':
-      return '💡';
-    case 'want':
-      return '✨';
-    case 'alternative':
-      return '🔄';
+function formatCategory(category: (typeof tools)[number]['category']): string {
+  switch (category) {
+    case 'body-composition':
+      return 'Body composition';
+    case 'nutrition':
+      return 'Nutrition';
+    case 'training':
+      return 'Training';
+    case 'recovery':
+      return 'Recovery';
     default: {
-      const _exhaustive: never = tier;
+      const _exhaustive: never = category;
       return _exhaustive;
     }
   }
@@ -79,102 +79,87 @@ export function BroToolsView() {
   return (
     <section className="stack tools-section">
       <PageChrome crumbs={toolsHubCrumbs()} />
-      <header className="section-masthead">
-        <p className="section-kicker">Gear & tracking</p>
-        <h2 className="section-display-title">
-          Bro <span className="accent">Tools</span>
-        </h2>
-        <p className="section-lede">
-          Laid out as Essential → Advised → Want → Alternative. Pick one or more filters — All shows
-          everything.
-        </p>
-      </header>
+      <div className="legends-browse">
+        <section className="legends-masthead">
+          <p className="legends-kicker">Gear & tracking</p>
+          <h1 className="legends-headline">
+            Bro <span className="accent">Tools</span>
+          </h1>
+          <p className="legends-lede">
+            Laid out as Essential → Advised → Want → Alternative. Pick one or more filters — All
+            shows everything.
+          </p>
 
-      <div className="legends-filter-rail" role="group" aria-label="Filter tools by tier">
-        <button
-          type="button"
-          className={`legends-filter-chip${showingAll ? ' active' : ''}`}
-          aria-pressed={showingAll}
-          onClick={selectAll}
-        >
-          All
-        </button>
-        {TOOL_TIER_ORDER.map((tier) => {
-          const active = selectedTiers.includes(tier);
-          return (
+          <div className="legends-filter-rail" role="group" aria-label="Filter tools by tier">
             <button
-              key={tier}
               type="button"
-              className={`legends-filter-chip${active ? ' active' : ''}`}
-              aria-pressed={active}
-              onClick={() => toggleTier(tier)}
+              className={`legends-filter-chip${showingAll ? ' active' : ''}`}
+              aria-pressed={showingAll}
+              onClick={selectAll}
             >
-              {tierLabel(tier)}
+              All
             </button>
-          );
-        })}
+            {TOOL_TIER_ORDER.map((tier) => {
+              const active = selectedTiers.includes(tier);
+              return (
+                <button
+                  key={tier}
+                  type="button"
+                  className={`legends-filter-chip${active ? ' active' : ''}`}
+                  aria-pressed={active}
+                  onClick={() => toggleTier(tier)}
+                >
+                  {tierLabel(tier)}
+                </button>
+              );
+            })}
+          </div>
+
+          <p className="legends-search-hint">
+            {filtered.length} of {tools.length} tools · {filterHint}
+          </p>
+        </section>
+
+        {filtered.length === 0 ? (
+          <div className="empty legends-empty">No tools match those filters.</div>
+        ) : (
+          grouped.map(({ tier, items }) => (
+            <section className="tools-tier-group" key={tier}>
+              <div className="tools-tier-head">
+                <h2 className="legend-col-title">{tierLabel(tier)}</h2>
+                <span className="tools-tier-count">{items.length}</span>
+              </div>
+              <div className="tools-grid">
+                {items.map((tool) => (
+                  <article className={`tool-card tool-card--${tool.tier}`} key={tool.id}>
+                    <div className="tool-card-glow" aria-hidden />
+                    <div className="tool-card-body">
+                      <p className="tool-card-eyebrow">{formatCategory(tool.category)}</p>
+                      <h3 className="tool-card-title">{tool.name}</h3>
+                      <div className="chips">
+                        <span className={`chip tool-tier tool-tier--${tool.tier}`}>
+                          {tierLabel(tool.tier)}
+                        </span>
+                      </div>
+                      <p className="tool-card-blurb">{tool.necessity}</p>
+                      <p className="tool-card-tracks">
+                        <strong>Tracks</strong> {tool.tracks}
+                      </p>
+                      <p className="tool-card-advice">{tool.advice}</p>
+                      <p className="tool-card-meta">{tool.purchaseReason}</p>
+                    </div>
+                    {tool.url ? (
+                      <ExternalLink className="tool-card-cta" href={tool.url}>
+                        Learn more →
+                      </ExternalLink>
+                    ) : null}
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))
+        )}
       </div>
-
-      <p className="legends-search-hint">
-        {filtered.length} of {tools.length} tools · {filterHint}
-      </p>
-
-      {filtered.length === 0 ? (
-        <div className="empty">No tools match those filters.</div>
-      ) : (
-        grouped.map(({ tier, items }) => (
-          <section className={`tools-category tools-tier-section tools-tier-section--${tier}`} key={tier}>
-            <div className="tools-category-head">
-              <span aria-hidden>{tierSectionEmoji(tier)}</span>
-              <h3>{tierLabel(tier)}</h3>
-              <span className="muted">{items.length}</span>
-            </div>
-            <div className="tools-grid">
-              {items.map((tool) => (
-                <article className={`tool-card tool-card--${tool.tier}`} key={tool.id}>
-                  <div className="tool-card-top">
-                    <span className={`tag accent tool-tier tool-tier--${tool.tier}`}>
-                      {tierLabel(tool.tier)}
-                    </span>
-                    <span className="tool-card-category muted">{formatCategory(tool.category)}</span>
-                  </div>
-                  <h4 className="tool-card-title">{tool.name}</h4>
-                  <p className="tool-card-tracks">
-                    <strong>Tracks</strong> {tool.tracks}
-                  </p>
-                  <p className="tool-card-body">{tool.necessity}</p>
-                  <p className="tool-card-advice muted">{tool.advice}</p>
-                  <p className="tool-card-purchase muted">
-                    <strong>Purchase:</strong> {tool.purchaseReason}
-                  </p>
-                  {tool.url ? (
-                    <ExternalLink className="tool-card-link" href={tool.url}>
-                      Learn more →
-                    </ExternalLink>
-                  ) : null}
-                </article>
-              ))}
-            </div>
-          </section>
-        ))
-      )}
     </section>
   );
-}
-
-function formatCategory(category: (typeof tools)[number]['category']): string {
-  switch (category) {
-    case 'body-composition':
-      return 'Body composition';
-    case 'nutrition':
-      return 'Nutrition';
-    case 'training':
-      return 'Training';
-    case 'recovery':
-      return 'Recovery';
-    default: {
-      const _exhaustive: never = category;
-      return _exhaustive;
-    }
-  }
 }
