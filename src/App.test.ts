@@ -86,7 +86,7 @@ describe('Bro Training routes', () => {
   it('renders the personal collection at its direct URL', () => {
     const container = renderAt('/training/personal');
 
-    expect(container.textContent).toContain('My Personal collection');
+    expect(container.textContent).toContain('Bro Personal');
     expect(container.textContent).toContain('In-app workouts');
     expect(
       container.querySelector<HTMLAnchorElement>(

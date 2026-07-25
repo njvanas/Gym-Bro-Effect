@@ -1127,27 +1127,6 @@ a.back {
 
 /* Personal Hevy folders */
 
-.personal-badge {
-  display: inline-block;
-  margin-bottom: 0.65rem;
-  padding: 0.3rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background: var(--accent-soft);
-  color: var(--accent-ink);
-  border: 1px solid var(--accent);
-}
-
-.section-heading {
-  margin: 0 0 0.4rem;
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  letter-spacing: 0.02em;
-}
-
 .hevy-folders {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -2265,12 +2244,6 @@ button.chip.usage-chip.personal:not(.selected) {
 .exercise-open-workout:hover,
 .exercise-open-workout:focus-visible {
   text-decoration: underline;
-}
-
-.personal-workouts .section-heading,
-.personal-folders .section-heading {
-  margin: 0;
-  font-size: 1.05rem;
 }
 
 .exercise-modal {

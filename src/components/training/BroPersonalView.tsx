@@ -13,19 +13,20 @@ export function BroPersonalView() {
     <div className="collection-layout stack">
       <PageChrome crumbs={trainingPersonalCrumbs()} />
 
-      <section className="collection-intro personal-intro">
-        <div className="personal-badge">My Personal collection</div>
-        <h2 className="section-heading">{myCollection.name}</h2>
-        <p className="muted">{myCollection.summary}</p>
-        <p className="muted">
-          In-app days below mirror the Bulk like Dorian folder. Hevy folder cards still open the live
-          app so you can save and log.
+      <header className="section-masthead">
+        <p className="section-kicker">Bro Training</p>
+        <h2 className="section-display-title">
+          Bro <span className="accent">Personal</span>
+        </h2>
+        <p className="section-lede">
+          {myCollection.summary} In-app days below mirror the Bulk like Dorian folder; Hevy folder
+          cards still open the live app so you can save and log.
         </p>
-      </section>
+      </header>
 
       {personalWorkouts.length > 0 ? (
         <section className="personal-workouts stack">
-          <h3 className="section-heading">In-app workouts</h3>
+          <h3 className="legend-col-title">In-app workouts</h3>
           <div className="folder-grid">
             {personalWorkouts.map((routine) => (
               <Link
@@ -48,7 +49,7 @@ export function BroPersonalView() {
       ) : null}
 
       <section className="hevy-folders personal-folders">
-        <h3 className="section-heading">Hevy folders</h3>
+        <h3 className="legend-col-title">Hevy folders</h3>
         <div className="folder-grid">
           {hevyFolders.map((folder) => (
             <ExternalLink key={folder.id} className="folder-card" href={folder.url}>
