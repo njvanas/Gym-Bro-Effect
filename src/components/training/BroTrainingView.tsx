@@ -6,11 +6,16 @@ import { PageChrome } from '../PageChrome';
 
 export function BroTrainingView() {
   return (
-    <section className="stack">
+    <section className="stack training-section">
       <PageChrome crumbs={trainingHubCrumbs()} />
-      <header>
-        <h2>Bro Training</h2>
-        <p className="muted">Legends, My Personal Hevy folders, and the exercise library.</p>
+      <header className="section-masthead">
+        <p className="section-kicker">Methods & movement</p>
+        <h2 className="section-display-title">
+          Bro <span className="accent">Training</span>
+        </h2>
+        <p className="section-lede">
+          Legends, My Personal Hevy folders, and the exercise library.
+        </p>
       </header>
       <div className="journey-grid training-hub-grid">
         <Link className="journey-card" to={paths.trainingLegends}>

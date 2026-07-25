@@ -16,10 +16,12 @@ export function PhaseDetail({ phase, foodsTo }: PhaseDetailProps) {
 
   return (
     <div className="stack phase-detail">
-      <header className={`phase-hero phase-hero--${phase.id}`}>
-        <p className="legend-eyebrow">Bro Fuel</p>
-        <h2 className="legend-detail-title">{phase.name}</h2>
-        <p className="phase-hero-tagline">{phase.tagline}</p>
+      <header className="section-masthead phase-masthead">
+        <p className="section-kicker">Bro Fuel</p>
+        <h2 className="section-display-title">
+          <span className="accent">{phase.name}</span>
+        </h2>
+        <p className="section-lede">{phase.tagline}</p>
         <div className="chips">
           <span className="chip accent">{featured.length} featured foods</span>
           <span className="chip">{phase.dailyRoutine.length} daily blocks</span>

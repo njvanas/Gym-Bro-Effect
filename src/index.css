@@ -1675,38 +1675,8 @@ table.ex tr:last-child td {
   font-weight: 600;
 }
 
-.phase-hero {
-  padding: 1.4rem 1.5rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: linear-gradient(135deg, var(--accent-soft), transparent 55%), var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.phase-hero--maintaining {
-  background: linear-gradient(135deg, color-mix(in srgb, #6bcf8e 18%, transparent), transparent 55%),
-    var(--surface);
-}
-
-.phase-hero--cutting {
-  background: linear-gradient(135deg, color-mix(in srgb, #5b8def 18%, transparent), transparent 55%),
-    var(--surface);
-}
-
-.phase-hero--bulking {
-  background: linear-gradient(135deg, var(--accent-soft), transparent 55%), var(--surface);
-}
-
-.phase-hero--recomposition {
-  background: linear-gradient(135deg, color-mix(in srgb, #f0a35e 18%, transparent), transparent 55%),
-    var(--surface);
-}
-
-.phase-hero-tagline {
-  margin: 0 0 0.85rem;
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  line-height: 1.45;
+.phase-masthead .chips {
+  margin-top: 0.35rem;
 }
 
 .fuel-panel {
