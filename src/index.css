@@ -2085,14 +2085,6 @@ table.ex tr:last-child td {
 
 /* ── Bro Exercises ── */
 
-.exercises-heading {
-  margin: 0.35rem 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  letter-spacing: 0.02em;
-  line-height: 1;
-}
-
 .exercises-toolbar {
   display: grid;
   gap: 0.75rem;

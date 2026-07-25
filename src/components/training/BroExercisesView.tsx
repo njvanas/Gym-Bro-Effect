@@ -52,7 +52,9 @@ export function BroExercisesView() {
       <PageChrome crumbs={crumbs} />
       <header className="section-masthead">
         <p className="section-kicker">Library</p>
-        <h3 className="exercises-heading">Bro Exercises</h3>
+        <h2 className="section-display-title">
+          Bro <span className="accent">Exercises</span>
+        </h2>
         <p className="section-lede">
           Search the library, filter by muscle, then open a card for cues — the grid stays put.
         </p>
